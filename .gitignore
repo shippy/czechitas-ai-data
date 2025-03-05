@@ -6,6 +6,9 @@ dist/
 wheels/
 *.egg-info
 
+# Pickle files
+*.pkl
+
 # Virtual environments
 .venv
 .env
