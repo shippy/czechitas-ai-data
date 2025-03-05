@@ -8,4 +8,5 @@ dependencies = [
     "google-generativeai>=0.8.4",
     "instructor>=1.7.2",
     "ipykernel>=6.29.5",
+    "python-dotenv>=1.0.1",
 ]
