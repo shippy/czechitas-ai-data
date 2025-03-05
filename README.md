@@ -11,10 +11,9 @@ Vytvořte si [v Google AI Studiu API klíč pro Gemini](https://aistudio.google.
 
 #### Na vlastním počítači (ve VSCode)
 
-1. Nainstalujte si `uv` a spusťte `uv sync`, který vám nainstaluje správný Python a všechny potřebné balíčky. V terminálu:
+1. [Nainstalujte si `uv`](https://docs.astral.sh/uv/getting-started/installation/) a spusťte `uv sync`, který vám nainstaluje správný Python a všechny potřebné balíčky. V terminálu:
 
 ```bash
-pip install uv
 uv sync
 ```
 
@@ -33,7 +32,6 @@ uv run --with jupyter notebooks/assignment-03.ipynb
 #### V Google Colab
 
 1. Otevřete daný notebook přímo v Google Colab:
-
     - [Úkol 3](https://colab.research.google.com/github/shippy/czechitas-ai-data/blob/main/notebooks/assignment-03.ipynb)
 2. Spusťte si notebook v prohlížeči. Notebook by měl rozpoznat, že běží v Google Colab, a automaticky si doinstalovat všechny potřebné balíčky.
 3. Klikněte na tlačítko "Secrets" v levé liště a přidejte předtím vytvořený API klíč do proměnné `GOOGLE_API_KEY` - buď "napřímo" přes "+ Add new secret", nebo přes "Gemini API keys" > "Import key from Google AI Studio".
