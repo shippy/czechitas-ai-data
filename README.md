@@ -26,7 +26,7 @@ GOOGLE_API_KEY="váš-api-klíč"
 1. Otevřete si notebook ve VSCode. Alternativně si spusťte notebook v prohlížeči:
 
 ```bash
-uv run --with jupyter notebooks/assignment-03.ipynb
+uv run --with jupyter jupyter lab notebooks/assignment-03.ipynb
 ```
 
 #### V Google Colab
