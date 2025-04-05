@@ -12,14 +12,14 @@ app = typer.Typer()
 
 
 @app.command()
-def crawl_and_scrape(url: str, output_dir: Path = Path("output")):
+def crawl_and_scrape(url: str, limit: int = 10, output_dir: Path = Path("output")):
     if not output_dir.exists():
         output_dir.mkdir(parents=True)
 
     client = FirecrawlApp(api_key=os.getenv("FIRECRAWL_API_KEY"))
 
     crawl = client.crawl_url(
-        url, params={"limit": 50, "scrapeOptions": {"formats": ["markdown"]}}
+        url, params={"limit": limit, "scrapeOptions": {"formats": ["markdown"]}}
     )
     print(crawl)
     return crawl
