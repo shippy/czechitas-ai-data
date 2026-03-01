@@ -1,0 +1,633 @@
+"""Generate the DataCorp s.r.o. synthetic HR dataset.
+
+Produces three files in notebooks/:
+- datacorp.csv         — main structured dataset (~510 rows, with planted dirt)
+- datacorp_reviews.csv — free-text performance reviews (~80 rows)
+- datacorp_exit_interviews.csv — free-text exit interview notes (~35 rows)
+
+Usage:
+    python scripts/generate_datacorp.py
+    # or:
+    uv run scripts/generate_datacorp.py
+"""
+
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+
+SEED = 42
+RNG = np.random.default_rng(SEED)
+OUTPUT_DIR = Path(__file__).resolve().parent.parent / "notebooks"
+
+# ── Czech name banks ──────────────────────────────────────────────
+
+MALE_FIRST = [
+    "Jan", "Petr", "Tomáš", "Martin", "Jakub", "David", "Lukáš", "Filip",
+    "Ondřej", "Michal", "Adam", "Vojtěch", "Daniel", "Marek", "Pavel",
+    "Josef", "Matěj", "Dominik", "Radek", "Karel",
+]
+FEMALE_FIRST = [
+    "Jana", "Eva", "Anna", "Lucie", "Tereza", "Kateřina", "Petra", "Marie",
+    "Martina", "Lenka", "Monika", "Veronika", "Barbora", "Hana", "Markéta",
+    "Klára", "Alena", "Simona", "Nikola", "Kristýna",
+]
+# Surname roots — male form; female form adds "ová" for adjectival surnames
+SURNAME_PAIRS = [
+    ("Novák", "Nováková"), ("Svoboda", "Svobodová"), ("Novotný", "Novotná"),
+    ("Dvořák", "Dvořáková"), ("Černý", "Černá"), ("Procházka", "Procházková"),
+    ("Kučera", "Kučerová"), ("Veselý", "Veselá"), ("Horák", "Horáková"),
+    ("Němec", "Němcová"), ("Pokorný", "Pokorná"), ("Marek", "Marková"),
+    ("Pospíšil", "Pospíšilová"), ("Hájek", "Hájková"), ("Jelínek", "Jelínková"),
+    ("Král", "Králová"), ("Růžička", "Růžičková"), ("Beneš", "Benešová"),
+    ("Fiala", "Fialová"), ("Sedláček", "Sedláčková"), ("Doležal", "Doležalová"),
+    ("Zeman", "Zemanová"), ("Kolář", "Kolářová"), ("Navrátil", "Navrátilová"),
+    ("Čermák", "Čermáková"), ("Vaněk", "Vaňková"), ("Urban", "Urbanová"),
+    ("Blažek", "Blažková"), ("Kříž", "Křížová"), ("Kopecký", "Kopecká"),
+    ("Konečný", "Konečná"), ("Malý", "Malá"), ("Holub", "Holubová"),
+    ("Čech", "Čechová"), ("Štěpánek", "Štěpánková"),
+]
+
+CITIES = [
+    "Praha", "Praha", "Praha", "Praha",  # heavily weighted
+    "Brno", "Brno",
+    "Ostrava", "Plzeň", "Liberec", "Olomouc",
+    "České Budějovice", "Hradec Králové", "Pardubice", "Zlín",
+]
+
+# ── Department profiles ──────────────────────────────────────────
+
+DEPARTMENTS = {
+    "Vývoj": {
+        "headcount": 100,
+        "base_salary": 65_000,
+        "salary_std": 12_000,
+        "avg_tenure_years": 4.0,
+        "tenure_std": 2.0,
+        "edu_weights": {"SŠ": 0.10, "VŠ Bc.": 0.10, "VŠ Mgr.": 0.60, "VŠ PhD.": 0.20},
+        "positions": [
+            "Software Developer", "QA Engineer", "Tech Lead", "DevOps Engineer",
+            "Data Engineer",
+        ],
+    },
+    "Marketing": {
+        "headcount": 70,
+        "base_salary": 45_000,
+        "salary_std": 8_000,
+        "avg_tenure_years": 3.0,
+        "tenure_std": 1.5,
+        "edu_weights": {"SŠ": 0.15, "VŠ Bc.": 0.25, "VŠ Mgr.": 0.50, "VŠ PhD.": 0.10},
+        "positions": [
+            "Marketingový specialista", "Content Manager", "SEO Specialist",
+            "Brand Manager",
+        ],
+    },
+    "Obchod": {
+        "headcount": 90,
+        "base_salary": 50_000,
+        "salary_std": 10_000,
+        "avg_tenure_years": 3.5,
+        "tenure_std": 1.8,
+        "edu_weights": {"SŠ": 0.30, "VŠ Bc.": 0.20, "VŠ Mgr.": 0.40, "VŠ PhD.": 0.10},
+        "positions": [
+            "Obchodní zástupce", "Account Manager", "Sales Manager",
+            "Business Development",
+        ],
+    },
+    "HR": {
+        "headcount": 50,
+        "base_salary": 42_000,
+        "salary_std": 7_000,
+        "avg_tenure_years": 3.0,
+        "tenure_std": 1.5,
+        "edu_weights": {"SŠ": 0.15, "VŠ Bc.": 0.20, "VŠ Mgr.": 0.55, "VŠ PhD.": 0.10},
+        "positions": ["HR Specialist", "Recruiter", "HR Manager", "Payroll Specialist"],
+    },
+    "Finance": {
+        "headcount": 70,
+        "base_salary": 55_000,
+        "salary_std": 10_000,
+        "avg_tenure_years": 4.5,
+        "tenure_std": 2.0,
+        "edu_weights": {"SŠ": 0.10, "VŠ Bc.": 0.15, "VŠ Mgr.": 0.55, "VŠ PhD.": 0.20},
+        "positions": ["Účetní", "Finanční analytik", "Controller", "Auditor"],
+    },
+    "Podpora": {
+        "headcount": 120,
+        "base_salary": 35_000,
+        "salary_std": 5_000,
+        "avg_tenure_years": 2.0,
+        "tenure_std": 1.0,
+        "edu_weights": {"SŠ": 0.45, "VŠ Bc.": 0.20, "VŠ Mgr.": 0.30, "VŠ PhD.": 0.05},
+        "positions": [
+            "Zákaznická podpora", "Help Desk Specialist", "Support Team Lead",
+            "Technická podpora",
+        ],
+    },
+}
+
+
+def generate_employees() -> pd.DataFrame:
+    """Generate the clean base employee dataset with planted analytical signals."""
+    rows = []
+    employee_id = 0
+
+    for dept_name, profile in DEPARTMENTS.items():
+        for _ in range(profile["headcount"]):
+            # Gender
+            is_female = RNG.random() < 0.45
+            pohlavi = "Ž" if is_female else "M"
+
+            # Name
+            if is_female:
+                jmeno = RNG.choice(FEMALE_FIRST)
+                _, prijmeni = SURNAME_PAIRS[RNG.integers(len(SURNAME_PAIRS))]
+            else:
+                jmeno = RNG.choice(MALE_FIRST)
+                prijmeni, _ = SURNAME_PAIRS[RNG.integers(len(SURNAME_PAIRS))]
+
+            # Tenure (years) — department-specific
+            tenure = max(
+                0.1,
+                RNG.normal(profile["avg_tenure_years"], profile["tenure_std"]),
+            )
+
+            # Age — correlated with tenure
+            min_age = 22
+            age = int(min_age + tenure + RNG.normal(5, 4))
+            age = max(22, min(62, age))
+
+            # Hire date
+            from datetime import date, timedelta
+
+            hire_date = date(2025, 6, 1) - timedelta(days=int(tenure * 365))
+            # Clamp to reasonable range
+            if hire_date < date(2015, 1, 1):
+                hire_date = date(2015, 1, 1) + timedelta(days=RNG.integers(0, 180))
+
+            # Education — department-weighted
+            edu_labels = list(profile["edu_weights"].keys())
+            edu_probs = list(profile["edu_weights"].values())
+            vzdelani = RNG.choice(edu_labels, p=edu_probs)
+
+            # Salary — base + seniority + education bonus + noise
+            salary = profile["base_salary"]
+            salary += tenure * 1_500  # seniority bonus
+            if vzdelani == "VŠ Mgr.":
+                salary += RNG.normal(8_000, 2_000)
+            elif vzdelani == "VŠ PhD.":
+                salary += RNG.normal(12_000, 3_000)
+
+            # Spurious signal: Marketing gets slight tenure-dependent bump
+            # so that raw gap vs Obchod exists but disappears when controlling
+            if dept_name == "Obchod":
+                salary += tenure * 800  # extra tenure bonus in sales
+
+            salary += RNG.normal(0, profile["salary_std"])
+            salary = max(25_000, round(salary / 500) * 500)  # round to 500
+
+            # SŠ salespeople exceptions — a few earn a lot
+            if dept_name == "Obchod" and vzdelani == "SŠ" and RNG.random() < 0.15:
+                salary = RNG.integers(70_000, 95_000)
+                salary = round(salary / 500) * 500
+
+            # Performance — correlated with tenure
+            perf_score = 3.0 + 0.15 * tenure + RNG.normal(0, 0.8)
+            perf_score = int(np.clip(round(perf_score), 1, 5))
+
+            pozice = RNG.choice(profile["positions"])
+            mesto = RNG.choice(CITIES)
+            typ_uvazku = RNG.choice(
+                ["Plný", "Částečný", "DPP"], p=[0.85, 0.10, 0.05]
+            )
+
+            # Email
+            email = (
+                f"{jmeno.lower()}.{prijmeni.lower()}@datacorp.cz"
+                .replace("á", "a").replace("č", "c").replace("ď", "d")
+                .replace("é", "e").replace("ě", "e").replace("í", "i")
+                .replace("ň", "n").replace("ó", "o").replace("ř", "r")
+                .replace("š", "s").replace("ť", "t").replace("ú", "u")
+                .replace("ů", "u").replace("ý", "y").replace("ž", "z")
+            )
+
+            rows.append({
+                "employee_id": employee_id,
+                "jmeno": jmeno,
+                "prijmeni": prijmeni,
+                "email": email,
+                "oddeleni": dept_name,
+                "pozice": pozice,
+                "datum_nastupu": hire_date,
+                "plat": salary,
+                "hodnoceni_vykonu": perf_score,
+                "vzdelani": vzdelani,
+                "mesto": mesto,
+                "vek": age,
+                "pohlavi": pohlavi,
+                "typ_uvazku": typ_uvazku,
+            })
+            employee_id += 1
+
+    return pd.DataFrame(rows)
+
+
+def apply_dirt(df: pd.DataFrame) -> pd.DataFrame:
+    """Apply pre-planted data quality issues."""
+    df = df.copy()
+    n = len(df)
+
+    # 1. Inconsistent oddeleni values
+    marketing_mask = df["oddeleni"] == "Marketing"
+    marketing_idx = df[marketing_mask].index.tolist()
+    if len(marketing_idx) > 20:
+        lowercase_idx = RNG.choice(marketing_idx, size=15, replace=False)
+        mktg_idx = RNG.choice(
+            [i for i in marketing_idx if i not in lowercase_idx], size=5, replace=False
+        )
+        df.loc[lowercase_idx, "oddeleni"] = "marketing"
+        df.loc[mktg_idx, "oddeleni"] = "Mktg"
+
+    # 2. Missing plat — ~40 total, ~25 in Podpora
+    podpora_idx = df[df["oddeleni"] == "Podpora"].index.tolist()
+    other_idx = df[df["oddeleni"] != "Podpora"].index.tolist()
+    missing_podpora = RNG.choice(podpora_idx, size=min(25, len(podpora_idx)), replace=False)
+    missing_other = RNG.choice(other_idx, size=min(15, len(other_idx)), replace=False)
+    df.loc[missing_podpora, "plat"] = np.nan
+    df.loc[missing_other, "plat"] = np.nan
+
+    # 3. Mixed date formats — ~100 rows get DD.MM.YYYY, rest YYYY-MM-DD
+    format_idx = RNG.choice(df.index, size=100, replace=False)
+    df["datum_nastupu"] = df["datum_nastupu"].apply(
+        lambda d: d.strftime("%Y-%m-%d") if not pd.isna(d) else ""
+    )
+    for idx in format_idx:
+        try:
+            from datetime import datetime
+
+            d = datetime.strptime(df.at[idx, "datum_nastupu"], "%Y-%m-%d")
+            df.at[idx, "datum_nastupu"] = d.strftime("%d.%m.%Y")
+        except (ValueError, TypeError):
+            pass
+
+    # 4. Salary outliers — 4 extreme values in low-salary departments
+    outlier_depts = ["Podpora", "HR"]
+    for dept in outlier_depts:
+        dept_idx = df[(df["oddeleni"] == dept) & df["plat"].notna()].index.tolist()
+        if len(dept_idx) >= 2:
+            outlier_idx = RNG.choice(dept_idx, size=2, replace=False)
+            df.loc[outlier_idx, "plat"] = RNG.integers(200_000, 260_000, size=2)
+
+    # 5. Duplicate rows — 10 exact copies
+    dup_idx = RNG.choice(df.index, size=10, replace=False)
+    duplicates = df.loc[dup_idx].copy()
+    df = pd.concat([df, duplicates], ignore_index=True)
+
+    # 6. Invalid hodnoceni_vykonu — 5-8 values of 0 or 6
+    n_invalid = RNG.integers(5, 9)
+    invalid_idx = RNG.choice(df.index, size=n_invalid, replace=False)
+    df.loc[invalid_idx, "hodnoceni_vykonu"] = RNG.choice([0, 6], size=n_invalid)
+
+    # Shuffle the whole thing
+    df = df.sample(frac=1, random_state=SEED).reset_index(drop=True)
+
+    return df
+
+
+# ── Review text generation ────────────────────────────────────────
+
+REVIEW_TEMPLATES_POSITIVE = [
+    "{name} je velmi {adj_pos} a {praise}. {recommendation_pos}",
+    "{name} odvádí skvělou práci{area}. {praise}. {recommendation_pos}",
+    "S prací {name_gen} jsem velmi spokojený/á. {praise}. {recommendation_pos}",
+    "{name} je klíčový/á člen/ka týmu. {praise}. {note_pos}",
+]
+
+REVIEW_TEMPLATES_MIXED = [
+    "{name} je {adj_pos}, ale {weakness}. {recommendation_mix}",
+    "{name} odvádí solidní práci, ale {weakness}. {recommendation_mix}",
+    "S prací {name_gen} jsem celkově spokojený/á, nicméně {weakness}. {recommendation_mix}",
+    "{name} má {strength_detail}, ale {weakness}. {recommendation_mix}",
+]
+
+REVIEW_TEMPLATES_NEGATIVE = [
+    "{name} má problémy s {problem}. {neg_detail}. {recommendation_neg}",
+    "Výkon {name_gen} je pod očekáváním. {neg_detail}. {recommendation_neg}",
+    "U {name_gen} vidím opakované problémy s {problem}. {recommendation_neg}",
+]
+
+ADJ_POS = [
+    "spolehlivý/á", "pracovitý/á", "kreativní", "pečlivý/á",
+    "proaktivní", "samostatný/á", "komunikativní", "flexibilní",
+]
+PRAISE = [
+    "klienti si ho/ji velmi pochvalují",
+    "kolegové ho/ji respektují",
+    "vždy dodržuje termíny",
+    "přináší nové nápady do týmu",
+    "jeho/její práce je vždy precizní",
+    "zvládá i náročné situace s klidem",
+    "je ochoten/ochotna pomoci kolegům",
+    "dobře komunikuje s ostatními odděleními",
+]
+RECOMMENDATION_POS = [
+    "Doporučuji zvážit povýšení.",
+    "Navrhuji navýšení platu.",
+    "Měli bychom mu/jí nabídnout více odpovědnosti.",
+    "Výborný/á kandidát/ka na vedení projektu.",
+    "",
+]
+NOTE_POS = [
+    "Pokračovat v současném nastavení.",
+    "Zvážit rozšíření kompetencí.",
+    "Výborný přínos pro tým.",
+]
+STRENGTH_DETAIL = [
+    "silné analytické schopnosti",
+    "výborný přehled o produktech",
+    "dobré vztahy s klienty",
+    "technické znalosti na vysoké úrovni",
+]
+WEAKNESS = [
+    "někdy nestíhá deadliny",
+    "komunikace s týmem by mohla být lepší",
+    "občas se ztrácí v detailech a zpomaluje celkový progres",
+    "prezentační dovednosti potřebují zlepšení",
+    "je vidět, že ho/ji současná pozice už moc nebaví",
+    "má tendenci pracovat izolovaně",
+    "občas dělá chyby v dokumentaci",
+    "mohl/a by být aktivnější na poradách",
+]
+RECOMMENDATION_MIX = [
+    "Doporučuji školení v oblasti time managementu.",
+    "Navrhuji mentoring se seniornějším kolegou.",
+    "Měli bychom zvážit přesun do jiného týmu.",
+    "Doporučuji zpětnou vazbu od kolegů (360°).",
+    "Zvážit rozvojový plán na příští kvartál.",
+]
+PROBLEM = [
+    "dodržováním termínů",
+    "kvalitou výstupů",
+    "docházkou",
+    "komunikací v týmu",
+    "plněním KPI",
+    "adaptací na nové procesy",
+]
+NEG_DETAIL = [
+    "Opakovaně jsme řešili stížnosti od kolegů",
+    "Výstupy vyžadují časté přepracování",
+    "Několikrát nedodržel/a dohodnuté termíny",
+    "Spolupráce s ostatními odděleními vázne",
+]
+RECOMMENDATION_NEG = [
+    "Nutné zlepšení do konce zkušební doby.",
+    "Doporučuji formální rozvojový plán s měsíčním hodnocením.",
+    "Pokud se situace nezlepší, zvážit ukončení spolupráce.",
+    "Navrhuji intenzivní koučink.",
+]
+AREAS = [
+    "", " v oblasti analýzy dat", " na klientských projektech",
+    " při správě interních systémů", " v komunikaci se zákazníky",
+]
+
+
+def _fill_review_template(template: str, name: str) -> str:
+    """Fill a review template with random slot values."""
+    # Genitive form — crude but good enough for templates
+    if name.endswith("a"):
+        name_gen = name[:-1] + "y"
+    elif name.endswith("k"):
+        name_gen = name + "a"
+    else:
+        name_gen = name + "a"
+
+    replacements = {
+        "{name}": name,
+        "{name_gen}": name_gen,
+        "{adj_pos}": RNG.choice(ADJ_POS),
+        "{praise}": RNG.choice(PRAISE),
+        "{recommendation_pos}": RNG.choice(RECOMMENDATION_POS),
+        "{note_pos}": RNG.choice(NOTE_POS),
+        "{strength_detail}": RNG.choice(STRENGTH_DETAIL),
+        "{weakness}": RNG.choice(WEAKNESS),
+        "{recommendation_mix}": RNG.choice(RECOMMENDATION_MIX),
+        "{problem}": RNG.choice(PROBLEM),
+        "{neg_detail}": RNG.choice(NEG_DETAIL),
+        "{recommendation_neg}": RNG.choice(RECOMMENDATION_NEG),
+        "{area}": RNG.choice(AREAS),
+    }
+    result = template
+    for key, val in replacements.items():
+        result = result.replace(key, val)
+    return result
+
+
+def generate_reviews(df: pd.DataFrame) -> pd.DataFrame:
+    """Generate ~80 performance reviews for a subset of employees."""
+    # Pick ~80 employees (spread across departments)
+    review_rows = []
+    for dept in DEPARTMENTS:
+        dept_mask = df["oddeleni"].isin(
+            [dept, dept.lower(), "Mktg"] if dept == "Marketing" else [dept]
+        )
+        dept_employees = df[dept_mask]
+        n_reviews = max(5, int(len(dept_employees) * 0.16))
+        selected = dept_employees.sample(
+            n=min(n_reviews, len(dept_employees)), random_state=SEED
+        )
+
+        for _, emp in selected.iterrows():
+            perf = emp["hodnoceni_vykonu"]
+            name = emp["jmeno"]
+
+            # Choose template type based on performance score
+            if perf >= 4:
+                template = RNG.choice(REVIEW_TEMPLATES_POSITIVE)
+            elif perf >= 3:
+                template = RNG.choice(REVIEW_TEMPLATES_MIXED)
+            else:
+                template = RNG.choice(REVIEW_TEMPLATES_NEGATIVE)
+
+            # Planted signal: ~15% of high-perf employees get mixed/negative review
+            if perf >= 4 and RNG.random() < 0.15:
+                template = RNG.choice(REVIEW_TEMPLATES_MIXED)
+
+            review_text = _fill_review_template(template, name)
+
+            # Review year — most recent full year of employment
+            review_rows.append({
+                "employee_id": emp["employee_id"],
+                "rok": RNG.integers(2023, 2026),
+                "review_text": review_text,
+            })
+
+    return pd.DataFrame(review_rows)
+
+
+# ── Exit interview text generation ────────────────────────────────
+
+EXIT_TEMPLATES = {
+    "salary": [
+        "Odcházím hlavně kvůli platu. Po {years} letech jsem pořád na podobné úrovni a jinde mi nabídli výrazně víc. {note}",
+        "Finanční ohodnocení neodpovídá mé práci. {note} Jinak nemám výhrady k týmu.",
+        "Dostal/a jsem nabídku s o {diff}% vyšším platem. Tady nebylo na vyjednávání prostoru. {note}",
+    ],
+    "growth": [
+        "Cítím, že jsem se tu přestal/a rozvíjet. Po {years} letech dělám pořád to samé. {note}",
+        "Chybí mi možnost kariérního růstu. Chtěl/a bych se posunout do vedoucí pozice, ale tady to není reálné. {note}",
+        "Odcházím, protože jsem dostal/a příležitost pracovat na zajímavějších projektech. {note}",
+    ],
+    "work_life_balance": [
+        "Přecházím na pozici s možností home office. Tady to prostě nešlo skloubit s rodinou. {note}",
+        "Potřebuji flexibilnější pracovní dobu. {note} Jinak jsem tu byl/a spokojený/á.",
+        "Dojíždění mi zabírá příliš času. Našel/la jsem práci blíž k domovu. {note}",
+    ],
+    "management": [
+        "Neshodl/a jsem se s vedením oddělení. {note} Komunikace shora dolů nefungovala.",
+        "Změna vedení v posledním roce hodně ovlivnila atmosféru v týmu. {note}",
+        "Chybí mi zpětná vazba a jasné směřování od managementu. {note}",
+    ],
+    "other": [
+        "Stěhuji se do jiného města, takže dojíždění není možné. {note}",
+        "Vracím se ke studiu na plný úvazek. {note} Rád/a bych se sem jednou vrátil/a.",
+        "Dostal/a jsem příležitost v zahraničí, kterou nechci propásnout. {note}",
+    ],
+}
+
+EXIT_NOTES_POS = [
+    "Jinak super kolektiv.",
+    "Děkuji za příležitosti, které jsem tu dostal/a.",
+    "Kolegům budu děkovat za spolupráci.",
+    "Bylo to tu fajn, jen ty podmínky už nestačí.",
+    "",
+]
+EXIT_NOTES_NEG = [
+    "Upřímně, moc mi to tu chybět nebude.",
+    "Doufám, že se situace zlepší pro ostatní kolegy.",
+    "Několik kolegů uvažuje o odchodu ze stejných důvodů.",
+    "",
+]
+
+
+def generate_exit_interviews(df: pd.DataFrame) -> pd.DataFrame:
+    """Generate ~35 exit interview notes, skewed toward Podpora."""
+    from datetime import timedelta
+
+    exit_rows = []
+
+    # Podpora: ~20 exits, others: ~15 total
+    dept_exit_counts = {
+        "Podpora": 20,
+        "Marketing": 3,
+        "Obchod": 4,
+        "HR": 2,
+        "Finance": 2,
+        "Vývoj": 4,
+    }
+
+    # Reason distribution per department
+    dept_reason_weights = {
+        "Podpora": {"salary": 0.40, "growth": 0.30, "work_life_balance": 0.15,
+                     "management": 0.10, "other": 0.05},
+        "Marketing": {"salary": 0.20, "growth": 0.30, "work_life_balance": 0.20,
+                       "management": 0.15, "other": 0.15},
+        "Obchod": {"salary": 0.25, "growth": 0.20, "work_life_balance": 0.15,
+                    "management": 0.20, "other": 0.20},
+        "HR": {"salary": 0.20, "growth": 0.25, "work_life_balance": 0.25,
+               "management": 0.15, "other": 0.15},
+        "Finance": {"salary": 0.15, "growth": 0.20, "work_life_balance": 0.20,
+                     "management": 0.15, "other": 0.30},
+        "Vývoj": {"salary": 0.30, "growth": 0.25, "work_life_balance": 0.15,
+                   "management": 0.15, "other": 0.15},
+    }
+
+    for dept, n_exits in dept_exit_counts.items():
+        dept_mask = df["oddeleni"].isin(
+            [dept, dept.lower(), "Mktg"] if dept == "Marketing" else [dept]
+        )
+        dept_employees = df[dept_mask]
+        if len(dept_employees) < n_exits:
+            n_exits = len(dept_employees)
+
+        selected = dept_employees.sample(n=n_exits, random_state=SEED + hash(dept) % 1000)
+
+        reasons = list(dept_reason_weights[dept].keys())
+        weights = list(dept_reason_weights[dept].values())
+
+        for _, emp in selected.iterrows():
+            reason = RNG.choice(reasons, p=weights)
+            template = RNG.choice(EXIT_TEMPLATES[reason])
+
+            # Compute years roughly from datum_nastupu
+            try:
+                from datetime import datetime
+
+                if "." in str(emp["datum_nastupu"]):
+                    hire = datetime.strptime(str(emp["datum_nastupu"]), "%d.%m.%Y")
+                else:
+                    hire = datetime.strptime(str(emp["datum_nastupu"]), "%Y-%m-%d")
+                years = round((datetime(2025, 6, 1) - hire).days / 365, 1)
+            except (ValueError, TypeError):
+                years = 2.0
+
+            # Pick note based on whether exit is bitter or amicable
+            is_bitter = reason in ("management", "salary") and RNG.random() < 0.4
+            note = RNG.choice(EXIT_NOTES_NEG if is_bitter else EXIT_NOTES_POS)
+
+            text = template.format(
+                years=years,
+                diff=RNG.integers(15, 40),
+                note=note,
+            ).strip()
+
+            # Exit date — sometime in 2024-2025
+            from datetime import date
+
+            exit_date = date(2024, 1, 1) + timedelta(days=int(RNG.integers(0, 540)))
+
+            exit_rows.append({
+                "employee_id": emp["employee_id"],
+                "datum_odchodu": exit_date.strftime("%Y-%m-%d"),
+                "interview_text": text,
+            })
+
+    return pd.DataFrame(exit_rows)
+
+
+def main() -> None:
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    print("Generating employees...")
+    df = generate_employees()
+    print(f"  Clean rows: {len(df)}")
+
+    print("Applying dirt...")
+    df_dirty = apply_dirt(df)
+    print(f"  Dirty rows (with duplicates): {len(df_dirty)}")
+
+    print("Generating reviews...")
+    reviews = generate_reviews(df_dirty)
+    print(f"  Review rows: {len(reviews)}")
+
+    print("Generating exit interviews...")
+    exits = generate_exit_interviews(df_dirty)
+    print(f"  Exit interview rows: {len(exits)}")
+
+    # Save
+    csv_path = OUTPUT_DIR / "datacorp.csv"
+    df_dirty.to_csv(csv_path, index=False)
+    print(f"  Saved: {csv_path}")
+
+    reviews_path = OUTPUT_DIR / "datacorp_reviews.csv"
+    reviews.to_csv(reviews_path, index=False)
+    print(f"  Saved: {reviews_path}")
+
+    exits_path = OUTPUT_DIR / "datacorp_exit_interviews.csv"
+    exits.to_csv(exits_path, index=False)
+    print(f"  Saved: {exits_path}")
+
+    print("\nDone!")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,5 +1,19 @@
 ## Czechitas: AI v datové analýze
 
+### Datasety
+
+#### DataCorp s.r.o. (HR dataset)
+
+Syntetický dataset fiktivní české firmy "DataCorp s.r.o." — zaměstnanecká data pro výuku životního cyklu datové analýzy.
+
+| Soubor | Obsah |
+|--------|-------|
+| `notebooks/datacorp.csv` | Hlavní strukturovaný dataset (~510 řádků, 14 sloupců) — záměrně obsahuje chyby v datech |
+| `notebooks/datacorp_reviews.csv` | Textové hodnocení výkonu (~80 záznamů) — nestrukturovaný text v češtině |
+| `notebooks/datacorp_exit_interviews.csv` | Výstupní rozhovory (~35 záznamů) — nestrukturovaný text v češtině |
+
+Regenerace datasetu: `uv run scripts/generate_datacorp.py`
+
 ### Setup
 
 #### Předpoklady
