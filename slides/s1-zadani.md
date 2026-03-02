@@ -64,7 +64,14 @@ layout: section
 subtitle: "Seznamování a zpřesňování zadání · ~30 minut"
 ---
 
+---
+
 # Samostatná práce 1
+**Seznamte se!**
+- Jak se jmenuju?
+- Odkud jsem?
+- Co dělám, pracuju už v IT nebo datech?
+- Proč tady jsem, co si chci z kurzu odnést
 
 ---
 
