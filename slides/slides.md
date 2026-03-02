@@ -1,0 +1,73 @@
+---
+theme: ./theme
+title: "AI v datové analýze"
+info: "Lifecycle práce datového analytika s využitím AI"
+author: Markéta Hanna, Šimon Podhajský, Dan Rabiencný
+transition: slide-left
+mdc: true
+fonts:
+  sans: Open Sans
+  mono: Source Code Pro
+---
+
+# AI v datové analýze
+
+Lifecycle práce datového analytika s využitím AI
+
+Markéta Hanna · Šimon Podhajský · Dan Rabiencný · Czechitas · Březen 2026
+
+---
+
+# Osnova kurzu
+
+| Sekce | Téma | Lektor/ka |
+|-------|------|-----------|
+| 0 | Úvod do AI a prompt engineering | Šimon |
+| 1 | Porozumění zadání | Markéta |
+| 2 | Porozumění datům (EDA) | Šimon |
+| 3 | Příprava dat | Dan |
+| 4 | Samotná analýza | Šimon |
+| 5 | Prezentace výsledků | Markéta |
+| ⭐ | Bonus: Nástroje a transformery | — |
+
+---
+src: ./s0-intro.md
+---
+
+---
+src: ./s0-teorie.md
+---
+
+---
+src: ./s1-zadani.md
+---
+
+---
+src: ./s2-data.md
+---
+
+---
+src: ./s3-priprava.md
+---
+
+---
+src: ./s4-analyza.md
+---
+
+---
+src: ./s5-prezentace.md
+---
+
+---
+layout: center
+---
+
+# Děkujeme za pozornost!
+
+Markéta Hanna · Šimon Podhajský · Dan Rabiencný
+
+**Czechitas · AI v datové analýze · Březen 2026**
+
+---
+src: ./s6-bonus.md
+---

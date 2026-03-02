@@ -13,3 +13,6 @@ wheels/
 # Virtual environments
 .venv
 .env
+
+# Node (Slidev slides)
+node_modules/

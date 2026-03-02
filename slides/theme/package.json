@@ -1,0 +1,18 @@
+{
+  "name": "slidev-theme-czechitas",
+  "version": "1.0.0",
+  "description": "Czechitas brand theme for Slidev — matching the official lecturer PPTX template",
+  "private": true,
+  "engines": {
+    "slidev": ">=0.50.0"
+  },
+  "slidev": {
+    "colorSchema": "light",
+    "defaults": {
+      "fonts": {
+        "sans": "Open Sans",
+        "mono": "Source Code Pro"
+      }
+    }
+  }
+}
