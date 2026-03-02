@@ -7,6 +7,16 @@ subtitle: "(Pre)processing, čištění, transformace dat"
 
 ---
 
+# Proč si data obecně připravujeme
+
+---
+layout: center
+---
+
+## Otázka na vás - proč si data obecně připravujeme? :)
+
+---
+
 # Proč si data obecně připravujeme?
 
 <v-click>
