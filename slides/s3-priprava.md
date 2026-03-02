@@ -92,6 +92,7 @@ Připravte náš dataset DataCorp na základě předchozích zjištění pro dal
 
 **Úkol 1 - nechte AI navrhnout úpravy:**
 - obecný dotaz: ,,co bys v datech opravil, aby byla data použitelná pro další analýzu?"
+- v další iteraci nechte AI návrhnout what-if scénáře
 
 Nesouhlasíte s první verzí výstupu? Něco vám tam chybí? Iterujte.
 
@@ -106,6 +107,7 @@ Připravte náš dataset DataCorp na základě předchozích zjištění pro dal
 **Úkol 2 - nechte AI navrhnout transformační skript (python) a zkuste si ho nad daty vyzkoušet**
 - použijte vyiterované poznatky od AI z předchozího úkolu
 - existuje požadavek do dat přidat počítaný sloupec `kategorie_mzdy`. Pokud je mzda nižší nebo rovna 35.000 Kč, je to ,,malá mzda", pokud je vyšší než 35.000 Kč a nižší nebo rovna 95.000 Kč, je to ,,střední mzda", pokud je vyšší než 95.000 Kč, je to ,,velká mzda"
+- nechte AI do skriptu zaimplementovat jeden vybraný what-if scénář
 - Pamatujte. chceme správný, optimální a zdokumentovaný kód
 
 Posuďte - **Jak hodnotíte vygenerovaný skript? Dělá, co má? Jak rychle běží?**
