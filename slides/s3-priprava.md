@@ -80,15 +80,40 @@ subtitle: "AI jako pomocník při přípravě dat · ~20 minut"
 
 ---
 
-# Zadání
+# Zadání 
 
-**Use-case: Veterinární klinika se 3 pobočkami ve Středočeském kraji**
+Připravte náš dataset DataCorp na základě předchozích zjištění pro další analýzu:
 
-~5 000 klientů, ~8 000 zvířat, ~40 000 návštěv, 4 roky dat (od roku 2022)
+**Úkol 1 - nechte AI navrhnout úpravy:**
+- obecný dotaz: ,,co bys v datech opravil, aby byla data použitelná pro další analýzu?"
 
-Majitel říká: *„Zdá se mi, že klienti chodí méně často a kliniky nejsou tak vytížené jako dřív. Zjisti, co se děje v datech."*
+Nesouhlasíte s první verzí výstupu? Něco vám tam chybí? Iterujte.
 
-**Úkol:** Využijte AI pro přípravu a vyčištění dat.
+Posuďte - **věříte výstupu / souhlasíte s ním? Proč ano? Proč ne?**
+
+---
+
+# Zadání 
+
+Připravte náš dataset DataCorp na základě předchozích zjištění pro další analýzu:
+
+**Úkol 2 - nechte AI navrhnout transformační skript (python) a zkuste si ho nad daty vyzkoušet**
+- použijte vyiterované poznatky od AI z předchozího úkolu
+- existuje požadavek do dat přidat počítaný sloupec `kategorie_mzdy`. Pokud je mzda nižší nebo rovna 35.000 Kč, je to ,,malá mzda", pokud je vyšší než 35.000 Kč a nižší nebo rovna 95.000 Kč, je to ,,střední mzda", pokud je vyšší než 95.000 Kč, je to ,,velká mzda"
+- Pamatujte. chceme správný, optimální a zdokumentovaný kód
+
+Posuďte - **Jak hodnotíte vygenerovaný skript? Dělá, co má? Jak rychle běží?**
+
+---
+
+# Zadání 
+
+Připravte náš dataset DataCorp na základě předchozích zjištění pro další analýzu:
+
+**Bonusový úkol - zkuste si sami napsat transformační skript, který data připraví do chtěné podoby (python / sql - co vám je příjemnější) a nechte si od AI váš skript zvalidovat z pohledu správnosti a optimálnosti**
+- platí stejné požadavky jako v předchozím úkolu
+
+Posuďte - **Jak hodnotíte návrh na zlepšení skriptu? Přijde vám užitečný?**
 
 ---
 layout: section
