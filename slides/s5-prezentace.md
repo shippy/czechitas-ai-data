@@ -7,14 +7,28 @@ subtitle: "Co jsem z dat dostal/a? (Interpretace)"
 
 ---
 
-# Jak může AI pomoci prezentovat výsledky analýzy
+# Jak může AI pomoci s prezentací výsledků?
 
-- **AI jako oponent** — slabá místa analýzy
-- Interpretace výsledků a její rizika
-- Jaké otázky můžeme dostat
-- Podpořit **storytelling** a navrhnout vizuální metaforu do prezentace
-- Vygenerovat **management summary**
-- Navrhnout **akční kroky**
+🧠 **Oponent**
+→ Najde slabá místa  
+→ Simuluje otázky vedení  
+
+🎯 **Překladatel**
+→ Převádí analýzu do business jazyka  
+→ Pomůže s management summary  
+
+📊 **Storyteller**
+→ Navrhne strukturu a vizuály  
+→ Pomůže vytvořit jasný příběh  
+
+🚀 **Strategický partner**
+→ Navrhne akční kroky  
+→ Upozorní na alternativní interpretace  
+
+---
+
+> AI zlepšuje formu.  
+> Odpovědnost za obsah je na vás.
 
 ---
 layout: section
@@ -27,20 +41,24 @@ subtitle: "AI jako pomocník při prezentaci výsledků analýzy · ~15 minut"
 
 # Zadání
 
-**Prezentace výsledků analýzy z úkolu č. 1**
+## Prezentace výsledků analýzy – DataCorp s.r.o.
 
-Use-case: Veterinární klinika se 3 pobočkami ve Středočeském kraji
+**Cíl:** Srozumitelně komunikovat závěry analýzy vedení.
 
-Z vaší analýzy vyplynulo:
+Vyberte si otázku, kterou jste analyzovaly v předchozí sekci.
 
-- Průměrný počet návštěv na klienta klesl z 2,4 ročně (2022) na 1,8 (2025)
-- Pokles je výraznější u mladších zvířat (1–3 roky)
-- Jedna pobočka vykazuje výraznější pokles než ostatní
-- Sezónnost zůstává podobná (jaro silné, léto slabší)
-- Průměrná hodnota návštěvy mírně roste (inflace / dražší úkony)
-- Retence klientů meziročně klesla o 8 %
+1. „Existuje rozdíl v platech mezi odděleními?"
+2. „Souvisí délka zaměstnání s hodnocením výkonu?"
+3. „Liší se platy podle vzdělání?"
+4. Vaše vlastní otázka ze sekce 2
 
-**Úkol:** Využijte AI pro přípravu na prezentaci výsledků.
+**Jaká jsou vaše zjištění z dat?**
+
+**Úkol:** S  využitím AI připravte krátkou prezentaci pro HR Business Partnera (a potenciálně vedení), která:
+- Stručně shrne analytickou otázku
+- Jasně představí hlavní zjištění, formulace v business jazyce a zjednodušení technických vysvětlení
+- Upozorní na omezení dat a interpretace
+- Navrhne další možné kroky
 
 ---
 layout: section
