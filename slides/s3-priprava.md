@@ -6,10 +6,6 @@ subtitle: "(Pre)processing, čištění, transformace dat"
 # Sekce 3: Příprava dat
 
 ---
-
-# Proč si data obecně připravujeme
-
----
 layout: center
 ---
 
