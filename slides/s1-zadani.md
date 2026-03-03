@@ -19,7 +19,7 @@ V tomto kurzu budeme vycházet z logiky tradiční metodologie **CRISP-DM**, kte
 
 ---
 
-# Jak se naučíme přemýšlet ještě než se podíváme na data?
+# Jak se naučíme přemýšlet, ještě než se podíváme na data?
 
 **V této fázi rozvíjíme schopnost:**
 - strukturovat analytický problém
@@ -51,13 +51,14 @@ V tomto kurzu budeme vycházet z logiky tradiční metodologie **CRISP-DM**, kte
 
 ---
 layout: section
-subtitle: "Seznamování a zpřesňování zadání · ~30 minut"
----
-
+subtitle: "Seznamování a zpřesňování zadání· ~30 minut"
 ---
 
 # Samostatná práce 1
-**Seznamte se!**
+
+---
+
+# Seznamte se!
 - Jak se jmenuju?
 - Odkud jsem?
 - Co dělám, pracuju už v IT nebo datech?
