@@ -12,24 +12,14 @@ subtitle: "Co se po mně vlastně chce?"
 Každý datový nebo AI projekt má svůj životní cyklus.
 V tomto kurzu budeme vycházet z logiky tradiční metodologie **CRISP-DM**, která strukturuje analytickou práci od pochopení business cíle až po interpretaci výsledků.
 
-Fáze CRISP-DM:
-- **Business Understanding**
-- **Data Understanding**
-- Data Preparation
-- Modeling
-- Evaluation
-- Deployment
-
-
----
-
-# Jak se naučíme přemýšlet ještě než se podíváme na data?
-
 <div class="icon-grid cols-2" style="margin-top:1.5rem">
   <div class="icon-card"><div class="icon">💼</div><div class="label">Business Understanding<br><small style="font-weight:300;color:#666">Jaký problém má analýza skutečně řešit? Jaké rozhodnutí má podpořit?</small></div></div>
   <div class="icon-card"><div class="icon">🔢</div><div class="label">Data Understanding<br><small style="font-weight:300;color:#666">Jak tento problém převést do měřitelné a analyticky uchopitelné podoby?</small></div></div>
 </div>
 
+---
+
+# Jak se naučíme přemýšlet ještě než se podíváme na data?
 
 **V této fázi rozvíjíme schopnost:**
 - strukturovat analytický problém
