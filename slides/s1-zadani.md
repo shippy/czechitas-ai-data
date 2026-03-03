@@ -81,7 +81,7 @@ subtitle: "Seznamování a zpřesňování zadání · ~30 minut"
 
 HR Business Partner: *„V rámci přípravy podkladů pro vedení potřebujeme vyhodnotit, zda současné mzdové nastavení napříč odděleními odpovídá jejich personální struktuře. Zaměřte se zejména na to, zda případné rozdíly v odměňování lze vysvětlit faktory jako délka zaměstnání, vzdělání nebo výkon zaměstnance."*
 
-Dataset obsahuje záznamy o jednotlivých zaměstnancích:
+Dostanete dataset se záznamy jednotlivých zaměstnanců:
 - zařazení do oddělení
 - výše mzdy
 - délka zaměstnání ve firmě
@@ -96,10 +96,10 @@ Dataset obsahuje záznamy o jednotlivých zaměstnancích:
 
 1) Jak byste samy postupovaly pro zpřesnění zadání?
    
-2) Použijte AI jako sparing partnera:
-- Nechte si pomoci se strukturováním analytického plánu
+2) Použijte ChatGPT jako sparing partnera:
+- Nechte si pomoci vygenerovat doplňující otázky, navrhnout metriky, formulovat hypotézy
 
-3) Porovnejte výstup AI s vaším návrhem
+3) Porovnejte výstup ChatGPT s vaším návrhem
 - Co AI doplnila? Kde naopak přemýšlí příliš obecně?
 
 ---
