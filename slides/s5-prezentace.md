@@ -54,12 +54,16 @@ Vyberte si otázku, kterou jste analyzovaly v předchozí sekci.
 
 **Jaká jsou vaše zjištění z dat?**
 
-**Úkol:** S  využitím AI připravte krátkou prezentaci pro HR Business Partnera (a potenciálně vedení), která:
+---
+
+# Úkol
+
+**S využitím ChatGPT připravte krátkou prezentaci pro HR Business Partnera a vedení firmy DataCorp s.r.o.** 
 - Stručně shrne analytickou otázku
 - Jasně představí hlavní zjištění, formulace v business jazyce a zjednodušení technických vysvětlení
 - Upozorní na omezení dat a interpretace
 - Navrhne další možné kroky
-
+  
 ---
 layout: section
 ---
