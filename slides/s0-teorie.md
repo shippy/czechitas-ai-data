@@ -70,6 +70,26 @@ Pro nás důležité: LLM umí **rozumět textu** a **generovat text** (i kód, 
 
 ---
 
+# Halucinace
+
+LLM nemá „paměť na fakta" — generuje text, který *vypadá* pravděpodobně. Někdy si proto věci vymyslí.
+
+<v-clicks>
+
+- Vymyšlená čísla a statistiky, které znějí přesvědčivě
+- Neexistující zdroje a citace
+- Sebevědomé odpovědi na otázky, kde nezná odpověď
+
+</v-clicks>
+
+<v-click>
+
+<div class="callout warning">⚠️ Čím plynuleji AI mluví, tím snáz tomu uvěříte. Vždy ověřujte klíčová tvrzení.</div>
+
+</v-click>
+
+---
+
 # Kontextové okno
 
 **Kontextové okno** = vše, co LLM „vidí" při generování odpovědi.
