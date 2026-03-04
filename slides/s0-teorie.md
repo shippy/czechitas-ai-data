@@ -38,7 +38,7 @@ Pro nás důležité: LLM umí **rozumět textu** a **generovat text** (i kód, 
 </div>
 <div style="flex:1">
 
-1. **Unsupervised learning** — LLM přečte obrovské množství textu z internetu
+1. **Self-supervised learning** — LLM přečte obrovské množství textu z internetu a učí se predikovat další slovo
 
 2. **Supervised fine-tuning** — lidé ho naučí odpovídat ve formátu otázka → odpověď
 
