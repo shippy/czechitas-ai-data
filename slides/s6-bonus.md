@@ -20,7 +20,7 @@ subtitle: "Kam se podívat dál"
 
 # Custom GPT — vlastní AI pomocníček
 
-- Dedikovaný GPT na specifickou oblast (jen s placeným ChatGPT Plus/Pro)
+- Dedikovaný GPT na specifickou oblast (jen s placeným ChatGPT Plus/Pro/Go)
 - Můžete mu dát **vlastní instrukce** (systémový prompt) a **vlastní dokumenty**
 - Lze sdílet s kolegy nebo komunitou
 

@@ -54,7 +54,7 @@ Pro nás důležité: LLM umí **rozumět textu** a **generovat text** (i kód, 
 <div style="display:flex;gap:2rem;align-items:flex-start;margin-top:1rem">
 <div style="flex:1">
 
-- LLM **přečetl celý internet** před rokem a půl a pamatuje si ho, *zhruba*
+- LLM **přečetl celý internet** před několika měsíci a pamatuje si ho, *zhruba*
 
 - Vy teď můžete do jeho **kontextového okna** napsat, co vás trápí
 
@@ -98,7 +98,7 @@ Pro nás důležité: LLM umí **rozumět textu** a **generovat text** (i kód, 
 
 | Model | Výrobce | Silné stránky |
 |-------|---------|---------------|
-| **ChatGPT** (GPT-4.5) | OpenAI | Nejrozšířenější, dobrý all-rounder |
+| **ChatGPT** (GPT-5.2/5.3) | OpenAI | Nejrozšířenější, dobrý all-rounder |
 | **Claude** | Anthropic | Dlouhý kontext, pečlivé instrukce |
 | **Gemini** | Google | Integrace s Google ekosystémem |
 | **Llama** | Meta | Open-source, lokální běh |
