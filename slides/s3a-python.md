@@ -103,15 +103,14 @@ a = Counter(count=1, kind="puppy", members=["Punťa"])
 - Typicky přes **SDK** v konkrétním programovacím jazyku (např. Python)
 - Vyžaduje tzv. **API klíč** pro danou službu
 
-```python {1|2|3-7|all}
-from openai import OpenAI
-client = OpenAI()
-cover_letter = client.chat.completions.create(
-    model="gpt-5-mini",
+```python {1|2|3-6|all}
+import instructor
+client = instructor.from_provider("openai/gpt-5-mini")
+cover_letter = client.create(
     messages=[
         {"role": "user",
          "content": "Napiš mi motivační dopis do Bradavic."}
-    ])
+    ], response_model=str)
 ```
 
 ---
@@ -128,7 +127,7 @@ class User(BaseModel):
     name: str = Field(..., description="All parts of name")
     age: float
 
-user = client.chat.completions.create(
+user = client.create(
     "Jmenuji se Šimon a je mi 33 let", response_model=User)
 # => User(name="Šimon", age=33.0)
 ```
@@ -163,7 +162,7 @@ import asyncio
 SEM = asyncio.Semaphore(5)          # max 5 požadavků najednou
 async def extract(text):
     async with SEM:                 # "počkej, až budeš na řadě"
-        return await async_client.chat.completions.create(...)
+        return await async_client.create(...)
 
 results = await asyncio.gather(*[   # spustí vše najednou
     extract(row["text"]) for _, row in df.iterrows()
