@@ -13,7 +13,7 @@ subtitle: "Trocha teorie, než se pustíme do praxe"
 <div style="flex:3">
 <div class="icon-grid">
   <div class="icon-card"><div class="icon">🤖</div><div class="label">Strojové učení (ML)<br><small style="font-weight:300;color:#666">Algoritmy trénované na datech</small></div></div>
-  <div class="icon-card"><div class="icon">🧠</div><div class="label">Hluboké učení (DL)<br><small style="font-weight:300;color:#666">Neuronové sítě napodobující mozek</small></div></div>
+  <div class="icon-card"><div class="icon">🧠</div><div class="label">Hluboké učení (DL)<br><small style="font-weight:300;color:#666">Neuronové sítě inspirované mozkem</small></div></div>
   <div class="icon-card"><div class="icon">💬</div><div class="label">Velké jazykové modely (LLM)<br><small style="font-weight:300;color:#666">GPT, Claude, Gemini…</small></div></div>
 </div>
 </div>
@@ -58,7 +58,7 @@ Pro nás důležité: LLM umí **rozumět textu** a **generovat text** (i kód, 
 
 - Vy teď můžete do jeho **kontextového okna** napsat, co vás trápí
 
-- Do kontextového okna můžou přidat obsah i **nástroje** — vyhledávání, nahraný soubor, výsledek kódu
+- Obsah do okna přidávají i **nástroje** — vyhledávání, nahraný soubor, výsledek kódu
 
 - LLM statisticky predikuje **nejpravděpodobnější další slovo**
 

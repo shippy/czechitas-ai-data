@@ -35,7 +35,7 @@ layout: section
 subtitle: "AI jako pomocník při prezentaci výsledků analýzy · ~15 minut"
 ---
 
-# Samostatná práce 5
+# Samostatná práce 5: Prezentace výsledků
 
 ---
 
@@ -58,11 +58,11 @@ Vyberte si otázku, kterou jste analyzovaly v předchozí sekci.
 
 # Úkol
 
-**S využitím ChatGPT připravte krátkou prezentaci pro HR Business Partnera a vedení firmy DataCorp s.r.o.** 
-- Stručně shrne analytickou otázku
-- Jasně představí hlavní zjištění, formulace v business jazyce a zjednodušení technických vysvětlení
-- Upozorní na omezení dat a interpretace
-- Navrhne další možné kroky
+**S využitím ChatGPT připravte krátkou prezentaci pro HR Business Partnera a vedení firmy DataCorp s.r.o. Prezentace by měla:**
+- Stručně shrnout analytickou otázku
+- Jasně představit hlavní zjištění v business jazyce
+- Upozornit na omezení dat a interpretace
+- Navrhnout další možné kroky
   
 ---
 layout: section

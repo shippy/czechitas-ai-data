@@ -140,7 +140,7 @@ Mapa chybějících hodnot — kolik, kde, a je v tom vzorec?
 
 <v-click>
 
-Histogram + komentář od AI. Jsou tam outliery? Clustery?
+Histogram + komentář od AI. Jsou tam odlehlé hodnoty (outliery)? Shluky?
 
 </v-click>
 

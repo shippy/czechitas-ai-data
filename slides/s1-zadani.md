@@ -10,7 +10,7 @@ subtitle: "Co se po mně vlastně chce?"
 # Porozumění zadání analýzy
 
 Každý datový nebo AI projekt má svůj životní cyklus.
-V tomto kurzu budeme vycházet z logiky tradiční metodologie **CRISP-DM**, která strukturuje analytickou práci od pochopení business cíle až po interpretaci výsledků.
+V tomto kurzu budeme vycházet z logiky tradiční metodologie **CRISP-DM**, která strukturuje analytickou práci od pochopení business cíle až po nasazení výsledků. Dnes z ní použijeme hlavně první fáze.
 
 <div class="icon-grid cols-2" style="margin-top:1.5rem">
   <div class="icon-card"><div class="icon">💼</div><div class="label">Business Understanding<br><small style="font-weight:300;color:#666">Jaký problém má analýza skutečně řešit? Jaké rozhodnutí má podpořit?</small></div></div>
@@ -25,7 +25,7 @@ V tomto kurzu budeme vycházet z logiky tradiční metodologie **CRISP-DM**, kte
 - strukturovat analytický problém
 - pracovat s nejistotou a neúplnými informacemi
 - definovat datové požadavky
-- formulovat pracovní hypotézy ještě před seznámením se z daty
+- formulovat pracovní hypotézy ještě před seznámením se s daty
 
 ---
 
@@ -51,10 +51,10 @@ V tomto kurzu budeme vycházet z logiky tradiční metodologie **CRISP-DM**, kte
 
 ---
 layout: section
-subtitle: "Seznamování a zpřesňování zadání· ~30 minut"
+subtitle: "Seznamování a zpřesňování zadání · ~30 minut"
 ---
 
-# Samostatná práce 1
+# Samostatná práce 1: Porozumění zadání
 
 ---
 
@@ -87,7 +87,7 @@ Dostanete dataset se záznamy jednotlivých zaměstnanců:
 
 1) Jak byste samy postupovaly pro zpřesnění zadání?
    
-2) Použijte ChatGPT jako sparing partnera:
+2) Použijte ChatGPT jako sparring partnera:
 - Nechte si pomoci vygenerovat doplňující otázky, navrhnout metriky, formulovat hypotézy
 
 3) Porovnejte výstup ChatGPT s vaším návrhem
