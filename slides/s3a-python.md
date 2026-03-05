@@ -107,7 +107,7 @@ a = Counter(count=1, kind="puppy", members=["Punťa"])
 from openai import OpenAI
 client = OpenAI()
 cover_letter = client.chat.completions.create(
-    model="gpt-5-main-mini",
+    model="gpt-5-mini",
     messages=[
         {"role": "user",
          "content": "Napiš mi motivační dopis do Bradavic."}
