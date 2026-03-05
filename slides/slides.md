@@ -5,6 +5,8 @@ info: "Lifecycle práce datového analytika s využitím AI"
 author: Markéta Hanna, Šimon Podhajský, Dan Rabiencný
 transition: slide-left
 mdc: true
+shiki:
+  theme: github-light
 fonts:
   sans: Open Sans
   mono: Source Code Pro
@@ -48,6 +50,10 @@ src: ./s2-data.md
 
 ---
 src: ./s3-priprava.md
+---
+
+---
+src: ./s3a-python.md
 ---
 
 ---
