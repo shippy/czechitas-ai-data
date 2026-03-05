@@ -151,3 +151,35 @@ user = client.chat.completions.create(
 <div class="callout">💡 Bylo toho moc? Nevadí — zeptejte se GPT pomocníčka nebo nás!</div>
 
 </v-click>
+
+---
+
+# Bonus: Async (paralelní zpracování)
+
+Když zpracováváme **desítky nebo stovky** záznamů, nechceme čekat na každý zvlášť:
+
+```python {1-4|6-8|all}
+import asyncio
+SEM = asyncio.Semaphore(5)          # max 5 požadavků najednou
+async def extract(text):
+    async with SEM:                 # "počkej, až budeš na řadě"
+        return await async_client.chat.completions.create(...)
+
+results = await asyncio.gather(*[   # spustí vše najednou
+    extract(row["text"]) for _, row in df.iterrows()
+])
+```
+
+<v-clicks>
+
+- **`async/await`** — „tohle může běžet na pozadí, zatímco čekám na odpověď"
+- **`Semaphore`** — omezuje počet souběžných požadavků (abychom nepřetížili API)
+- **`asyncio.gather`** — spustí všechny úkoly najednou a počká na výsledky
+
+</v-clicks>
+
+<v-click>
+
+<div class="callout">💡 Nemusíte tomu rozumět do detailu — stačí vědět, že to existuje, a zkopírovat vzor z notebooku.</div>
+
+</v-click>
