@@ -105,7 +105,7 @@ Posuďte - **věříte výstupu / souhlasíte s ním? Proč ano? Proč ne?**
 Připravte náš dataset DataCorp na základě předchozích zjištění pro další analýzu:
 
 **Úkol 2 - nechte AI navrhnout transformační skript (python) a zkuste si ho nad daty vyzkoušet**
-- použijte vyiterované poznatky od AI z předchozího úkolu
+- použijte vyiterované poznatky od AI z úkolu 1 v této sekci
 - existuje požadavek do dat přidat počítaný sloupec `kategorie_mzdy`. Pokud je mzda nižší nebo rovna 35.000 Kč, je to ,,malá mzda", pokud je vyšší než 35.000 Kč a nižší nebo rovna 95.000 Kč, je to ,,střední mzda", pokud je vyšší než 95.000 Kč, je to ,,velká mzda"
 - nechte AI do skriptu zaimplementovat jeden vybraný what-if scénář
 - Pamatujte. chceme správný, optimální a zdokumentovaný kód
@@ -119,7 +119,7 @@ Posuďte - **Jak hodnotíte vygenerovaný skript? Dělá, co má? Jak rychle bě
 Připravte náš dataset DataCorp na základě předchozích zjištění pro další analýzu:
 
 **Bonusový úkol - zkuste si sami napsat transformační skript, který data připraví do chtěné podoby (python / sql - co vám je příjemnější) a nechte si od AI váš skript zvalidovat z pohledu správnosti a optimálnosti**
-- platí stejné požadavky jako v předchozím úkolu
+- platí stejné požadavky jako v předchozím úkolu v této sekci
 
 Posuďte - **Jak hodnotíte návrh na zlepšení skriptu? Přijde vám užitečný?**
 
