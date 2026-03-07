@@ -2,11 +2,11 @@
 layout: bio
 image: /marketa-hanna.jpeg
 name: "Markéta Hanna"
-subtitle: "Lektorka · Data & AI"
+subtitle: "Spoluautorka & koučka · Data & AI"
 ---
 
 - Senior IT Analyst @ T-Mobile CZ
-- Lektorka Czechitas kurzů
+- Spoluautorka kurzu a koučka
 
 ::qr::
 <QRCode url="https://www.linkedin.com/in/mark%C3%A9ta-hanna-05019941/" :size="120">LinkedIn</QRCode>

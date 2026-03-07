@@ -25,11 +25,11 @@ Markéta Hanna · Šimon Podhajský · Dan Rabiencný · Czechitas · Březen 20
 | Sekce | Téma | Lektor/ka |
 |-------|------|-----------|
 | 0 | Úvod do AI a prompt engineering | Šimon |
-| 1 | Porozumění zadání | Markéta |
+| 1 | Porozumění zadání | Dan |
 | 2 | Porozumění datům (EDA) | Šimon |
 | 3 | Příprava dat | Dan |
 | 4 | Samotná analýza | Šimon |
-| 5 | Prezentace výsledků | Markéta |
+| 5 | Prezentace výsledků | Dan |
 | ⭐ | Bonus: Nástroje a transformery | — |
 
 ---
