@@ -3,6 +3,7 @@ theme: ./theme
 title: "AI v datové analýze"
 info: "Lifecycle práce datového analytika s využitím AI"
 author: Markéta Hanna, Šimon Podhajský, Dan Rabiencný
+favicon: /favicon.png
 transition: slide-left
 mdc: true
 shiki:
