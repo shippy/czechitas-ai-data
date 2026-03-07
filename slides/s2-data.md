@@ -54,6 +54,23 @@ AI zrychluje mechaniku — ale ten checklist se nemění.
 **Vy pořád musíte vědět, na co se ptát a kdy odpověď nevoní.**
 
 ---
+
+# Než nahrajete data do AI
+
+<div class="icon-grid cols-2">
+  <div class="icon-card"><div class="icon">🔒</div><div class="label">Co se s daty stane?<br><small style="font-weight:300;color:#666">ChatGPT Free/Plus data může použít k trénování modelu</small></div></div>
+  <div class="icon-card"><div class="icon">🏢</div><div class="label">Firemní data<br><small style="font-weight:300;color:#666">Citlivá data (platy, hodnocení) nahrávejte jen přes firemní plán (Team/Enterprise)</small></div></div>
+  <div class="icon-card"><div class="icon">🛡️</div><div class="label">Anonymizace<br><small style="font-weight:300;color:#666">Odstraňte jména, rodná čísla a identifikátory, než data nahrajete</small></div></div>
+  <div class="icon-card"><div class="icon">⚙️</div><div class="label">Nastavení<br><small style="font-weight:300;color:#666">V ChatGPT: Settings → Data Controls → vypněte trénování na vašich datech</small></div></div>
+</div>
+
+<v-click>
+
+Dnes pracujeme s **fiktivním datasetem** — v praxi toto řešte s IT oddělením.
+
+</v-click>
+
+---
 layout: section
 ---
 
@@ -123,7 +140,7 @@ Mapa chybějících hodnot — kolik, kde, a je v tom vzorec?
 
 <v-click>
 
-Histogram + komentář od AI. Jsou tam outliery? Clustery?
+Histogram + komentář od AI. Jsou tam odlehlé hodnoty (outliery)? Shluky?
 
 </v-click>
 

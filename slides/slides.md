@@ -5,6 +5,8 @@ info: "Lifecycle práce datového analytika s využitím AI"
 author: Markéta Hanna, Šimon Podhajský, Dan Rabiencný
 transition: slide-left
 mdc: true
+shiki:
+  theme: github-light
 fonts:
   sans: Open Sans
   mono: Source Code Pro
@@ -51,6 +53,10 @@ src: ./s3-priprava.md
 ---
 
 ---
+src: ./s3a-python.md
+---
+
+---
 src: ./s4-analyza.md
 ---
 
@@ -62,11 +68,29 @@ src: ./s5-prezentace.md
 layout: center
 ---
 
+# Zpětná vazba
+
+Budeme rádi za vaši zpětnou vazbu!
+
+<QRCode url="https://moje.czechitas.cz/cs/zpetna-vazba/7942-ai-v-datove-analyze" :size="250">Zpětná vazba</QRCode>
+
+---
+layout: center
+---
+
 # Děkujeme za pozornost!
 
 Markéta Hanna · Šimon Podhajský · Dan Rabiencný
 
 **Czechitas · AI v datové analýze · Březen 2026**
+
+<QRCode url="https://moje.czechitas.cz/cs/zpetna-vazba/7942-ai-v-datove-analyze" :size="150">Zpětná vazba</QRCode>
+
+---
+layout: center
+---
+
+<img src="/czechitas-heart-hands.png" class="h-80 mx-auto" />
 
 ---
 src: ./s6-bonus.md

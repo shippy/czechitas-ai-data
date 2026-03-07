@@ -20,7 +20,7 @@ subtitle: "Kam se podívat dál"
 
 # Custom GPT — vlastní AI pomocníček
 
-- Dedikovaný GPT na specifickou oblast (jen s placeným ChatGPT Plus/Pro)
+- Dedikovaný GPT na specifickou oblast (jen s placeným ChatGPT Plus/Pro/Go)
 - Můžete mu dát **vlastní instrukce** (systémový prompt) a **vlastní dokumenty**
 - Lze sdílet s kolegy nebo komunitou
 
@@ -160,3 +160,13 @@ GPT = **G**enerative **P**retrained **T**ransformer — stojí na decoderech nav
 
 </div>
 </div>
+
+---
+layout: center
+---
+
+# Zpětná vazba
+
+Budeme rádi za vaši zpětnou vazbu!
+
+<QRCode url="https://moje.czechitas.cz/cs/zpetna-vazba/7942-ai-v-datove-analyze" :size="250">Zpětná vazba</QRCode>

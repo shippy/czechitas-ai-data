@@ -82,11 +82,11 @@ layout: section
 subtitle: "AI jako pomocník při přípravě dat · ~20 minut"
 ---
 
-# Samostatná práce 3
+# Samostatná práce 3: Příprava dat
 
 ---
 
-# Zadání 
+# Zadání
 
 Připravte náš dataset DataCorp na základě předchozích zjištění pro další analýzu:
 
@@ -108,7 +108,7 @@ Připravte náš dataset DataCorp na základě předchozích zjištění pro dal
 - použijte vyiterované poznatky od AI z úkolu 1 v této sekci
 - existuje požadavek do dat přidat počítaný sloupec `kategorie_mzdy`. Pokud je mzda nižší nebo rovna 35.000 Kč, je to ,,malá mzda", pokud je vyšší než 35.000 Kč a nižší nebo rovna 95.000 Kč, je to ,,střední mzda", pokud je vyšší než 95.000 Kč, je to ,,velká mzda"
 - nechte AI do skriptu zaimplementovat jeden vybraný what-if scénář
-- Pamatujte. chceme správný, optimální a zdokumentovaný kód
+- Pamatujte: chceme správný, optimální a zdokumentovaný kód
 
 Posuďte - **Jak hodnotíte vygenerovaný skript? Dělá, co má? Jak rychle běží?**
 

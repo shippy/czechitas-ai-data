@@ -158,6 +158,7 @@
 .slidev-layout pre {
   font-family: 'Source Code Pro', monospace;
   border-radius: 8px;
+  font-size: 1.3rem;
 }
 
 /* ── Conversation / chat pattern ──

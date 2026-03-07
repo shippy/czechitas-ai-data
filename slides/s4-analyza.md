@@ -64,6 +64,25 @@ a
 
 ---
 
+# Jak ověřit, co AI spočítalo
+
+<v-clicks>
+
+- **Zkontrolujte kód** — požádejte AI: „Vysvětli mi krok po kroku, co tento kód dělá"
+- **Spot-check čísla** — vezměte 2–3 řádky a spočítejte ručně, jestli sedí
+- **Porovnejte výstupy** — zkuste stejný dotaz v jiném modelu nebo jinak formulovaný
+- **Ověřte okrajové případy** — co když je hodnota nulová, chybějící nebo extrémní?
+
+</v-clicks>
+
+<v-click>
+
+<div class="callout">💡 Nemusíte rozumět každému řádku kódu. Stačí umět ověřit, že výsledek dává smysl.</div>
+
+</v-click>
+
+---
+
 # Proč nestačí první odpověď
 
 <div class="chat-prompt">Existuje rozdíl v platech mezi odděleními?</div>

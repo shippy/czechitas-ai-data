@@ -13,7 +13,7 @@ subtitle: "Trocha teorie, než se pustíme do praxe"
 <div style="flex:3">
 <div class="icon-grid">
   <div class="icon-card"><div class="icon">🤖</div><div class="label">Strojové učení (ML)<br><small style="font-weight:300;color:#666">Algoritmy trénované na datech</small></div></div>
-  <div class="icon-card"><div class="icon">🧠</div><div class="label">Hluboké učení (DL)<br><small style="font-weight:300;color:#666">Neuronové sítě napodobující mozek</small></div></div>
+  <div class="icon-card"><div class="icon">🧠</div><div class="label">Hluboké učení (DL)<br><small style="font-weight:300;color:#666">Neuronové sítě inspirované mozkem</small></div></div>
   <div class="icon-card"><div class="icon">💬</div><div class="label">Velké jazykové modely (LLM)<br><small style="font-weight:300;color:#666">GPT, Claude, Gemini…</small></div></div>
 </div>
 </div>
@@ -38,7 +38,7 @@ Pro nás důležité: LLM umí **rozumět textu** a **generovat text** (i kód, 
 </div>
 <div style="flex:1">
 
-1. **Unsupervised learning** — LLM přečte obrovské množství textu z internetu
+1. **Self-supervised learning** — LLM přečte obrovské množství textu z internetu a učí se predikovat další slovo
 
 2. **Supervised fine-tuning** — lidé ho naučí odpovídat ve formátu otázka → odpověď
 
@@ -54,11 +54,11 @@ Pro nás důležité: LLM umí **rozumět textu** a **generovat text** (i kód, 
 <div style="display:flex;gap:2rem;align-items:flex-start;margin-top:1rem">
 <div style="flex:1">
 
-- LLM **přečetl celý internet** před rokem a půl a pamatuje si ho, *zhruba*
+- LLM **přečetl celý internet** před několika měsíci a pamatuje si ho, *zhruba*
 
 - Vy teď můžete do jeho **kontextového okna** napsat, co vás trápí
 
-- Do kontextového okna můžou přidat obsah i **nástroje** — vyhledávání, nahraný soubor, výsledek kódu
+- Obsah do okna přidávají i **nástroje** — vyhledávání, nahraný soubor, výsledek kódu
 
 - LLM statisticky predikuje **nejpravděpodobnější další slovo**
 
@@ -67,6 +67,26 @@ Pro nás důležité: LLM umí **rozumět textu** a **generovat text** (i kód, 
 <img src="/context-window.png" class="w-full rounded-lg" />
 </div>
 </div>
+
+---
+
+# Halucinace
+
+LLM nemá „paměť na fakta" — generuje text, který *vypadá* pravděpodobně. Někdy si proto věci vymyslí.
+
+<v-clicks>
+
+- Vymyšlená čísla a statistiky, které znějí přesvědčivě
+- Neexistující zdroje a citace
+- Sebevědomé odpovědi na otázky, kde nezná odpověď
+
+</v-clicks>
+
+<v-click>
+
+<div class="callout warning">⚠️ Čím plynuleji AI mluví, tím snáz tomu uvěříte. Vždy ověřujte klíčová tvrzení.</div>
+
+</v-click>
 
 ---
 
@@ -98,7 +118,7 @@ Pro nás důležité: LLM umí **rozumět textu** a **generovat text** (i kód, 
 
 | Model | Výrobce | Silné stránky |
 |-------|---------|---------------|
-| **ChatGPT** (GPT-4.5) | OpenAI | Nejrozšířenější, dobrý all-rounder |
+| **ChatGPT** (GPT-5.4) | OpenAI | Nejrozšířenější, dobrý all-rounder |
 | **Claude** | Anthropic | Dlouhý kontext, pečlivé instrukce |
 | **Gemini** | Google | Integrace s Google ekosystémem |
 | **Llama** | Meta | Open-source, lokální běh |
