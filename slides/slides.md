@@ -83,7 +83,7 @@ layout: center
 
 Markéta Hanna · Šimon Podhajský · Dan Rabiencný
 
-**Czechitas · AI v datové analýze · Březen 2026**
+**Czechitas · AI v datové analýze · Květen 2026**
 
 <QRCode url="https://moje.czechitas.cz/cs/zpetna-vazba/7942-ai-v-datove-analyze" :size="150">Zpětná vazba</QRCode>
 
