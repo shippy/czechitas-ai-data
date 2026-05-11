@@ -39,7 +39,8 @@ Od lektora získejte klíč k OpenAI API nebo si jej [vlastnoručně opatřete z
 #### V Google Colab
 
 1. Otevřete daný notebook přímo v Google Colab:
-    - [Úkol 3](https://colab.research.google.com/github/shippy/czechitas-ai-data/blob/main/notebooks/assignment-03.ipynb)
+    - [Úkol 3c](https://colab.research.google.com/github/shippy/czechitas-ai-data/blob/main/notebooks/assignment-03c.ipynb)
+    - (Notebooky `assignment-03.ipynb` a `assignment-03b.ipynb` jsou deprecated a v aktivní verzi kurzu se nepoužívají.)
 2. Spusťte si notebook v prohlížeči. Notebook by měl rozpoznat, že běží v Google Colab, a automaticky si doinstalovat všechny potřebné balíčky.
 3. Klikněte na tlačítko "Secrets" v levé liště a přidejte předtím vytvořený API klíč do proměnné `OPENAI_API_KEY` - přes "+ Add new secret"
 
@@ -61,5 +62,5 @@ OPENAI_API_KEY="váš-api-klíč"
 1. Otevřete si notebook ve VSCode. Alternativně si spusťte notebook v prohlížeči:
 
 ```bash
-uv run --with jupyter jupyter lab notebooks/assignment-03.ipynb
+uv run --with jupyter jupyter lab notebooks/assignment-03c.ipynb
 ```
