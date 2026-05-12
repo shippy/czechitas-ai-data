@@ -260,7 +260,7 @@ def build_salary_history(universe: pd.DataFrame) -> pd.DataFrame:
             hire = pd.to_datetime(emp["datum_nastupu"])
         except (ValueError, TypeError):
             hire = pd.Timestamp("2020-01-01")
-        current_salary = float(emp["plat"]) if pd.notna(emp.get("plat")) else 50_000.0
+        current_salary = int(emp["plat"]) if pd.notna(emp.get("plat")) else 50_000
         # Reconstruct an earlier starting salary, then walk forward to current_salary.
         # Each event dates between hire and the Q1 2026 snapshot cutoff.
         cutoff = pd.Timestamp("2026-04-01")
@@ -269,7 +269,7 @@ def build_salary_history(universe: pd.DataFrame) -> pd.DataFrame:
             hire + pd.Timedelta(days=int(RNG.integers(30, max(31, span_days))))
             for _ in range(n_events)
         ])
-        prev = current_salary - sum(RNG.integers(2_000, 8_000) for _ in range(n_events))
+        prev = current_salary - int(sum(RNG.integers(2_000, 8_000) for _ in range(n_events)))
         for d in dates:
             raise_amt = int(RNG.integers(2_000, 8_000))
             new_salary = prev + raise_amt
@@ -350,8 +350,8 @@ def apply_dirt_salary_history(df: pd.DataFrame, main_df: pd.DataFrame) -> pd.Dat
         df = pd.concat([df, pd.DataFrame([{
             "employee_id": emp_id,
             "datum_zmeny": backdate.strftime("%Y-%m-%d"),
-            "plat_pred": rows.iloc[0]["plat_pred"],
-            "plat_po": float(rows.iloc[0]["plat_pred"]) - 2000,
+            "plat_pred": int(rows.iloc[0]["plat_pred"]),
+            "plat_po": int(float(rows.iloc[0]["plat_pred"]) - 2000),
             "duvod": "correction",
         }])], ignore_index=True)
 
