@@ -102,3 +102,11 @@ def test_org_chart_shape_and_cycles() -> None:
         if parent.get(mgr) == emp_id:
             cycles += 1
     assert cycles >= 2  # 3 planted, expect to detect at least 2
+
+
+def test_tickets_shape() -> None:
+    df = pd.read_csv(NOTEBOOKS / "datacorp_tickets.csv", dtype=str)
+    assert set(df.columns) == {
+        "ticket_id", "reporter_id", "datum", "kategorie", "priorita", "status", "popis",
+    }
+    assert 4500 <= len(df) <= 5500

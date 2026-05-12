@@ -490,6 +490,61 @@ def apply_dirt_main(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
+TICKET_TEMPLATES = {
+    "Hardware": [
+        "Nefunguje mi {hw}. Můžete se na to podívat?",
+        "{hw} přestal/a fungovat dnes ráno. Potřebuji to vyřešit co nejdřív.",
+        "Prosím o výměnu {hw} — je už za zenitem.",
+    ],
+    "Software": [
+        "Nejde mi nainstalovat {sw}. Vyhazuje to chybu.",
+        "Po updatu {sw} se mi rozbilo {feature}.",
+        "Mohli byste mi prosím přidat licenci na {sw}?",
+    ],
+    "Účet a přístup": [
+        "Zapomněl/a jsem heslo do {system}.",
+        "Nemám přístup ke sdílenému disku týmu.",
+        "Můj VPN profil nefunguje od pondělí.",
+    ],
+    "Ostatní": [
+        "Nefunguje kávovar v 3. patře.",
+        "Někdo mi v ledničce snědl oběd. Co s tím?",
+        "Klimatizace v open-spacu zase netáhne.",
+    ],
+}
+HW = ["notebook", "monitor", "myš", "klávesnice", "dock", "headset"]
+SW = ["VS Code", "Slack", "Excel", "Jira", "Figma"]
+FEATURE = ["sdílení obrazovky", "notifikace", "VPN integrace", "SSO login"]
+SYSTEM = ["Jira", "Confluence", "interní portál", "Slack"]
+
+
+def build_tickets(universe: pd.DataFrame) -> pd.DataFrame:
+    rows = []
+    ids = universe["employee_id"].tolist()
+    start = pd.Timestamp("2024-01-01")
+    for ticket_id in range(1, 5001):
+        reporter = int(RNG.choice(ids))
+        cat = str(RNG.choice(list(TICKET_TEMPLATES.keys()), p=[0.35, 0.35, 0.20, 0.10]))
+        tmpl = str(RNG.choice(TICKET_TEMPLATES[cat]))
+        popis = tmpl.format(
+            hw=RNG.choice(HW), sw=RNG.choice(SW),
+            feature=RNG.choice(FEATURE), system=RNG.choice(SYSTEM),
+        )
+        when = start + pd.Timedelta(days=int(RNG.integers(0, 500)),
+                                    hours=int(RNG.integers(8, 18)),
+                                    minutes=int(RNG.integers(0, 60)))
+        rows.append({
+            "ticket_id": ticket_id,
+            "reporter_id": reporter,
+            "datum": when.strftime("%Y-%m-%d %H:%M:%S"),
+            "kategorie": cat,
+            "priorita": str(RNG.choice(["P1", "P2", "P3", "P4"], p=[0.05, 0.20, 0.50, 0.25])),
+            "status": str(RNG.choice(["open", "pending", "closed"], p=[0.15, 0.20, 0.65])),
+            "popis": popis,
+        })
+    return pd.DataFrame(rows)
+
+
 def build_org_chart(universe: pd.DataFrame) -> pd.DataFrame:
     """One row per employee per reporting line.
 
@@ -871,6 +926,11 @@ def main() -> None:
     org = build_org_chart(universe.drop(columns=["_departed"]))
     org.to_csv(OUTPUT_DIR / "datacorp_org_chart.csv", index=False)
     print(f"  Org chart rows: {len(org)}")
+
+    print("Building tickets...")
+    tickets = build_tickets(universe.drop(columns=["_departed"]))
+    tickets.to_csv(OUTPUT_DIR / "datacorp_tickets.csv", index=False)
+    print(f"  Tickets rows: {len(tickets)}")
 
     # Save files.
     main_df_dirty.to_csv(OUTPUT_DIR / "datacorp.csv", index=False)
