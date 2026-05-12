@@ -144,3 +144,11 @@ def test_payroll_xlsx_currency_landmine() -> None:
     df = df[df["os_cislo"].apply(lambda x: str(x).replace(".0", "").isdigit())]
     eur_like = df["mzda_brutto"].astype(float).between(1500, 4000).sum()
     assert eur_like >= 4
+
+
+def test_reviews_scaled_and_dirty() -> None:
+    df = pd.read_csv(NOTEBOOKS / "datacorp_reviews.csv")
+    assert 130 <= len(df) <= 180
+    # Sarcasm signal: at least 3 reviews containing both *kreativní* and "deadlin"
+    sarcastic = df["review_text"].str.contains(r"\*kreativní\*", regex=True, na=False).sum()
+    assert sarcastic >= 3

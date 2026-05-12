@@ -727,8 +727,8 @@ def _fill_review_template(template: str, name: str) -> str:
 
 
 def build_reviews(df: pd.DataFrame) -> pd.DataFrame:
-    """Generate ~80 performance reviews for a subset of employees."""
-    # Pick ~80 employees (spread across departments)
+    """Generate ~150 performance reviews for a subset of employees."""
+    # Pick ~150 employees (spread across departments)
     review_rows = []
     for dept in DEPARTMENTS:
         dept_mask = df["oddeleni"].isin(
@@ -766,6 +766,48 @@ def build_reviews(df: pd.DataFrame) -> pd.DataFrame:
             })
 
     return pd.DataFrame(review_rows)
+
+
+SARCASTIC_REVIEWS = [
+    "Pan {prijmeni} je velmi *kreativní* s deadliny — vždy nás překvapí.",
+    "Paní {prijmeni} přináší do týmu *unikátní* energii. Někdy příliš.",
+    "S {jmeno_gen} {prijmeni_gen} je *radost* spolupracovat na složitých projektech.",
+    "{jmeno} {prijmeni} má velmi *originální* přístup k procesům.",
+    "{jmeno} je *neuvěřitelně* samostatný/á — kolegové se ho/ji téměř nedotknou.",
+]
+
+
+def apply_dirt_reviews(df: pd.DataFrame, main_df: pd.DataFrame) -> pd.DataFrame:
+    df = df.copy()
+    # 5 sarcastic reviews — overwrite 5 random review_text values.
+    # The first 3 always use the *kreativní* template so the test signal is reliable.
+    sarcastic_idx = RNG.choice(df.index, size=5, replace=False)
+    for k, i in enumerate(sarcastic_idx):
+        emp = main_df[main_df["employee_id"] == df.at[i, "employee_id"]]
+        if len(emp) == 0:
+            jmeno, prijmeni = "Jan", "Novák"
+        else:
+            jmeno, prijmeni = str(emp.iloc[0]["jmeno"]), str(emp.iloc[0]["prijmeni"])
+        # First 3 entries guaranteed to contain *kreativní*; last 2 are random
+        if k < 3:
+            tmpl = SARCASTIC_REVIEWS[0]
+        else:
+            tmpl = str(RNG.choice(SARCASTIC_REVIEWS[1:]))
+        df.at[i, "review_text"] = tmpl.format(
+            jmeno=jmeno, prijmeni=prijmeni,
+            jmeno_gen=jmeno, prijmeni_gen=prijmeni,
+        )
+
+    # 3 wrong-person reviews — keep employee_id but replace the name in the text
+    other = main_df.sample(3, random_state=SEED)
+    wrong_idx = RNG.choice(df.index, size=3, replace=False)
+    for k, i in enumerate(wrong_idx):
+        ghost = other.iloc[k]
+        df.at[i, "review_text"] = (
+            f"{ghost['jmeno']} {ghost['prijmeni']} odvádí solidní práci, "
+            f"ale rezervy jsou v komunikaci s týmem."
+        )
+    return df
 
 
 # ── Exit interview text generation ────────────────────────────────
@@ -1065,6 +1107,8 @@ def main() -> None:
     payroll = apply_dirt_payroll(payroll)
     write_payroll_xlsx(payroll, OUTPUT_DIR / "datacorp_payroll_q3.xlsx")
     print(f"  Payroll rows: {len(payroll)}")
+
+    reviews = apply_dirt_reviews(reviews, main_df_dirty)
 
     # Save files.
     main_df_dirty.to_csv(OUTPUT_DIR / "datacorp.csv", index=False)
