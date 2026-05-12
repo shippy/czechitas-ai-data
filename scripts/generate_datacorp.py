@@ -289,6 +289,81 @@ def build_salary_history(universe: pd.DataFrame) -> pd.DataFrame:
     return df.sample(frac=1, random_state=SEED).reset_index(drop=True)
 
 
+def apply_dirt_salary_history(df: pd.DataFrame, main_df: pd.DataFrame) -> pd.DataFrame:
+    """Plant dirt in salary history. `main_df` is the post-dirt main CSV.
+
+    Conflict rates (per the spec) target ratios over employees present
+    in both the salary-history and the main CSV.
+    """
+    df = df.copy()
+
+    # 12. Date format soup
+    n = len(df)
+    rest_idx = df.index.tolist()
+    czech_idx = RNG.choice(rest_idx, size=int(n * 0.30), replace=False)
+    remaining = [i for i in rest_idx if i not in set(czech_idx)]
+    us_idx = RNG.choice(remaining, size=int(n * 0.15), replace=False)
+    remaining = [i for i in remaining if i not in set(us_idx)]
+    year_only_idx = RNG.choice(remaining, size=int(n * 0.03), replace=False)
+    for i in czech_idx:
+        d = pd.to_datetime(df.at[i, "datum_zmeny"])
+        df.at[i, "datum_zmeny"] = d.strftime("%d.%m.%Y")
+    for i in us_idx:
+        d = pd.to_datetime(df.at[i, "datum_zmeny"])
+        df.at[i, "datum_zmeny"] = d.strftime("%m/%d/%Y")
+    for i in year_only_idx:
+        df.at[i, "datum_zmeny"] = str(pd.to_datetime(df.at[i, "datum_zmeny"]).year)
+
+    # 11. Decimal separator mixing in plat_po
+    decimal_idx = RNG.choice(df.index, size=int(n * 0.10), replace=False)
+    nbsp = " "  # non-breaking space U+00A0
+    for i in decimal_idx:
+        v = float(df.at[i, "plat_po"])
+        df.at[i, "plat_po"] = f"{int(v // 1000)}{nbsp}{int(v) % 1000:03d},{int((v % 1) * 100):02d}"
+
+    # Drive conflicts with main `plat` (10% off-by-small)
+    common_ids = set(df["employee_id"]) & set(main_df["employee_id"])
+    common_list = list(common_ids)
+    RNG.shuffle(common_list)
+    off_small = common_list[: int(len(common_list) * 0.10)]
+    for emp_id in off_small:
+        rows = df[df["employee_id"] == emp_id]
+        if len(rows) == 0:
+            continue
+        latest_idx = rows.index[-1]
+        try:
+            val = float(str(df.at[latest_idx, "plat_po"]).replace(nbsp, "").replace(",", "."))
+            df.at[latest_idx, "plat_po"] = int(val + RNG.integers(1_000, 5_000))
+        except (ValueError, TypeError):
+            pass
+
+    # 17. Salary history out of order — pick 2 employees, add a backdated correction
+    out_of_order_emps = RNG.choice(common_list, size=2, replace=False)
+    for emp_id in out_of_order_emps:
+        rows = df[df["employee_id"] == emp_id].sort_values("datum_zmeny")
+        if len(rows) < 2:
+            continue
+        backdate = pd.to_datetime(rows.iloc[0]["datum_zmeny"], errors="coerce")
+        if pd.isna(backdate):
+            continue
+        backdate = backdate - pd.Timedelta(days=30)
+        df = pd.concat([df, pd.DataFrame([{
+            "employee_id": emp_id,
+            "datum_zmeny": backdate.strftime("%Y-%m-%d"),
+            "plat_pred": rows.iloc[0]["plat_pred"],
+            "plat_po": float(rows.iloc[0]["plat_pred"]) - 2000,
+            "duvod": "correction",
+        }])], ignore_index=True)
+
+    # 14. Silent ID collision — reassign 3 of donor's history rows to victim's ID
+    if len(common_list) >= 2:
+        donor, victim = common_list[0], common_list[1]
+        donor_rows = df[df["employee_id"] == donor].head(3).index
+        df.loc[donor_rows, "employee_id"] = victim
+
+    return df.reset_index(drop=True)
+
+
 def apply_dirt_main(df: pd.DataFrame) -> pd.DataFrame:
     """Apply pre-planted data quality issues."""
     df = df.copy()
@@ -735,6 +810,7 @@ def main() -> None:
 
     print("Building salary history...")
     salary_history = build_salary_history(universe.drop(columns=["_departed"]))
+    salary_history = apply_dirt_salary_history(salary_history, main_df_dirty)
     salary_history.to_csv(OUTPUT_DIR / "datacorp_salary_history.csv", index=False)
     print(f"  Salary history rows: {len(salary_history)}")
 

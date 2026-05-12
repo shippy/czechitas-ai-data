@@ -64,3 +64,25 @@ def test_salary_history_shape() -> None:
     assert set(df.columns) == {"employee_id", "datum_zmeny", "plat_pred", "plat_po", "duvod"}
     assert 2500 <= len(df) <= 4000
     assert df["duvod"].isin({"raise", "promotion", "correction", "acquisition_harmonization"}).any()
+
+
+def test_salary_history_date_formats() -> None:
+    df = pd.read_csv(NOTEBOOKS / "datacorp_salary_history.csv", dtype=str)
+    iso = df["datum_zmeny"].str.match(r"^\d{4}-\d{2}-\d{2}$").sum()
+    czech = df["datum_zmeny"].str.match(r"^\d{2}\.\d{2}\.\d{4}$").sum()
+    us = df["datum_zmeny"].str.match(r"^\d{2}/\d{2}/\d{4}$").sum()
+    year_only = df["datum_zmeny"].str.match(r"^\d{4}$").sum()
+    assert iso > 100 and czech > 100 and us > 50 and year_only > 5
+
+
+def test_salary_history_decimal_mixing() -> None:
+    df = pd.read_csv(NOTEBOOKS / "datacorp_salary_history.csv", dtype=str)
+    comma_decimals = df["plat_po"].astype(str).str.contains(",").sum()
+    assert comma_decimals >= 100
+
+
+def test_salary_history_references_departed() -> None:
+    history = pd.read_csv(NOTEBOOKS / "datacorp_salary_history.csv")
+    main = pd.read_csv(NOTEBOOKS / "datacorp.csv")
+    departed_ids = set(history["employee_id"]) - set(main["employee_id"])
+    assert len(departed_ids) >= 5
