@@ -105,7 +105,7 @@ a = Counter(count=1, kind="puppy", members=["Punťa"])
 
 ```python {1|2|3-6|all}
 import instructor
-client = instructor.from_provider("openai/gpt-5-mini")
+client = instructor.from_provider("openai/gpt-5.4-mini")
 cover_letter = client.create(
     messages=[
         {"role": "user",

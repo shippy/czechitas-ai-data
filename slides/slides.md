@@ -3,6 +3,7 @@ theme: ./theme
 title: "AI v datové analýze"
 info: "Lifecycle práce datového analytika s využitím AI"
 author: Markéta Hanna, Šimon Podhajský, Dan Rabiencný
+favicon: /favicon.png
 transition: slide-left
 mdc: true
 shiki:
@@ -16,7 +17,7 @@ fonts:
 
 Lifecycle práce datového analytika s využitím AI
 
-Markéta Hanna · Šimon Podhajský · Dan Rabiencný · Czechitas · Březen 2026
+Markéta Hanna · Šimon Podhajský · Dan Rabiencný · Czechitas · Květen 2026
 
 ---
 
@@ -27,7 +28,7 @@ Markéta Hanna · Šimon Podhajský · Dan Rabiencný · Czechitas · Březen 20
 | 0 | Úvod do AI a prompt engineering | Šimon |
 | 1 | Porozumění zadání | Markéta |
 | 2 | Porozumění datům (EDA) | Šimon |
-| 3 | Příprava dat | Dan |
+| 3 | Příprava dat | Markéta |
 | 4 | Samotná analýza | Šimon |
 | 5 | Prezentace výsledků | Markéta |
 | ⭐ | Bonus: Nástroje a transformery | — |
@@ -68,21 +69,29 @@ src: ./s5-prezentace.md
 layout: center
 ---
 
-# Děkujeme za pozornost!
-
-Markéta Hanna · Šimon Podhajský · Dan Rabiencný
-
-**Czechitas · AI v datové analýze · Březen 2026**
-
----
-layout: center
----
-
 # Zpětná vazba
 
 Budeme rádi za vaši zpětnou vazbu!
 
 <QRCode url="https://moje.czechitas.cz/cs/zpetna-vazba/7942-ai-v-datove-analyze" :size="250">Zpětná vazba</QRCode>
+
+---
+layout: center
+---
+
+# Děkujeme za pozornost!
+
+Markéta Hanna · Šimon Podhajský · Dan Rabiencný
+
+**Czechitas · AI v datové analýze · Květen 2026**
+
+<QRCode url="https://moje.czechitas.cz/cs/zpetna-vazba/7942-ai-v-datove-analyze" :size="150">Zpětná vazba</QRCode>
+
+---
+layout: center
+---
+
+<img src="/czechitas-heart-hands.png" class="h-80 mx-auto" />
 
 ---
 src: ./s6-bonus.md

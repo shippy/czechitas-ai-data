@@ -160,3 +160,13 @@ GPT = **G**enerative **P**retrained **T**ransformer — stojí na decoderech nav
 
 </div>
 </div>
+
+---
+layout: center
+---
+
+# Zpětná vazba
+
+Budeme rádi za vaši zpětnou vazbu!
+
+<QRCode url="https://moje.czechitas.cz/cs/zpetna-vazba/7942-ai-v-datove-analyze" :size="250">Zpětná vazba</QRCode>

@@ -1,5 +1,5 @@
 <script setup>
-import characterImg from '../assets/czechitas-woman-laptop.png'
+import characterImg from '../assets/czechitas_lidi.png'
 
 defineProps({
   subtitle: { type: String, default: '' },

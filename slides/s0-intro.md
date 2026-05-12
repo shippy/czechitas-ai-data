@@ -6,7 +6,7 @@ subtitle: "Lektorka · Data & AI"
 ---
 
 - Senior IT Analyst @ T-Mobile CZ
-- Lektorka Czechitas kurzů
+- Lektorka & koučka Czechitas kurzů Data & AI
 
 ::qr::
 <QRCode url="https://www.linkedin.com/in/mark%C3%A9ta-hanna-05019941/" :size="120">LinkedIn</QRCode>
@@ -29,7 +29,7 @@ subtitle: "Lektor · Data & AI"
 layout: bio
 image: /dan-rabiencny.jpeg
 name: "Dan Rabiencný"
-subtitle: "Lektor · Data & AI"
+subtitle: "Spoluautor kurzu · Data & AI"
 ---
 
 - Data & AI Consultant @ KPMG
