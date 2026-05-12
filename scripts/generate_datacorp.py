@@ -349,9 +349,12 @@ def apply_dirt_main(df: pd.DataFrame) -> pd.DataFrame:
     future_idx = RNG.choice(df.index, size=5, replace=False)
     for i in future_idx:
         existing = str(df.at[i, "datum_nastupu"])
-        df.at[i, "datum_nastupu"] = existing.replace("2017", "2027").replace("2018", "2028")
-        if "20" not in df.at[i, "datum_nastupu"][-4:]:
+        replaced = existing.replace("2017", "2027").replace("2018", "2028")
+        if replaced == existing:
+            # No 2017/2018 in the original; force a future date.
             df.at[i, "datum_nastupu"] = "2027-06-15"
+        else:
+            df.at[i, "datum_nastupu"] = replaced
 
     # 15. Diacritic-folded duplicate identities — add 2 paired rows
     if "Černý" in df["prijmeni"].astype(str).values:
@@ -360,7 +363,7 @@ def apply_dirt_main(df: pd.DataFrame) -> pd.DataFrame:
             folded = cerny_rows.copy()
             folded["prijmeni"] = "Cerny"
             folded["jmeno"] = folded["jmeno"].astype(str).str.replace("á", "a").str.replace("í", "i")
-            folded["employee_id"] = folded["employee_id"].astype(int).max() + 5000
+            folded["employee_id"] = int(df["employee_id"].astype(int).max()) + 5000
             folded["email"] = folded["email"].astype(str).str.replace("ý", "y").str.replace("á", "a")
             df = pd.concat([df, folded], ignore_index=True)
 

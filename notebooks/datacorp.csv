@@ -345,7 +345,7 @@ employee_id,jmeno,prijmeni,email,oddeleni,pozice,datum_nastupu,plat,hodnoceni_vy
 603,Josef,Beneš,josef.benes@datacorp.cz,HR,HR Specialist,2025-04-26,50500.0,4,VŠ PhD.,Liberec,26,M,DPP,778906753
 491,Hana,Vaňková,hana.vankova@datacorp.cz,Obchod,Obchodní zástupce,2022-01-21,57500.0,4,SŠ,Praha,31,Ž,DPP,+420 625 637 709
 383,Marek,Novotný,marek.novotny@datacorp.cz,Obchod,Business Development,2023-02-28,74500.0,4,SŠ,Praha,30,M,Částečný,+420 664 160 887
-175,Michal,Černý,michal.cerny@datacorp.cz,Vývoj,QA Engineer,2024-12-20,82500.0,2,VŠ Mgr.,Praha,24,M,Plný,+420 730 417 896
+175,Michal,Černý,michal.cerny@datacorp.cz,Vývoj,QA Engineer,2027-06-15,82500.0,2,VŠ Mgr.,Praha,24,M,Plný,+420 730 417 896
 126,Dominik,Štěpánek,dominik.stepanek@datacorp.cz,Vývoj,Software Developer,2019-01-21,68500.0,3,VŠ Bc.,Plzeň,32,M,Částečný,652583694
 595,Tomáš,Pospíšil,tomas.pospisil@datacorp.cz,HR,HR Specialist,2023-02-08,33000.0,2,SŠ,Plzeň,29,M,Plný,+420 622 722 267
 433,Karel,Doležal,karel.dolezal@datacorp.cz,Obchod,Obchodní zástupce,24.11.2021,31500.0,4,VŠ Mgr.,Brno,38,M,Částečný,+420 774 391 158
@@ -565,7 +565,7 @@ employee_id,jmeno,prijmeni,email,oddeleni,pozice,datum_nastupu,plat,hodnoceni_vy
 46,Tomáš,Čermák,tomas.cermak@datacorp.cz,Vývoj,Tech Lead,2022-01-06,79500.0,4,SŠ,Praha,30,M,Plný,+420 683 852 928
 354,Petra,Horáková,petra.horakova@datacorp.cz,Obchod,Obchodní zástupce,30.10.2024,41000.0,2,VŠ Bc.,Praha,37,Ž,Částečný,+420 671 471 316
 198,David,Fiala,david.fiala@datacorp.cz,Vývoj,Tech Lead,2022-05-01,64500.0,4,SŠ,Zlín,31,M,Plný,+420 603 183 499
-5034,Tomaš,Cerny,tomas.cerny@datacorp.cz,Vývoj,Tech Lead,2018-03-19,91500.0,3,SŠ,Brno,32,M,Plný,+420 663 498 110
+6014,Tomaš,Cerny,tomas.cerny@datacorp.cz,Vývoj,Tech Lead,2018-03-19,91500.0,3,SŠ,Brno,32,M,Plný,+420 663 498 110
 856,Alena,Kopecká,alena.kopecka@datacorp.cz,Podpora,Support Team Lead,2022-02-10,42500.0,3,VŠ Mgr.,Plzeň,32,Ž,Plný,+420 706 600 198
 800,Petr,Novák,petr.novak@datacorp.cz,Podpora,Technická podpora,2022-08-14,35000.0,4,VŠ Mgr.,Ostrava,34,M,Částečný,+420 766 597 925
 266,Adam,Němec,adam.nemec@datacorp.cz,Marketing,Content Manager,01.05.2021,57000.0,3,SŠ,České Budějovice,35,M,Plný,+420 622 613 257
