@@ -1,9 +1,13 @@
 """Generate the DataCorp s.r.o. synthetic HR dataset.
 
-Produces three files in notebooks/:
-- datacorp.csv         — main structured dataset (~1000 rows, with planted dirt)
-- datacorp_reviews.csv — free-text performance reviews (~160 rows)
-- datacorp_exit_interviews.csv — free-text exit interview notes (~35 rows)
+Produces seven files in notebooks/, all deterministic given SEED:
+- datacorp.csv               — main HR table (~1000 rows, 15 columns, planted dirt)
+- datacorp_reviews.csv       — performance reviews (~150 rows, Czech free-text)
+- datacorp_exit_interviews.csv — exit interviews (~70 rows, Czech free-text with English fragments)
+- datacorp_salary_history.csv  — salary changes (~3700 rows, mixed date/decimal formats)
+- datacorp_org_chart.csv       — manager hierarchy (~1200 rows, planted cycles and orphans)
+- datacorp_tickets.csv         — IT/HR ticket export (~5000 rows, inconsistent taxonomy)
+- datacorp_payroll_q3.xlsx     — finance payroll (Excel, schema drift, EUR landmines)
 
 Usage:
     python scripts/generate_datacorp.py
