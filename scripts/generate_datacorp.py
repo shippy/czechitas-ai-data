@@ -898,6 +898,101 @@ def build_exit_interviews(df: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(exit_rows)
 
 
+def build_payroll_xlsx(main_df: pd.DataFrame) -> pd.DataFrame:
+    """Return the data frame and *also* writes it directly to xlsx in main().
+
+    For testability the function only computes the payroll rows; the xlsx
+    write (with merged headers + totals row + extra sheets) lives in
+    `write_payroll_xlsx` below.
+    """
+    rows = []
+    for _, emp in main_df.iterrows():
+        plat = pd.to_numeric(emp.get("plat"), errors="coerce")
+        if pd.isna(plat):
+            plat = 50_000.0
+        bonus = int(RNG.integers(0, 15_000))
+        rows.append({
+            "os_cislo": int(emp["employee_id"]),
+            "jmeno_prijmeni": f"{str(emp['jmeno']).strip()} {str(emp['prijmeni']).strip()}",
+            "oddeleni": emp["oddeleni"],
+            "mzda_brutto": float(plat),
+            "bonus": bonus,
+            "mzda_celkem": float(plat) + bonus,
+            "aktivni": "ano",
+        })
+    return pd.DataFrame(rows)
+
+
+def apply_dirt_payroll(df: pd.DataFrame) -> pd.DataFrame:
+    df = df.copy()
+    # 8% of mzda_brutto off by 1-15%
+    off_idx = RNG.choice(df.index, size=int(len(df) * 0.08), replace=False)
+    for i in off_idx:
+        delta = 1 + RNG.uniform(-0.15, 0.15)
+        df.at[i, "mzda_brutto"] = round(df.at[i, "mzda_brutto"] * delta)
+        df.at[i, "mzda_celkem"] = df.at[i, "mzda_brutto"] + df.at[i, "bonus"]
+
+    # 30 rows where mzda_celkem != mzda_brutto + bonus
+    bad_arith = RNG.choice(df.index, size=30, replace=False)
+    for i in bad_arith:
+        df.at[i, "mzda_celkem"] = df.at[i, "mzda_brutto"] + df.at[i, "bonus"] - int(RNG.integers(500, 3000))
+
+    # 4 EUR-not-CZK landmines
+    eur_idx = RNG.choice(df.index, size=4, replace=False)
+    for i in eur_idx:
+        df.at[i, "mzda_brutto"] = round(df.at[i, "mzda_brutto"] / 25)
+        df.at[i, "bonus"] = round(df.at[i, "bonus"] / 25)
+        df.at[i, "mzda_celkem"] = df.at[i, "mzda_brutto"] + df.at[i, "bonus"]
+
+    # 5 English-language oddeleni values
+    en_map = {"Vývoj": "Engineering", "Podpora": "Support", "Marketing": "Marketing",
+              "Obchod": "Sales", "Finance": "Finance", "HR": "HR"}
+    en_idx = RNG.choice(df.index, size=5, replace=False)
+    for i in en_idx:
+        cs = df.at[i, "oddeleni"]
+        df.at[i, "oddeleni"] = en_map.get(cs, cs)
+
+    # 3 plausible-wrong departments (rotate cs values)
+    wrong_idx = RNG.choice(df.index, size=3, replace=False)
+    rotation = ["Marketing", "Vývoj", "Obchod"]
+    for k, i in enumerate(wrong_idx):
+        df.at[i, "oddeleni"] = rotation[k]
+
+    # `aktivni` mixed truthiness
+    n = len(df)
+    forms = ["ano", "Ano", "ANO", "y", "1", "true", ""]
+    for k, form in enumerate(forms):
+        m = max(5, n // (len(forms) * 6))
+        sample_idx = RNG.choice(df.index, size=m, replace=False)
+        df.loc[sample_idx, "aktivni"] = form
+
+    return df
+
+
+def write_payroll_xlsx(df: pd.DataFrame, path: Path) -> None:
+    """Write payroll DF with 3 merged-header rows, totals row, and extra sheets."""
+    from openpyxl import Workbook
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "Mzdy Q3 2025"
+    # 3 merged-header artifact rows
+    ws.append(["Mzdy zaměstnanců — Q3 2025", None, None, None, None, None, None])
+    ws.append([None, None, None, None, None, None, None])
+    ws.append(["DataCorp s.r.o. — interní použití", None, None, None, None, None, None])
+    # Header row
+    ws.append(list(df.columns))
+    for r in df.itertuples(index=False):
+        ws.append(list(r))
+    # CELKEM totals row
+    totals = ["CELKEM", None, None,
+              float(df["mzda_brutto"].sum()), float(df["bonus"].sum()),
+              float(df["mzda_celkem"].sum()), None]
+    ws.append(totals)
+    wb.create_sheet("List2")
+    wb.create_sheet("List3")
+    wb.save(path)
+
+
 def apply_dirt_tickets(df: pd.DataFrame, universe: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
     # Taxonomy mismatch — replace ~7% of "Hardware" with variants
@@ -964,6 +1059,12 @@ def main() -> None:
     tickets = apply_dirt_tickets(tickets, universe.drop(columns=["_departed"]))
     tickets.to_csv(OUTPUT_DIR / "datacorp_tickets.csv", index=False)
     print(f"  Tickets rows: {len(tickets)}")
+
+    print("Building payroll xlsx...")
+    payroll = build_payroll_xlsx(main_df_dirty)
+    payroll = apply_dirt_payroll(payroll)
+    write_payroll_xlsx(payroll, OUTPUT_DIR / "datacorp_payroll_q3.xlsx")
+    print(f"  Payroll rows: {len(payroll)}")
 
     # Save files.
     main_df_dirty.to_csv(OUTPUT_DIR / "datacorp.csv", index=False)

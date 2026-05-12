@@ -123,3 +123,24 @@ def test_tickets_dirty_reporter_ids() -> None:
     df = pd.read_csv(NOTEBOOKS / "datacorp_tickets.csv", dtype=str)
     punctuated = df["reporter_id"].astype(str).str.contains(r"\.|^\s|\s$", regex=True).sum()
     assert punctuated >= 5
+
+
+def test_payroll_xlsx_structure() -> None:
+    import openpyxl
+    path = NOTEBOOKS / "datacorp_payroll_q3.xlsx"
+    wb = openpyxl.load_workbook(path, data_only=True)
+    assert "Mzdy Q3 2025" in wb.sheetnames
+    # Top 3 rows + bottom totals row
+    df = pd.read_excel(path, sheet_name="Mzdy Q3 2025", header=None)
+    assert df.iloc[0].isna().all() or df.iloc[0].notna().sum() <= 2
+    # Find the CELKEM row
+    assert (df.astype(str).apply(lambda r: r.str.contains("CELKEM", na=False).any(), axis=1)).any()
+
+
+def test_payroll_xlsx_currency_landmine() -> None:
+    df = pd.read_excel(NOTEBOOKS / "datacorp_payroll_q3.xlsx",
+                       sheet_name="Mzdy Q3 2025", skiprows=3)
+    # Drop totals row
+    df = df[df["os_cislo"].apply(lambda x: str(x).replace(".0", "").isdigit())]
+    eur_like = df["mzda_brutto"].astype(float).between(1500, 4000).sum()
+    assert eur_like >= 4
