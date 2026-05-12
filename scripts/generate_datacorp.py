@@ -261,10 +261,12 @@ def build_salary_history(universe: pd.DataFrame) -> pd.DataFrame:
         except (ValueError, TypeError):
             hire = pd.Timestamp("2020-01-01")
         current_salary = float(emp["plat"]) if pd.notna(emp.get("plat")) else 50_000.0
-        # Walk backwards: today's salary, then earlier raises
-        salary = current_salary
+        # Reconstruct an earlier starting salary, then walk forward to current_salary.
+        # Each event dates between hire and the Q1 2026 snapshot cutoff.
+        cutoff = pd.Timestamp("2026-04-01")
+        span_days = max(30, (cutoff - hire).days)
         dates = sorted([
-            hire + pd.Timedelta(days=int(RNG.integers(30, 365 * 5)))
+            hire + pd.Timedelta(days=int(RNG.integers(30, max(31, span_days))))
             for _ in range(n_events)
         ])
         prev = current_salary - sum(RNG.integers(2_000, 8_000) for _ in range(n_events))
