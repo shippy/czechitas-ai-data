@@ -57,3 +57,10 @@ def test_name_whitespace_dirt_present() -> None:
     leading = df["jmeno"].str.match(r"^\s").sum() + df["prijmeni"].str.match(r"^\s").sum()
     trailing = df["jmeno"].str.match(r".*\s$").sum() + df["prijmeni"].str.match(r".*\s$").sum()
     assert (leading + trailing) >= 5
+
+
+def test_salary_history_shape() -> None:
+    df = pd.read_csv(NOTEBOOKS / "datacorp_salary_history.csv", dtype=str)
+    assert set(df.columns) == {"employee_id", "datum_zmeny", "plat_pred", "plat_po", "duvod"}
+    assert 2500 <= len(df) <= 4000
+    assert df["duvod"].isin({"raise", "promotion", "correction", "acquisition_harmonization"}).any()

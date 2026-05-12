@@ -247,6 +247,46 @@ def tag_departures(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
+def build_salary_history(universe: pd.DataFrame) -> pd.DataFrame:
+    """Generate 1–6 salary events per employee, chronological per employee.
+
+    Operates on the full universe (including departed employees) so
+    departed people retain salary history that is absent from the main CSV.
+    """
+    rows = []
+    for _, emp in universe.iterrows():
+        n_events = int(RNG.integers(1, 7))
+        try:
+            hire = pd.to_datetime(emp["datum_nastupu"])
+        except (ValueError, TypeError):
+            hire = pd.Timestamp("2020-01-01")
+        current_salary = float(emp["plat"]) if pd.notna(emp.get("plat")) else 50_000.0
+        # Walk backwards: today's salary, then earlier raises
+        salary = current_salary
+        dates = sorted([
+            hire + pd.Timedelta(days=int(RNG.integers(30, 365 * 5)))
+            for _ in range(n_events)
+        ])
+        prev = current_salary - sum(RNG.integers(2_000, 8_000) for _ in range(n_events))
+        for d in dates:
+            raise_amt = int(RNG.integers(2_000, 8_000))
+            new_salary = prev + raise_amt
+            duvod = RNG.choice(
+                ["raise", "promotion", "correction", "acquisition_harmonization"],
+                p=[0.65, 0.20, 0.10, 0.05],
+            )
+            rows.append({
+                "employee_id": int(emp["employee_id"]),
+                "datum_zmeny": d.strftime("%Y-%m-%d"),
+                "plat_pred": prev,
+                "plat_po": new_salary,
+                "duvod": duvod,
+            })
+            prev = new_salary
+    df = pd.DataFrame(rows)
+    return df.sample(frac=1, random_state=SEED).reset_index(drop=True)
+
+
 def apply_dirt_main(df: pd.DataFrame) -> pd.DataFrame:
     """Apply pre-planted data quality issues."""
     df = df.copy()
@@ -691,7 +731,12 @@ def main() -> None:
     reviews = build_reviews(universe.drop(columns=["_departed"]))
     exits = build_exit_interviews(universe.drop(columns=["_departed"]))
 
-    # Save the three existing files for now; new ones come in later tasks.
+    print("Building salary history...")
+    salary_history = build_salary_history(universe.drop(columns=["_departed"]))
+    salary_history.to_csv(OUTPUT_DIR / "datacorp_salary_history.csv", index=False)
+    print(f"  Salary history rows: {len(salary_history)}")
+
+    # Save files.
     main_df_dirty.to_csv(OUTPUT_DIR / "datacorp.csv", index=False)
     reviews.to_csv(OUTPUT_DIR / "datacorp_reviews.csv", index=False)
     exits.to_csv(OUTPUT_DIR / "datacorp_exit_interviews.csv", index=False)
