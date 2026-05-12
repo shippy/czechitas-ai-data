@@ -152,3 +152,12 @@ def test_reviews_scaled_and_dirty() -> None:
     # Sarcasm signal: at least 3 reviews containing both *kreativní* and "deadlin"
     sarcastic = df["review_text"].str.contains(r"\*kreativní\*", regex=True, na=False).sum()
     assert sarcastic >= 3
+
+
+def test_exit_interviews_scaled_and_dirty() -> None:
+    df = pd.read_csv(NOTEBOOKS / "datacorp_exit_interviews.csv")
+    assert 60 <= len(df) <= 90
+    en_words = df["interview_text"].str.contains(
+        r"\b(better|compensation|elsewhere|team|management|opportunity)\b",
+        regex=True, na=False).sum()
+    assert en_words >= 5

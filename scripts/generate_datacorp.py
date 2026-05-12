@@ -856,19 +856,19 @@ EXIT_NOTES_NEG = [
 
 
 def build_exit_interviews(df: pd.DataFrame) -> pd.DataFrame:
-    """Generate ~35 exit interview notes, skewed toward Podpora."""
+    """Generate ~70 exit interview notes, skewed toward Podpora."""
     from datetime import timedelta
 
     exit_rows = []
 
-    # Podpora: ~20 exits, others: ~15 total
+    # Podpora: ~40 exits, others: ~30 total
     dept_exit_counts = {
-        "Podpora": 20,
-        "Marketing": 3,
-        "Obchod": 4,
-        "HR": 2,
-        "Finance": 2,
-        "Vývoj": 4,
+        "Podpora": 40,
+        "Marketing": 6,
+        "Obchod": 8,
+        "HR": 4,
+        "Finance": 4,
+        "Vývoj": 8,
     }
 
     # Reason distribution per department
@@ -938,6 +938,31 @@ def build_exit_interviews(df: pd.DataFrame) -> pd.DataFrame:
             })
 
     return pd.DataFrame(exit_rows)
+
+
+EN_FRAGMENTS = [
+    " Hlavní důvod: better compensation elsewhere. Tým byl ok.",
+    " management was nice, ale firma jako celek nepostupuje.",
+    " I'm looking for better opportunity. Děkuji za vše.",
+    " Tým, team dynamics, byl super, ale management nereaguje.",
+    " Going for a senior role elsewhere — tady už nebyl prostor.",
+]
+CONTRADICTION = (
+    "Platově jsem byl celkem spokojen, kolegové fajn. Odcházím hlavně kvůli "
+    "tomu, že peníze už nejsou dostatečné a HR nedokázalo nic nabídnout."
+)
+
+
+def apply_dirt_exit_interviews(df: pd.DataFrame) -> pd.DataFrame:
+    df = df.copy()
+    en_idx = RNG.choice(df.index, size=5, replace=False)
+    for k, i in enumerate(en_idx):
+        df.at[i, "interview_text"] = str(df.at[i, "interview_text"]) + EN_FRAGMENTS[k % len(EN_FRAGMENTS)]
+    # 1 self-contradiction — must not overwrite one of the EN_FRAGMENT rows
+    remaining = [i for i in df.index if i not in set(en_idx)]
+    contra_idx = RNG.choice(remaining, size=1)
+    df.loc[contra_idx, "interview_text"] = CONTRADICTION
+    return df
 
 
 def build_payroll_xlsx(main_df: pd.DataFrame) -> pd.DataFrame:
@@ -1083,7 +1108,6 @@ def main() -> None:
     print(f"  Main HR rows (post-dirt): {len(main_df_dirty)}")
 
     reviews = build_reviews(universe.drop(columns=["_departed"]))
-    exits = build_exit_interviews(universe.drop(columns=["_departed"]))
 
     print("Building salary history...")
     salary_history = build_salary_history(universe.drop(columns=["_departed"]))
@@ -1109,6 +1133,9 @@ def main() -> None:
     print(f"  Payroll rows: {len(payroll)}")
 
     reviews = apply_dirt_reviews(reviews, main_df_dirty)
+
+    exits = build_exit_interviews(universe.drop(columns=["_departed"]))
+    exits = apply_dirt_exit_interviews(exits)
 
     # Save files.
     main_df_dirty.to_csv(OUTPUT_DIR / "datacorp.csv", index=False)
