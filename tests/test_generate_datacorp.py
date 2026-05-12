@@ -110,3 +110,16 @@ def test_tickets_shape() -> None:
         "ticket_id", "reporter_id", "datum", "kategorie", "priorita", "status", "popis",
     }
     assert 4500 <= len(df) <= 5500
+
+
+def test_tickets_taxonomy_dirty() -> None:
+    df = pd.read_csv(NOTEBOOKS / "datacorp_tickets.csv", dtype=str)
+    cats = set(df["kategorie"].unique())
+    hw_variants = {c for c in cats if c.lower().startswith("hardware") or c.upper() == "HW" or "hw" in c}
+    assert len(hw_variants) >= 3
+
+
+def test_tickets_dirty_reporter_ids() -> None:
+    df = pd.read_csv(NOTEBOOKS / "datacorp_tickets.csv", dtype=str)
+    punctuated = df["reporter_id"].astype(str).str.contains(r"\.|^\s|\s$", regex=True).sum()
+    assert punctuated >= 5

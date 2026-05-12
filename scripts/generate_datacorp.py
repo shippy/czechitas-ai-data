@@ -898,6 +898,38 @@ def build_exit_interviews(df: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(exit_rows)
 
 
+def apply_dirt_tickets(df: pd.DataFrame, universe: pd.DataFrame) -> pd.DataFrame:
+    df = df.copy()
+    # Taxonomy mismatch — replace ~7% of "Hardware" with variants
+    hw_mask = df["kategorie"] == "Hardware"
+    hw_idx = df[hw_mask].index.tolist()
+    variants = ["HW", "hardware-other", "hw / sw", "HARDWARE", "Hardware "]
+    chunk = max(1, len(hw_idx) // (len(variants) * 7))
+    cursor = 0
+    for v in variants:
+        slice_idx = hw_idx[cursor: cursor + chunk]
+        df.loc[slice_idx, "kategorie"] = v
+        cursor += chunk
+
+    # Priorita mismatch — bump 40% of P3/P4 with trivial popis to P1
+    coffee_mask = df["popis"].str.contains("kávovar|lednič|klimatizac", na=False)
+    coffee_idx = df[coffee_mask].sample(frac=0.4, random_state=SEED).index
+    df.loc[coffee_idx, "priorita"] = "P1"
+
+    # 50 invalid reporter_ids
+    valid_ids = set(universe["employee_id"])
+    invalid_idx = RNG.choice(df.index, size=50, replace=False)
+    df.loc[invalid_idx, "reporter_id"] = RNG.integers(9000, 9999, size=50)
+
+    # 10 trailing-punctuation / leading-whitespace IDs
+    punct_idx = RNG.choice(df.index, size=10, replace=False)
+    for k, i in enumerate(punct_idx):
+        rid = str(df.at[i, "reporter_id"])
+        df.at[i, "reporter_id"] = f"{rid}." if k % 2 == 0 else f" {rid}"
+
+    return df
+
+
 def main() -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -929,6 +961,7 @@ def main() -> None:
 
     print("Building tickets...")
     tickets = build_tickets(universe.drop(columns=["_departed"]))
+    tickets = apply_dirt_tickets(tickets, universe.drop(columns=["_departed"]))
     tickets.to_csv(OUTPUT_DIR / "datacorp_tickets.csv", index=False)
     print(f"  Tickets rows: {len(tickets)}")
 
