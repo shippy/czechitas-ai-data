@@ -161,3 +161,31 @@ def test_exit_interviews_scaled_and_dirty() -> None:
         r"\b(better|compensation|elsewhere|team|management|opportunity)\b",
         regex=True, na=False).sum()
     assert en_words >= 5
+
+
+def test_generator_is_deterministic(tmp_path) -> None:
+    """Two consecutive runs produce byte-identical files."""
+    import hashlib
+    files = [
+        "datacorp.csv", "datacorp_reviews.csv", "datacorp_exit_interviews.csv",
+        "datacorp_salary_history.csv", "datacorp_org_chart.csv",
+        "datacorp_tickets.csv", "datacorp_payroll_q3.xlsx",
+    ]
+    first = {f: hashlib.sha256((NOTEBOOKS / f).read_bytes()).hexdigest() for f in files}
+    subprocess.run([sys.executable, str(REPO_ROOT / "scripts" / "generate_datacorp.py")], check=True)
+    second = {f: hashlib.sha256((NOTEBOOKS / f).read_bytes()).hexdigest() for f in files}
+    assert first == second
+
+
+def test_survivorship_bias_present() -> None:
+    main = pd.read_csv(NOTEBOOKS / "datacorp.csv")
+    history = pd.read_csv(NOTEBOOKS / "datacorp_salary_history.csv")
+    reviews = pd.read_csv(NOTEBOOKS / "datacorp_reviews.csv")
+    exits = pd.read_csv(NOTEBOOKS / "datacorp_exit_interviews.csv")
+    main_ids = set(main["employee_id"])
+    ghosts_history = set(history["employee_id"]) - main_ids
+    ghosts_reviews = set(reviews["employee_id"]) - main_ids
+    ghosts_exits = set(exits["employee_id"]) - main_ids
+    assert len(ghosts_history) >= 5
+    assert len(ghosts_reviews) >= 1
+    assert len(ghosts_exits) >= 1

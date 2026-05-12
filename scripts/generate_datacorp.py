@@ -895,7 +895,9 @@ def build_exit_interviews(df: pd.DataFrame) -> pd.DataFrame:
         if len(dept_employees) < n_exits:
             n_exits = len(dept_employees)
 
-        selected = dept_employees.sample(n=n_exits, random_state=SEED + hash(dept) % 1000)
+        import hashlib as _hashlib
+        dept_seed = SEED + int(_hashlib.sha256(dept.encode()).hexdigest(), 16) % 1000
+        selected = dept_employees.sample(n=n_exits, random_state=dept_seed)
 
         reasons = list(dept_reason_weights[dept].keys())
         weights = list(dept_reason_weights[dept].values())
@@ -1037,7 +1039,15 @@ def apply_dirt_payroll(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def write_payroll_xlsx(df: pd.DataFrame, path: Path) -> None:
-    """Write payroll DF with 3 merged-header rows, totals row, and extra sheets."""
+    """Write payroll DF with 3 merged-header rows, totals row, and extra sheets.
+
+    The xlsx is written with a fixed creation/modification timestamp so that
+    repeated runs produce byte-identical output (openpyxl otherwise injects
+    the current wall-clock time into docProps/core.xml on every save).
+    """
+    import io as _io
+    import re as _re
+    import zipfile as _zf
     from openpyxl import Workbook
     wb = Workbook()
     ws = wb.active
@@ -1057,7 +1067,30 @@ def write_payroll_xlsx(df: pd.DataFrame, path: Path) -> None:
     ws.append(totals)
     wb.create_sheet("List2")
     wb.create_sheet("List3")
-    wb.save(path)
+    # Save to a buffer first, then rewrite with a fixed timestamp
+    buf = _io.BytesIO()
+    wb.save(buf)
+    buf.seek(0)
+    out = _io.BytesIO()
+    _FIXED_TS = "2025-10-01T00:00:00Z"
+    _FIXED_DATE = (2025, 10, 1, 0, 0, 0)  # fixed DOS timestamp for every entry
+    with _zf.ZipFile(buf, "r") as zin, _zf.ZipFile(out, "w", compression=_zf.ZIP_DEFLATED) as zout:
+        for item in zin.infolist():
+            data = zin.read(item.filename)
+            if item.filename == "docProps/core.xml":
+                data = _re.sub(
+                    rb"<dcterms:created[^>]*>.*?</dcterms:created>",
+                    f"<dcterms:created xsi:type=\"dcterms:W3CDTF\">{_FIXED_TS}</dcterms:created>".encode(),
+                    data,
+                )
+                data = _re.sub(
+                    rb"<dcterms:modified[^>]*>.*?</dcterms:modified>",
+                    f"<dcterms:modified xsi:type=\"dcterms:W3CDTF\">{_FIXED_TS}</dcterms:modified>".encode(),
+                    data,
+                )
+            item.date_time = _FIXED_DATE
+            zout.writestr(item, data)
+    path.write_bytes(out.getvalue())
 
 
 def apply_dirt_tickets(df: pd.DataFrame, universe: pd.DataFrame) -> pd.DataFrame:
@@ -1094,54 +1127,40 @@ def apply_dirt_tickets(df: pd.DataFrame, universe: pd.DataFrame) -> pd.DataFrame
 
 def main() -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-
     print("Building employee universe...")
     universe = build_main_df()
     universe = tag_departures(universe)
-    print(f"  Universe size: {len(universe)} ({universe['_departed'].sum()} departed)")
+    print(f"  Universe: {len(universe)} ({universe['_departed'].sum()} departed)")
 
-    # Side-tables use full universe; main CSV uses only non-departed.
     main_df = universe[~universe["_departed"]].drop(columns=["_departed"]).copy()
-    print(f"  Main HR rows (pre-dirt): {len(main_df)}")
-
     main_df_dirty = apply_dirt_main(main_df)
-    print(f"  Main HR rows (post-dirt): {len(main_df_dirty)}")
+    universe_for_sides = universe.drop(columns=["_departed"]).copy()
 
-    reviews = build_reviews(universe.drop(columns=["_departed"]))
+    print("Building side-tables...")
+    salary_history = apply_dirt_salary_history(
+        build_salary_history(universe_for_sides), main_df_dirty,
+    )
+    org = build_org_chart(universe_for_sides)
+    tickets = apply_dirt_tickets(build_tickets(universe_for_sides), universe_for_sides)
+    payroll = apply_dirt_payroll(build_payroll_xlsx(main_df_dirty))
+    reviews = apply_dirt_reviews(build_reviews(universe_for_sides), main_df_dirty)
+    exits = apply_dirt_exit_interviews(build_exit_interviews(universe_for_sides))
 
-    print("Building salary history...")
-    salary_history = build_salary_history(universe.drop(columns=["_departed"]))
-    salary_history = apply_dirt_salary_history(salary_history, main_df_dirty)
-    salary_history.to_csv(OUTPUT_DIR / "datacorp_salary_history.csv", index=False)
-    print(f"  Salary history rows: {len(salary_history)}")
-
-    print("Building org chart...")
-    org = build_org_chart(universe.drop(columns=["_departed"]))
-    org.to_csv(OUTPUT_DIR / "datacorp_org_chart.csv", index=False)
-    print(f"  Org chart rows: {len(org)}")
-
-    print("Building tickets...")
-    tickets = build_tickets(universe.drop(columns=["_departed"]))
-    tickets = apply_dirt_tickets(tickets, universe.drop(columns=["_departed"]))
-    tickets.to_csv(OUTPUT_DIR / "datacorp_tickets.csv", index=False)
-    print(f"  Tickets rows: {len(tickets)}")
-
-    print("Building payroll xlsx...")
-    payroll = build_payroll_xlsx(main_df_dirty)
-    payroll = apply_dirt_payroll(payroll)
-    write_payroll_xlsx(payroll, OUTPUT_DIR / "datacorp_payroll_q3.xlsx")
-    print(f"  Payroll rows: {len(payroll)}")
-
-    reviews = apply_dirt_reviews(reviews, main_df_dirty)
-
-    exits = build_exit_interviews(universe.drop(columns=["_departed"]))
-    exits = apply_dirt_exit_interviews(exits)
-
-    # Save files.
+    print("Writing files...")
     main_df_dirty.to_csv(OUTPUT_DIR / "datacorp.csv", index=False)
     reviews.to_csv(OUTPUT_DIR / "datacorp_reviews.csv", index=False)
     exits.to_csv(OUTPUT_DIR / "datacorp_exit_interviews.csv", index=False)
-    print("\nDone!")
+    salary_history.to_csv(OUTPUT_DIR / "datacorp_salary_history.csv", index=False)
+    org.to_csv(OUTPUT_DIR / "datacorp_org_chart.csv", index=False)
+    tickets.to_csv(OUTPUT_DIR / "datacorp_tickets.csv", index=False)
+    write_payroll_xlsx(payroll, OUTPUT_DIR / "datacorp_payroll_q3.xlsx")
+
+    # Smoke checks
+    assert 990 <= len(main_df_dirty) <= 1030
+    assert 2500 <= len(salary_history) <= 4000
+    assert 1000 <= len(org) <= 1400
+    assert 4500 <= len(tickets) <= 5500
+    print("Done!")
 
 
 if __name__ == "__main__":
