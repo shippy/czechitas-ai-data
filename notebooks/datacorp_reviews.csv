@@ -1,80 +1,162 @@
 employee_id,rok,review_text
-56,2025,"Lucie má silné analytické schopnosti, ale je vidět, že ho/ji současná pozice už moc nebaví. Zvážit rozvojový plán na příští kvartál."
-85,2023,"S prací Mareka jsem celkově spokojený/á, nicméně komunikace s týmem by mohla být lepší. Doporučuji zpětnou vazbu od kolegů (360°)."
-65,2024,David má problémy s docházkou. Výstupy vyžadují časté přepracování. Nutné zlepšení do konce zkušební doby.
-74,2024,"Lucie odvádí solidní práci, ale je vidět, že ho/ji současná pozice už moc nebaví. Měli bychom zvážit přesun do jiného týmu."
-29,2024,Výkon Jany je pod očekáváním. Několikrát nedodržel/a dohodnuté termíny. Doporučuji formální rozvojový plán s měsíčním hodnocením.
-88,2024,Barbora je velmi spolehlivý/á a přináší nové nápady do týmu. Měli bychom mu/jí nabídnout více odpovědnosti.
-71,2024,Radek je velmi komunikativní a přináší nové nápady do týmu. Navrhuji navýšení platu.
-7,2025,"Kristýna má technické znalosti na vysoké úrovni, ale občas se ztrácí v detailech a zpomaluje celkový progres. Doporučuji zpětnou vazbu od kolegů (360°)."
-2,2025,Martin je velmi pečlivý/á a je ochoten/ochotna pomoci kolegům. Navrhuji navýšení platu.
-55,2023,"Alena má silné analytické schopnosti, ale mohl/a by být aktivnější na poradách. Doporučuji školení v oblasti time managementu."
-11,2024,Pavel odvádí skvělou práci. jeho/její práce je vždy precizní. Navrhuji navýšení platu.
-25,2023,"Anna odvádí solidní práci, ale mohl/a by být aktivnější na poradách. Doporučuji školení v oblasti time managementu."
-80,2025,Hana odvádí skvělou práci v komunikaci se zákazníky. dobře komunikuje s ostatními odděleními. Měli bychom mu/jí nabídnout více odpovědnosti.
-50,2024,S prací Martina jsem velmi spokojený/á. vždy dodržuje termíny. Výborný/á kandidát/ka na vedení projektu.
-47,2024,S prací Davida jsem velmi spokojený/á. klienti si ho/ji velmi pochvalují. Výborný/á kandidát/ka na vedení projektu.
-33,2025,"Vojtěch je pečlivý/á, ale prezentační dovednosti potřebují zlepšení. Doporučuji školení v oblasti time managementu."
-144,2023,Výkon Nikoly je pod očekáváním. Výstupy vyžadují časté přepracování. Doporučuji formální rozvojový plán s měsíčním hodnocením.
-117,2023,Simona má problémy s adaptací na nové procesy. Spolupráce s ostatními odděleními vázne. Nutné zlepšení do konce zkušební doby.
-107,2024,"Josef má silné analytické schopnosti, ale někdy nestíhá deadliny. Měli bychom zvážit přesun do jiného týmu."
-167,2023,"Petr je samostatný/á, ale občas se ztrácí v detailech a zpomaluje celkový progres. Doporučuji školení v oblasti time managementu."
-138,2025,"S prací Ondřeja jsem celkově spokojený/á, nicméně někdy nestíhá deadliny. Doporučuji školení v oblasti time managementu."
-108,2023,S prací Markéty jsem velmi spokojený/á. zvládá i náročné situace s klidem. Výborný/á kandidát/ka na vedení projektu.
-132,2024,Simona odvádí skvělou práci v komunikaci se zákazníky. klienti si ho/ji velmi pochvalují. 
-158,2024,U Nikoly vidím opakované problémy s komunikací v týmu. Nutné zlepšení do konce zkušební doby.
-115,2024,Josef je velmi spolehlivý/á a klienti si ho/ji velmi pochvalují. Měli bychom mu/jí nabídnout více odpovědnosti.
-140,2024,"Veronika odvádí solidní práci, ale komunikace s týmem by mohla být lepší. Zvážit rozvojový plán na příští kvartál."
-139,2023,Martina odvádí skvělou práci na klientských projektech. jeho/její práce je vždy precizní. Výborný/á kandidát/ka na vedení projektu.
-184,2024,"Eva je flexibilní, ale občas se ztrácí v detailech a zpomaluje celkový progres. Zvážit rozvojový plán na příští kvartál."
-231,2023,"Daniel odvádí solidní práci, ale někdy nestíhá deadliny. Měli bychom zvážit přesun do jiného týmu."
-186,2023,"Radek má technické znalosti na vysoké úrovni, ale je vidět, že ho/ji současná pozice už moc nebaví. Navrhuji mentoring se seniornějším kolegou."
-236,2025,U Jany vidím opakované problémy s adaptací na nové procesy. Doporučuji formální rozvojový plán s měsíčním hodnocením.
-220,2025,Kristýna odvádí skvělou práci v komunikaci se zákazníky. dobře komunikuje s ostatními odděleními. Doporučuji zvážit povýšení.
-175,2025,"Tereza odvádí solidní práci, ale mohl/a by být aktivnější na poradách. Doporučuji zpětnou vazbu od kolegů (360°)."
-177,2025,"Monika má silné analytické schopnosti, ale prezentační dovednosti potřebují zlepšení. Zvážit rozvojový plán na příští kvartál."
-171,2024,"Výkon Evy je pod očekáváním. Výstupy vyžadují časté přepracování. Pokud se situace nezlepší, zvážit ukončení spolupráce."
-229,2023,"S prací Moniky jsem celkově spokojený/á, nicméně mohl/a by být aktivnější na poradách. Doporučuji zpětnou vazbu od kolegů (360°)."
-202,2023,U Tomáša vidím opakované problémy s dodržováním termínů. Doporučuji formální rozvojový plán s měsíčním hodnocením.
-174,2024,Barbora je klíčový/á člen/ka týmu. kolegové ho/ji respektují. Pokračovat v současném nastavení.
-222,2024,"S prací Vojtěcha jsem celkově spokojený/á, nicméně někdy nestíhá deadliny. Zvážit rozvojový plán na příští kvartál."
-170,2025,Monika je velmi komunikativní a je ochoten/ochotna pomoci kolegům. Navrhuji navýšení platu.
-191,2024,"Vojtěch má technické znalosti na vysoké úrovni, ale občas se ztrácí v detailech a zpomaluje celkový progres. Doporučuji zpětnou vazbu od kolegů (360°)."
-264,2023,Anna odvádí skvělou práci při správě interních systémů. zvládá i náročné situace s klidem. Výborný/á kandidát/ka na vedení projektu.
-269,2023,"S prací Filipa jsem celkově spokojený/á, nicméně prezentační dovednosti potřebují zlepšení. Doporučuji školení v oblasti time managementu."
-261,2025,"Výkon Michala je pod očekáváním. Několikrát nedodržel/a dohodnuté termíny. Pokud se situace nezlepší, zvážit ukončení spolupráce."
-265,2025,Anna odvádí skvělou práci. vždy dodržuje termíny. Měli bychom mu/jí nabídnout více odpovědnosti.
-291,2025,"David je komunikativní, ale mohl/a by být aktivnější na poradách. Navrhuji mentoring se seniornějším kolegou."
-282,2024,"Eva je kreativní, ale občas dělá chyby v dokumentaci. Doporučuji školení v oblasti time managementu."
-304,2025,U Tomáša vidím opakované problémy s plněním KPI. Nutné zlepšení do konce zkušební doby.
-292,2024,U Adama vidím opakované problémy s komunikací v týmu. Nutné zlepšení do konce zkušební doby.
-354,2024,Martin odvádí skvělou práci při správě interních systémů. jeho/její práce je vždy precizní. Měli bychom mu/jí nabídnout více odpovědnosti.
-368,2025,Kateřina odvádí skvělou práci v oblasti analýzy dat. vždy dodržuje termíny. Výborný/á kandidát/ka na vedení projektu.
-370,2023,Adam je velmi pečlivý/á a zvládá i náročné situace s klidem. Měli bychom mu/jí nabídnout více odpovědnosti.
-342,2024,Dominik je velmi komunikativní a jeho/její práce je vždy precizní. Doporučuji zvážit povýšení.
-337,2024,Josef je velmi flexibilní a přináší nové nápady do týmu. 
-333,2023,Vojtěch je klíčový/á člen/ka týmu. zvládá i náročné situace s klidem. Pokračovat v současném nastavení.
-335,2023,Jakub odvádí skvělou práci. klienti si ho/ji velmi pochvalují. Měli bychom mu/jí nabídnout více odpovědnosti.
-320,2024,"David odvádí solidní práci, ale občas se ztrácí v detailech a zpomaluje celkový progres. Zvážit rozvojový plán na příští kvartál."
-317,2023,"Nikola odvádí solidní práci, ale někdy nestíhá deadliny. Doporučuji školení v oblasti time managementu."
-374,2024,Simona je klíčový/á člen/ka týmu. kolegové ho/ji respektují. Pokračovat v současném nastavení.
-367,2025,"Kateřina má technické znalosti na vysoké úrovni, ale komunikace s týmem by mohla být lepší. Doporučuji zpětnou vazbu od kolegů (360°)."
-474,2023,David je velmi samostatný/á a klienti si ho/ji velmi pochvalují. Výborný/á kandidát/ka na vedení projektu.
-464,2025,Jan má problémy s dodržováním termínů. Opakovaně jsme řešili stížnosti od kolegů. Doporučuji formální rozvojový plán s měsíčním hodnocením.
-476,2023,Anna odvádí skvělou práci na klientských projektech. dobře komunikuje s ostatními odděleními. Výborný/á kandidát/ka na vedení projektu.
-436,2023,"Pavel má výborný přehled o produktech, ale prezentační dovednosti potřebují zlepšení. Zvážit rozvojový plán na příští kvartál."
-420,2024,"Daniel odvádí solidní práci, ale komunikace s týmem by mohla být lepší. Doporučuji zpětnou vazbu od kolegů (360°)."
-496,2024,"Martin odvádí solidní práci, ale prezentační dovednosti potřebují zlepšení. Měli bychom zvážit přesun do jiného týmu."
-388,2023,"Petra je samostatný/á, ale občas se ztrácí v detailech a zpomaluje celkový progres. Navrhuji mentoring se seniornějším kolegou."
-498,2023,"Markéta je proaktivní, ale komunikace s týmem by mohla být lepší. Navrhuji mentoring se seniornějším kolegou."
-421,2025,Vojtěch je klíčový/á člen/ka týmu. kolegové ho/ji respektují. Pokračovat v současném nastavení.
-424,2023,S prací Evy jsem velmi spokojený/á. je ochoten/ochotna pomoci kolegům. Navrhuji navýšení platu.
-416,2023,"Martina je flexibilní, ale prezentační dovednosti potřebují zlepšení. Měli bychom zvážit přesun do jiného týmu."
-456,2024,U Dominika vidím opakované problémy s kvalitou výstupů. Nutné zlepšení do konce zkušební doby.
-381,2023,Výkon Veroniky je pod očekáváním. Výstupy vyžadují časté přepracování. Doporučuji formální rozvojový plán s měsíčním hodnocením.
-397,2023,"Markéta je kreativní, ale někdy nestíhá deadliny. Navrhuji mentoring se seniornějším kolegou."
-486,2024,S prací Josefa jsem velmi spokojený/á. zvládá i náročné situace s klidem. Doporučuji zvážit povýšení.
-399,2025,"Josef má silné analytické schopnosti, ale mohl/a by být aktivnější na poradách. Měli bychom zvážit přesun do jiného týmu."
-410,2023,"Petra odvádí solidní práci, ale mohl/a by být aktivnější na poradách. Doporučuji zpětnou vazbu od kolegů (360°)."
-407,2023,S prací Markéty jsem velmi spokojený/á. přináší nové nápady do týmu. 
-459,2024,Ondřej je klíčový/á člen/ka týmu. zvládá i náročné situace s klidem. Pokračovat v současném nastavení.
+95,2024,Lucie je klíčový/á člen/ka týmu. klienti si ho/ji velmi pochvalují. Výborný přínos pro tým.
+15,2024,Marie odvádí skvělou práci. vždy dodržuje termíny. Měli bychom mu/jí nabídnout více odpovědnosti.
+30,2023,Lukáš odvádí skvělou práci. klienti si ho/ji velmi pochvalují. Doporučuji zvážit povýšení.
+158,2024,"Adam je flexibilní, ale mohl/a by být aktivnější na poradách. Zvážit rozvojový plán na příští kvartál."
+128,2023,Alena je klíčový/á člen/ka týmu. kolegové ho/ji respektují. Výborný přínos pro tým.
+115,2024,Radek odvádí skvělou práci. dobře komunikuje s ostatními odděleními. Doporučuji zvážit povýšení.
+69,2024,Výkon Karela je pod očekáváním. Opakovaně jsme řešili stížnosti od kolegů. Doporučuji formální rozvojový plán s měsíčním hodnocením.
+170,2024,Martin je velmi kreativní a klienti si ho/ji velmi pochvalují. Výborný/á kandidát/ka na vedení projektu.
+174,2025,"Nikola odvádí solidní práci, ale mohl/a by být aktivnější na poradách. Zvážit rozvojový plán na příští kvartál."
+45,2025,Pavel má problémy s adaptací na nové procesy. Opakovaně jsme řešili stížnosti od kolegů. Nutné zlepšení do konce zkušební doby.
+66,2023,"S prací Markéty jsem celkově spokojený/á, nicméně je vidět, že ho/ji současná pozice už moc nebaví. Zvážit rozvojový plán na příští kvartál."
+182,2023,"Martin je kreativní, ale je vidět, že ho/ji současná pozice už moc nebaví. Zvážit rozvojový plán na příští kvartál."
+165,2025,"Adam má technické znalosti na vysoké úrovni, ale někdy nestíhá deadliny. Navrhuji mentoring se seniornějším kolegou."
+78,2023,Simona je klíčový/á člen/ka týmu. je ochoten/ochotna pomoci kolegům. Výborný přínos pro tým.
+186,2024,"S prací Karela jsem celkově spokojený/á, nicméně občas se ztrácí v detailech a zpomaluje celkový progres. Doporučuji školení v oblasti time managementu."
+177,2023,Jana je klíčový/á člen/ka týmu. kolegové ho/ji respektují. Pokračovat v současném nastavení.
+56,2025,"S prací Luciea jsem celkově spokojený/á, nicméně má tendenci pracovat izolovaně. Zvážit rozvojový plán na příští kvartál."
+152,2024,"Jan má silné analytické schopnosti, ale někdy nestíhá deadliny. Navrhuji mentoring se seniornějším kolegou."
+82,2024,Ondřej odvádí skvělou práci při správě interních systémů. je ochoten/ochotna pomoci kolegům. Výborný/á kandidát/ka na vedení projektu.
+68,2024,"Eva odvádí solidní práci, ale občas se ztrácí v detailech a zpomaluje celkový progres. Měli bychom zvážit přesun do jiného týmu."
+124,2023,Petra je klíčový/á člen/ka týmu. klienti si ho/ji velmi pochvalují. Pokračovat v současném nastavení.
+16,2023,Barbora odvádí skvělou práci. přináší nové nápady do týmu. Měli bychom mu/jí nabídnout více odpovědnosti.
+148,2024,"Klára je pracovitý/á, ale někdy nestíhá deadliny. Měli bychom zvážit přesun do jiného týmu."
+93,2025,Lenka je velmi pracovitý/á a je ochoten/ochotna pomoci kolegům. 
+65,2025,David má problémy s kvalitou výstupů. Spolupráce s ostatními odděleními vázne. Navrhuji intenzivní koučink.
+60,2023,"Pavel má výborný přehled o produktech, ale mohl/a by být aktivnější na poradách. Doporučuji školení v oblasti time managementu."
+84,2024,"David je kreativní, ale občas dělá chyby v dokumentaci. Navrhuji mentoring se seniornějším kolegou."
+67,2024,"S prací Daniela jsem celkově spokojený/á, nicméně mohl/a by být aktivnější na poradách. Zvážit rozvojový plán na příští kvartál."
+125,2023,Tereza je klíčový/á člen/ka týmu. přináší nové nápady do týmu. Pokračovat v současném nastavení.
+132,2024,Radek je velmi proaktivní a jeho/její práce je vždy precizní. Měli bychom mu/jí nabídnout více odpovědnosti.
+9,2024,"Lenka odvádí solidní práci, ale občas dělá chyby v dokumentaci. Měli bychom zvážit přesun do jiného týmu."
+18,2025,"S prací Matěja jsem celkově spokojený/á, nicméně komunikace s týmem by mohla být lepší. Zvážit rozvojový plán na příští kvartál."
+308,2023,"S prací Martiny jsem celkově spokojený/á, nicméně mohl/a by být aktivnější na poradách. Měli bychom zvážit přesun do jiného týmu."
+267,2025,"Kristýna odvádí solidní práci, ale občas dělá chyby v dokumentaci. Doporučuji školení v oblasti time managementu."
+231,2024,"Josef má dobré vztahy s klienty, ale občas se ztrácí v detailech a zpomaluje celkový progres. Navrhuji mentoring se seniornějším kolegou."
+319,2025,Tomáš odvádí skvělou práci při správě interních systémů. kolegové ho/ji respektují. Měli bychom mu/jí nabídnout více odpovědnosti.
+242,2025,S prací Anny jsem velmi spokojený/á. jeho/její práce je vždy precizní. 
+212,2023,Ondřej odvádí skvělou práci v oblasti analýzy dat. klienti si ho/ji velmi pochvalují. 
+281,2025,"S prací Veroniky jsem celkově spokojený/á, nicméně občas se ztrácí v detailech a zpomaluje celkový progres. Zvážit rozvojový plán na příští kvartál."
+269,2023,"S prací Petra jsem celkově spokojený/á, nicméně občas se ztrácí v detailech a zpomaluje celkový progres. Doporučuji školení v oblasti time managementu."
+304,2023,Kristýna je klíčový/á člen/ka týmu. je ochoten/ochotna pomoci kolegům. Zvážit rozšíření kompetencí.
+309,2024,Tomáš je velmi proaktivní a dobře komunikuje s ostatními odděleními. Výborný/á kandidát/ka na vedení projektu.
+313,2025,Adam je velmi pracovitý/á a klienti si ho/ji velmi pochvalují. Výborný/á kandidát/ka na vedení projektu.
+256,2023,"Nikola je pracovitý/á, ale občas se ztrácí v detailech a zpomaluje celkový progres. Doporučuji zpětnou vazbu od kolegů (360°)."
+266,2024,Filip je klíčový/á člen/ka týmu. dobře komunikuje s ostatními odděleními. Zvážit rozšíření kompetencí.
+219,2023,"S prací Kristýny jsem celkově spokojený/á, nicméně občas se ztrácí v detailech a zpomaluje celkový progres. Doporučuji školení v oblasti time managementu."
+332,2023,Ondřej odvádí skvělou práci. dobře komunikuje s ostatními odděleními. Navrhuji navýšení platu.
+278,2023,S prací Evy jsem velmi spokojený/á. vždy dodržuje termíny. Výborný/á kandidát/ka na vedení projektu.
+211,2024,"Filip je flexibilní, ale mohl/a by být aktivnější na poradách. Navrhuji mentoring se seniornějším kolegou."
+227,2025,"S prací Aleny jsem celkově spokojený/á, nicméně mohl/a by být aktivnější na poradách. Navrhuji mentoring se seniornějším kolegou."
+327,2025,"S prací Evy jsem celkově spokojený/á, nicméně někdy nestíhá deadliny. Navrhuji mentoring se seniornějším kolegou."
+310,2023,"Marie odvádí solidní práci, ale občas dělá chyby v dokumentaci. Doporučuji zpětnou vazbu od kolegů (360°)."
+236,2025,Lukáš odvádí skvělou práci při správě interních systémů. zvládá i náročné situace s klidem. Doporučuji zvážit povýšení.
+318,2024,"S prací Nikoly jsem celkově spokojený/á, nicméně komunikace s týmem by mohla být lepší. Navrhuji mentoring se seniornějším kolegou."
+359,2023,Daniel je klíčový/á člen/ka týmu. vždy dodržuje termíny. Zvážit rozšíření kompetencí.
+382,2025,S prací Simony jsem velmi spokojený/á. je ochoten/ochotna pomoci kolegům. Doporučuji zvážit povýšení.
+496,2024,"S prací Tomáša jsem celkově spokojený/á, nicméně občas se ztrácí v detailech a zpomaluje celkový progres. Doporučuji školení v oblasti time managementu."
+451,2024,Matěj je klíčový/á člen/ka týmu. přináší nové nápady do týmu. Výborný přínos pro tým.
+488,2023,"Petr odvádí solidní práci, ale komunikace s týmem by mohla být lepší. Doporučuji školení v oblasti time managementu."
+355,2024,David odvádí skvělou práci v komunikaci se zákazníky. zvládá i náročné situace s klidem. Doporučuji zvážit povýšení.
+364,2024,Lucie odvádí skvělou práci v komunikaci se zákazníky. dobře komunikuje s ostatními odděleními. Navrhuji navýšení platu.
+408,2024,Tereza je klíčový/á člen/ka týmu. kolegové ho/ji respektují. Výborný přínos pro tým.
+457,2023,"Jana je proaktivní, ale komunikace s týmem by mohla být lepší. Navrhuji mentoring se seniornějším kolegou."
+438,2024,David je klíčový/á člen/ka týmu. přináší nové nápady do týmu. Pokračovat v současném nastavení.
+437,2025,"Lucie má problémy s adaptací na nové procesy. Opakovaně jsme řešili stížnosti od kolegů. Pokud se situace nezlepší, zvážit ukončení spolupráce."
+503,2025,Jakub má problémy s docházkou. Výstupy vyžadují časté přepracování. Doporučuji formální rozvojový plán s měsíčním hodnocením.
+409,2025,"S prací Petry jsem celkově spokojený/á, nicméně někdy nestíhá deadliny. Navrhuji mentoring se seniornějším kolegou."
+515,2025,"Michal odvádí solidní práci, ale prezentační dovednosti potřebují zlepšení. Navrhuji mentoring se seniornějším kolegou."
+385,2024,"S prací Daniela jsem celkově spokojený/á, nicméně komunikace s týmem by mohla být lepší. Zvážit rozvojový plán na příští kvartál."
+356,2025,"Karel má výborný přehled o produktech, ale prezentační dovednosti potřebují zlepšení. Doporučuji školení v oblasti time managementu."
+391,2025,Výkon Kláry je pod očekáváním. Opakovaně jsme řešili stížnosti od kolegů. Doporučuji formální rozvojový plán s měsíčním hodnocením.
+375,2024,Filip je klíčový/á člen/ka týmu. je ochoten/ochotna pomoci kolegům. Pokračovat v současném nastavení.
+422,2024,Jan je velmi pečlivý/á a kolegové ho/ji respektují. Výborný/á kandidát/ka na vedení projektu.
+396,2025,"Monika má silné analytické schopnosti, ale má tendenci pracovat izolovaně. Doporučuji zpětnou vazbu od kolegů (360°)."
+505,2025,S prací Vojtěcha jsem velmi spokojený/á. dobře komunikuje s ostatními odděleními. Navrhuji navýšení platu.
+464,2025,Veronika je klíčový/á člen/ka týmu. jeho/její práce je vždy precizní. Pokračovat v současném nastavení.
+486,2024,"S prací Martina jsem celkově spokojený/á, nicméně je vidět, že ho/ji současná pozice už moc nebaví. Zvážit rozvojový plán na příští kvartál."
+370,2025,S prací Jakuba jsem velmi spokojený/á. je ochoten/ochotna pomoci kolegům. Měli bychom mu/jí nabídnout více odpovědnosti.
+349,2025,S prací Evy jsem velmi spokojený/á. jeho/její práce je vždy precizní. Doporučuji zvážit povýšení.
+466,2025,"S prací Mareka jsem celkově spokojený/á, nicméně komunikace s týmem by mohla být lepší. Doporučuji zpětnou vazbu od kolegů (360°)."
+400,2024,U Mareka vidím opakované problémy s dodržováním termínů. Nutné zlepšení do konce zkušební doby.
+358,2024,Daniel je velmi samostatný/á a přináší nové nápady do týmu. Měli bychom mu/jí nabídnout více odpovědnosti.
+510,2025,Barbora je velmi komunikativní a zvládá i náročné situace s klidem. Měli bychom mu/jí nabídnout více odpovědnosti.
+608,2025,Martin je velmi proaktivní a klienti si ho/ji velmi pochvalují. Měli bychom mu/jí nabídnout více odpovědnosti.
+578,2025,"U Martiny vidím opakované problémy s dodržováním termínů. Pokud se situace nezlepší, zvážit ukončení spolupráce."
+595,2023,"S prací Kristýny jsem celkově spokojený/á, nicméně občas dělá chyby v dokumentaci. Zvážit rozvojový plán na příští kvartál."
+570,2024,Eva odvádí skvělou práci. klienti si ho/ji velmi pochvalují. Měli bychom mu/jí nabídnout více odpovědnosti.
+569,2024,"Radek odvádí solidní práci, ale mohl/a by být aktivnější na poradách. Doporučuji zpětnou vazbu od kolegů (360°)."
+564,2024,"Hana odvádí solidní práci, ale je vidět, že ho/ji současná pozice už moc nebaví. Doporučuji školení v oblasti time managementu."
+547,2025,Martin odvádí skvělou práci v komunikaci se zákazníky. vždy dodržuje termíny. 
+605,2024,S prací Mariea jsem velmi spokojený/á. je ochoten/ochotna pomoci kolegům. Výborný/á kandidát/ka na vedení projektu.
+535,2025,Dominik je velmi pracovitý/á a vždy dodržuje termíny. 
+525,2023,S prací Jany jsem velmi spokojený/á. vždy dodržuje termíny. 
+543,2023,Výkon Markéty je pod očekáváním. Opakovaně jsme řešili stížnosti od kolegů. Navrhuji intenzivní koučink.
+555,2024,Petr odvádí skvělou práci na klientských projektech. je ochoten/ochotna pomoci kolegům. Měli bychom mu/jí nabídnout více odpovědnosti.
+598,2025,"S prací Lukáša jsem celkově spokojený/á, nicméně je vidět, že ho/ji současná pozice už moc nebaví. Měli bychom zvážit přesun do jiného týmu."
+558,2025,S prací Petry jsem velmi spokojený/á. klienti si ho/ji velmi pochvalují. Doporučuji zvážit povýšení.
+615,2025,S prací Ondřeja jsem velmi spokojený/á. kolegové ho/ji respektují. Navrhuji navýšení platu.
+529,2023,"Martina je spolehlivý/á, ale komunikace s týmem by mohla být lepší. Doporučuji školení v oblasti time managementu."
+733,2025,Jana odvádí skvělou práci. kolegové ho/ji respektují. Výborný/á kandidát/ka na vedení projektu.
+692,2023,"Tomáš je samostatný/á, ale občas se ztrácí v detailech a zpomaluje celkový progres. Doporučuji zpětnou vazbu od kolegů (360°)."
+656,2025,Pavel je velmi pracovitý/á a zvládá i náročné situace s klidem. Navrhuji navýšení platu.
+744,2023,"Marek odvádí solidní práci, ale občas se ztrácí v detailech a zpomaluje celkový progres. Doporučuji školení v oblasti time managementu."
+667,2023,"Martina má silné analytické schopnosti, ale mohl/a by být aktivnější na poradách. Doporučuji zpětnou vazbu od kolegů (360°)."
+637,2025,"Alena je komunikativní, ale mohl/a by být aktivnější na poradách. Doporučuji zpětnou vazbu od kolegů (360°)."
+706,2023,Marie odvádí skvělou práci v oblasti analýzy dat. kolegové ho/ji respektují. Měli bychom mu/jí nabídnout více odpovědnosti.
+694,2023,S prací Karela jsem velmi spokojený/á. zvládá i náročné situace s klidem. Doporučuji zvážit povýšení.
+729,2025,Lukáš odvádí skvělou práci na klientských projektech. kolegové ho/ji respektují. Doporučuji zvážit povýšení.
+734,2024,Josef je velmi proaktivní a vždy dodržuje termíny. Výborný/á kandidát/ka na vedení projektu.
+738,2025,"Josef je komunikativní, ale mohl/a by být aktivnější na poradách. Doporučuji zpětnou vazbu od kolegů (360°)."
+681,2025,Martin je velmi komunikativní a je ochoten/ochotna pomoci kolegům. Doporučuji zvážit povýšení.
+691,2025,"Martina je pečlivý/á, ale občas se ztrácí v detailech a zpomaluje celkový progres. Navrhuji mentoring se seniornějším kolegou."
+644,2023,"Martin je flexibilní, ale prezentační dovednosti potřebují zlepšení. Navrhuji mentoring se seniornějším kolegou."
+757,2024,"S prací Vojtěcha jsem celkově spokojený/á, nicméně má tendenci pracovat izolovaně. Měli bychom zvážit přesun do jiného týmu."
+703,2023,"Petra má výborný přehled o produktech, ale je vidět, že ho/ji současná pozice už moc nebaví. Doporučuji zpětnou vazbu od kolegů (360°)."
+636,2024,"S prací Anny jsem celkově spokojený/á, nicméně občas se ztrácí v detailech a zpomaluje celkový progres. Doporučuji zpětnou vazbu od kolegů (360°)."
+652,2025,S prací Hany jsem velmi spokojený/á. je ochoten/ochotna pomoci kolegům. Navrhuji navýšení platu.
+752,2024,"Petr odvádí solidní práci, ale je vidět, že ho/ji současná pozice už moc nebaví. Zvážit rozvojový plán na příští kvartál."
+735,2024,Kristýna odvádí skvělou práci v komunikaci se zákazníky. jeho/její práce je vždy precizní. Měli bychom mu/jí nabídnout více odpovědnosti.
+661,2025,"Tomáš odvádí solidní práci, ale mohl/a by být aktivnější na poradách. Doporučuji zpětnou vazbu od kolegů (360°)."
+743,2025,Nikola je klíčový/á člen/ka týmu. jeho/její práce je vždy precizní. Pokračovat v současném nastavení.
+907,2024,U Jana vidím opakované problémy s komunikací v týmu. Navrhuji intenzivní koučink.
+771,2024,Výkon Pavela je pod očekáváním. Výstupy vyžadují časté přepracování. Doporučuji formální rozvojový plán s měsíčním hodnocením.
+862,2023,"Dominik odvádí solidní práci, ale je vidět, že ho/ji současná pozice už moc nebaví. Zvážit rozvojový plán na příští kvartál."
+825,2023,"Matěj odvádí solidní práci, ale mohl/a by být aktivnější na poradách. Navrhuji mentoring se seniornějším kolegou."
+877,2025,Monika odvádí skvělou práci. jeho/její práce je vždy precizní. Výborný/á kandidát/ka na vedení projektu.
+946,2025,"Výkon Matěja je pod očekáváním. Spolupráce s ostatními odděleními vázne. Pokud se situace nezlepší, zvážit ukončení spolupráce."
+962,2024,"U Barbory vidím opakované problémy s plněním KPI. Pokud se situace nezlepší, zvážit ukončení spolupráce."
+949,2023,"Lucie je flexibilní, ale občas dělá chyby v dokumentaci. Doporučuji zpětnou vazbu od kolegů (360°)."
+774,2025,S prací Petra jsem velmi spokojený/á. přináší nové nápady do týmu. Navrhuji navýšení platu.
+869,2023,"Ondřej má dobré vztahy s klienty, ale je vidět, že ho/ji současná pozice už moc nebaví. Doporučuji školení v oblasti time managementu."
+965,2025,U Kláry vidím opakované problémy s komunikací v týmu. Navrhuji intenzivní koučink.
+981,2023,"Tomáš odvádí solidní práci, ale prezentační dovednosti potřebují zlepšení. Zvážit rozvojový plán na příští kvartál."
+1001,2024,"S prací Petra jsem celkově spokojený/á, nicméně občas dělá chyby v dokumentaci. Doporučuji zpětnou vazbu od kolegů (360°)."
+1005,2025,"S prací Hany jsem celkově spokojený/á, nicméně komunikace s týmem by mohla být lepší. Zvážit rozvojový plán na příští kvartál."
+832,2024,"S prací Veroniky jsem celkově spokojený/á, nicméně mohl/a by být aktivnější na poradách. Měli bychom zvážit přesun do jiného týmu."
+989,2023,"Ondřej je pracovitý/á, ale někdy nestíhá deadliny. Navrhuji mentoring se seniornějším kolegou."
+959,2025,"Lucie odvádí solidní práci, ale někdy nestíhá deadliny. Doporučuji školení v oblasti time managementu."
+780,2025,"Jan odvádí solidní práci, ale někdy nestíhá deadliny. Navrhuji mentoring se seniornějším kolegou."
+942,2024,"S prací Karela jsem celkově spokojený/á, nicméně občas se ztrácí v detailech a zpomaluje celkový progres. Zvážit rozvojový plán na příští kvartál."
+789,2025,S prací Kristýny jsem velmi spokojený/á. zvládá i náročné situace s klidem. Měli bychom mu/jí nabídnout více odpovědnosti.
+1012,2025,"S prací Terezy jsem celkově spokojený/á, nicméně má tendenci pracovat izolovaně. Zvážit rozvojový plán na příští kvartál."
+784,2024,"S prací Simony jsem celkově spokojený/á, nicméně občas dělá chyby v dokumentaci. Navrhuji mentoring se seniornějším kolegou."
+879,2024,"Pavel je pečlivý/á, ale občas dělá chyby v dokumentaci. Měli bychom zvážit přesun do jiného týmu."
+833,2025,"Klára je flexibilní, ale má tendenci pracovat izolovaně. Doporučuji zpětnou vazbu od kolegů (360°)."
+941,2025,U Ondřeja vidím opakované problémy s dodržováním termínů. Nutné zlepšení do konce zkušební doby.
+810,2025,"Pavel má dobré vztahy s klienty, ale komunikace s týmem by mohla být lepší. Navrhuji mentoring se seniornějším kolegou."
+820,2024,"S prací Simony jsem celkově spokojený/á, nicméně někdy nestíhá deadliny. Doporučuji školení v oblasti time managementu."
+775,2023,"S prací Jana jsem celkově spokojený/á, nicméně má tendenci pracovat izolovaně. Měli bychom zvážit přesun do jiného týmu."
+795,2023,"S prací Kateřiny jsem celkově spokojený/á, nicméně občas se ztrácí v detailech a zpomaluje celkový progres. Navrhuji mentoring se seniornějším kolegou."
+885,2025,"Josef je komunikativní, ale komunikace s týmem by mohla být lepší. Navrhuji mentoring se seniornějším kolegou."
+966,2023,"Kateřina odvádí solidní práci, ale občas dělá chyby v dokumentaci. Měli bychom zvážit přesun do jiného týmu."
+798,2024,S prací Matěja jsem velmi spokojený/á. klienti si ho/ji velmi pochvalují. Navrhuji navýšení platu.
+906,2024,U Jana vidím opakované problémy s kvalitou výstupů. Navrhuji intenzivní koučink.
+984,2023,"S prací Moniky jsem celkově spokojený/á, nicméně prezentační dovednosti potřebují zlepšení. Navrhuji mentoring se seniornějším kolegou."
+790,2023,"S prací Jakuba jsem celkově spokojený/á, nicméně občas dělá chyby v dokumentaci. Doporučuji zpětnou vazbu od kolegů (360°)."
+876,2025,"Adam odvádí solidní práci, ale mohl/a by být aktivnější na poradách. Doporučuji zpětnou vazbu od kolegů (360°)."
+783,2023,Klára má problémy s komunikací v týmu. Spolupráce s ostatními odděleními vázne. Navrhuji intenzivní koučink.
+961,2024,"Vojtěch odvádí solidní práci, ale občas se ztrácí v detailech a zpomaluje celkový progres. Doporučuji školení v oblasti time managementu."
+945,2024,Veronika je klíčový/á člen/ka týmu. jeho/její práce je vždy precizní. Výborný přínos pro tým.
+924,2023,David je velmi spolehlivý/á a klienti si ho/ji velmi pochvalují. Navrhuji navýšení platu.

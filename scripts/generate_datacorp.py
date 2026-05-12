@@ -1,8 +1,8 @@
 """Generate the DataCorp s.r.o. synthetic HR dataset.
 
 Produces three files in notebooks/:
-- datacorp.csv         — main structured dataset (~510 rows, with planted dirt)
-- datacorp_reviews.csv — free-text performance reviews (~80 rows)
+- datacorp.csv         — main structured dataset (~1000 rows, with planted dirt)
+- datacorp_reviews.csv — free-text performance reviews (~160 rows)
 - datacorp_exit_interviews.csv — free-text exit interview notes (~35 rows)
 
 Usage:
@@ -59,7 +59,7 @@ CITIES = [
 
 DEPARTMENTS = {
     "Vývoj": {
-        "headcount": 100,
+        "headcount": 200,
         "base_salary": 65_000,
         "salary_std": 12_000,
         "avg_tenure_years": 4.0,
@@ -71,7 +71,7 @@ DEPARTMENTS = {
         ],
     },
     "Marketing": {
-        "headcount": 70,
+        "headcount": 140,
         "base_salary": 45_000,
         "salary_std": 8_000,
         "avg_tenure_years": 3.0,
@@ -83,7 +83,7 @@ DEPARTMENTS = {
         ],
     },
     "Obchod": {
-        "headcount": 90,
+        "headcount": 185,
         "base_salary": 50_000,
         "salary_std": 10_000,
         "avg_tenure_years": 3.5,
@@ -95,7 +95,7 @@ DEPARTMENTS = {
         ],
     },
     "HR": {
-        "headcount": 50,
+        "headcount": 100,
         "base_salary": 42_000,
         "salary_std": 7_000,
         "avg_tenure_years": 3.0,
@@ -104,7 +104,7 @@ DEPARTMENTS = {
         "positions": ["HR Specialist", "Recruiter", "HR Manager", "Payroll Specialist"],
     },
     "Finance": {
-        "headcount": 70,
+        "headcount": 140,
         "base_salary": 55_000,
         "salary_std": 10_000,
         "avg_tenure_years": 4.5,
@@ -113,7 +113,7 @@ DEPARTMENTS = {
         "positions": ["Účetní", "Finanční analytik", "Controller", "Auditor"],
     },
     "Podpora": {
-        "headcount": 120,
+        "headcount": 250,
         "base_salary": 35_000,
         "salary_std": 5_000,
         "avg_tenure_years": 2.0,
@@ -127,7 +127,7 @@ DEPARTMENTS = {
 }
 
 
-def generate_employees() -> pd.DataFrame:
+def build_main_df() -> pd.DataFrame:
     """Generate the clean base employee dataset with planted analytical signals."""
     rows = []
     employee_id = 0
@@ -232,7 +232,21 @@ def generate_employees() -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def apply_dirt(df: pd.DataFrame) -> pd.DataFrame:
+def tag_departures(df: pd.DataFrame) -> pd.DataFrame:
+    """Tag ~15 employees as departed.
+
+    Departed employees stay in the in-memory universe (side-tables can
+    reference them) but are filtered out of the persisted main CSV.
+    This creates natural survivorship bias for downstream analysis.
+    """
+    df = df.copy()
+    df["_departed"] = False
+    departed_idx = RNG.choice(df.index, size=15, replace=False)
+    df.loc[departed_idx, "_departed"] = True
+    return df
+
+
+def apply_dirt_main(df: pd.DataFrame) -> pd.DataFrame:
     """Apply pre-planted data quality issues."""
     df = df.copy()
     n = len(df)
@@ -422,7 +436,7 @@ def _fill_review_template(template: str, name: str) -> str:
     return result
 
 
-def generate_reviews(df: pd.DataFrame) -> pd.DataFrame:
+def build_reviews(df: pd.DataFrame) -> pd.DataFrame:
     """Generate ~80 performance reviews for a subset of employees."""
     # Pick ~80 employees (spread across departments)
     review_rows = []
@@ -509,7 +523,7 @@ EXIT_NOTES_NEG = [
 ]
 
 
-def generate_exit_interviews(df: pd.DataFrame) -> pd.DataFrame:
+def build_exit_interviews(df: pd.DataFrame) -> pd.DataFrame:
     """Generate ~35 exit interview notes, skewed toward Podpora."""
     from datetime import timedelta
 
@@ -597,35 +611,25 @@ def generate_exit_interviews(df: pd.DataFrame) -> pd.DataFrame:
 def main() -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    print("Generating employees...")
-    df = generate_employees()
-    print(f"  Clean rows: {len(df)}")
+    print("Building employee universe...")
+    universe = build_main_df()
+    universe = tag_departures(universe)
+    print(f"  Universe size: {len(universe)} ({universe['_departed'].sum()} departed)")
 
-    print("Applying dirt...")
-    df_dirty = apply_dirt(df)
-    print(f"  Dirty rows (with duplicates): {len(df_dirty)}")
+    # Side-tables use full universe; main CSV uses only non-departed.
+    main_df = universe[~universe["_departed"]].drop(columns=["_departed"]).copy()
+    print(f"  Main HR rows (pre-dirt): {len(main_df)}")
 
-    print("Generating reviews...")
-    reviews = generate_reviews(df_dirty)
-    print(f"  Review rows: {len(reviews)}")
+    main_df_dirty = apply_dirt_main(main_df)
+    print(f"  Main HR rows (post-dirt): {len(main_df_dirty)}")
 
-    print("Generating exit interviews...")
-    exits = generate_exit_interviews(df_dirty)
-    print(f"  Exit interview rows: {len(exits)}")
+    reviews = build_reviews(universe.drop(columns=["_departed"]))
+    exits = build_exit_interviews(universe.drop(columns=["_departed"]))
 
-    # Save
-    csv_path = OUTPUT_DIR / "datacorp.csv"
-    df_dirty.to_csv(csv_path, index=False)
-    print(f"  Saved: {csv_path}")
-
-    reviews_path = OUTPUT_DIR / "datacorp_reviews.csv"
-    reviews.to_csv(reviews_path, index=False)
-    print(f"  Saved: {reviews_path}")
-
-    exits_path = OUTPUT_DIR / "datacorp_exit_interviews.csv"
-    exits.to_csv(exits_path, index=False)
-    print(f"  Saved: {exits_path}")
-
+    # Save the three existing files for now; new ones come in later tasks.
+    main_df_dirty.to_csv(OUTPUT_DIR / "datacorp.csv", index=False)
+    reviews.to_csv(OUTPUT_DIR / "datacorp_reviews.csv", index=False)
+    exits.to_csv(OUTPUT_DIR / "datacorp_exit_interviews.csv", index=False)
     print("\nDone!")
 
 

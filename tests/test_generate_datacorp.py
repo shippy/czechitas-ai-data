@@ -27,6 +27,4 @@ def regenerate_dataset() -> None:
 
 def test_main_table_row_count() -> None:
     df = pd.read_csv(NOTEBOOKS / "datacorp.csv")
-    # Temporary range matching the current ~510-row generator. Task 2 will
-    # tighten this to 990–1030 once headcount is scaled up.
-    assert 500 <= len(df) <= 530
+    assert 990 <= len(df) <= 1030
