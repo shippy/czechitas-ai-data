@@ -490,6 +490,59 @@ def apply_dirt_main(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
+def build_org_chart(universe: pd.DataFrame) -> pd.DataFrame:
+    """One row per employee per reporting line.
+
+    ~80% of employees have 1 row; ~20% have 2–3 rows; cycles and orphan
+    manager_ids are planted.
+    """
+    rows = []
+    universe = universe.copy()
+    universe["plat"] = pd.to_numeric(universe["plat"], errors="coerce").fillna(0)
+
+    # Heuristic manager picker: choose someone in the same department with higher salary
+    by_dept = {dept: sub for dept, sub in universe.groupby("oddeleni")}
+    ids = universe["employee_id"].tolist()
+    for _, emp in universe.iterrows():
+        dept_peers = by_dept.get(emp["oddeleni"])
+        candidates = dept_peers[dept_peers["plat"] > emp["plat"]] if dept_peers is not None else None
+        if candidates is None or len(candidates) == 0:
+            mgr = None  # department head
+        else:
+            mgr = int(candidates.sample(1, random_state=int(emp["employee_id"])).iloc[0]["employee_id"])
+        hire = str(emp["datum_nastupu"])
+        rows.append({
+            "employee_id": int(emp["employee_id"]),
+            "manager_id": mgr,
+            "platnost_od": hire if hire and hire != "nan" else "2020-01-01",
+        })
+        # ~20% get a manager change
+        if RNG.random() < 0.20 and mgr is not None:
+            new_mgr = int(RNG.choice(ids))
+            rows.append({
+                "employee_id": int(emp["employee_id"]),
+                "manager_id": new_mgr,
+                "platnost_od": "2024-01-15",
+            })
+
+    df = pd.DataFrame(rows)
+
+    # Plant 3 cycles: pick 3 pairs and swap
+    for _ in range(3):
+        pair = RNG.choice(df["employee_id"].unique(), size=2, replace=False)
+        a, b = int(pair[0]), int(pair[1])
+        a_latest = df[df["employee_id"] == a].tail(1).index
+        b_latest = df[df["employee_id"] == b].tail(1).index
+        df.loc[a_latest, "manager_id"] = b
+        df.loc[b_latest, "manager_id"] = a
+
+    # Plant 15 orphan manager_ids (point at IDs not in universe)
+    orphan_idx = RNG.choice(df.index, size=15, replace=False)
+    df.loc[orphan_idx, "manager_id"] = RNG.integers(9000, 9999, size=15)
+
+    return df.sample(frac=1, random_state=SEED).reset_index(drop=True)
+
+
 # ── Review text generation ────────────────────────────────────────
 
 REVIEW_TEMPLATES_POSITIVE = [
@@ -813,6 +866,11 @@ def main() -> None:
     salary_history = apply_dirt_salary_history(salary_history, main_df_dirty)
     salary_history.to_csv(OUTPUT_DIR / "datacorp_salary_history.csv", index=False)
     print(f"  Salary history rows: {len(salary_history)}")
+
+    print("Building org chart...")
+    org = build_org_chart(universe.drop(columns=["_departed"]))
+    org.to_csv(OUTPUT_DIR / "datacorp_org_chart.csv", index=False)
+    print(f"  Org chart rows: {len(org)}")
 
     # Save files.
     main_df_dirty.to_csv(OUTPUT_DIR / "datacorp.csv", index=False)

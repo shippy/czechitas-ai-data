@@ -86,3 +86,19 @@ def test_salary_history_references_departed() -> None:
     main = pd.read_csv(NOTEBOOKS / "datacorp.csv")
     departed_ids = set(history["employee_id"]) - set(main["employee_id"])
     assert len(departed_ids) >= 5
+
+
+def test_org_chart_shape_and_cycles() -> None:
+    df = pd.read_csv(NOTEBOOKS / "datacorp_org_chart.csv")
+    assert set(df.columns) == {"employee_id", "manager_id", "platnost_od"}
+    assert 1000 <= len(df) <= 1400  # ~1000 + multi-row history rows
+    # detect at least one cycle
+    latest = df.sort_values("platnost_od").drop_duplicates("employee_id", keep="last")
+    parent = dict(zip(latest["employee_id"], latest["manager_id"]))
+    cycles = 0
+    for emp_id, mgr in parent.items():
+        if pd.isna(mgr):
+            continue
+        if parent.get(mgr) == emp_id:
+            cycles += 1
+    assert cycles >= 2  # 3 planted, expect to detect at least 2
