@@ -163,7 +163,7 @@ def build_main_df() -> pd.DataFrame:
             hire_date = date(2025, 6, 1) - timedelta(days=int(tenure * 365))
             # Clamp to reasonable range
             if hire_date < date(2015, 1, 1):
-                hire_date = date(2015, 1, 1) + timedelta(days=RNG.integers(0, 180))
+                hire_date = date(2015, 1, 1) + timedelta(days=int(RNG.integers(0, 180)))
 
             # Education — department-weighted
             edu_labels = list(profile["edu_weights"].keys())
@@ -226,6 +226,7 @@ def build_main_df() -> pd.DataFrame:
                 "vek": age,
                 "pohlavi": pohlavi,
                 "typ_uvazku": typ_uvazku,
+                "telefon": f"+420 {RNG.integers(600, 800)} {RNG.integers(100, 1000):03d} {RNG.integers(100, 1000):03d}",
             })
             employee_id += 1
 
@@ -301,6 +302,67 @@ def apply_dirt_main(df: pd.DataFrame) -> pd.DataFrame:
     n_invalid = RNG.integers(5, 9)
     invalid_idx = RNG.choice(df.index, size=n_invalid, replace=False)
     df.loc[invalid_idx, "hodnoceni_vykonu"] = RNG.choice([0, 6], size=n_invalid)
+
+    # 7. Phone-number formats and invalids
+    phone_idx = df.index.tolist()
+    n_alt = 200  # split across alt formats
+    alt_idx = RNG.choice(phone_idx, size=n_alt, replace=False)
+    half = n_alt // 2
+    for i in alt_idx[:half]:
+        df.at[i, "telefon"] = df.at[i, "telefon"].replace("+420 ", "").replace(" ", "")
+    for i in alt_idx[half:]:
+        df.at[i, "telefon"] = df.at[i, "telefon"].replace("+420 ", "")
+    missing_phone = RNG.choice(phone_idx, size=20, replace=False)
+    df.loc[missing_phone, "telefon"] = np.nan
+    invalid_phone = RNG.choice(phone_idx, size=5, replace=False)
+    df.loc[invalid_phone, "telefon"] = RNG.choice(["???", "viz Slack"], size=5)
+
+    # 8. Email / name mismatches (rehires reusing employee_id)
+    rehire_idx = RNG.choice(df.index, size=15, replace=False)
+    ghost_emails = [
+        "petra.svobodova@datacorp.cz", "tomas.novak@datacorp.cz",
+        "jana.kralova@datacorp.cz", "marek.benes@datacorp.cz",
+        "lucie.dvorakova@datacorp.cz",
+    ]
+    for k, i in enumerate(rehire_idx):
+        df.at[i, "email"] = ghost_emails[k % len(ghost_emails)]
+
+    # 9. Whitespace and embedded newlines in name fields
+    ws_idx = RNG.choice(df.index, size=30, replace=False)
+    for k, i in enumerate(ws_idx):
+        col = "jmeno" if k % 2 == 0 else "prijmeni"
+        original = df.at[i, col]
+        if k % 3 == 0:
+            df.at[i, col] = f" {original}"
+        elif k % 3 == 1:
+            df.at[i, col] = f"{original} "
+        else:
+            df.at[i, col] = f" {original} "
+
+    # 10. Encoding mojibake — 3 rows with mangled diacritics
+    mojibake_idx = RNG.choice(df.index, size=3, replace=False)
+    mojibake_map = str.maketrans({"Č": "Ä", "č": "Ä", "ž": "Å¾", "š": "Å¡"})
+    for i in mojibake_idx:
+        df.at[i, "prijmeni"] = str(df.at[i, "prijmeni"]).translate(mojibake_map)
+
+    # 16. Future hire dates (typo 2017 -> 2027)
+    future_idx = RNG.choice(df.index, size=5, replace=False)
+    for i in future_idx:
+        existing = str(df.at[i, "datum_nastupu"])
+        df.at[i, "datum_nastupu"] = existing.replace("2017", "2027").replace("2018", "2028")
+        if "20" not in df.at[i, "datum_nastupu"][-4:]:
+            df.at[i, "datum_nastupu"] = "2027-06-15"
+
+    # 15. Diacritic-folded duplicate identities — add 2 paired rows
+    if "Černý" in df["prijmeni"].astype(str).values:
+        cerny_rows = df[df["prijmeni"].astype(str) == "Černý"].head(1).copy()
+        if len(cerny_rows):
+            folded = cerny_rows.copy()
+            folded["prijmeni"] = "Cerny"
+            folded["jmeno"] = folded["jmeno"].astype(str).str.replace("á", "a").str.replace("í", "i")
+            folded["employee_id"] = folded["employee_id"].astype(int).max() + 5000
+            folded["email"] = folded["email"].astype(str).str.replace("ý", "y").str.replace("á", "a")
+            df = pd.concat([df, folded], ignore_index=True)
 
     # Shuffle the whole thing
     df = df.sample(frac=1, random_state=SEED).reset_index(drop=True)
