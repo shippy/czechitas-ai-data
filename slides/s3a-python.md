@@ -147,20 +147,6 @@ user = client.create(
 
 ---
 
-# Vyzkoušejte si: assignment-03c
-
-<div class="flex justify-around items-start mt-8">
-
-<QRCode url="https://colab.research.google.com/github/shippy/czechitas-ai-data/blob/main/notebooks/assignment-03c.ipynb" :size="200">Notebook v Google Colab</QRCode>
-
-<QRCode url="https://chatgpt.com/g/g-67cab661ae5c8191b0d8419c76d3959b-czechitas-ai-in-data-analytics-2025-12" :size="200">GPT pomocníček</QRCode>
-
-</div>
-
-<div class="callout mt-8">💡 Bylo toho moc? Nevadí — zeptejte se GPT pomocníčka nebo nás!</div>
-
----
-
 # Bonus: Async (paralelní zpracování)
 
 Když zpracováváme **desítky nebo stovky** záznamů, nechceme čekat na každý zvlášť:
