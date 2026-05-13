@@ -169,31 +169,26 @@ subtitle: "~30 minut + 5 minut společné sdílení"
 
 ---
 
-# Fáze 1: No-code analýza (~15 min)
+# Fáze 1: Strukturovaná extrakce (~15 min)
 
-Vyberte si jednu otázku (nebo použijte vlastní ze sekce 2):
+V notebooku jsou tři textové datasety: hlavní `datacorp.csv`, **performance reviews** a **exit interviews**. Cílem je vytáhnout z volného textu strukturované informace pomocí Pydantic modelu.
 
-1. „Existuje rozdíl v platech mezi odděleními?"
-2. „Souvisí délka zaměstnání s hodnocením výkonu?"
-3. „Liší se platy podle vzdělání?"
-4. Vaše vlastní otázka ze sekce 2
+- **Úkol 1**: Zpracujte všechny exit interviews — pro každý záznam hlavní důvod odchodu, sentiment a jednověté shrnutí.
+- **Úkol 2**: Navrhněte si vlastní Pydantic model pro performance reviews (sentiment, silné/slabé stránky, doporučená akce…) a zpracujte všechny.
 
-**Postup v ChatGPT:**
-
-- Získejte první odpověď
-- Zeptejte se: „Jak jsi to spočítal/a?"
-- Položte aspoň jeden „what if" follow-up
-- Udělejte screenshot klíčového zjištění
+→ Notebook má hotovou ukázku — kopírujte vzor a upravujte.
 
 ---
 
-# Fáze 2: Code analýza (~15 min)
+# Fáze 2: Propojení a analýza (~15 min)
 
-Stejná otázka, teď v Google Colabu:
+Strukturovaná data z Fáze 1 spojte s hlavním datasetem přes `employee_id` a odpovězte:
 
-- Nechte AI vygenerovat Python kód pro stejnou analýzu
-- Spusťte ho, porovnejte výsledek s no-code odpovědí
-- **Bonus:** Požádejte AI o vizualizaci nebo statistický test
+- **Úkol 3.1**: Které oddělení má nejvíc negativních exit interviews?
+- **Úkol 3.2**: Koreluje sentiment review s výší platu nebo hodnocením výkonu?
+- **Úkol 3.3**: Jaké jsou nejčastější důvody odchodu? Vytvořte graf.
+
+**Bonus, pokud zbude čas:** Úkol 4 (rekonciliace mzdového listu z Excelu) nebo úprava Pydantic modelu — viz konec notebooku.
 
 ---
 layout: center
@@ -201,6 +196,6 @@ layout: center
 
 # Společné sdílení
 
-- Daly no-code a code stejnou odpověď?
-- Kterému způsobu víc důvěřujete? Proč?
-- Změnil váš „what if" follow-up závěr?
+- Která z tří otázek měla překvapivou odpověď?
+- Vrátil LLM někdy nesmyslnou strukturu? Co s tím?
+- Jak moc záleží na system promptu — kdo zkusil změnit instrukci a co se stalo?
