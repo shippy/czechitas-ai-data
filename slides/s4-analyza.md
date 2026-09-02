@@ -107,47 +107,6 @@ a
 
 ---
 layout: section
----
-
-# Ukázka: Stejná otázka, dva způsoby
-
-„Existuje rozdíl v platech mezi odděleními?"
-
----
-
-# Způsob 1: No-code (ChatGPT)
-
-1. Nahrát vyčištěný dataset
-2. Zeptat se přímo
-3. AI vytvoří graf + shrnutí
-4. Follow-up: „Je ten rozdíl statisticky významný?"
-5. Follow-up: „Změní se, když vezmu v úvahu délku zaměstnání?"
-
-→ Odpověď se vyvíjí s každým follow-upem
-
----
-
-# Způsob 2: Code (Google Colab)
-
-1. Stejná otázka: „Napiš mi Python kód, který tohle zodpoví"
-2. Spustit v Colabu, podívat se na výstup
-3. Co tím získáme:
-   - **Reprodukovatelnost** — můžu to spustit znovu zítra
-   - **Transparentnost** — vidím přesně, co se počítalo
-   - **Sdílitelnost** — můžu poslat notebook šéfovi
-
----
-
-# Kdy který způsob?
-
-| No-code (ChatGPT) | Code (Colab) |
-|--------------------|--------------|
-| Rychlý průzkum | Cokoliv, co musíte obhájit |
-| Sanity check | Cokoliv, co se opakuje |
-| „Stojí tohle za zkoumání?" | Cokoliv, co předáváte dál |
-
----
-layout: section
 subtitle: "~30 minut + 5 minut společné sdílení"
 ---
 
@@ -180,15 +139,15 @@ V notebooku jsou tři textové datasety: hlavní `datacorp.csv`, **performance r
 
 ---
 
-# Fáze 2: Propojení a analýza (~15 min)
+# Fáze 2: Změřte svou extrakci (~15 min)
 
-Strukturovaná data z Fáze 1 spojte s hlavním datasetem přes `employee_id` a odpovězte:
+Dataset je syntetický — správné odpovědi známe (`datacorp_ground_truth_*.csv`). Porovnejte svou extrakci z Fáze 1 s realitou:
 
-- **Úkol 3.1**: Které oddělení má nejvíc negativních exit interviews?
-- **Úkol 3.2**: Koreluje sentiment review s výší platu nebo hodnocením výkonu?
-- **Úkol 3.3**: Jaké jsou nejčastější důvody odchodu? Vytvořte graf.
+- **Úkol 3.1**: Accuracy + confusion matrix důvodů odchodu — kde se váš model plete?
+- **Úkol 3.2**: Bias sonda — jak úspěšný je model u anglických a sarkastických textů?
+- **Úkol 3.3**: „Změnila by naměřená chybovost nějaký závěr, který byste prezentovaly vedení?"
 
-**Bonus, pokud zbude čas:** Úkol 4 (rekonciliace mzdového listu z Excelu) nebo úprava Pydantic modelu — viz konec notebooku.
+**Bonus, pokud zbude čas:** Úkol 4 (rekonciliace mzdového listu z Excelu) — viz konec notebooku.
 
 ---
 layout: center
@@ -196,6 +155,38 @@ layout: center
 
 # Společné sdílení
 
-- Která z tří otázek měla překvapivou odpověď?
-- Vrátil LLM někdy nesmyslnou strukturu? Co s tím?
-- Jak moc záleží na system promptu — kdo zkusil změnit instrukci a co se stalo?
+- Čí extrakce skórovala nejlépe — a co rozhodlo? Prompt? Popisy polí? Model?
+- Kde model selhával — sarkasmus? Angličtina?
+- Co s tím říká governance slide ze sekce 2?
+
+---
+layout: section
+---
+
+# Demo: Agent v terminálu
+
+Třetí stupeň žebříku
+
+---
+
+# Agent v terminálu: Claude Code / Codex CLI
+
+Lektor pustí agenta nad složkou `notebooks/` a zadá:
+
+<div class="chat-prompt">Zrekonciliuj datacorp_payroll_q3.xlsx proti datacorp.csv a napiš report.</div>
+
+<v-click>
+
+Sledujte:
+
+- **Co agent čte** — které soubory si otevřel sám?
+- **Co spouští** — jaké příkazy a kód?
+- **Co lektor kontroluje** — a čemu nevěří?
+
+</v-click>
+
+<v-click>
+
+<div class="callout">💡 Stejné dovednosti dohledu jako u Cowork — jen víc autonomie. Třetí stupeň žebříku.</div>
+
+</v-click>
