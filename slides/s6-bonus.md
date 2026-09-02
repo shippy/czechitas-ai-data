@@ -13,22 +13,21 @@ subtitle: "Kam se podívat dál"
   <div class="icon-card"><div class="icon">📊</div><div class="label">Excel / Sheets Copilot<br><small style="font-weight:300;color:#666">Analýza dat, generování funkcí</small></div></div>
   <div class="icon-card"><div class="icon">📈</div><div class="label">Power BI Copilot<br><small style="font-weight:300;color:#666">Generování a vysvětlování DAX kódu</small></div></div>
   <div class="icon-card"><div class="icon">💻</div><div class="label">Programovací editory<br><small style="font-weight:300;color:#666">VSCode + Copilot, Cursor, Windsurf</small></div></div>
-  <div class="icon-card"><div class="icon">🖼️</div><div class="label">Generování obrázků<br><small style="font-weight:300;color:#666">DALL-E, Midjourney — storytelling v datech</small></div></div>
+  <div class="icon-card"><div class="icon">🖥️</div><div class="label">Desktop agenti<br><small style="font-weight:300;color:#666">Claude Cowork, ChatGPT Work — agent nad vašimi soubory</small></div></div>
 </div>
 
 ---
 
-# Custom GPT — vlastní AI pomocníček
+# Projects — trvalý kontext
 
-- Dedikovaný GPT na specifickou oblast (jen s placeným ChatGPT Plus/Pro/Go)
-- Můžete mu dát **vlastní instrukce** (systémový prompt) a **vlastní dokumenty**
-- Lze sdílet s kolegy nebo komunitou
+- ChatGPT i Claude: **složka konverzací** se sdílenými soubory a instrukcemi
+- Hodí se na opakovanou agendu — měsíční report, jeden dataset
+- Nahrazuje dřívější Custom GPTs
 
 **Příklady:**
 
-- GPT pro analýzu vašich interních dat
-- GPT s firemní dokumentací
-- Výukový bot na konkrétní doménu
+- projekt na měsíční HR report — stejné instrukce, nová data
+- projekt s firemní dokumentací jako trvalým kontextem
 
 ---
 
@@ -52,7 +51,7 @@ Více informací: [modelcontextprotocol.io](https://modelcontextprotocol.io/)
 
 ---
 layout: section
-subtitle: "Jak GPT vlastně vevnitř funguje?"
+subtitle: "Samostudium — projděte si doma, na kurzu neprezentujeme"
 ---
 
 # Bonus: Transformery
@@ -160,13 +159,3 @@ GPT = **G**enerative **P**retrained **T**ransformer — stojí na decoderech nav
 
 </div>
 </div>
-
----
-layout: center
----
-
-# Zpětná vazba
-
-Budeme rádi za vaši zpětnou vazbu!
-
-<QRCode url="https://moje.czechitas.cz/cs/zpetna-vazba/8176-ai-v-datove-analyze" :size="250">Zpětná vazba</QRCode>

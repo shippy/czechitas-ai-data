@@ -58,12 +58,29 @@ Vyberte si otázku, kterou jste analyzovaly v předchozí sekci.
 
 # Úkol
 
-**S využitím ChatGPT připravte krátkou prezentaci pro HR Business Partnera a vedení firmy DataCorp s.r.o. Prezentace by měla:**
+**Připravte krátkou prezentaci pro HR Business Partnera a vedení firmy DataCorp s.r.o. Prezentace by měla:**
 - Stručně shrnout analytickou otázku
 - Jasně představit hlavní zjištění v business jazyce
 - Upozornit na omezení dat a interpretace
 - Navrhnout další možné kroky
-  
+
+**Na závěr:**
+1. Nechte svého agenta (Claude Cowork / ChatGPT Work) napsat manažerské shrnutí
+2. Než ho pustíte dál, **každé číslo dohledejte** ve své analýze
+3. Číslo bez zdroje škrtněte, nebo označte „neověřeno"
+
+---
+
+# Demo: AI jako oponent
+
+Lektor/ka nechá AI simulovat pushback HR Business Partnera:
+
+- „Nemůže to být jen senioritou?"
+- „Proč mám tomuhle číslu věřit?"
+- „Co konkrétně mám s tím zjištěním udělat?"
+
+**Sledujte:** které otázky by vaši prezentaci zaskočily — a co v ní kvůli tomu doplníte?
+
 ---
 layout: section
 ---
