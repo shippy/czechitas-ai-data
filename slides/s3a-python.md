@@ -71,9 +71,11 @@ b.append(5)                   # přidám objekt do seznamu b
 
 # Rychlý úvod do Pythonu (3): Struktury a typy
 
-```python {1|2-5|7}
+```python {1-2|4-7|9|all}
+from pydantic import BaseModel
 from typing import Literal
-class Counter:
+
+class Counter(BaseModel):
     count: int
     kind: Literal["puppy", "kitten"]
     members: list[str]
@@ -83,7 +85,7 @@ a = Counter(count=1, kind="puppy", members=["Punťa"])
 
 <v-clicks>
 
-- **Třída (`class`)** — sdruží více dat vedle sebe (a dá jim typy)
+- **`BaseModel`** — sdruží více dat vedle sebe a **zkontroluje typy při vytvoření**
 - **Typy** — `int` (číslo), `str` (text), `list[str]` (seznam textů)
 - **`Literal`** — výčet povolených hodnot (zde jen `"puppy"` nebo `"kitten"`)
 
@@ -91,7 +93,7 @@ a = Counter(count=1, kind="puppy", members=["Punťa"])
 
 <v-click>
 
-<div class="callout">💡 Tyto koncepty se nám budou hodit pro structured outputs a práci s AI přes API.</div>
+<div class="callout">💡 Přesně tohle použijeme pro structured outputs — model musí vrátit data v této struktuře.</div>
 
 </v-click>
 
@@ -147,32 +149,19 @@ user = client.create(
 
 ---
 
-# Bonus: Async (paralelní zpracování)
-
-Když zpracováváme **desítky nebo stovky** záznamů, nechceme čekat na každý zvlášť:
-
-```python {1-4|6-8|all}
-import asyncio
-SEM = asyncio.Semaphore(5)          # max 5 požadavků najednou
-async def extract(text):
-    async with SEM:                 # "počkej, až budeš na řadě"
-        return await async_client.create(...)
-
-results = await asyncio.gather(*[   # spustí vše najednou
-    extract(row["text"]) for _, row in df.iterrows()
-])
-```
+# Jak číst a ověřit vygenerovaný kód
 
 <v-clicks>
 
-- **`async/await`** — „tohle může běžet na pozadí, zatímco čekám na odpověď"
-- **`Semaphore`** — omezuje počet souběžných požadavků (abychom nepřetížili API)
-- **`asyncio.gather`** — spustí všechny úkoly najednou a počká na výsledky
+- Čtěte **shora dolů** — u každého bloku si řekněte, kterých sloupců se dotýká
+- **Jeden krok přepočítejte ručně** — stačí 2–3 řádky dat
+- Nevěříte řádku? Zeptejte se: „Vysvětli, co tenhle řádek dělá a proč."
+- Chtějte **souhrn změn** — počty řádků před a po každém kroku
 
 </v-clicks>
 
 <v-click>
 
-<div class="callout">💡 Nemusíte tomu rozumět do detailu — stačí vědět, že to existuje, a zkopírovat vzor z notebooku.</div>
+<div class="callout">💡 Nemusíte umět kód napsat — musíte ho umět zkontrolovat. Zodpovědnost za výsledek zůstává na vás.</div>
 
 </v-click>
