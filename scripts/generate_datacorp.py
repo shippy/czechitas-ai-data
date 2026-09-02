@@ -751,14 +751,18 @@ def build_reviews(df: pd.DataFrame) -> pd.DataFrame:
             # Choose template type based on performance score
             if perf >= 4:
                 template = RNG.choice(REVIEW_TEMPLATES_POSITIVE)
+                gt_sentiment = "pozitivní"
             elif perf >= 3:
                 template = RNG.choice(REVIEW_TEMPLATES_MIXED)
+                gt_sentiment = "smíšené"
             else:
                 template = RNG.choice(REVIEW_TEMPLATES_NEGATIVE)
+                gt_sentiment = "negativní"
 
             # Planted signal: ~15% of high-perf employees get mixed/negative review
             if perf >= 4 and RNG.random() < 0.15:
                 template = RNG.choice(REVIEW_TEMPLATES_MIXED)
+                gt_sentiment = "smíšené"
 
             review_text = _fill_review_template(template, name)
 
@@ -767,6 +771,7 @@ def build_reviews(df: pd.DataFrame) -> pd.DataFrame:
                 "employee_id": emp["employee_id"],
                 "rok": RNG.integers(2023, 2026),
                 "review_text": review_text,
+                "_gt_sentiment": gt_sentiment,
             })
 
     return pd.DataFrame(review_rows)
@@ -783,6 +788,8 @@ SARCASTIC_REVIEWS = [
 
 def apply_dirt_reviews(df: pd.DataFrame, main_df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
+    df["_gt_sarcastic"] = False
+    df["_gt_wrong_person"] = False
     # 5 sarcastic reviews — overwrite 5 random review_text values.
     # The first 3 always use the *kreativní* template so the test signal is reliable.
     sarcastic_idx = RNG.choice(df.index, size=5, replace=False)
@@ -801,6 +808,8 @@ def apply_dirt_reviews(df: pd.DataFrame, main_df: pd.DataFrame) -> pd.DataFrame:
             jmeno=jmeno, prijmeni=prijmeni,
             jmeno_gen=jmeno, prijmeni_gen=prijmeni,
         )
+        df.at[i, "_gt_sentiment"] = "negativní"
+        df.at[i, "_gt_sarcastic"] = True
 
     # 3 wrong-person reviews — keep employee_id but replace the name in the text
     other = main_df.sample(3, random_state=SEED)
@@ -811,6 +820,8 @@ def apply_dirt_reviews(df: pd.DataFrame, main_df: pd.DataFrame) -> pd.DataFrame:
             f"{ghost['jmeno']} {ghost['prijmeni']} odvádí solidní práci, "
             f"ale rezervy jsou v komunikaci s týmem."
         )
+        df.at[i, "_gt_sentiment"] = "smíšené"
+        df.at[i, "_gt_wrong_person"] = True
     return df
 
 
@@ -857,6 +868,15 @@ EXIT_NOTES_NEG = [
     "Několik kolegů uvažuje o odchodu ze stejných důvodů.",
     "",
 ]
+
+
+REASON_LABELS = {
+    "salary": "plat",
+    "growth": "kariérní růst",
+    "work_life_balance": "work-life balance",
+    "management": "vedení",
+    "other": "jiné",
+}
 
 
 def build_exit_interviews(df: pd.DataFrame) -> pd.DataFrame:
@@ -941,6 +961,8 @@ def build_exit_interviews(df: pd.DataFrame) -> pd.DataFrame:
                 "employee_id": emp["employee_id"],
                 "datum_odchodu": exit_date.strftime("%Y-%m-%d"),
                 "interview_text": text,
+                "_gt_reason": REASON_LABELS[reason],
+                "_gt_bitter": bool(is_bitter),
             })
 
     return pd.DataFrame(exit_rows)
@@ -961,13 +983,18 @@ CONTRADICTION = (
 
 def apply_dirt_exit_interviews(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
+    df["_gt_language"] = "cs"
+    df["_gt_contradiction"] = False
     en_idx = RNG.choice(df.index, size=5, replace=False)
     for k, i in enumerate(en_idx):
         df.at[i, "interview_text"] = str(df.at[i, "interview_text"]) + EN_FRAGMENTS[k % len(EN_FRAGMENTS)]
+        df.at[i, "_gt_language"] = "mixed-en"
     # 1 self-contradiction — must not overwrite one of the EN_FRAGMENT rows
     remaining = [i for i in df.index if i not in set(en_idx)]
     contra_idx = RNG.choice(remaining, size=1)
     df.loc[contra_idx, "interview_text"] = CONTRADICTION
+    df.loc[contra_idx, "_gt_reason"] = "plat"
+    df.loc[contra_idx, "_gt_contradiction"] = True
     return df
 
 
@@ -998,17 +1025,20 @@ def build_payroll_xlsx(main_df: pd.DataFrame) -> pd.DataFrame:
 
 def apply_dirt_payroll(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
+    df["_gt_errors"] = [[] for _ in df.index]
     # 8% of mzda_brutto off by 1-15%
     off_idx = RNG.choice(df.index, size=int(len(df) * 0.08), replace=False)
     for i in off_idx:
         delta = 1 + RNG.uniform(-0.15, 0.15)
         df.at[i, "mzda_brutto"] = round(df.at[i, "mzda_brutto"] * delta)
         df.at[i, "mzda_celkem"] = df.at[i, "mzda_brutto"] + df.at[i, "bonus"]
+        df.at[i, "_gt_errors"].append("mzda_off")
 
     # 30 rows where mzda_celkem != mzda_brutto + bonus
     bad_arith = RNG.choice(df.index, size=30, replace=False)
     for i in bad_arith:
         df.at[i, "mzda_celkem"] = df.at[i, "mzda_brutto"] + df.at[i, "bonus"] - int(RNG.integers(500, 3000))
+        df.at[i, "_gt_errors"].append("arithmetic")
 
     # 4 EUR-not-CZK landmines
     eur_idx = RNG.choice(df.index, size=4, replace=False)
@@ -1016,6 +1046,7 @@ def apply_dirt_payroll(df: pd.DataFrame) -> pd.DataFrame:
         df.at[i, "mzda_brutto"] = round(df.at[i, "mzda_brutto"] / 25)
         df.at[i, "bonus"] = round(df.at[i, "bonus"] / 25)
         df.at[i, "mzda_celkem"] = df.at[i, "mzda_brutto"] + df.at[i, "bonus"]
+        df.at[i, "_gt_errors"].append("eur")
 
     # 5 English-language oddeleni values
     en_map = {"Vývoj": "Engineering", "Podpora": "Support", "Marketing": "Marketing",
@@ -1024,12 +1055,14 @@ def apply_dirt_payroll(df: pd.DataFrame) -> pd.DataFrame:
     for i in en_idx:
         cs = df.at[i, "oddeleni"]
         df.at[i, "oddeleni"] = en_map.get(cs, cs)
+        df.at[i, "_gt_errors"].append("oddeleni_en")
 
     # 3 plausible-wrong departments (rotate cs values)
     wrong_idx = RNG.choice(df.index, size=3, replace=False)
     rotation = ["Marketing", "Vývoj", "Obchod"]
     for k, i in enumerate(wrong_idx):
         df.at[i, "oddeleni"] = rotation[k]
+        df.at[i, "_gt_errors"].append("oddeleni_wrong")
 
     # `aktivni` mixed truthiness
     n = len(df)
@@ -1039,6 +1072,7 @@ def apply_dirt_payroll(df: pd.DataFrame) -> pd.DataFrame:
         sample_idx = RNG.choice(df.index, size=m, replace=False)
         df.loc[sample_idx, "aktivni"] = form
 
+    df["_gt_errors"] = df["_gt_errors"].apply(lambda l: ";".join(l) if l else "ok")
     return df
 
 
@@ -1149,6 +1183,28 @@ def main() -> None:
     payroll = apply_dirt_payroll(build_payroll_xlsx(main_df_dirty))
     reviews = apply_dirt_reviews(build_reviews(universe_for_sides), main_df_dirty)
     exits = apply_dirt_exit_interviews(build_exit_interviews(universe_for_sides))
+
+    print("Writing ground truth...")
+
+    def _split_gt(df, keys, rename):
+        gt_cols = [c for c in df.columns if c.startswith("_gt_")]
+        gt = df[keys + gt_cols].rename(columns=rename)
+        return gt, df.drop(columns=gt_cols)
+
+    exits_gt, exits = _split_gt(
+        exits, ["employee_id"],
+        {"_gt_reason": "true_reason", "_gt_bitter": "true_bitter",
+         "_gt_language": "language", "_gt_contradiction": "is_contradiction"},
+    )
+    reviews_gt, reviews = _split_gt(
+        reviews, ["employee_id", "rok"],
+        {"_gt_sentiment": "true_sentiment", "_gt_sarcastic": "is_sarcastic",
+         "_gt_wrong_person": "is_wrong_person"},
+    )
+    payroll_gt, payroll = _split_gt(payroll, ["os_cislo"], {"_gt_errors": "error_types"})
+    exits_gt.to_csv(OUTPUT_DIR / "datacorp_ground_truth_exits.csv", index=False)
+    reviews_gt.to_csv(OUTPUT_DIR / "datacorp_ground_truth_reviews.csv", index=False)
+    payroll_gt.to_csv(OUTPUT_DIR / "datacorp_ground_truth_payroll.csv", index=False)
 
     print("Writing files...")
     main_df_dirty.to_csv(OUTPUT_DIR / "datacorp.csv", index=False)

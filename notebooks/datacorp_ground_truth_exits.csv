@@ -1,0 +1,71 @@
+employee_id,true_reason,true_bitter,language,is_contradiction
+883,work-life balance,False,cs,False
+819,vedení,False,cs,False
+954,kariérní růst,False,cs,False
+919,plat,False,cs,False
+969,vedení,False,cs,False
+768,kariérní růst,False,cs,False
+1002,plat,False,cs,False
+818,vedení,False,cs,False
+989,kariérní růst,False,cs,False
+913,work-life balance,False,cs,False
+917,kariérní růst,False,cs,False
+835,work-life balance,False,cs,False
+979,plat,True,cs,False
+1008,work-life balance,False,cs,False
+993,jiné,False,cs,False
+869,vedení,False,cs,False
+930,work-life balance,False,cs,False
+778,kariérní růst,False,mixed-en,False
+966,work-life balance,False,cs,False
+898,work-life balance,False,cs,False
+976,kariérní růst,False,cs,False
+802,work-life balance,False,cs,False
+889,work-life balance,False,cs,False
+922,plat,False,mixed-en,False
+928,work-life balance,False,cs,False
+1011,kariérní růst,False,cs,False
+956,kariérní růst,False,cs,False
+988,plat,False,cs,True
+940,vedení,False,cs,False
+815,vedení,True,cs,False
+935,kariérní růst,False,cs,False
+779,kariérní růst,False,cs,False
+938,vedení,False,cs,False
+875,kariérní růst,False,cs,False
+862,kariérní růst,False,cs,False
+996,kariérní růst,False,cs,False
+916,plat,False,cs,False
+968,plat,True,cs,False
+865,jiné,False,cs,False
+860,plat,False,cs,False
+244,jiné,False,cs,False
+321,kariérní růst,False,cs,False
+304,kariérní růst,False,cs,False
+227,work-life balance,False,mixed-en,False
+290,plat,True,cs,False
+306,vedení,True,cs,False
+378,jiné,False,cs,False
+435,jiné,False,cs,False
+468,jiné,False,cs,False
+361,plat,True,cs,False
+398,jiné,False,cs,False
+520,work-life balance,False,cs,False
+358,vedení,True,cs,False
+432,plat,True,mixed-en,False
+557,plat,False,cs,False
+552,work-life balance,False,cs,False
+605,work-life balance,False,cs,False
+540,vedení,False,cs,False
+674,jiné,False,mixed-en,False
+637,jiné,False,cs,False
+630,plat,False,cs,False
+762,plat,False,cs,False
+133,plat,True,cs,False
+175,kariérní růst,False,cs,False
+115,plat,False,cs,False
+197,plat,False,cs,False
+14,jiné,False,cs,False
+31,plat,True,cs,False
+179,vedení,True,cs,False
+192,kariérní růst,False,cs,False
