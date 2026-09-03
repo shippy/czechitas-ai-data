@@ -65,7 +65,7 @@ layout: section
 
 # Demo: Agent nad složkou DataCorp
 
-Lektor namíří agenta (Claude Cowork / ChatGPT Work) na složku s DataCorp soubory:
+Namíříme agenta (Claude Cowork / ChatGPT Work) na složku s DataCorp soubory:
 
 <v-clicks>
 

@@ -171,7 +171,7 @@ Třetí stupeň žebříku
 
 # Agent v terminálu: Claude Code / Codex CLI
 
-Lektor pustí agenta nad složkou `notebooks/` a zadá:
+Pustíme agenta nad složkou `notebooks/` a zadáme:
 
 <div class="chat-prompt">Zrekonciliuj datacorp_payroll_q3.xlsx proti datacorp.csv a napiš report.</div>
 
@@ -181,7 +181,7 @@ Sledujte:
 
 - **Co agent čte** — které soubory si otevřel sám?
 - **Co spouští** — jaké příkazy a kód?
-- **Co lektor kontroluje** — a čemu nevěří?
+- **Co kontrolujeme** — a čemu nevěříme?
 
 </v-click>
 

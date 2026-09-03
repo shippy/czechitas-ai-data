@@ -73,7 +73,7 @@ Vyberte si otázku, kterou jste analyzovaly v předchozí sekci.
 
 # Demo: AI jako oponent
 
-Lektor/ka nechá AI simulovat pushback HR Business Partnera:
+Necháme AI simulovat pushback HR Business Partnera:
 
 - „Nemůže to být jen senioritou?"
 - „Proč mám tomuhle číslu věřit?"
