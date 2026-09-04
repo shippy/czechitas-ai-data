@@ -968,13 +968,15 @@ def build_exit_interviews(df: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(exit_rows)
 
 
-EN_FRAGMENTS = [
-    " Hlavní důvod: better compensation elsewhere. Tým byl ok.",
-    " management was nice, ale firma jako celek nepostupuje.",
-    " I'm looking for better opportunity. Děkuji za vše.",
-    " Tým, team dynamics, byl super, ale management nereaguje.",
-    " Going for a senior role elsewhere — tady už nebyl prostor.",
-]
+# Keyed by the record's _gt_reason so the appended English restates the same
+# reason instead of introducing a competing one (keeps the language probe clean).
+EN_FRAGMENTS_BY_REASON = {
+    "plat": " Main reason: compensation — jinde nabídli výrazně víc.",
+    "kariérní růst": " I'm looking for growth opportunities elsewhere — tady už nebyl prostor.",
+    "work-life balance": " Honestly, work-life balance was the issue. Tým byl fajn.",
+    "vedení": " Management nereaguje — that was the main issue for me.",
+    "jiné": " It was simply time to move on. Děkuji za vše.",
+}
 CONTRADICTION = (
     "Platově jsem byl celkem spokojen, kolegové fajn. Odcházím hlavně kvůli "
     "tomu, že peníze už nejsou dostatečné a HR nedokázalo nic nabídnout."
@@ -986,8 +988,10 @@ def apply_dirt_exit_interviews(df: pd.DataFrame) -> pd.DataFrame:
     df["_gt_language"] = "cs"
     df["_gt_contradiction"] = False
     en_idx = RNG.choice(df.index, size=5, replace=False)
-    for k, i in enumerate(en_idx):
-        df.at[i, "interview_text"] = str(df.at[i, "interview_text"]) + EN_FRAGMENTS[k % len(EN_FRAGMENTS)]
+    for i in en_idx:
+        df.at[i, "interview_text"] = (
+            str(df.at[i, "interview_text"]) + EN_FRAGMENTS_BY_REASON[df.at[i, "_gt_reason"]]
+        )
         df.at[i, "_gt_language"] = "mixed-en"
     # 1 self-contradiction — must not overwrite one of the EN_FRAGMENT rows
     remaining = [i for i in df.index if i not in set(en_idx)]
@@ -1202,6 +1206,9 @@ def main() -> None:
          "_gt_wrong_person": "is_wrong_person"},
     )
     payroll_gt, payroll = _split_gt(payroll, ["os_cislo"], {"_gt_errors": "error_types"})
+    # os_cislo is deliberately non-unique (duplicated employee rows); row_index is
+    # the 0-based data-row position in the xlsx (after headers, before CELKEM).
+    payroll_gt.insert(0, "row_index", range(len(payroll_gt)))
     exits_gt.to_csv(OUTPUT_DIR / "datacorp_ground_truth_exits.csv", index=False)
     reviews_gt.to_csv(OUTPUT_DIR / "datacorp_ground_truth_reviews.csv", index=False)
     payroll_gt.to_csv(OUTPUT_DIR / "datacorp_ground_truth_payroll.csv", index=False)

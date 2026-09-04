@@ -16,13 +16,13 @@ employee_id,datum_odchodu,interview_text
 993,2024-10-26,"Stěhuji se do jiného města, takže dojíždění není možné. Jinak super kolektiv."
 869,2024-11-07,"Neshodl/a jsem se s vedením oddělení. Děkuji za příležitosti, které jsem tu dostal/a. Komunikace shora dolů nefungovala."
 930,2025-04-05,Přecházím na pozici s možností home office. Tady to prostě nešlo skloubit s rodinou. Kolegům budu děkovat za spolupráci.
-778,2024-11-01,"Cítím, že jsem se tu přestal/a rozvíjet. Po 1.0 letech dělám pořád to samé. Bylo to tu fajn, jen ty podmínky už nestačí. management was nice, ale firma jako celek nepostupuje."
+778,2024-11-01,"Cítím, že jsem se tu přestal/a rozvíjet. Po 1.0 letech dělám pořád to samé. Bylo to tu fajn, jen ty podmínky už nestačí. I'm looking for growth opportunities elsewhere — tady už nebyl prostor."
 966,2024-07-02,Přecházím na pozici s možností home office. Tady to prostě nešlo skloubit s rodinou. Jinak super kolektiv.
 898,2025-05-18,Dojíždění mi zabírá příliš času. Našel/la jsem práci blíž k domovu.
 976,2024-09-20,"Cítím, že jsem se tu přestal/a rozvíjet. Po 1.9 letech dělám pořád to samé. Děkuji za příležitosti, které jsem tu dostal/a."
 802,2024-05-04,Dojíždění mi zabírá příliš času. Našel/la jsem práci blíž k domovu.
 889,2025-03-02,Potřebuji flexibilnější pracovní dobu.  Jinak jsem tu byl/a spokojený/á.
-922,2025-01-28,Finanční ohodnocení neodpovídá mé práci.  Jinak nemám výhrady k týmu. Hlavní důvod: better compensation elsewhere. Tým byl ok.
+922,2025-01-28,Finanční ohodnocení neodpovídá mé práci.  Jinak nemám výhrady k týmu. Main reason: compensation — jinde nabídli výrazně víc.
 928,2024-01-31,"Potřebuji flexibilnější pracovní dobu. Bylo to tu fajn, jen ty podmínky už nestačí. Jinak jsem tu byl/a spokojený/á."
 1011,2024-03-13,"Cítím, že jsem se tu přestal/a rozvíjet. Po 2.9 letech dělám pořád to samé. Kolegům budu děkovat za spolupráci."
 956,2024-08-02,"Cítím, že jsem se tu přestal/a rozvíjet. Po 2.1 letech dělám pořád to samé. Jinak super kolektiv."
@@ -42,7 +42,7 @@ employee_id,datum_odchodu,interview_text
 244,2025-05-09,"Stěhuji se do jiného města, takže dojíždění není možné. Děkuji za příležitosti, které jsem tu dostal/a."
 321,2025-05-21,"Odcházím, protože jsem dostal/a příležitost pracovat na zajímavějších projektech. Jinak super kolektiv."
 304,2024-07-20,"Odcházím, protože jsem dostal/a příležitost pracovat na zajímavějších projektech. Jinak super kolektiv."
-227,2024-12-08,Dojíždění mi zabírá příliš času. Našel/la jsem práci blíž k domovu. I'm looking for better opportunity. Děkuji za vše.
+227,2024-12-08,"Dojíždění mi zabírá příliš času. Našel/la jsem práci blíž k domovu. Honestly, work-life balance was the issue. Tým byl fajn."
 290,2024-05-19,Odcházím hlavně kvůli platu. Po 3.5 letech jsem pořád na podobné úrovni a jinde mi nabídli výrazně víc.
 306,2024-05-06,Chybí mi zpětná vazba a jasné směřování od managementu.
 378,2024-10-17,"Stěhuji se do jiného města, takže dojíždění není možné."
@@ -52,12 +52,12 @@ employee_id,datum_odchodu,interview_text
 398,2025-01-27,Vracím se ke studiu na plný úvazek.  Rád/a bych se sem jednou vrátil/a.
 520,2024-12-16,Potřebuji flexibilnější pracovní dobu.  Jinak jsem tu byl/a spokojený/á.
 358,2025-05-30,Neshodl/a jsem se s vedením oddělení. Několik kolegů uvažuje o odchodu ze stejných důvodů. Komunikace shora dolů nefungovala.
-432,2024-03-20,Odcházím hlavně kvůli platu. Po 2.0 letech jsem pořád na podobné úrovni a jinde mi nabídli výrazně víc. Going for a senior role elsewhere — tady už nebyl prostor.
+432,2024-03-20,Odcházím hlavně kvůli platu. Po 2.0 letech jsem pořád na podobné úrovni a jinde mi nabídli výrazně víc. Main reason: compensation — jinde nabídli výrazně víc.
 557,2025-06-09,Finanční ohodnocení neodpovídá mé práci. Jinak super kolektiv. Jinak nemám výhrady k týmu.
 552,2024-04-11,"Dojíždění mi zabírá příliš času. Našel/la jsem práci blíž k domovu. Děkuji za příležitosti, které jsem tu dostal/a."
 605,2025-01-01,Potřebuji flexibilnější pracovní dobu.  Jinak jsem tu byl/a spokojený/á.
 540,2024-03-29,Změna vedení v posledním roce hodně ovlivnila atmosféru v týmu. Jinak super kolektiv.
-674,2024-07-23,"Dostal/a jsem příležitost v zahraničí, kterou nechci propásnout. Kolegům budu děkovat za spolupráci. Tým, team dynamics, byl super, ale management nereaguje."
+674,2024-07-23,"Dostal/a jsem příležitost v zahraničí, kterou nechci propásnout. Kolegům budu děkovat za spolupráci. It was simply time to move on. Děkuji za vše."
 637,2024-05-12,"Dostal/a jsem příležitost v zahraničí, kterou nechci propásnout. Jinak super kolektiv."
 630,2024-11-18,Dostal/a jsem nabídku s o 32% vyšším platem. Tady nebylo na vyjednávání prostoru. Kolegům budu děkovat za spolupráci.
 762,2025-06-04,Odcházím hlavně kvůli platu. Po 6.2 letech jsem pořád na podobné úrovni a jinde mi nabídli výrazně víc.
