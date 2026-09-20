@@ -116,12 +116,18 @@ Posuďte - **Jak hodnotíte vygenerovaný skript? Dělá, co má? Jak rychle bě
 
 # Zadání 
 
-Připravte náš dataset DataCorp na základě předchozích zjištění pro další analýzu:
+**Úkol 3 - zobecněte postup do skillu**
 
-**Bonusový úkol - zkuste si sami napsat transformační skript, který data připraví do chtěné podoby (python / sql - co vám je příjemnější) a nechte si od AI váš skript zvalidovat z pohledu správnosti a optimálnosti**
-- platí stejné požadavky jako v předchozím úkolu v této sekci
+ Tenhle postup budete opakovat u každého dalšího čištění dat — zapište ho jako skill `data-transformer`:
 
-Posuďte - **Jak hodnotíte návrh na zlepšení skriptu? Přijde vám užitečný?**
+| Prvek skillu | Obsah |
+|---|---|
+| **Kdy použít** | Mám dataset s identifikovanými nečistotami a potřebuji transformační skript |
+| **Kroky** | 1) Shrň nalezené problémy z EDA · 2) Nech AI navrhnout úpravy + what-if scénáře · 3) Vyjasni si sporné body (iteruj) · 4) Vygeneruj skript s dokumentací · 5) Over výstup na malém vzorku před/po |
+| **Výstup** | Okomentovaný skript (SQL) + shrnutí, co se změnilo a proč |
+| **Na co si dát pozor** | Nekontrolovat jen "běží bez chyby" — ověřit, že logika odpovídá zadání (např. hraniční hodnoty u kategorizace) |
+
+Posuďte - **Fungoval postup i na jiném zadání? Co jste museli doplnit?**
 
 ---
 layout: section
