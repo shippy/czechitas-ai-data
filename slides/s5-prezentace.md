@@ -58,27 +58,12 @@ Vyberte si otázku, kterou jste analyzovaly v předchozí sekci.
 
 # Úkol
 
-**S využitím ChatGPT / Claude připravte obsah pro krátkou prezentaci pro HR Business Partnera a vedení firmy DataCorp s.r.o. Prezentace by měla:**
+**S využitím ChatGPT připravte krátkou prezentaci pro HR Business Partnera a vedení firmy DataCorp s.r.o. Prezentace by měla:**
 - Stručně shrnout analytickou otázku
 - Jasně představit hlavní zjištění v business jazyce
 - Upozornit na omezení dat a interpretace
 - Navrhnout další možné kroky
-
----
-
-# Úkol 2 - zapište jako skill `summarize-for-management`
-
-Tenhle postup budete potřebovat u každé další prezentace výsledků.
-
-- **Kdy použít:** mám hotovou analýzu, potřebuji ji shrnout pro vedení
-- **Kroky:** otázka jednou větou → zjištění v business jazyce → omezení dat → 2-3 další kroky
-- **Výstup:** krátký text, žádný statistický žargon
-- **Pozor na:** AI ráda zjištění zjednoduší až na falešnou jistotu — trvej na uvedení nejistoty
-
-Otestujte skill na **jiné otázce ze seznamu výše**.
-
-Posuďte - **Fungoval beze změny, nebo se muselo něco ručně dolaďovat?**
-
+  
 ---
 layout: section
 ---

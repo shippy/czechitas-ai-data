@@ -197,7 +197,7 @@ subtitle: "~25 minut + 5 minut společné sdílení"
 
 ---
 
-# Zadání - EDA
+# Zadání
 
 Nahrajte dataset DataCorp do ChatGPT a projděte tabulku otázek:
 
@@ -212,7 +212,7 @@ Nahrajte dataset DataCorp do ChatGPT a projděte tabulku otázek:
 
 ---
 
-# Druhá část úkolu
+# Váš úkol na konec
 
 Zapište si:
 
@@ -220,19 +220,6 @@ Zapište si:
 - **2 otázky**, které byste chtěly dále prozkoumat
 
 → Budeme je potřebovat v sekci 4!
-
----
-
-# Poslední část úkolu
-
-Postup šesti otázek, který jste právě prošly, se vám může hodit u jiného datasetu. Zapište ho jako **skill** (`eda-profiler`) podle kostry:
-
-| Prvek skillu | Obsah |
-|---|---|
-| **Kdy použít** | Nový dataset, potřebuji posoudit kvalitu před analýzou |
-| **Kroky** | popiš dataset → sloupce a typy → chybějící hodnoty → rozložení → anomálie → náměty na analýzu |
-| **Výstup** | strukturované shrnutí + míra jistoty u zjištění |
-| **Na co si dát pozor** | to, co jste si právě zapsaly jako "překvapení" |
 
 ---
 layout: center
