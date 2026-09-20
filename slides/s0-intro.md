@@ -2,7 +2,7 @@
 layout: bio
 image: /marketa-hanna.jpeg
 name: "Markéta Hanna"
-subtitle: "Lektorka · Data & AI"
+subtitle: "Spoluautorka kurzu · Data & AI"
 ---
 
 - Senior IT Analyst @ T-Mobile CZ
@@ -29,7 +29,7 @@ subtitle: "Lektor · Data & AI"
 layout: bio
 image: /dan-rabiencny.jpeg
 name: "Dan Rabiencný"
-subtitle: "Spoluautor kurzu · Data & AI"
+subtitle: "Lektor · Data & AI"
 ---
 
 - Data & AI Consultant @ KPMG

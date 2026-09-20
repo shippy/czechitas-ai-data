@@ -93,6 +93,10 @@ Dostanete dataset se záznamy jednotlivých zaměstnanců:
 3) Porovnejte výstup ChatGPT s vaším návrhem
 - Co AI doplnila? Kde naopak přemýšlí příliš obecně?
 
+4) Zobecněte postup do znovupoužitelného skillu
+- Tenhle rozklad zadání budete dělat u každého dalšího projektu — zabalme ho, ať ho příště nemusíme vymýšlet znovu
+- využijte k vytvoření buď ChatGPT nebo Claude
+
 ---
 layout: section
 ---
