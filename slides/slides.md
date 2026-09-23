@@ -30,8 +30,9 @@ Markéta Hanna · Šimon Podhajský · Dan Rabiencný · Czechitas · září 20
 | 2 | Porozumění datům (EDA) | Šimon |
 | 3 | Příprava dat | Dan |
 | 4 | Samotná analýza | Šimon |
+| — | Demo: agent v terminálu | Šimon |
 | 5 | Prezentace výsledků | Dan |
-| ⭐ | Bonus: Nástroje a transformery | — |
+| ⭐ | Bonus: Nástroje (transformery = samostudium) | — |
 
 ---
 src: ./s0-intro.md
@@ -98,5 +99,5 @@ layout: center
 <img src="/czechitas-heart-hands.png" class="h-80 mx-auto" />
 
 ---
-src: ./s6a-bonus.md
+src: ./s6-bonus.md
 ---

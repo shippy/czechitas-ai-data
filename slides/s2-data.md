@@ -55,18 +55,33 @@ AI zrychluje mechaniku — ale ten checklist se nemění.
 
 ---
 
-# Než nahrajete data do AI
+# HR data = vysoce riziková doména
 
-<div class="icon-grid cols-2">
-  <div class="icon-card"><div class="icon">🔒</div><div class="label">Co se s daty stane?<br><small style="font-weight:300;color:#666">ChatGPT Free/Plus data může použít k trénování modelu</small></div></div>
-  <div class="icon-card"><div class="icon">🏢</div><div class="label">Firemní data<br><small style="font-weight:300;color:#666">Citlivá data (platy, hodnocení) nahrávejte jen přes firemní plán (Team/Enterprise)</small></div></div>
-  <div class="icon-card"><div class="icon">🛡️</div><div class="label">Anonymizace<br><small style="font-weight:300;color:#666">Odstraňte jména, rodná čísla a identifikátory, než data nahrajete</small></div></div>
-  <div class="icon-card"><div class="icon">⚙️</div><div class="label">Nastavení<br><small style="font-weight:300;color:#666">V ChatGPT: Settings → Data Controls → vypněte trénování na vašich datech</small></div></div>
+<div class="icon-grid">
+  <div class="icon-card"><div class="icon">⚖️</div><div class="label">AI Act — Annex III<br><small style="font-weight:300;color:#666">AI, která hodnotí zaměstnance, je vysoce rizikové použití</small></div></div>
+  <div class="icon-card"><div class="icon">🔒</div><div class="label">GDPR<br><small style="font-weight:300;color:#666">Mzdy, hodnocení i exit interviews jsou osobní údaje zaměstnanců</small></div></div>
+  <div class="icon-card"><div class="icon">📉</div><div class="label">Bias<br><small style="font-weight:300;color:#666">Model může systematicky hůř číst některé skupiny či jazyky — změříme v sekci 4</small></div></div>
 </div>
 
 <v-click>
 
-Dnes pracujeme s **fiktivním datasetem** — v praxi toto řešte s IT oddělením.
+Dnes pracujeme s **fiktivním datasetem** — v praxi toto řešte s IT oddělením a pověřencem pro ochranu osobních údajů (DPO).
+
+</v-click>
+
+---
+
+# Co smím nahrát kam
+
+| | Osobní účet (Free/Plus) | Firemní plán (Team/Enterprise) | API |
+|---|---|---|---|
+| **Veřejná či fiktivní data** | ✅ | ✅ | ✅ |
+| **Interní neosobní data** | ⚠️ | ✅ | ✅ |
+| **Osobní údaje zaměstnanců** | ❌ | ⚠️ DPA + anonymizace | ⚠️ |
+
+<v-click>
+
+<div class="callout warning">⚠️ Vždy: anonymizace, firemní pravidla — a při nejistotě se zeptejte.</div>
 
 </v-click>
 
@@ -187,6 +202,18 @@ AI vám dá generický první souhrn. Hodnota je v tom, že se ptáte dál. Tam 
 **2. Důvěřuj, ale prověřuj.**
 
 AI někdy špatně přečte formát, pomíchá si škálu 1–5 s procenty, nebo přehlédne duplicity. Vždycky se dívejte, jestli odpověď dává smysl.
+
+---
+
+# Tohle byl celou dobu agent
+
+<v-clicks>
+
+- ChatGPT ani Claude s nahraným CSV nepočítá „z hlavy" — **píše a spouští Python** v sandboxu
+- Klikněte na **„Zobrazit kód"** — uvidíte přesně, co za vás proběhlo
+- Právě jste absolvovaly **první stupeň žebříku agentnosti**: zadaly jste cíl, AI jednala, vy jste kontrolovaly
+
+</v-clicks>
 
 ---
 layout: section

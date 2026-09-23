@@ -41,7 +41,7 @@ Příprava dat zahrnuje:
 # Tradiční cesta přípravy dat (bez AI)
 
 - Manuální EDA a tvorba čisticího / transformačního skriptu
-- Dvojitá kognitivní zátěž: **správný** skript (dělá, co má) a **optimální** skript (běží efektivně)
+- Dvojitá kognitivní zátěž: **správný** skript (dělá, co má) a **zdokumentovaný** postup (jde zpětně zkontrolovat)
 - Sklon k reaktivnímu přemýšlení — „data se chovají takto, tak musím dát do skriptu toto"
 - Dokumentace jako „nutné zlo" — každý důležitý krok by měl být zdokumentován, což se ne vždycky děje…
 
@@ -50,7 +50,7 @@ Příprava dat zahrnuje:
 # Příprava dat s AI
 
 - AI může připravit EDA skript
-- AI může připravit **správný a optimální** transformační skript, případně zoptimalizovat váš skript
+- AI může připravit **správný a zdokumentovaný** transformační skript, případně zkontrolovat váš skript
 - Od reaktivního k **proaktivnímu** přemýšlení — „data se teď chovají takto, jak by se potenciálně mohla chovat v budoucnu?" (AI může navrhnout what-if scénáře)
 - AI může dokumentovat kód za běhu, případně připravit přímo analytickou dokumentaci
 - **Human-in-the-loop** je potřeba — ve finále zodpovídáte za správnost vy, ne AI :)
@@ -63,19 +63,24 @@ layout: section
 
 ---
 
-# Demo: Čištění dat pokladního systému
+# Demo: Agent nad složkou DataCorp
 
-**Zadání:**
+Namíříme agenta (Claude Cowork / ChatGPT Work) na složku s DataCorp soubory:
 
-Pokladní systém sítě CoffeeCloud při exportu poškodil část dat. Potřebujeme mít připravena data pro analýzu tržeb. Nezajímá nás místo zakoupení / transakce.
+<v-clicks>
 
-**Analytický úkol:**
+1. „Projdi soubory ve složce a shrň problémy s kvalitou dat."
+2. „Navrhni čisticí kroky — zatím nic neměň."
+3. Návrhy **schvalujeme / odmítáme** — agent provádí jen to schválené
+4. Výstup: **vyčištěný CSV + log provedených změn**
 
-- Doplnění chybějících hodnot tam, kde se to dá
-- Označení chybějících hodnot placeholderem `MISSING` tam, kde bez kontextu nemůžeme doplnit
-- Pokud chybí datum transakce → nevyhodnotitelný záznam, zbavíme se jich
-- Přidání sloupce `Validation`: hodnoty `"fixed"` nebo `"OK"`
-- Ve výsledku chceme mít jen potřebné sloupce
+</v-clicks>
+
+<v-click>
+
+<div class="callout">👀 Sledujte: co agent rozhodl sám, aniž se zeptal?</div>
+
+</v-click>
 
 ---
 layout: section
@@ -86,48 +91,61 @@ subtitle: "AI jako pomocník při přípravě dat · ~20 minut"
 
 ---
 
-# Zadání
+# Samostatná práce 3 (~20 min)
 
-Připravte náš dataset DataCorp na základě předchozích zjištění pro další analýzu:
+<div class="flex justify-between items-start gap-8">
 
-**Úkol 1 - nechte AI navrhnout úpravy:**
-- obecný dotaz: ,,co bys v datech opravil, aby byla data použitelná pro další analýzu?"
-- v další iteraci nechte AI návrhnout what-if scénáře
+<div>
 
-Nesouhlasíte s první verzí výstupu? Něco vám tam chybí? Iterujte.
+Namiřte svého agenta (Claude Cowork / ChatGPT Work) na složku s DataCorp daty:
 
-Posuďte - **věříte výstupu / souhlasíte s ním? Proč ano? Proč ne?**
+1. Stáhněte si repo jako ZIP (QR vpravo) a rozbalte
+2. Nechte agenta **navrhnout čisticí kroky** — nesouhlasíte? Iterujte
+3. Nechte ho kroky **provést** → `datacorp_clean.csv` + `cleaning_log.md`
+4. Přidejte počítaný sloupec `kategorie_mzdy`:
+   - do 35 000 Kč včetně → „malá mzda"
+   - do 95 000 Kč včetně → „střední mzda"
+   - jinak → „velká mzda"
+5. **Ručně ověřte 2–3 opravy** proti původním datům
 
----
+</div>
 
-# Zadání 
+<QRCode url="https://github.com/shippy/czechitas-ai-data" :size="150">Repo s daty</QRCode>
 
-Připravte náš dataset DataCorp na základě předchozích zjištění pro další analýzu:
-
-**Úkol 2 - nechte AI navrhnout transformační skript (python) a zkuste si ho nad daty vyzkoušet**
-- použijte vyiterované poznatky od AI z úkolu 1 v této sekci
-- existuje požadavek do dat přidat počítaný sloupec `kategorie_mzdy`. Pokud je mzda nižší nebo rovna 35.000 Kč, je to ,,malá mzda", pokud je vyšší než 35.000 Kč a nižší nebo rovna 95.000 Kč, je to ,,střední mzda", pokud je vyšší než 95.000 Kč, je to ,,velká mzda"
-- nechte AI do skriptu zaimplementovat jeden vybraný what-if scénář
-- Pamatujte: chceme správný, optimální a zdokumentovaný kód
-
-Posuďte - **Jak hodnotíte vygenerovaný skript? Dělá, co má? Jak rychle běží?**
+</div>
 
 ---
 
-# Zadání 
+# Posuďte + fallback
 
-**Úkol 3 - zobecněte postup do skillu**
+<v-clicks>
 
- Tenhle postup budete opakovat u každého dalšího čištění dat — zapište ho jako skill `data-transformer`:
+- **Věříte logu změn?** Proč ano? Proč ne?
+- Co agent rozhodl **potichu za vás**?
+- Co byste nechaly **schvalovat vždy**?
+
+</v-clicks>
+
+<v-click>
+
+<div class="callout">🛟 Nefunguje vám agent? Fallback: Google Colab + Data Science Agent — nahrajte CSV a zadejte stejné zadání. Nebo pracujte ve dvojici.</div>
+
+</v-click>
+
+---
+
+# Zapište postup jako skill `data-transformer`
+
+Tenhle postup budete opakovat u každého dalšího čištění dat:
 
 | Prvek skillu | Obsah |
 |---|---|
-| **Kdy použít** | Mám dataset s identifikovanými nečistotami a potřebuji transformační skript |
-| **Kroky** | 1) Shrň nalezené problémy z EDA · 2) Nech AI navrhnout úpravy + what-if scénáře · 3) Vyjasni si sporné body (iteruj) · 4) Vygeneruj skript s dokumentací · 5) Over výstup na malém vzorku před/po |
-| **Výstup** | Okomentovaný skript (SQL) + shrnutí, co se změnilo a proč |
-| **Na co si dát pozor** | Nekontrolovat jen "běží bez chyby" — ověřit, že logika odpovídá zadání (např. hraniční hodnoty u kategorizace) |
+| **Kdy použít** | Mám dataset s nečistotami a agenta, který ho může vyčistit |
+| **Kroky** | 1) Shrň problémy z EDA · 2) Nech agenta navrhnout čisticí kroky — zatím nic neměnit · 3) Sporné kroky vyjasni (iteruj) · 4) Proveď → vyčištěná data + log změn · 5) Ověř 2–3 opravy proti původním datům |
+| **Výstup** | Vyčištěný CSV + `cleaning_log.md` (co, proč, kolik řádků) |
+| **Na co si dát pozor** | Co agent rozhodl potichu — hraniční hodnoty, mazání řádků, doplňování chybějících |
 
-Posuďte - **Fungoval postup i na jiném zadání? Co jste museli doplnit?**
+Posuďte - **Fungoval postup i na jiném zadání? Co jste musely doplnit?**
 
 ---
 layout: section
