@@ -87,10 +87,10 @@ Dostanete dataset se záznamy jednotlivých zaměstnanců:
 
 1) Jak byste samy postupovaly pro zpřesnění zadání?
    
-2) Použijte ChatGPT jako sparring partnera:
+2) Použijte AI jako sparring partnera:
 - Nechte si pomoci vygenerovat doplňující otázky, navrhnout metriky, formulovat hypotézy
 
-3) Porovnejte výstup ChatGPT s vaším návrhem
+3) Porovnejte výstup AI s vaším návrhem
 - Co AI doplnila? Kde naopak přemýšlí příliš obecně?
 
 ---

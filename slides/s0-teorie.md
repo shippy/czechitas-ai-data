@@ -169,13 +169,31 @@ Kvalita výstupu závisí na kvalitě vstupu.
 # Jak psát dobré prompty
 
 <div class="icon-grid">
-  <div class="icon-card"><div class="icon">🎭</div><div class="label">Vytvořte roli<br><small style="font-weight:300;color:#666">„Jsi expert na SQL…"</small></div></div>
+  <div class="icon-card"><div class="icon">🧭</div><div class="label">Definujte úspěch<br><small style="font-weight:300;color:#666">„Hotovo vypadá takto: …"</small></div></div>
   <div class="icon-card"><div class="icon">🎯</div><div class="label">Buďte konkrétní<br><small style="font-weight:300;color:#666">Přesný úkol, ne vágní zadání</small></div></div>
   <div class="icon-card"><div class="icon">📐</div><div class="label">Strukturujte prompt<br><small style="font-weight:300;color:#666">Odrážky, sekce, formát</small></div></div>
   <div class="icon-card"><div class="icon">📎</div><div class="label">Přidejte kontext<br><small style="font-weight:300;color:#666">Data, příklady, omezení</small></div></div>
   <div class="icon-card"><div class="icon">📋</div><div class="label">Specifikujte výstup<br><small style="font-weight:300;color:#666">Formát, délka, jazyk</small></div></div>
   <div class="icon-card"><div class="icon">🔄</div><div class="label">Iterujte<br><small style="font-weight:300;color:#666">Follow-up otázky zpřesní výsledek</small></div></div>
 </div>
+
+---
+
+# Kdy sáhnout po přemýšlivém modelu
+
+<v-clicks>
+
+- **Rychlé modely** stačí na mechaniku — souhrny, formátování, kód podle vzoru
+- **Přemýšlivé (thinking/reasoning) modely** se vyplatí na vícekrokové úlohy — odvození metriky, rekonciliace dvou datasetů, ověření závěru
+- Přemýšlivý model je **pomalejší a dražší**, ale ukáže svůj postup
+
+</v-clicks>
+
+<v-click>
+
+<div class="callout">💡 Když jde o závěr, za který ručíte, chtějte postup vidět — a přečtěte si ho.</div>
+
+</v-click>
 
 ---
 
@@ -192,5 +210,48 @@ Kvalita výstupu závisí na kvalitě vstupu.
 **Příklad few-shot promptu:**
 
 <div class="chat-prompt" style="font-size:0.85em">Klasifikuj názvy sloupců podle typu.<br>Příklady: `vek` → numerický, `jmeno` → text, `datum_nastupu` → datum<br>Klasifikuj: `plat`, `oddeleni`, `hodnoceni_score`, `email`</div>
+
+</v-click>
+
+---
+
+# Žebřík agentnosti — mapa dneška
+
+| Stupeň | Nástroj | Kde dnes |
+|--------|---------|----------|
+| **1. Chat + příloha** | ChatGPT / Claude v prohlížeči | Sekce 1–2 |
+| **2. Agent nad vašimi soubory** | Claude Cowork · ChatGPT Work | Sekce 3 a 5 |
+| **3. Agent v terminálu** | Claude Code · Codex | Demo odpoledne |
+
+<v-click>
+
+<div class="callout">💡 Čím výš, tím víc AI udělá sama — a tím pečlivěji kontrolujete, co udělala. Otázky zůstávají stejné: Co udělala? Co ověřím? Za co ručím já?</div>
+
+</v-click>
+
+---
+
+# Než začneme: otestujte si výbavu (5 minut)
+
+<div style="display:flex;gap:2rem;align-items:flex-start">
+<div style="flex:3">
+
+1. Otevřete desktopovou aplikaci — **ChatGPT s Work** nebo **Claude Cowork**
+
+2. Stáhněte si testovací složku (QR kód vpravo)
+
+3. Zadejte prompt:
+
+<div class="chat-prompt">Shrň mi data v této složce do tří odrážek.</div>
+
+</div>
+<div style="flex:2">
+<QRCode url="https://github.com/shippy/czechitas-ai-data/tree/main/precourse" :size="200">Testovací složka</QRCode>
+</div>
+</div>
+
+<v-click>
+
+<div class="callout mt-4">💡 Nefunguje? Nevadí — fallback je Google Colab (ukážeme v sekci 3), nebo pracujte ve dvojici.</div>
 
 </v-click>
