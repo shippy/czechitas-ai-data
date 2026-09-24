@@ -77,4 +77,4 @@ uv run --with jupyter jupyter lab notebooks/assignment-03c.ipynb
 
 ### Údržba mezi kohortami
 
-Odkaz na GPT pomocníčka (slug `chatgpt.com/g/...`) je specifický pro každou kohortu — před novým během kurzu ho aktualizujte v `notebooks/assignment-03c.ipynb` a ve slides (`slides/s4-analyza.md`, `slides/s6-bonus.md`).
+GPT pomocníček byl vyřazen (Custom GPTs končí; nahradily ho skilly ve složce `skills/`). Datový ZIP pro studentky se generuje automaticky GitHub Actions (`data-release.yml`) — rolling release `datacorp-data` při každé změně dat na `main`, verzované releasy při tagu `v*`.

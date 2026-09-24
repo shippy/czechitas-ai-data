@@ -99,7 +99,7 @@ subtitle: "AI jako pomocník při přípravě dat · ~20 minut"
 
 Namiřte svého agenta (Claude Cowork / ChatGPT Work) na složku s DataCorp daty:
 
-1. Stáhněte si repo jako ZIP (QR vpravo) a rozbalte
+1. Stáhněte si data jako ZIP (QR vpravo) a rozbalte
 2. Nechte agenta **navrhnout čisticí kroky** — nesouhlasíte? Iterujte
 3. Nechte ho kroky **provést** → `datacorp_clean.csv` + `cleaning_log.md`
 4. Přidejte počítaný sloupec `kategorie_mzdy`:
@@ -110,7 +110,7 @@ Namiřte svého agenta (Claude Cowork / ChatGPT Work) na složku s DataCorp daty
 
 </div>
 
-<QRCode url="https://github.com/shippy/czechitas-ai-data" :size="150">Repo s daty</QRCode>
+<QRCode url="https://github.com/shippy/czechitas-ai-data/releases/download/datacorp-data/datacorp-data.zip" :size="150">Data ke stažení</QRCode>
 
 </div>
 
