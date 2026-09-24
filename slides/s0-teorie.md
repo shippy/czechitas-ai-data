@@ -256,6 +256,28 @@ Zítra budete potřebovat **stejný** prompt na jiný dataset. A pozítří taky
 
 ---
 
+# SKILL.md — standard, kterému rozumí (skoro) všechno
+
+Skilly mají otevřený formát **Agent Skills**: složka se souborem `SKILL.md` — hlavička říká *kdy* skill použít, tělo říká *jak*.
+
+```markdown
+---
+name: eda-profiler
+description: Použij při prvním kontaktu s novým datasetem…
+---
+
+# EDA profil datasetu
+1. Popis: co je jeden řádek? …
+```
+
+<v-click>
+
+<div class="callout">💡 Stejný soubor funguje v ChatGPT, Claude, Claude Code, Codexu, VS Code i Gemini — napíšete jednou, nosíte s sebou. Skilly z dnešního kurzu najdete v <a href="https://github.com/shippy/czechitas-ai-data/tree/main/skills">repu kurzu</a> (a v datovém ZIPu).</div>
+
+</v-click>
+
+---
+
 # Co dnes uděláme
 
 U každé části dne si postup, který si vyzkoušíte, **zapíšete jako skill**:

@@ -67,6 +67,26 @@ src: ./s5-prezentace.md
 ---
 
 ---
+
+# Meta: Jak vznikl tenhle kurz
+
+Tyhle materiály vznikaly **stejně, jak jsme dnes pracovali** — člověk + AI agent.
+
+<v-clicks>
+
+- Slidy jsou markdown v gitu (**Slidev**) — takže je agent může číst, upravovat a kontrolovat jako kód
+- AI navrhovalo datasety, cvičení i formulace; **každou změnu ale četl a schvaloval člověk**
+- A přesně tady je ta past: nástroje dnes svádí stát se **kanónem na slop** (pálit nezkontrolované AI výstupy do světa) nebo **lidským razítkem** (odklikávat, co AI vyrobí)
+
+</v-clicks>
+
+<v-click>
+
+<div class="callout">💡 Stejné pravidlo jako celý dnešek: AI píše návrhy. Vy vlastníte výsledek — i s chybami.</div>
+
+</v-click>
+
+---
 layout: center
 ---
 
