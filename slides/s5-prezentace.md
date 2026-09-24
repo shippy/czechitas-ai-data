@@ -27,8 +27,15 @@ subtitle: "Co jsem z dat dostal/a? (Interpretace)"
 
 ---
 
-> AI zlepšuje formu.  
-> Odpovědnost za obsah je na vás.
+# Demo: AI jako oponent
+
+Necháme AI simulovat pushback HR Business Partnera:
+
+- „Nemůže to být jen senioritou?"
+- „Proč mám tomuhle číslu věřit?"
+- „Co konkrétně mám s tím zjištěním udělat?"
+
+**Sledujte:** které otázky by vaši prezentaci zaskočily — a co v ní kvůli tomu doplníte?
 
 ---
 layout: section
@@ -71,15 +78,18 @@ Vyberte si otázku, kterou jste analyzovaly v předchozí sekci.
 
 ---
 
-# Demo: AI jako oponent
+# Úkol 2 - zapište jako skill `summarize-for-management`
 
-Necháme AI simulovat pushback HR Business Partnera:
+Tenhle postup budete potřebovat u každé další prezentace výsledků.
 
-- „Nemůže to být jen senioritou?"
-- „Proč mám tomuhle číslu věřit?"
-- „Co konkrétně mám s tím zjištěním udělat?"
+- **Kdy použít:** mám hotovou analýzu, potřebuji ji shrnout pro vedení
+- **Kroky:** otázka jednou větou → zjištění v business jazyce → omezení dat → 2–3 další kroky
+- **Výstup:** krátký text, žádný statistický žargon — a **každé číslo s dohledatelným zdrojem**
+- **Pozor na:** AI ráda zjištění zjednoduší až na falešnou jistotu — trvejte na uvedení nejistoty
 
-**Sledujte:** které otázky by vaši prezentaci zaskočily — a co v ní kvůli tomu doplníte?
+Otestujte skill na **jiné otázce ze seznamu výše**.
+
+Posuďte - **Fungoval beze změny, nebo se muselo něco ručně dolaďovat?**
 
 ---
 layout: section

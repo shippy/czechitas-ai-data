@@ -50,6 +50,53 @@ V tomto kurzu budeme vycházet z logiky tradiční metodologie **CRISP-DM**, kte
 </div>
 
 ---
+
+# Jak by to vypadalo v praxi (příklad)
+
+<div style="margin-top:1rem">
+
+**PŘED SCHŮZKOU S BUSINESSEM**
+
+<v-clicks>
+
+- Business se ozve s potřebou (e-mail, Slack) — *„Potřebujeme probrat, zákazníci nakupují méně."*
+- Iterace s AI → příprava doplňujících otázek na schůzku
+
+</v-clicks>
+
+<v-click>
+
+**PO SCHŮZCE S BUSINESSEM**
+
+</v-click>
+
+<v-click>
+
+- Business odpověděl na otázky → iterace s AI → návrh metrik a hypotéz
+
+</v-click>
+
+<v-click>
+
+**VALIDACE S BUSINESSEM**
+
+</v-click>
+
+<v-click>
+
+- Shrnutí: co jdeme analyzovat, jak, a jaké budou výstupy — potvrzení s businessem před otevřením dat
+
+</v-click>
+
+</div>
+
+<v-click>
+
+<div class="callout warning">⚠️ AI nenahrazuje rozhovor s businessem — zlepšuje kvalitu otázek, které mu položíte, a pomáhá zpracovat, co vám odpoví.</div>
+
+</v-click>
+
+---
 layout: section
 subtitle: "Seznamování a zpřesňování zadání · ~30 minut"
 ---
@@ -85,13 +132,17 @@ Dostanete dataset se záznamy jednotlivých zaměstnanců:
 
 **Zpřesnění analytického zadání (ještě před otevřením dat)**
 
-1) Jak byste samy postupovaly pro zpřesnění zadání?
+1) Zkuste si říct, jak byste samy postupovaly pro zpřesnění zadání? (bez AI)
    
 2) Použijte AI jako sparring partnera:
 - Nechte si pomoci vygenerovat doplňující otázky, navrhnout metriky, formulovat hypotézy
 
 3) Porovnejte výstup AI s vaším návrhem
 - Co AI doplnila? Kde naopak přemýšlí příliš obecně?
+
+4) Zobecněte postup do skillu `clarify-analysis-brief`
+- Tenhle rozklad zadání budete dělat u každého dalšího projektu — zabalme ho, ať ho příště nemusíme vymýšlet znovu
+- k vytvoření využijte ChatGPT nebo Claude
 
 ---
 layout: section

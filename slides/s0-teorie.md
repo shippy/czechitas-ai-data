@@ -215,6 +215,61 @@ Kvalita výstupu závisí na kvalitě vstupu.
 
 ---
 
+# Co když dobrý prompt potřebujete znovu?
+
+Dobrý prompt (kontext, strukturu, few-shot příklady) jste si právě musely samy sestavit.
+
+<v-click>
+
+Zítra budete potřebovat **stejný** prompt na jiný dataset. A pozítří taky.
+
+**AI má „amnézii" — každá nová konverzace začíná od nuly.**
+
+</v-click>
+
+---
+
+# Skill: zabalený prompt pro opakované použití
+
+**Skill** = zapsaný, znovupoužitelný postup — ne jednorázový prompt, ale vše, co jsme si dnes řekli o dobrém promptu (kontext, struktura, kritéria úspěchu, formát výstupu), sepsané jednou a použitelné pokaždé znovu.
+
+<div class="icon-grid cols-2" style="margin-top:1.5rem">
+  <div class="icon-card"><div class="icon">🎯</div><div class="label">Definuje „kdy"<br><small style="font-weight:300;color:#666">V jaké situaci se má použít</small></div></div>
+  <div class="icon-card"><div class="icon">📋</div><div class="label">Definuje kroky<br><small style="font-weight:300;color:#666">Jaký postup má AI dodržet</small></div></div>
+  <div class="icon-card"><div class="icon">📐</div><div class="label">Definuje výstup<br><small style="font-weight:300;color:#666">Stejný formát pokaždé</small></div></div>
+  <div class="icon-card"><div class="icon">🔁</div><div class="label">Znovupoužitelný<br><small style="font-weight:300;color:#666">Napíšete jednou, použijete opakovaně</small></div></div>
+</div>
+
+---
+
+# Jak skill vypadá
+
+| Prvek | Obsah |
+|---|---|
+| **Název** | krátký, akční (např. `eda-profiler`) |
+| **Kdy použít** | jaká situace/zadání skill spouští |
+| **Kroky** | co má AI udělat, v jakém pořadí |
+| **Výstup** | jaký formát a strukturu očekávám |
+| **Na co si dát pozor** | časté chyby AI u tohoto typu úkolu |
+
+<div class="callout warning">⚠️ Skill není kouzlo — je to zapsaná zkušenost. Čím lepší postup dnes objevíte, tím lepší skill z něj vznikne.</div>
+
+---
+
+# Co dnes uděláme
+
+U každé části dne si postup, který si vyzkoušíte, **zapíšete jako skill**:
+
+| Sekce | Skill |
+|---|---|
+| 1 · Zadání | `clarify-analysis-brief` |
+| 2 · Data | `eda-profiler` |
+| 3 · Příprava dat | `data-transformer` |
+| 4 · Analýza dat | `extract-and-evaluate` |
+| 5 · Prezentace | `summarize-for-management` |
+
+---
+
 # Žebřík agentnosti — mapa dneška
 
 | Stupeň | Nástroj | Kde dnes |

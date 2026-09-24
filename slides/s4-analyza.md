@@ -150,6 +150,19 @@ Dataset je syntetický — správné odpovědi známe (`datacorp_ground_truth_*.
 **Bonus, pokud zbude čas:** Úkol 4 (rekonciliace mzdového listu z Excelu) — viz konec notebooku.
 
 ---
+
+# Zapište postup jako skill `extract-and-evaluate`
+
+Extrakce se strukturovaným výstupem + měření přesnosti — to budete opakovat u každých textových dat:
+
+| Prvek skillu | Obsah |
+|---|---|
+| **Kdy použít** | Mám nestrukturovaný text a chci z něj spolehlivá strukturovaná data |
+| **Kroky** | 1) Prohlédni vzorek textů · 2) Navrhni Pydantic model (Literal kategorie, popisy polí) · 3) Extrahuj vše · 4) Změř accuracy na označeném vzorku · 5) Iteruj prompt/model podle chyb |
+| **Výstup** | Strukturovaný dataset + naměřená chybovost (ne odhad od oka) |
+| **Na co si dát pozor** | Systematické chyby — jiný jazyk, sarkasmus, nejednoznačné kategorie |
+
+---
 layout: center
 ---
 

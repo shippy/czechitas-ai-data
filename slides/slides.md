@@ -17,7 +17,7 @@ fonts:
 
 Lifecycle práce datového analytika s využitím AI
 
-Markéta Hanna · Šimon Podhajský · Dan Rabiencný · Czechitas · Květen 2026
+Markéta Hanna · Šimon Podhajský · Dan Rabiencný · Czechitas · září 2026
 
 ---
 
@@ -26,12 +26,12 @@ Markéta Hanna · Šimon Podhajský · Dan Rabiencný · Czechitas · Květen 20
 | Sekce | Téma | Lektor/ka |
 |-------|------|-----------|
 | 0 | Úvod do AI a prompt engineering | Šimon |
-| 1 | Porozumění zadání | Markéta |
+| 1 | Porozumění zadání | Dan |
 | 2 | Porozumění datům (EDA) | Šimon |
-| 3 | Příprava dat | Markéta |
+| 3 | Příprava dat | Dan |
 | 4 | Samotná analýza | Šimon |
 | — | Demo: agent v terminálu | Šimon |
-| 5 | Prezentace výsledků | Markéta |
+| 5 | Prezentace výsledků | Dan |
 | ⭐ | Bonus: Nástroje (transformery = samostudium) | — |
 
 ---
@@ -84,7 +84,7 @@ layout: center
 
 Markéta Hanna · Šimon Podhajský · Dan Rabiencný
 
-**Czechitas · AI v datové analýze · Květen 2026**
+**Czechitas · AI v datové analýze · září 2026**
 
 <QRCode url="https://moje.czechitas.cz/cs/zpetna-vazba/8176-ai-v-datove-analyze" :size="150">Zpětná vazba</QRCode>
 

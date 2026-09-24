@@ -65,7 +65,7 @@ layout: section
 
 # Demo: Agent nad složkou DataCorp
 
-Namíříme agenta (Claude Cowork / ChatGPT Work) na složku s DataCorp soubory:
+Namíříme agenta (Claude Cowork / ChatGPT Work) na soubor s pokladními daty kavárny CoffeeCloud:
 
 <v-clicks>
 
@@ -131,6 +131,21 @@ Namiřte svého agenta (Claude Cowork / ChatGPT Work) na složku s DataCorp daty
 <div class="callout">🛟 Nefunguje vám agent? Fallback: Google Colab + Data Science Agent — nahrajte CSV a zadejte stejné zadání. Nebo pracujte ve dvojici.</div>
 
 </v-click>
+
+---
+
+# Zapište postup jako skill `data-transformer`
+
+Tenhle postup budete opakovat u každého dalšího čištění dat:
+
+| Prvek skillu | Obsah |
+|---|---|
+| **Kdy použít** | Mám dataset s nečistotami a agenta, který ho může vyčistit |
+| **Kroky** | 1) Shrň problémy z EDA · 2) Nech agenta navrhnout čisticí kroky — zatím nic neměnit · 3) Sporné kroky vyjasni (iteruj) · 4) Proveď → vyčištěná data + log změn · 5) Ověř 2–3 opravy proti původním datům |
+| **Výstup** | Vyčištěný CSV + `cleaning_log.md` (co, proč, kolik řádků) |
+| **Na co si dát pozor** | Co agent rozhodl potichu — hraniční hodnoty, mazání řádků, doplňování chybějících |
+
+Posuďte - **Fungoval postup i na jiném zadání? Co jste musely doplnit?**
 
 ---
 layout: section
