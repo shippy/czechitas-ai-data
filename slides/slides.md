@@ -67,10 +67,6 @@ src: ./s5-prezentace.md
 ---
 
 ---
-src: ./s6-konverzacni_analytika.md
----
-
----
 layout: center
 ---
 

@@ -6,7 +6,7 @@ subtitle: "Spoluautorka kurzu · Data & AI"
 ---
 
 - Senior IT Analyst @ T-Mobile CZ
-- Lektorka & koučka Czechitas kurzů Data & AI
+- Lektorka a koučka Czechitas kurzů Data & AI
 
 ::qr::
 <QRCode url="https://www.linkedin.com/in/mark%C3%A9ta-hanna-05019941/" :size="120">LinkedIn</QRCode>
@@ -33,7 +33,7 @@ subtitle: "Lektor · Data & AI"
 ---
 
 - Data & AI Consultant @ KPMG
-- Lektor Czechitas kurzů
+- Lektor a Czechitas kurzů Data & AI
 
 ::qr::
 <QRCode url="https://www.linkedin.com/in/daniel-rabiencn%C3%BD/" :size="120">LinkedIn</QRCode>
