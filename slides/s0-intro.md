@@ -33,7 +33,7 @@ subtitle: "Lektor · Data & AI"
 ---
 
 - Data & AI Consultant @ KPMG
-- Lektor a Czechitas kurzů Data & AI
+- Lektor Czechitas kurzů Data & AI
 
 ::qr::
 <QRCode url="https://www.linkedin.com/in/daniel-rabiencn%C3%BD/" :size="120">LinkedIn</QRCode>
