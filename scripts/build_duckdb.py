@@ -32,6 +32,7 @@ TABLES = {
 
 def main() -> None:
     out = Path(sys.argv[1]) if len(sys.argv) > 1 else DATA_DIR / "datacorp.duckdb"
+    out.parent.mkdir(parents=True, exist_ok=True)
     out.unlink(missing_ok=True)
 
     con = duckdb.connect(str(out))
