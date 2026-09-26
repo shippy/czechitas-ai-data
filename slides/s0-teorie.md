@@ -278,6 +278,58 @@ description: Použij při prvním kontaktu s novým datasetem…
 
 ---
 
+# Ukázka: od promptu ke skillu
+
+AI vám napsala kód nad nákupy kavárny (`test-data.csv`: `datum, produkt, ks, cena`):
+
+```python
+df = pd.read_csv("test-data.csv")
+utrata = df.groupby("produkt")["cena"].sum()
+utrata.sort_values(ascending=False).head(3)
+```
+
+<v-click>
+
+<div class="chat-prompt">Co dělá tenhle kód?</div>
+
+</v-click>
+
+<v-click>
+
+<div class="chat-prompt">Znám Excel, Python ne. Vysvětli mi tento kód po blocích a u každého uveď excelový ekvivalent. Na konci vypiš, co si mám ověřit, než výsledku uvěřím.</div>
+
+</v-click>
+
+<v-click>
+
+<div class="callout warning">⚠️ Kód běží a pořadí top 3 dokonce sedí — jenže sčítá <b>cenu za kus</b> bez počtu kusů. Konvice: 3 196 Kč místo 11 186 Kč. Všimla si toho AI?</div>
+
+</v-click>
+
+---
+
+# Zabalte to do skillu
+
+<v-clicks>
+
+1. Doladěný postup nechte AI sepsat:
+
+<div class="chat-prompt">Z toho, co jsme teď dělali, napiš SKILL.md podle kostry: kdy použít / kroky / výstup / na co si dát pozor.</div>
+
+2. **Přečtěte ho kriticky** — „Na co si dát pozor" bývá nejslabší. Chybí tam agregace nad špatným sloupcem?
+3. Doplňte sekci **Moje úroveň** — skill vysvětluje tak, jak potřebujete *vy* (Excel? SQL? úplné začátky?)
+4. **Otestujte v nové konverzaci** na jiném kódu — pamatujete na amnézii?
+
+</v-clicks>
+
+<v-click>
+
+<div class="callout">💡 Hotový skill <code>vysvetli-kod</code> najdete v repu kurzu. Hodí se celý den — kódu od AI dnes uvidíte hodně.</div>
+
+</v-click>
+
+---
+
 # Co dnes uděláme
 
 U každé části dne si postup, který si vyzkoušíte, **zapíšete jako skill**:

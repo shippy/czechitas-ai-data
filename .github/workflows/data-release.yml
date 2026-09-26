@@ -54,7 +54,7 @@ jobs:
         run: |
           gh release delete datacorp-data --yes || true
           git push origin :refs/tags/datacorp-data || true
-          gh release create datacorp-data build/datacorp-data.zip \
+          gh release create datacorp-data build/datacorp-data.zip build/datacorp.duckdb \
             --title "DataCorp data (rolling)" \
             --notes "Aktuální data kurzu: 6 CSV tabulek, mzdový list (xlsx), datacorp.duckdb a složka skills/. Bez ground-truth souborů. Automaticky přegenerováno při každé změně dat na main." \
             --latest=false
@@ -64,6 +64,6 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "${GITHUB_REF_NAME}" build/datacorp-data.zip \
+          gh release create "${GITHUB_REF_NAME}" build/datacorp-data.zip build/datacorp.duckdb \
             --title "DataCorp data ${GITHUB_REF_NAME}" \
             --notes "Verzovaná data kurzu (${GITHUB_REF_NAME}): 6 CSV tabulek, mzdový list (xlsx), datacorp.duckdb a složka skills/. Bez ground-truth souborů."
