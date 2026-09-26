@@ -17,7 +17,7 @@ fonts:
 
 Lifecycle práce datového analytika s využitím AI
 
-Markéta Hanna · Šimon Podhajský · Dan Rabiencný · Czechitas · Květen 2026
+Markéta Hanna · Šimon Podhajský · Dan Rabiencný · Czechitas · září 2026
 
 ---
 
@@ -26,12 +26,13 @@ Markéta Hanna · Šimon Podhajský · Dan Rabiencný · Czechitas · Květen 20
 | Sekce | Téma | Lektor/ka |
 |-------|------|-----------|
 | 0 | Úvod do AI a prompt engineering | Šimon |
-| 1 | Porozumění zadání | Markéta |
+| 1 | Porozumění zadání | Dan |
 | 2 | Porozumění datům (EDA) | Šimon |
-| 3 | Příprava dat | Markéta |
+| 3 | Příprava dat | Dan |
 | 4 | Samotná analýza | Šimon |
-| 5 | Prezentace výsledků | Markéta |
-| ⭐ | Bonus: Nástroje a transformery | — |
+| — | Demo: agent v terminálu | Šimon |
+| 5 | Prezentace výsledků | Dan |
+| ⭐ | Bonus: Nástroje (transformery = samostudium) | — |
 
 ---
 src: ./s0-intro.md
@@ -66,6 +67,26 @@ src: ./s5-prezentace.md
 ---
 
 ---
+
+# Meta: Jak vznikl tenhle kurz
+
+Tyhle materiály vznikaly **stejně, jak jsme dnes pracovali** — člověk + AI agent.
+
+<v-clicks>
+
+- Slidy jsou markdown v gitu (**Slidev**) — takže je agent může číst, upravovat a kontrolovat jako kód
+- AI navrhovalo datasety, cvičení i formulace; **každou změnu ale četl a schvaloval člověk**
+- A přesně tady je ta past: nástroje dnes svádí stát se **kanónem na slop** (pálit nezkontrolované AI výstupy do světa) nebo **lidským razítkem** (odklikávat, co AI vyrobí)
+
+</v-clicks>
+
+<v-click>
+
+<div class="callout">💡 Stejné pravidlo jako celý dnešek: AI píše návrhy. Vy vlastníte výsledek — i s chybami.</div>
+
+</v-click>
+
+---
 layout: center
 ---
 
@@ -73,7 +94,7 @@ layout: center
 
 Budeme rádi za vaši zpětnou vazbu!
 
-<QRCode url="https://moje.czechitas.cz/cs/zpetna-vazba/8176-ai-v-datove-analyze" :size="250">Zpětná vazba</QRCode>
+<QRCode url="https://moje.czechitas.cz/cs/zpetna-vazba/8360-ai-v-datove-analyze" :size="250">Zpětná vazba</QRCode>
 
 ---
 layout: center
@@ -83,9 +104,9 @@ layout: center
 
 Markéta Hanna · Šimon Podhajský · Dan Rabiencný
 
-**Czechitas · AI v datové analýze · Květen 2026**
+**Czechitas · AI v datové analýze · září 2026**
 
-<QRCode url="https://moje.czechitas.cz/cs/zpetna-vazba/8176-ai-v-datove-analyze" :size="150">Zpětná vazba</QRCode>
+<QRCode url="https://moje.czechitas.cz/cs/zpetna-vazba/8360-ai-v-datove-analyze" :size="150">Zpětná vazba</QRCode>
 
 ---
 layout: center

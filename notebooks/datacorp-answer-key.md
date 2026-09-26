@@ -52,19 +52,19 @@ Podpora má průměrnou délku zaměstnání ~2 roky (ostatní oddělení ~3–4
 
 ## Nestrukturovaná data
 
-### Hodnocení výkonu (`datacorp_reviews.csv`, 79 řádků)
+### Hodnocení výkonu (`datacorp_reviews.csv`, 161 řádků)
 
 - Propojeno přes `employee_id`
 - Sentiment koreluje s `hodnoceni_vykonu`, ale ne dokonale
 - ~15 % zaměstnanců s vysokým skóre má smíšený/kritický review (šéf dává dobré hodnocení, ale píše upřímnou zpětnou vazbu)
-- Extrakční cíl (Pydantic): sentiment, silné stránky, slabé stránky, doporučená akce
+- Extrakční cíl (Pydantic): sentiment (`pozitivní`/`smíšené`/`negativní` — musí sedět na ground truth!), silné stránky, slabé stránky, doporučená akce
 
 ### Výstupní rozhovory (`datacorp_exit_interviews.csv`, ~70 řádků po rozšíření)
 
 - ~40 z Podpory, ~30 z ostatních oddělení
 - Podpora: důvody clustered kolem "plat" (40 %) a "růst" (30 %)
 - Ostatní oddělení: důvody rozloženy rovnoměrněji
-- Extrakční cíl (Pydantic): kategorie důvodu odchodu, sentiment, doporučil/a by firmu
+- Extrakční cíl (Pydantic): kategorie důvodu odchodu (`plat`/`kariérní růst`/`work-life balance`/`vedení`/`jiné`), sentiment, shrnutí
 
 ## Další záměrně zasazené problémy (rozšíření 2026-05)
 
@@ -90,6 +90,24 @@ Po rozšíření datasetu na ~1000 zaměstnanců a 4 nové soubory přibylo 18 d
 | 22 | Mixed-language exit interviews | 5 fragmentů kombinujících češtinu a angličtinu | `df['interview_text'].str.contains(r'\bbetter|opportunity\b')` |
 | 23 | Self-contradicting exit interview | 1 záznam s rozporem (např. "platově byl spokojen" + "odchází kvůli penězům") | manuální čtení |
 | 24 | Survivorship bias | ~15 zaměstnanců odešlo — jsou v `salary_history`, `reviews`, `exit_interviews`, ale ne v `datacorp.csv` | `set(history.employee_id) - set(main.employee_id)` |
+
+## Úkol 3 (eval proti ground truth) — očekávané výsledky
+
+Od přepisu 2026-09 je Úkol 3 eval: studentky měří svou extrakci proti
+`datacorp_ground_truth_{exits,reviews,payroll}.csv` (generuje `generate_datacorp.py`,
+žijí na `main`, ale záměrně NEJSOU v datovém ZIPu z releasu).
+
+- **3.1 (accuracy důvodů odchodu):** s kategoriemi shodnými s ground truth typicky
+  vysoká (>85 %). Nejčastější záměny: `jiné` ↔ `kariérní růst` a záznamy s více důvody.
+- **3.2a (jazyková sonda):** mixed-en fragmenty od 2026-09 **přeformulovávají tentýž
+  důvod anglicky** (žádný konkurenční důvod), takže accuracy by se mezi `cs` a
+  `mixed-en` neměla výrazně lišit. Výrazný propad u `mixed-en` = zajímavý nález, ne artefakt dat.
+  Pozor: `mixed-en` je jen 5 záznamů — malý vzorek, o čemž má smysl mluvit.
+- **3.2b (sarkasmus):** 5 sarkastických reviews (`*kreativní*` apod.) má ground truth
+  `negativní`; modely je často čtou jako pozitivní/smíšené. Očekávaný propad accuracy —
+  to je pointa bias sondy a můstek ke governance slidu ze sekce 2.
+- **Kontradikce (1 záznam):** ground truth říká `plat`; model může legitimně
+  zvolit jinak — dobrý diskusní případ „chyba definice vs. chyba modelu".
 
 ## Úkol 4 — očekávané výsledky
 

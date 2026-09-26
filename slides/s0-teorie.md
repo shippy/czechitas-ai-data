@@ -118,8 +118,8 @@ LLM nemá „paměť na fakta" — generuje text, který *vypadá* pravděpodobn
 
 | Model | Výrobce | Silné stránky |
 |-------|---------|---------------|
-| **ChatGPT** (GPT-5.5) | OpenAI | Nejrozšířenější, dobrý all-rounder |
-| **Claude** | Anthropic | Dlouhý kontext, pečlivé instrukce |
+| **ChatGPT** (Astra / GPT-6) | OpenAI | Nejrozšířenější, dobrý all-rounder |
+| **Claude** (Fable 5.1 / Opus 5.5) | Anthropic | Dlouhý kontext, pečlivé instrukce |
 | **Gemini** | Google | Integrace s Google ekosystémem |
 | **Llama** | Meta | Open-source, lokální běh |
 
@@ -169,13 +169,31 @@ Kvalita výstupu závisí na kvalitě vstupu.
 # Jak psát dobré prompty
 
 <div class="icon-grid">
-  <div class="icon-card"><div class="icon">🎭</div><div class="label">Vytvořte roli<br><small style="font-weight:300;color:#666">„Jsi expert na SQL…"</small></div></div>
+  <div class="icon-card"><div class="icon">🧭</div><div class="label">Definujte úspěch<br><small style="font-weight:300;color:#666">„Hotovo vypadá takto: …"</small></div></div>
   <div class="icon-card"><div class="icon">🎯</div><div class="label">Buďte konkrétní<br><small style="font-weight:300;color:#666">Přesný úkol, ne vágní zadání</small></div></div>
   <div class="icon-card"><div class="icon">📐</div><div class="label">Strukturujte prompt<br><small style="font-weight:300;color:#666">Odrážky, sekce, formát</small></div></div>
   <div class="icon-card"><div class="icon">📎</div><div class="label">Přidejte kontext<br><small style="font-weight:300;color:#666">Data, příklady, omezení</small></div></div>
   <div class="icon-card"><div class="icon">📋</div><div class="label">Specifikujte výstup<br><small style="font-weight:300;color:#666">Formát, délka, jazyk</small></div></div>
   <div class="icon-card"><div class="icon">🔄</div><div class="label">Iterujte<br><small style="font-weight:300;color:#666">Follow-up otázky zpřesní výsledek</small></div></div>
 </div>
+
+---
+
+# Kdy sáhnout po přemýšlivém modelu
+
+<v-clicks>
+
+- **Rychlé modely** stačí na mechaniku — souhrny, formátování, kód podle vzoru
+- **Přemýšlivé (thinking/reasoning) modely** se vyplatí na vícekrokové úlohy — odvození metriky, rekonciliace dvou datasetů, ověření závěru
+- Přemýšlivý model je **pomalejší a dražší**, ale ukáže svůj postup
+
+</v-clicks>
+
+<v-click>
+
+<div class="callout">💡 Když jde o závěr, za který ručíte, chtějte postup vidět — a přečtěte si ho.</div>
+
+</v-click>
 
 ---
 
@@ -192,5 +210,125 @@ Kvalita výstupu závisí na kvalitě vstupu.
 **Příklad few-shot promptu:**
 
 <div class="chat-prompt" style="font-size:0.85em">Klasifikuj názvy sloupců podle typu.<br>Příklady: `vek` → numerický, `jmeno` → text, `datum_nastupu` → datum<br>Klasifikuj: `plat`, `oddeleni`, `hodnoceni_score`, `email`</div>
+
+</v-click>
+
+---
+
+# Co když dobrý prompt potřebujete znovu?
+
+Dobrý prompt (kontext, strukturu, few-shot příklady) jste si právě musely samy sestavit.
+
+<v-click>
+
+Zítra budete potřebovat **stejný** prompt na jiný dataset. A pozítří taky.
+
+**AI má „amnézii" — každá nová konverzace začíná od nuly.**
+
+</v-click>
+
+---
+
+# Skill: zabalený prompt pro opakované použití
+
+**Skill** = zapsaný, znovupoužitelný postup — ne jednorázový prompt, ale vše, co jsme si dnes řekli o dobrém promptu (kontext, struktura, kritéria úspěchu, formát výstupu), sepsané jednou a použitelné pokaždé znovu.
+
+<div class="icon-grid cols-2" style="margin-top:1.5rem">
+  <div class="icon-card"><div class="icon">🎯</div><div class="label">Definuje „kdy"<br><small style="font-weight:300;color:#666">V jaké situaci se má použít</small></div></div>
+  <div class="icon-card"><div class="icon">📋</div><div class="label">Definuje kroky<br><small style="font-weight:300;color:#666">Jaký postup má AI dodržet</small></div></div>
+  <div class="icon-card"><div class="icon">📐</div><div class="label">Definuje výstup<br><small style="font-weight:300;color:#666">Stejný formát pokaždé</small></div></div>
+  <div class="icon-card"><div class="icon">🔁</div><div class="label">Znovupoužitelný<br><small style="font-weight:300;color:#666">Napíšete jednou, použijete opakovaně</small></div></div>
+</div>
+
+---
+
+# Jak skill vypadá
+
+| Prvek | Obsah |
+|---|---|
+| **Název** | krátký, akční (např. `eda-profiler`) |
+| **Kdy použít** | jaká situace/zadání skill spouští |
+| **Kroky** | co má AI udělat, v jakém pořadí |
+| **Výstup** | jaký formát a strukturu očekávám |
+| **Na co si dát pozor** | časté chyby AI u tohoto typu úkolu |
+
+<div class="callout warning">⚠️ Skill není kouzlo — je to zapsaná zkušenost. Čím lepší postup dnes objevíte, tím lepší skill z něj vznikne.</div>
+
+---
+
+# SKILL.md — standard, kterému rozumí (skoro) všechno
+
+Skilly mají otevřený formát **Agent Skills**: složka se souborem `SKILL.md` — hlavička říká *kdy* skill použít, tělo říká *jak*.
+
+```markdown
+---
+name: eda-profiler
+description: Použij při prvním kontaktu s novým datasetem…
+---
+
+# EDA profil datasetu
+1. Popis: co je jeden řádek? …
+```
+
+<v-click>
+
+<div class="callout">💡 Stejný soubor funguje v ChatGPT, Claude, Claude Code, Codexu, VS Code i Gemini — napíšete jednou, nosíte s sebou. Skilly z dnešního kurzu najdete v <a href="https://github.com/shippy/czechitas-ai-data/tree/main/skills">repu kurzu</a> (a v datovém ZIPu).</div>
+
+</v-click>
+
+---
+
+# Co dnes uděláme
+
+U každé části dne si postup, který si vyzkoušíte, **zapíšete jako skill**:
+
+| Sekce | Skill |
+|---|---|
+| 1 · Zadání | `clarify-analysis-brief` |
+| 2 · Data | `eda-profiler` |
+| 3 · Příprava dat | `data-transformer` |
+| 4 · Analýza dat | `extract-and-evaluate` |
+| 5 · Prezentace | `summarize-for-management` |
+
+---
+
+# Žebřík agentnosti — mapa dneška
+
+| Stupeň | Nástroj | Kde dnes |
+|--------|---------|----------|
+| **1. Chat + příloha** | ChatGPT / Claude v prohlížeči | Sekce 1–2 |
+| **2. Agent nad vašimi soubory** | Claude Cowork · ChatGPT Work | Sekce 3 a 5 |
+| **3. Agent v terminálu** | Claude Code · Codex | Demo odpoledne |
+
+<v-click>
+
+<div class="callout">💡 Čím výš, tím víc AI udělá sama — a tím pečlivěji kontrolujete, co udělala. Otázky zůstávají stejné: Co udělala? Co ověřím? Za co ručím já?</div>
+
+</v-click>
+
+---
+
+# Než začneme: otestujte si výbavu (5 minut)
+
+<div style="display:flex;gap:2rem;align-items:flex-start">
+<div style="flex:3">
+
+1. Otevřete desktopovou aplikaci — **ChatGPT s Work** nebo **Claude Cowork**
+
+2. Stáhněte si testovací složku (QR kód vpravo)
+
+3. Zadejte prompt:
+
+<div class="chat-prompt">Shrň mi data v této složce do tří odrážek.</div>
+
+</div>
+<div style="flex:2">
+<QRCode url="https://github.com/shippy/czechitas-ai-data/tree/main/precourse" :size="200">Testovací složka</QRCode>
+</div>
+</div>
+
+<v-click>
+
+<div class="callout mt-4">💡 Nefunguje? Nevadí — fallback je Google Colab (ukážeme v sekci 3), nebo pracujte ve dvojici.</div>
 
 </v-click>
