@@ -118,8 +118,8 @@ LLM nemá „paměť na fakta" — generuje text, který *vypadá* pravděpodobn
 
 | Model | Výrobce | Silné stránky |
 |-------|---------|---------------|
-| **ChatGPT** (GPT-5.5) | OpenAI | Nejrozšířenější, dobrý all-rounder |
-| **Claude** | Anthropic | Dlouhý kontext, pečlivé instrukce |
+| **ChatGPT** (Astra / GPT-6) | OpenAI | Nejrozšířenější, dobrý all-rounder |
+| **Claude** (Fable 5.1 / Opus 5.5) | Anthropic | Dlouhý kontext, pečlivé instrukce |
 | **Gemini** | Google | Integrace s Google ekosystémem |
 | **Llama** | Meta | Open-source, lokální běh |
 
