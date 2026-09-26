@@ -1,0 +1,1001 @@
+employee_id,jmeno,prijmeni,email,oddeleni,pozice,datum_nastupu,plat,hodnoceni_vykonu,vzdelani,mesto,vek,pohlavi,typ_uvazku,telefon
+0,Marek,Král,marek.kral@datacorp.cz,Vývoj,DevOps Engineer,2019-12-03,57500,4,SŠ,Hradec Králové,36,M,Plný,+420 767 505 550
+1,Filip,Blažek,filip.blazek@datacorp.cz,Vývoj,DevOps Engineer,2019-03-03,71500,5,VŠ Mgr.,Praha,35,M,Plný,+420 726 730 419
+2,Ondřej,Malý,ondrej.maly@datacorp.cz,Vývoj,Data Engineer,2022-04-11,83500,4,VŠ Mgr.,České Budějovice,28,M,DPP,+420 682 393 914
+3,Filip,Blažek,filip.blazek@datacorp.cz,Vývoj,Software Developer,2021-08-25,89000,4,VŠ Mgr.,České Budějovice,27,M,Plný,+420 766 857 448
+4,Tereza,Navrátilová,tereza.navratilova@datacorp.cz,Vývoj,Tech Lead,2020-12-21,75000,4,SŠ,Olomouc,34,Ž,Plný,+420 711 513 555
+5,Veronika,Horáková,veronika.horakova@datacorp.cz,Vývoj,Software Developer,2023-02-25,77500,4,VŠ Mgr.,Praha,33,Ž,Plný,+420 711 642 127
+6,Kristýna,Veselá,kristyna.vesela@datacorp.cz,Vývoj,Tech Lead,2021-10-20,82500,4,VŠ Mgr.,Olomouc,25,Ž,Plný,+420 701 805 996
+7,Hana,Jelínková,hana.jelinkova@datacorp.cz,Vývoj,Data Engineer,2022-09-29,54500,4,SŠ,České Budějovice,28,Ž,Plný,+420 632 944 237
+8,Michal,Král,michal.kral@datacorp.cz,Vývoj,QA Engineer,2021-08-13,58000,3,VŠ Mgr.,Zlín,29,M,Částečný,+420 699 729 511
+9,David,Němec,david.nemec@datacorp.cz,Vývoj,DevOps Engineer,2019-12-12,75000,4,VŠ Mgr.,Olomouc,28,M,Plný,+420 640 827 621
+10,Lenka,Kopecká,lenka.kopecka@datacorp.cz,Vývoj,DevOps Engineer,2021-04-11,98500,3,VŠ Mgr.,Praha,29,Ž,Plný,+420 757 137 261
+11,Lenka,Navrátilová,lenka.navratilova@datacorp.cz,Vývoj,Software Developer,2018-06-30,64500,4,VŠ Bc.,Ostrava,29,Ž,Plný,+420 669 365 120
+12,Ondřej,Růžička,ondrej.ruzicka@datacorp.cz,Vývoj,Tech Lead,2020-10-17,90500,3,VŠ Mgr.,Ostrava,34,M,Plný,+420 790 398 590
+13,Monika,Němcová,monika.nemcova@datacorp.cz,Vývoj,Software Developer,2019-04-16,62000,3,VŠ Bc.,Olomouc,33,Ž,Plný,+420 734 319 693
+14,Radek,Urban,radek.urban@datacorp.cz,Vývoj,QA Engineer,2019-06-16,71500,5,VŠ Mgr.,Hradec Králové,30,M,Plný,+420 792 385 282
+15,Kristýna,Zemanová,kristyna.zemanova@datacorp.cz,Vývoj,Tech Lead,2021-07-02,65500,3,VŠ Bc.,Zlín,28,Ž,Částečný,+420 798 181 773
+16,Jakub,Malý,jakub.maly@datacorp.cz,Vývoj,DevOps Engineer,2020-11-06,92500,4,VŠ Mgr.,České Budějovice,36,M,Plný,+420 601 943 952
+17,Tereza,Novotná,tereza.novotna@datacorp.cz,Vývoj,Data Engineer,2021-10-12,65500,4,VŠ Mgr.,Brno,29,Ž,Plný,+420 794 490 229
+18,Lucie,Horáková,lucie.horakova@datacorp.cz,Vývoj,DevOps Engineer,2021-03-28,70500,3,VŠ Bc.,Liberec,33,Ž,Plný,+420 772 823 122
+19,Pavel,Kříž,pavel.kriz@datacorp.cz,Vývoj,Software Developer,2022-05-22,94500,3,VŠ Mgr.,Zlín,28,M,Plný,+420 784 637 599
+20,Matěj,Dvořák,matej.dvorak@datacorp.cz,Vývoj,Tech Lead,2021-03-28,78500,3,VŠ PhD.,Ostrava,32,M,Plný,+420 769 116 697
+21,Tomáš,Horák,tomas.horak@datacorp.cz,Vývoj,DevOps Engineer,2025-04-26,61500,3,VŠ Mgr.,Zlín,26,M,Plný,+420 773 577 323
+22,Kristýna,Urbanová,kristyna.urbanova@datacorp.cz,Vývoj,Software Developer,2017-10-01,72000,4,SŠ,Hradec Králové,46,Ž,Plný,+420 784 229 923
+23,Nikola,Procházková,nikola.prochazkova@datacorp.cz,Vývoj,QA Engineer,2021-09-08,67500,4,SŠ,Hradec Králové,25,Ž,Plný,+420 610 564 712
+24,Alena,Marková,alena.markova@datacorp.cz,Vývoj,DevOps Engineer,2021-04-25,83000,5,VŠ PhD.,Plzeň,31,Ž,Plný,+420 656 144 106
+25,Filip,Malý,filip.maly@datacorp.cz,Vývoj,Software Developer,2019-01-15,92500,4,VŠ PhD.,Praha,34,M,Plný,+420 795 621 801
+26,Daniel,Blažek,daniel.blazek@datacorp.cz,Vývoj,DevOps Engineer,2021-08-17,51000,3,VŠ Mgr.,Liberec,29,M,Plný,+420 612 225 490
+27,Lenka,Zemanová,lenka.zemanova@datacorp.cz,Vývoj,QA Engineer,2024-06-26,61500,3,VŠ Mgr.,Hradec Králové,31,Ž,Částečný,+420 789 868 532
+28,Lenka,Fialová,lenka.fialova@datacorp.cz,Vývoj,Software Developer,2017-12-07,88000,4,VŠ PhD.,České Budějovice,36,Ž,Plný,+420 719 725 552
+29,Simona,Čechová,simona.cechova@datacorp.cz,Vývoj,DevOps Engineer,2019-12-02,54500,4,SŠ,Zlín,39,Ž,Plný,+420 791 466 634
+30,Karel,Blažek,karel.blazek@datacorp.cz,Vývoj,Software Developer,2023-06-13,78500,4,VŠ Mgr.,Liberec,29,M,Plný,+420 735 570 754
+31,Josef,Fiala,josef.fiala@datacorp.cz,Vývoj,Tech Lead,2025-04-26,46000,4,VŠ Bc.,Ostrava,24,M,Plný,+420 731 929 796
+32,Pavel,Marek,pavel.marek@datacorp.cz,Vývoj,Data Engineer,2020-12-14,76000,4,VŠ Mgr.,Praha,32,M,Částečný,+420 711 494 763
+33,Filip,Kučera,filip.kucera@datacorp.cz,Vývoj,Tech Lead,2023-01-24,92500,4,VŠ Mgr.,Hradec Králové,30,M,Plný,+420 790 343 865
+34,Tomáš,Černý,tomas.cerny@datacorp.cz,Vývoj,Tech Lead,2018-03-19,91500,3,SŠ,Brno,32,M,Plný,+420 663 498 110
+35,Lukáš,Vaněk,lukas.vanek@datacorp.cz,Vývoj,DevOps Engineer,2024-03-30,83000,4,VŠ PhD.,Olomouc,22,M,Plný,+420 799 222 685
+36,Hana,Malá,hana.mala@datacorp.cz,Vývoj,Software Developer,2020-05-12,75000,4,VŠ Bc.,Pardubice,29,Ž,Plný,+420 781 132 104
+37,Jana,Křížová,jana.krizova@datacorp.cz,Vývoj,DevOps Engineer,2024-01-05,86000,3,VŠ PhD.,Praha,22,Ž,Plný,+420 754 837 854
+38,Lenka,Veselá,lenka.vesela@datacorp.cz,Vývoj,Software Developer,2018-09-18,67500,3,VŠ PhD.,Praha,34,Ž,Plný,+420 704 982 774
+39,Barbora,Novotná,barbora.novotna@datacorp.cz,Vývoj,DevOps Engineer,2020-06-21,75000,3,VŠ Mgr.,Brno,31,Ž,Plný,+420 796 588 805
+40,Dominik,Doležal,dominik.dolezal@datacorp.cz,Vývoj,Tech Lead,2020-09-11,90000,3,VŠ Mgr.,Zlín,37,M,Plný,+420 692 557 721
+41,Ondřej,Černý,ondrej.cerny@datacorp.cz,Vývoj,Software Developer,2021-04-13,81500,4,VŠ Mgr.,Zlín,31,M,Plný,+420 682 856 295
+42,Daniel,Marek,daniel.marek@datacorp.cz,Vývoj,Tech Lead,2022-05-03,68500,4,VŠ Mgr.,Olomouc,28,M,Plný,+420 717 687 654
+43,Lukáš,Marek,lukas.marek@datacorp.cz,Vývoj,Tech Lead,2023-09-14,93000,3,VŠ Mgr.,Praha,28,M,Plný,+420 784 760 568
+44,Jakub,Marek,jakub.marek@datacorp.cz,Vývoj,Tech Lead,2023-02-14,78000,4,VŠ PhD.,Praha,31,M,Plný,+420 613 768 912
+45,Jan,Čermák,jan.cermak@datacorp.cz,Vývoj,Data Engineer,2018-09-11,44500,4,VŠ Mgr.,Praha,37,M,Plný,+420 799 482 379
+46,Tomáš,Čermák,tomas.cermak@datacorp.cz,Vývoj,Tech Lead,2022-01-06,79500,4,SŠ,Praha,30,M,Plný,+420 683 852 928
+47,Karel,Veselý,karel.vesely@datacorp.cz,Vývoj,Data Engineer,2018-10-01,99500,4,VŠ Mgr.,Praha,32,M,Plný,+420 686 927 235
+48,Tereza,Malá,tereza.mala@datacorp.cz,Vývoj,Software Developer,2020-07-07,93000,2,VŠ Mgr.,Praha,25,Ž,Plný,+420 768 859 868
+49,Daniel,Jelínek,daniel.jelinek@datacorp.cz,Vývoj,DevOps Engineer,2021-09-27,88000,4,VŠ Mgr.,Brno,31,M,Plný,+420 696 720 866
+50,Ondřej,Malý,ondrej.maly@datacorp.cz,Vývoj,DevOps Engineer,2022-12-05,74000,4,VŠ Mgr.,Liberec,25,M,Plný,+420 601 404 384
+51,Lucie,Zemanová,lucie.zemanova@datacorp.cz,Vývoj,Data Engineer,2020-04-28,83500,3,VŠ Mgr.,Plzeň,32,Ž,DPP,+420 726 822 658
+52,Karel,Urban,karel.urban@datacorp.cz,Vývoj,Tech Lead,2020-09-10,70500,4,VŠ PhD.,České Budějovice,22,M,Plný,+420 729 597 965
+53,Marek,Dvořák,marek.dvorak@datacorp.cz,Vývoj,Data Engineer,2020-12-03,59000,3,VŠ Mgr.,Plzeň,38,M,Plný,+420 755 887 986
+54,Lukáš,Štěpánek,lukas.stepanek@datacorp.cz,Vývoj,QA Engineer,2020-05-22,65000,3,SŠ,Pardubice,29,M,Plný,+420 647 133 149
+55,Marie,Pospíšilová,marie.pospisilova@datacorp.cz,Vývoj,Software Developer,2020-12-13,62500,4,VŠ Mgr.,Brno,25,Ž,Plný,+420 609 191 659
+56,Ondřej,Novák,ondrej.novak@datacorp.cz,Vývoj,DevOps Engineer,2020-11-18,65500,3,SŠ,Olomouc,29,M,Plný,+420 683 867 571
+57,Lukáš,Malý,lukas.maly@datacorp.cz,Vývoj,QA Engineer,2025-04-16,59500,3,VŠ Mgr.,Olomouc,25,M,Plný,+420 668 482 826
+58,Daniel,Pokorný,daniel.pokorny@datacorp.cz,Vývoj,QA Engineer,2022-02-04,76500,3,VŠ Mgr.,Ostrava,29,M,Plný,+420 620 428 174
+59,Eva,Sedláčková,eva.sedlackova@datacorp.cz,Vývoj,Software Developer,2023-02-27,55500,3,VŠ Mgr.,Plzeň,29,Ž,Plný,+420 708 412 907
+60,Veronika,Marková,veronika.markova@datacorp.cz,Vývoj,Data Engineer,2020-06-16,85500,3,VŠ Mgr.,Praha,29,Ž,Plný,+420 635 239 412
+61,Simona,Novotná,simona.novotna@datacorp.cz,Vývoj,Tech Lead,2020-08-23,96500,3,VŠ Mgr.,Praha,31,Ž,Částečný,+420 762 340 808
+62,Lucie,Sedláčková,lucie.sedlackova@datacorp.cz,Vývoj,Data Engineer,2018-06-05,85500,5,VŠ PhD.,Zlín,32,Ž,Plný,+420 658 136 146
+63,Tereza,Štěpánková,tereza.stepankova@datacorp.cz,Vývoj,Tech Lead,2021-10-27,58000,3,SŠ,České Budějovice,35,Ž,Plný,+420 612 504 286
+64,Lenka,Hájková,lenka.hajkova@datacorp.cz,Vývoj,Software Developer,2020-02-16,60500,4,VŠ Bc.,Plzeň,32,Ž,Plný,+420 605 399 469
+65,Ondřej,Růžička,ondrej.ruzicka@datacorp.cz,Vývoj,Data Engineer,2021-08-12,64500,5,VŠ Mgr.,České Budějovice,35,M,Částečný,+420 666 534 143
+66,Dominik,Čermák,dominik.cermak@datacorp.cz,Vývoj,Data Engineer,2021-04-21,74500,4,VŠ Bc.,Praha,33,M,Plný,+420 630 199 735
+67,Barbora,Dvořáková,barbora.dvorakova@datacorp.cz,Vývoj,Tech Lead,2023-06-18,79000,5,SŠ,Ostrava,22,Ž,Plný,+420 632 995 869
+68,Tereza,Holubová,tereza.holubova@datacorp.cz,Vývoj,Tech Lead,2023-06-13,72500,4,VŠ PhD.,Hradec Králové,37,Ž,Plný,+420 659 294 563
+69,Martina,Křížová,martina.krizova@datacorp.cz,Vývoj,Software Developer,2020-09-27,65500,3,SŠ,Hradec Králové,24,Ž,Plný,+420 741 843 385
+70,Tomáš,Doležal,tomas.dolezal@datacorp.cz,Vývoj,QA Engineer,2021-05-25,80500,3,VŠ Mgr.,Praha,31,M,Plný,+420 710 993 620
+71,Veronika,Doležalová,veronika.dolezalova@datacorp.cz,Vývoj,Data Engineer,2021-05-01,70000,3,VŠ Mgr.,Praha,30,Ž,Plný,+420 658 979 852
+72,Eva,Doležalová,eva.dolezalova@datacorp.cz,Vývoj,DevOps Engineer,2019-04-21,67500,4,VŠ Mgr.,Olomouc,37,Ž,Plný,+420 752 610 340
+73,Josef,Procházka,josef.prochazka@datacorp.cz,Vývoj,Tech Lead,2020-12-26,74000,3,VŠ Mgr.,České Budějovice,30,M,Plný,+420 777 244 714
+74,Marie,Čechová,marie.cechova@datacorp.cz,Vývoj,Data Engineer,2022-05-20,68500,2,VŠ PhD.,České Budějovice,35,Ž,Částečný,+420 729 441 471
+75,Adam,Kolář,adam.kolar@datacorp.cz,Vývoj,DevOps Engineer,2020-08-17,67500,3,VŠ Bc.,Pardubice,38,M,Plný,+420 759 102 283
+77,Daniel,Beneš,daniel.benes@datacorp.cz,Vývoj,Tech Lead,2019-08-09,86000,4,VŠ Mgr.,Praha,32,M,DPP,+420 667 754 319
+78,Lenka,Urbanová,lenka.urbanova@datacorp.cz,Vývoj,Tech Lead,2021-04-02,71500,3,VŠ Mgr.,Praha,28,Ž,Plný,+420 601 533 180
+79,Karel,Navrátil,karel.navratil@datacorp.cz,Vývoj,Tech Lead,2025-04-26,72500,3,VŠ Mgr.,Praha,27,M,DPP,+420 796 419 957
+80,Martina,Černá,martina.cerna@datacorp.cz,Vývoj,Tech Lead,2018-12-07,54500,3,SŠ,Plzeň,31,Ž,Plný,+420 616 327 508
+81,Martin,Hájek,martin.hajek@datacorp.cz,Vývoj,Tech Lead,2023-02-22,78500,3,VŠ Mgr.,Praha,31,M,Částečný,+420 641 467 208
+82,Pavel,Dvořák,pavel.dvorak@datacorp.cz,Vývoj,Software Developer,2021-04-12,76000,4,VŠ Bc.,Praha,26,M,Plný,+420 626 866 616
+83,Simona,Fialová,simona.fialova@datacorp.cz,Vývoj,Tech Lead,2018-09-11,64500,4,VŠ Bc.,Praha,26,Ž,Plný,+420 755 353 541
+84,Filip,Fiala,filip.fiala@datacorp.cz,Vývoj,Data Engineer,2021-11-19,75500,4,VŠ Bc.,Zlín,30,M,Plný,+420 674 598 963
+85,Tereza,Konečná,tereza.konecna@datacorp.cz,Vývoj,Software Developer,2019-09-09,97000,4,VŠ Mgr.,Plzeň,33,Ž,Plný,+420 706 855 989
+86,Matěj,Vaněk,matej.vanek@datacorp.cz,Vývoj,Software Developer,2024-11-12,66000,4,VŠ PhD.,Hradec Králové,29,M,Plný,+420 610 775 673
+87,Klára,Veselá,klara.vesela@datacorp.cz,Vývoj,Data Engineer,2023-06-04,51500,3,SŠ,Pardubice,28,Ž,Plný,+420 612 818 216
+88,Klára,Kolářová,klara.kolarova@datacorp.cz,Vývoj,DevOps Engineer,2020-12-22,91000,3,VŠ Mgr.,Liberec,33,Ž,Plný,+420 722 955 573
+89,Petra,Dvořáková,petra.dvorakova@datacorp.cz,Vývoj,DevOps Engineer,2020-09-02,77000,3,VŠ Mgr.,Praha,34,Ž,Částečný,+420 660 743 429
+90,Filip,Jelínek,filip.jelinek@datacorp.cz,Vývoj,Tech Lead,2020-09-18,90000,4,VŠ Mgr.,Brno,34,M,Plný,+420 692 496 332
+91,Anna,Marková,anna.markova@datacorp.cz,Vývoj,DevOps Engineer,2022-03-03,55000,5,SŠ,Praha,33,Ž,Částečný,+420 755 776 322
+92,Martin,Černý,martin.cerny@datacorp.cz,Vývoj,Data Engineer,2021-12-19,82500,4,VŠ Mgr.,Plzeň,29,M,Plný,+420 753 957 624
+93,Barbora,Pokorná,barbora.pokorna@datacorp.cz,Vývoj,DevOps Engineer,2019-05-01,87000,3,VŠ Mgr.,Olomouc,37,Ž,Plný,+420 775 426 499
+94,Matěj,Kopecký,matej.kopecky@datacorp.cz,Vývoj,Tech Lead,2023-04-30,67000,3,VŠ Mgr.,Pardubice,32,M,Částečný,+420 663 858 942
+95,Karel,Štěpánek,karel.stepanek@datacorp.cz,Vývoj,DevOps Engineer,2021-03-14,84000,4,VŠ Mgr.,Brno,40,M,Plný,+420 651 426 468
+96,Hana,Křížová,hana.krizova@datacorp.cz,Vývoj,Software Developer,2019-02-27,61500,4,SŠ,Hradec Králové,30,Ž,Plný,+420 739 796 644
+97,Anna,Králová,anna.kralova@datacorp.cz,Vývoj,Data Engineer,2023-03-31,75000,4,VŠ Mgr.,Liberec,30,Ž,Plný,+420 613 629 811
+98,Lenka,Konečná,lenka.konecna@datacorp.cz,Vývoj,QA Engineer,2022-03-28,80500,3,VŠ PhD.,Plzeň,24,Ž,Plný,+420 759 687 101
+99,Karel,Svoboda,karel.svoboda@datacorp.cz,Vývoj,Tech Lead,2018-04-07,105000,5,VŠ PhD.,Praha,36,M,Plný,+420 610 786 418
+100,Marek,Kopecký,marek.kopecky@datacorp.cz,Vývoj,QA Engineer,2023-01-04,76500,2,VŠ Mgr.,Pardubice,34,M,Plný,+420 713 891 924
+101,Eva,Pokorná,eva.pokorna@datacorp.cz,Vývoj,Tech Lead,2023-05-25,59000,3,SŠ,Praha,30,Ž,Plný,+420 606 772 840
+102,Jana,Procházková,jana.prochazkova@datacorp.cz,Vývoj,Tech Lead,2025-04-26,88500,3,VŠ Mgr.,České Budějovice,23,Ž,Plný,+420 665 777 281
+103,Adam,Vaněk,adam.vanek@datacorp.cz,Vývoj,Tech Lead,2025-04-26,81500,3,VŠ Mgr.,Brno,22,M,Plný,+420 635 139 840
+104,Hana,Štěpánková,hana.stepankova@datacorp.cz,Vývoj,Data Engineer,2020-11-15,80000,5,VŠ Mgr.,Pardubice,29,Ž,Plný,+420 723 298 525
+105,Hana,Horáková,hana.horakova@datacorp.cz,Vývoj,DevOps Engineer,2023-05-23,80500,3,VŠ PhD.,Zlín,25,Ž,Plný,+420 720 657 334
+106,Kateřina,Urbanová,katerina.urbanova@datacorp.cz,Vývoj,Tech Lead,2024-08-14,80000,2,VŠ Mgr.,Plzeň,24,Ž,Plný,+420 768 159 426
+107,Jana,Doležalová,jana.dolezalova@datacorp.cz,Vývoj,Data Engineer,2020-09-09,101000,4,VŠ PhD.,Ostrava,34,Ž,Plný,+420 611 526 627
+108,Petra,Navrátilová,petra.navratilova@datacorp.cz,Vývoj,DevOps Engineer,2018-06-15,87500,4,VŠ Mgr.,Pardubice,29,Ž,Plný,+420 668 424 319
+109,Eva,Marková,eva.markova@datacorp.cz,Vývoj,QA Engineer,2019-08-25,51500,3,VŠ PhD.,Praha,30,Ž,Plný,+420 623 466 209
+110,Karel,Urban,karel.urban@datacorp.cz,Vývoj,Tech Lead,2018-11-03,90500,5,VŠ PhD.,Zlín,35,M,Plný,+420 783 825 932
+111,Martin,Marek,martin.marek@datacorp.cz,Vývoj,Tech Lead,2021-03-31,86000,4,VŠ Mgr.,Zlín,32,M,Částečný,+420 620 127 630
+112,Hana,Jelínková,hana.jelinkova@datacorp.cz,Vývoj,QA Engineer,2019-05-02,78500,3,VŠ PhD.,Ostrava,33,Ž,Plný,+420 676 515 362
+113,Marek,Pospíšil,marek.pospisil@datacorp.cz,Vývoj,QA Engineer,2019-11-15,67500,5,SŠ,Zlín,32,M,Plný,+420 677 802 606
+114,Adam,Němec,adam.nemec@datacorp.cz,Vývoj,Data Engineer,2023-02-03,96000,5,VŠ Mgr.,Brno,31,M,Částečný,+420 784 621 981
+115,Jana,Holubová,jana.holubova@datacorp.cz,Vývoj,DevOps Engineer,2020-09-10,51500,4,VŠ Mgr.,Ostrava,30,Ž,Plný,+420 601 942 397
+116,Karel,Hájek,karel.hajek@datacorp.cz,Vývoj,QA Engineer,2019-10-10,68500,2,VŠ Bc.,Plzeň,33,M,DPP,+420 615 967 812
+117,Simona,Holubová,simona.holubova@datacorp.cz,Vývoj,Tech Lead,2021-04-24,82500,2,VŠ PhD.,České Budějovice,22,Ž,Plný,+420 721 941 432
+118,Anna,Černá,anna.cerna@datacorp.cz,Vývoj,Data Engineer,2019-10-24,104500,4,VŠ Mgr.,Plzeň,29,Ž,Plný,+420 686 721 621
+119,Martin,Dvořák,martin.dvorak@datacorp.cz,Vývoj,QA Engineer,2024-07-17,56000,3,VŠ Mgr.,Liberec,28,M,Plný,+420 637 267 187
+120,Martin,Jelínek,martin.jelinek@datacorp.cz,Vývoj,Data Engineer,2020-08-06,80000,5,SŠ,Liberec,39,M,Plný,+420 626 487 427
+121,Jan,Pospíšil,jan.pospisil@datacorp.cz,Vývoj,Data Engineer,2016-10-20,86500,4,VŠ Mgr.,Brno,36,M,Plný,+420 787 920 205
+122,Jana,Kopecká,jana.kopecka@datacorp.cz,Vývoj,Data Engineer,2020-06-27,80000,3,VŠ PhD.,Praha,30,Ž,DPP,+420 657 379 812
+123,Lucie,Kučerová,lucie.kucerova@datacorp.cz,Vývoj,Data Engineer,2018-10-07,90000,4,VŠ Mgr.,Brno,38,Ž,Plný,+420 788 930 816
+124,Filip,Sedláček,filip.sedlacek@datacorp.cz,Vývoj,QA Engineer,2020-11-02,70500,4,VŠ Mgr.,Brno,37,M,Plný,+420 622 180 751
+125,Petr,Vaněk,petr.vanek@datacorp.cz,Vývoj,Tech Lead,2022-10-06,74500,2,SŠ,Praha,35,M,Plný,+420 795 445 564
+126,Dominik,Štěpánek,dominik.stepanek@datacorp.cz,Vývoj,Software Developer,2019-01-21,68500,3,VŠ Bc.,Plzeň,32,M,Částečný,+420 652 583 694
+127,Barbora,Benešová,barbora.benesova@datacorp.cz,Vývoj,Data Engineer,2016-12-18,83500,5,VŠ PhD.,Brno,29,Ž,Částečný,+420 687 864 440
+128,Tomáš,Fiala,tomas.fiala@datacorp.cz,Vývoj,DevOps Engineer,2020-08-21,88000,4,VŠ Mgr.,České Budějovice,37,M,Plný,+420 743 943 786
+129,Lucie,Doležalová,lucie.dolezalova@datacorp.cz,Vývoj,Tech Lead,2020-12-12,59000,5,VŠ Mgr.,Pardubice,31,Ž,Plný,+420 684 760 633
+130,Markéta,Kolářová,marketa.kolarova@datacorp.cz,Vývoj,Data Engineer,2020-11-03,72000,3,VŠ Mgr.,Hradec Králové,40,Ž,Plný,+420 749 803 913
+131,Ondřej,Kučera,ondrej.kucera@datacorp.cz,Vývoj,Data Engineer,2021-03-28,72500,3,VŠ Mgr.,Liberec,38,M,Plný,+420 685 432 555
+132,Michal,Růžička,michal.ruzicka@datacorp.cz,Vývoj,Software Developer,2024-04-09,80000,3,VŠ Bc.,České Budějovice,22,M,Částečný,+420 746 345 606
+133,Tomáš,Kříž,tomas.kriz@datacorp.cz,Vývoj,Software Developer,2018-01-04,88500,5,VŠ Mgr.,Hradec Králové,36,M,Plný,+420 635 808 530
+134,Marie,Němcová,marie.nemcova@datacorp.cz,Vývoj,QA Engineer,2022-08-26,71000,3,VŠ Mgr.,České Budějovice,29,Ž,Plný,+420 621 833 285
+135,Ondřej,Němec,ondrej.nemec@datacorp.cz,Vývoj,QA Engineer,2018-10-09,58500,4,VŠ Mgr.,Praha,34,M,Plný,+420 662 428 217
+136,Markéta,Pokorná,marketa.pokorna@datacorp.cz,Vývoj,Software Developer,2025-04-26,87500,3,VŠ Mgr.,Pardubice,22,Ž,DPP,+420 694 652 496
+137,Dominik,Beneš,dominik.benes@datacorp.cz,Vývoj,DevOps Engineer,2019-04-07,48500,4,SŠ,Ostrava,37,M,Plný,+420 681 787 596
+138,Karel,Dvořák,karel.dvorak@datacorp.cz,Vývoj,Software Developer,2023-05-04,95500,3,VŠ PhD.,Brno,32,M,Plný,+420 749 341 839
+139,Daniel,Král,daniel.kral@datacorp.cz,Vývoj,QA Engineer,2023-01-10,50000,3,VŠ Bc.,Liberec,31,M,Plný,+420 789 153 850
+140,Marek,Kučera,marek.kucera@datacorp.cz,Vývoj,Data Engineer,2019-11-17,82000,3,VŠ Mgr.,Hradec Králové,35,M,Plný,+420 792 348 407
+141,Kristýna,Nováková,kristyna.novakova@datacorp.cz,Vývoj,Tech Lead,2024-08-04,75000,2,VŠ Mgr.,Hradec Králové,27,Ž,Plný,+420 642 614 614
+142,Dominik,Svoboda,dominik.svoboda@datacorp.cz,Vývoj,Software Developer,2019-01-16,83000,3,VŠ PhD.,Brno,32,M,Plný,+420 634 275 607
+143,Ondřej,Vaněk,ondrej.vanek@datacorp.cz,Vývoj,Data Engineer,2021-10-07,87500,4,VŠ PhD.,Praha,27,M,Plný,+420 649 178 779
+144,Martina,Růžičková,martina.ruzickova@datacorp.cz,Vývoj,Tech Lead,2024-04-05,78000,3,VŠ Mgr.,Hradec Králové,26,Ž,Plný,+420 720 346 206
+145,Kateřina,Nováková,katerina.novakova@datacorp.cz,Vývoj,Data Engineer,2020-05-10,76500,4,VŠ PhD.,Hradec Králové,43,Ž,Plný,+420 727 244 289
+146,Daniel,Kopecký,daniel.kopecky@datacorp.cz,Vývoj,Software Developer,2025-04-26,78000,2,SŠ,Liberec,33,M,Plný,+420 720 215 209
+147,Josef,Dvořák,josef.dvorak@datacorp.cz,Vývoj,DevOps Engineer,2019-06-23,85000,2,VŠ Mgr.,Brno,32,M,Plný,+420 623 377 552
+148,Adam,Doležal,adam.dolezal@datacorp.cz,Vývoj,QA Engineer,2021-10-11,92500,3,VŠ PhD.,Plzeň,27,M,Plný,+420 667 815 508
+149,Karel,Kříž,karel.kriz@datacorp.cz,Vývoj,Data Engineer,2016-08-25,104000,4,VŠ Mgr.,Liberec,31,M,Částečný,+420 682 187 355
+150,Daniel,Hájek,daniel.hajek@datacorp.cz,Vývoj,QA Engineer,2024-08-12,54500,4,VŠ Mgr.,Olomouc,28,M,Plný,+420 789 122 509
+151,Jakub,Marek,jakub.marek@datacorp.cz,Vývoj,Tech Lead,2018-12-19,84500,4,VŠ Mgr.,Brno,30,M,Plný,+420 789 423 774
+152,Monika,Konečná,monika.konecna@datacorp.cz,Vývoj,Tech Lead,2022-06-26,105000,2,VŠ Mgr.,Praha,24,Ž,DPP,+420 688 739 197
+153,Daniel,Holub,daniel.holub@datacorp.cz,Vývoj,Tech Lead,2017-08-13,85000,4,VŠ Mgr.,Praha,32,M,Plný,+420 669 215 226
+154,Martin,Malý,martin.maly@datacorp.cz,Vývoj,Software Developer,2022-08-03,53000,4,VŠ Bc.,Praha,27,M,Plný,+420 612 990 178
+155,Eva,Fialová,eva.fialova@datacorp.cz,Vývoj,Data Engineer,2022-06-24,77000,3,VŠ Mgr.,Zlín,30,Ž,Plný,+420 742 734 411
+156,Petr,Procházka,petr.prochazka@datacorp.cz,Vývoj,DevOps Engineer,2023-01-22,86500,4,VŠ Bc.,Brno,29,M,Plný,+420 729 870 893
+157,Petr,Veselý,petr.vesely@datacorp.cz,Vývoj,QA Engineer,2019-08-21,77000,5,VŠ PhD.,Brno,29,M,Plný,+420 710 500 649
+158,Radek,Černý,radek.cerny@datacorp.cz,Vývoj,Tech Lead,2023-10-09,60500,3,VŠ Mgr.,Praha,25,M,Plný,+420 666 496 849
+159,Markéta,Kopecká,marketa.kopecka@datacorp.cz,Vývoj,Data Engineer,2022-04-28,94500,4,VŠ Mgr.,Zlín,30,Ž,Plný,+420 698 677 641
+160,Tomáš,Novotný,tomas.novotny@datacorp.cz,Vývoj,Tech Lead,2021-03-25,100000,5,VŠ PhD.,Ostrava,22,M,Plný,+420 685 295 229
+161,Eva,Kolářová,eva.kolarova@datacorp.cz,Vývoj,Tech Lead,2022-01-08,66000,3,SŠ,Praha,22,Ž,Plný,+420 788 461 663
+162,Marie,Kolářová,marie.kolarova@datacorp.cz,Vývoj,Tech Lead,2022-03-29,78500,4,VŠ Mgr.,Hradec Králové,30,Ž,DPP,+420 761 301 752
+163,Kateřina,Navrátilová,katerina.navratilova@datacorp.cz,Vývoj,QA Engineer,2022-05-06,80000,2,VŠ PhD.,Brno,32,Ž,Plný,+420 786 441 575
+164,Jakub,Pokorný,jakub.pokorny@datacorp.cz,Vývoj,Software Developer,2019-09-13,94000,4,VŠ PhD.,Brno,38,M,Plný,+420 616 604 256
+166,Martin,Novák,martin.novak@datacorp.cz,Vývoj,Data Engineer,2020-02-06,88500,4,VŠ Mgr.,Liberec,29,M,Plný,+420 604 863 192
+167,Martin,Horák,martin.horak@datacorp.cz,Vývoj,Tech Lead,2023-08-03,82500,3,VŠ PhD.,Liberec,34,M,Plný,+420 780 713 235
+168,Alena,Navrátilová,alena.navratilova@datacorp.cz,Vývoj,DevOps Engineer,2022-08-26,84500,5,VŠ PhD.,Brno,24,Ž,Plný,+420 746 141 194
+169,Filip,Pospíšil,filip.pospisil@datacorp.cz,Vývoj,Software Developer,2025-04-26,55000,3,VŠ Mgr.,Praha,28,M,Plný,+420 620 658 643
+170,Lucie,Svobodová,lucie.svobodova@datacorp.cz,Vývoj,Tech Lead,2022-08-01,63500,3,VŠ Mgr.,Praha,23,Ž,Částečný,+420 706 116 373
+171,Radek,Beneš,radek.benes@datacorp.cz,Vývoj,Software Developer,2021-02-15,87000,4,VŠ PhD.,Praha,29,M,Plný,+420 769 944 653
+172,Barbora,Doležalová,barbora.dolezalova@datacorp.cz,Vývoj,Tech Lead,2022-01-20,82500,2,SŠ,Ostrava,24,Ž,Plný,+420 708 380 935
+174,Veronika,Zemanová,veronika.zemanova@datacorp.cz,Vývoj,DevOps Engineer,2023-12-20,66500,2,VŠ Mgr.,Olomouc,28,Ž,Plný,+420 662 164 473
+175,Michal,Černý,michal.cerny@datacorp.cz,Vývoj,QA Engineer,2024-12-20,82500,2,VŠ Mgr.,Praha,24,M,Plný,+420 730 417 896
+176,David,Černý,david.cerny@datacorp.cz,Vývoj,QA Engineer,2021-11-22,73000,3,SŠ,Ostrava,27,M,Plný,+420 708 569 341
+177,Kateřina,Navrátilová,katerina.navratilova@datacorp.cz,Vývoj,DevOps Engineer,2024-02-06,69500,4,VŠ Bc.,Brno,31,Ž,Plný,+420 691 788 829
+178,Alena,Fialová,alena.fialova@datacorp.cz,Vývoj,Software Developer,2022-12-28,65500,2,VŠ Mgr.,České Budějovice,28,Ž,Částečný,+420 664 120 981
+179,Daniel,Malý,daniel.maly@datacorp.cz,Vývoj,QA Engineer,2020-10-24,85000,3,VŠ PhD.,Zlín,31,M,Plný,+420 709 814 402
+180,Martin,Novák,martin.novak@datacorp.cz,Vývoj,Software Developer,2023-08-22,94500,4,VŠ Mgr.,Praha,33,M,Plný,+420 745 950 986
+181,David,Svoboda,david.svoboda@datacorp.cz,Vývoj,Software Developer,2020-04-04,80500,4,VŠ Mgr.,České Budějovice,34,M,Plný,+420 771 216 351
+182,Dominik,Hájek,dominik.hajek@datacorp.cz,Vývoj,Tech Lead,2022-05-18,77500,3,VŠ Bc.,Brno,35,M,Plný,+420 742 712 516
+183,Martin,Hájek,martin.hajek@datacorp.cz,Vývoj,QA Engineer,2019-07-30,63500,3,VŠ Mgr.,Praha,35,M,Plný,+420 714 137 910
+184,Markéta,Svobodová,marketa.svobodova@datacorp.cz,Vývoj,QA Engineer,2023-11-14,83000,3,VŠ Mgr.,Liberec,33,Ž,Plný,+420 683 742 716
+185,Kristýna,Fialová,kristyna.fialova@datacorp.cz,Vývoj,Software Developer,2020-08-29,83500,4,VŠ Bc.,Praha,30,Ž,Plný,+420 785 332 135
+186,Klára,Horáková,klara.horakova@datacorp.cz,Vývoj,Data Engineer,2021-12-10,70000,4,VŠ Bc.,Brno,30,Ž,Plný,+420 665 180 643
+187,Jana,Pokorná,jana.pokorna@datacorp.cz,Vývoj,DevOps Engineer,2019-05-18,73500,4,VŠ Mgr.,Praha,36,Ž,Plný,+420 752 531 905
+188,Anna,Urbanová,anna.urbanova@datacorp.cz,Vývoj,Software Developer,2019-11-08,98500,4,VŠ PhD.,Praha,36,Ž,Plný,+420 626 130 701
+189,Josef,Kříž,josef.kriz@datacorp.cz,Vývoj,DevOps Engineer,2023-07-07,82500,4,VŠ Mgr.,Ostrava,25,M,Plný,+420 653 865 482
+190,Martin,Němec,martin.nemec@datacorp.cz,Vývoj,QA Engineer,2020-12-27,70000,4,VŠ Mgr.,Plzeň,34,M,Plný,+420 753 416 647
+191,Veronika,Růžičková,veronika.ruzickova@datacorp.cz,Vývoj,Data Engineer,2021-03-23,70500,3,VŠ Mgr.,Pardubice,40,Ž,Plný,+420 705 304 836
+192,Lukáš,Němec,lukas.nemec@datacorp.cz,Vývoj,Software Developer,2022-01-31,68000,3,VŠ Mgr.,Hradec Králové,41,M,Plný,+420 701 561 365
+193,David,Hájek,david.hajek@datacorp.cz,Vývoj,Software Developer,2023-07-28,72000,3,VŠ Bc.,Brno,29,M,Plný,+420 743 523 240
+194,Markéta,Štěpánková,marketa.stepankova@datacorp.cz,Vývoj,Tech Lead,2020-04-06,97000,5,VŠ Mgr.,Zlín,37,Ž,Částečný,+420 668 383 393
+195,Filip,Vaněk,filip.vanek@datacorp.cz,Vývoj,Tech Lead,2023-11-08,82500,4,VŠ Mgr.,Praha,29,M,Plný,+420 730 629 689
+196,Klára,Čechová,klara.cechova@datacorp.cz,Vývoj,Data Engineer,2024-11-24,60000,5,VŠ Bc.,Plzeň,27,Ž,Plný,+420 767 154 521
+197,Marie,Navrátilová,marie.navratilova@datacorp.cz,Vývoj,QA Engineer,2025-02-17,63000,3,VŠ Mgr.,Zlín,26,Ž,Plný,+420 754 360 628
+198,David,Fiala,david.fiala@datacorp.cz,Vývoj,Tech Lead,2022-05-01,64500,4,SŠ,Zlín,31,M,Plný,+420 603 183 499
+199,Veronika,Čermáková,veronika.cermakova@datacorp.cz,Vývoj,DevOps Engineer,2021-08-13,74000,4,VŠ PhD.,Liberec,28,Ž,Částečný,+420 768 140 132
+200,Pavel,Veselý,pavel.vesely@datacorp.cz,Marketing,Content Manager,2019-02-22,50000,5,VŠ Mgr.,Praha,34,M,Plný,+420 698 899 740
+201,Klára,Němcová,klara.nemcova@datacorp.cz,Marketing,Content Manager,2020-07-29,66000,3,VŠ Mgr.,Praha,28,Ž,Plný,+420 745 909 104
+202,Karel,Čech,karel.cech@datacorp.cz,Marketing,SEO Specialist,2022-07-19,50000,4,VŠ Mgr.,Ostrava,32,M,Plný,+420 726 908 656
+203,Kristýna,Hájková,kristyna.hajkova@datacorp.cz,Marketing,Content Manager,2022-09-17,54000,3,VŠ Bc.,Hradec Králové,31,Ž,Částečný,+420 699 858 129
+204,Jana,Jelínková,jana.jelinkova@datacorp.cz,Marketing,Content Manager,2021-01-21,75000,3,VŠ PhD.,Ostrava,31,Ž,Plný,+420 631 439 381
+205,Alena,Vaňková,alena.vankova@datacorp.cz,Marketing,Content Manager,2021-11-16,58000,2,VŠ Bc.,Brno,33,Ž,Plný,+420 634 565 755
+206,Jana,Vaňková,jana.vankova@datacorp.cz,Marketing,SEO Specialist,2021-01-11,56000,3,VŠ Mgr.,Hradec Králové,41,Ž,Plný,+420 694 593 791
+207,Ondřej,Malý,ondrej.maly@datacorp.cz,Marketing,Content Manager,2022-05-26,56000,4,VŠ Bc.,Brno,35,M,Částečný,+420 695 200 698
+208,Josef,Němec,josef.nemec@datacorp.cz,Marketing,Brand Manager,2021-10-24,69500,4,VŠ Mgr.,Praha,39,M,Plný,+420 608 234 825
+209,Dominik,Doležal,dominik.dolezal@datacorp.cz,Marketing,Marketingový specialista,2020-12-02,54000,4,VŠ Bc.,Praha,27,M,Plný,+420 609 259 988
+210,Petra,Urbanová,petra.urbanova@datacorp.cz,Marketing,Marketingový specialista,2021-02-25,54000,4,VŠ Mgr.,Zlín,37,Ž,Plný,+420 679 270 553
+211,Tomáš,Zeman,tomas.zeman@datacorp.cz,Marketing,SEO Specialist,2021-06-27,39000,4,VŠ Mgr.,České Budějovice,30,M,Plný,+420 659 580 938
+212,Radek,Štěpánek,radek.stepanek@datacorp.cz,Marketing,Marketingový specialista,2022-12-12,68500,3,VŠ Mgr.,Praha,31,M,Částečný,+420 752 211 188
+213,Martin,Kopecký,martin.kopecky@datacorp.cz,Marketing,Marketingový specialista,2022-12-14,43000,3,SŠ,Praha,22,M,Plný,+420 751 902 746
+214,Michal,Marek,michal.marek@datacorp.cz,Marketing,Content Manager,2021-05-24,69500,4,VŠ Mgr.,Zlín,28,M,Plný,+420 601 282 721
+215,Adam,Kopecký,adam.kopecky@datacorp.cz,Marketing,SEO Specialist,2023-01-30,54000,4,VŠ Mgr.,Praha,28,M,Plný,+420 728 818 662
+216,Jan,Zeman,jan.zeman@datacorp.cz,Marketing,Content Manager,2024-11-21,45000,2,VŠ Mgr.,Liberec,28,M,Plný,+420 602 760 909
+217,Matěj,Čech,matej.cech@datacorp.cz,Marketing,SEO Specialist,2023-05-15,50000,5,VŠ Mgr.,Brno,31,M,Plný,+420 610 438 273
+218,Nikola,Čechová,nikola.cechova@datacorp.cz,Marketing,Brand Manager,2022-06-12,57500,3,SŠ,Brno,37,Ž,Plný,+420 760 822 616
+219,Tomáš,Malý,tomas.maly@datacorp.cz,Marketing,Brand Manager,2022-01-02,67000,3,VŠ PhD.,Liberec,34,M,Plný,+420 642 710 548
+220,Barbora,Navrátilová,barbora.navratilova@datacorp.cz,Marketing,SEO Specialist,2021-04-07,48000,4,VŠ Bc.,Zlín,34,Ž,Plný,+420 756 678 892
+221,Lenka,Konečná,lenka.konecna@datacorp.cz,Marketing,Marketingový specialista,2025-04-17,43500,2,VŠ Mgr.,Zlín,22,Ž,Plný,+420 643 458 606
+222,Klára,Zemanová,klara.zemanova@datacorp.cz,Marketing,SEO Specialist,2023-02-10,55000,3,VŠ PhD.,Liberec,27,Ž,Plný,+420 702 721 573
+223,Jan,Malý,jan.maly@datacorp.cz,Marketing,SEO Specialist,2022-02-03,49000,4,SŠ,Praha,30,M,Plný,+420 687 847 324
+224,Dominik,Hájek,dominik.hajek@datacorp.cz,Marketing,Marketingový specialista,2021-03-13,45000,5,VŠ Bc.,Ostrava,28,M,Plný,+420 751 955 393
+225,David,Štěpánek,david.stepanek@datacorp.cz,Marketing,Marketingový specialista,2022-01-17,60000,4,SŠ,Praha,34,M,Plný,+420 749 709 643
+226,Lenka,Svobodová,lenka.svobodova@datacorp.cz,Marketing,Content Manager,2019-11-11,61000,4,VŠ PhD.,Hradec Králové,33,Ž,Plný,+420 631 657 335
+227,Marek,Holub,marek.holub@datacorp.cz,Marketing,Marketingový specialista,2021-08-09,68000,4,VŠ Mgr.,Liberec,29,M,Plný,+420 689 284 249
+228,Petr,Jelínek,petr.jelinek@datacorp.cz,Marketing,Content Manager,2022-01-20,53000,2,VŠ Mgr.,Brno,30,M,Částečný,+420 713 955 492
+229,Ondřej,Fiala,ondrej.fiala@datacorp.cz,Marketing,Content Manager,2022-06-27,65500,2,SŠ,Hradec Králové,27,M,Plný,+420 733 372 897
+230,Adam,Beneš,adam.benes@datacorp.cz,Marketing,Brand Manager,2021-11-02,71500,5,VŠ Mgr.,Pardubice,29,M,Částečný,+420 781 963 415
+231,Jakub,Malý,jakub.maly@datacorp.cz,Marketing,SEO Specialist,2022-02-12,53500,5,VŠ Bc.,Zlín,32,M,Plný,+420 616 849 898
+232,Marek,Fiala,marek.fiala@datacorp.cz,Marketing,SEO Specialist,2023-08-23,58500,2,VŠ Bc.,České Budějovice,24,M,Plný,+420 798 617 358
+233,Simona,Křížová,simona.krizova@datacorp.cz,Marketing,Brand Manager,2020-04-21,76500,4,VŠ Mgr.,Praha,33,Ž,Plný,+420 762 160 507
+234,Jakub,Hájek,jakub.hajek@datacorp.cz,Marketing,Brand Manager,2025-04-15,56500,3,VŠ Bc.,Brno,31,M,Plný,+420 636 542 606
+235,Matěj,Zeman,matej.zeman@datacorp.cz,Marketing,Marketingový specialista,2024-05-31,50000,2,VŠ Mgr.,Brno,22,M,Plný,+420 716 209 524
+236,Marek,Urban,marek.urban@datacorp.cz,Marketing,Brand Manager,2023-06-12,52000,3,VŠ Mgr.,České Budějovice,26,M,Plný,+420 748 704 253
+237,David,Procházka,david.prochazka@datacorp.cz,Marketing,Brand Manager,2022-07-03,62500,3,VŠ PhD.,Zlín,29,M,Plný,+420 774 705 579
+238,Markéta,Křížová,marketa.krizova@datacorp.cz,Marketing,Brand Manager,2023-11-08,54500,3,VŠ Mgr.,Zlín,34,Ž,Plný,+420 660 324 844
+239,Tomáš,Čech,tomas.cech@datacorp.cz,Marketing,Marketingový specialista,2022-06-14,42000,3,SŠ,Pardubice,27,M,Plný,+420 761 700 469
+240,Kateřina,Vaňková,katerina.vankova@datacorp.cz,Marketing,SEO Specialist,2023-01-20,46500,3,VŠ Bc.,Brno,29,Ž,Plný,+420 606 400 597
+241,David,Blažek,david.blazek@datacorp.cz,Marketing,Marketingový specialista,2021-11-14,58500,5,VŠ Mgr.,Praha,36,M,Plný,+420 752 526 804
+242,Klára,Kučerová,klara.kucerova@datacorp.cz,Marketing,Marketingový specialista,2025-01-19,30500,2,VŠ Bc.,Praha,26,Ž,Částečný,+420 681 817 915
+243,Dominik,Fiala,dominik.fiala@datacorp.cz,Marketing,SEO Specialist,2022-03-15,55500,4,VŠ PhD.,Liberec,31,M,Plný,+420 788 179 707
+244,Matěj,Štěpánek,matej.stepanek@datacorp.cz,Marketing,SEO Specialist,2021-12-19,59000,3,VŠ Mgr.,Olomouc,29,M,Plný,+420 620 333 574
+245,Anna,Blažková,anna.blazkova@datacorp.cz,Marketing,Marketingový specialista,2022-02-26,51500,3,VŠ Bc.,Olomouc,35,Ž,Částečný,+420 707 508 446
+246,Pavel,Novotný,pavel.novotny@datacorp.cz,Marketing,SEO Specialist,2024-03-04,53500,3,VŠ Mgr.,Olomouc,23,M,Plný,+420 667 998 108
+247,Lenka,Králová,lenka.kralova@datacorp.cz,Marketing,SEO Specialist,2023-09-01,57000,4,VŠ Bc.,Pardubice,22,Ž,Plný,+420 633 280 885
+248,Ondřej,Svoboda,ondrej.svoboda@datacorp.cz,Marketing,Marketingový specialista,2023-01-04,57000,2,VŠ Bc.,Pardubice,22,M,Plný,+420 734 711 648
+249,Petr,Štěpánek,petr.stepanek@datacorp.cz,Marketing,Brand Manager,2023-03-22,42500,2,VŠ Bc.,Praha,32,M,Plný,+420 644 591 516
+250,Josef,Navrátil,josef.navratil@datacorp.cz,Marketing,Marketingový specialista,2022-10-14,70000,4,VŠ Bc.,Hradec Králové,28,M,Plný,+420 708 494 782
+251,Tereza,Pospíšilová,tereza.pospisilova@datacorp.cz,Marketing,SEO Specialist,2020-10-27,59500,3,VŠ Mgr.,Brno,33,Ž,Plný,+420 763 582 782
+252,Michal,Navrátil,michal.navratil@datacorp.cz,Marketing,Content Manager,2020-10-08,64000,3,VŠ Mgr.,Brno,34,M,Plný,+420 768 469 686
+253,Vojtěch,Veselý,vojtech.vesely@datacorp.cz,Marketing,Marketingový specialista,2019-10-31,42500,3,SŠ,Praha,24,M,Plný,+420 654 397 576
+254,Anna,Procházková,anna.prochazkova@datacorp.cz,Marketing,Content Manager,2024-08-11,53000,2,VŠ Bc.,Praha,30,Ž,Částečný,+420 679 197 736
+255,Anna,Konečná,anna.konecna@datacorp.cz,Marketing,Brand Manager,2019-07-15,71000,5,VŠ PhD.,Pardubice,26,Ž,Plný,+420 724 211 445
+256,Lukáš,Procházka,lukas.prochazka@datacorp.cz,Marketing,Content Manager,2020-08-17,67000,4,VŠ Mgr.,Plzeň,32,M,Plný,+420 774 234 565
+257,Adam,Černý,adam.cerny@datacorp.cz,Marketing,Content Manager,2022-08-26,51000,5,VŠ Mgr.,Plzeň,35,M,Plný,+420 601 208 706
+258,Lucie,Doležalová,lucie.dolezalova@datacorp.cz,Marketing,SEO Specialist,2021-06-21,42000,3,VŠ Bc.,Praha,27,Ž,Plný,+420 743 893 932
+259,Marek,Vaněk,marek.vanek@datacorp.cz,Marketing,Content Manager,2024-01-11,29000,2,SŠ,Praha,22,M,Plný,+420 762 697 355
+260,Anna,Marková,anna.markova@datacorp.cz,Marketing,Content Manager,2021-04-17,64000,4,VŠ Mgr.,Pardubice,35,Ž,Plný,+420 639 402 719
+261,Lucie,Marková,lucie.markova@datacorp.cz,Marketing,Marketingový specialista,2023-05-18,64500,3,VŠ PhD.,Pardubice,26,Ž,Plný,+420 708 854 355
+262,Karel,Kučera,karel.kucera@datacorp.cz,Marketing,Content Manager,2023-03-24,57500,3,SŠ,Hradec Králové,27,M,Plný,+420 736 739 296
+263,Pavel,Kučera,pavel.kucera@datacorp.cz,Marketing,SEO Specialist,2021-11-19,54000,4,VŠ Mgr.,Zlín,38,M,Plný,+420 709 285 649
+264,Radek,Kříž,radek.kriz@datacorp.cz,Marketing,Brand Manager,2021-01-27,54500,3,VŠ Mgr.,Zlín,34,M,Plný,+420 723 846 676
+265,Veronika,Němcová,veronika.nemcova@datacorp.cz,Marketing,SEO Specialist,2020-04-15,74000,4,VŠ Mgr.,Praha,30,Ž,Částečný,+420 658 539 785
+266,Adam,Němec,adam.nemec@datacorp.cz,Marketing,Content Manager,2021-05-01,57000,3,SŠ,České Budějovice,35,M,Plný,+420 622 613 257
+267,Petra,Hájková,petra.hajkova@datacorp.cz,Marketing,Content Manager,2019-06-30,56500,3,VŠ Bc.,Brno,27,Ž,Plný,+420 650 234 986
+268,Pavel,Zeman,pavel.zeman@datacorp.cz,Marketing,Content Manager,2022-06-20,52500,4,VŠ Mgr.,Ostrava,34,M,Plný,+420 642 977 258
+269,Michal,Navrátil,michal.navratil@datacorp.cz,Marketing,Brand Manager,2018-12-21,53000,4,SŠ,Liberec,33,M,Plný,+420 722 515 655
+270,Alena,Veselá,alena.vesela@datacorp.cz,Marketing,Marketingový specialista,2022-02-01,61000,5,VŠ Mgr.,Ostrava,35,Ž,Plný,+420 730 263 228
+271,Markéta,Marková,marketa.markova@datacorp.cz,Marketing,Marketingový specialista,2020-07-19,55000,3,VŠ Mgr.,Praha,34,Ž,Plný,+420 722 795 340
+272,Tereza,Dvořáková,tereza.dvorakova@datacorp.cz,Marketing,SEO Specialist,2022-12-13,54000,3,VŠ Mgr.,Plzeň,27,Ž,Částečný,+420 678 887 252
+273,Radek,Hájek,radek.hajek@datacorp.cz,Marketing,Brand Manager,2020-03-03,51500,4,SŠ,Zlín,33,M,Plný,+420 790 148 963
+274,David,Kolář,david.kolar@datacorp.cz,Marketing,SEO Specialist,2021-07-24,65000,4,VŠ Mgr.,Praha,25,M,Plný,+420 719 690 104
+275,Michal,Procházka,michal.prochazka@datacorp.cz,Marketing,Marketingový specialista,2023-02-27,52500,4,VŠ Bc.,Hradec Králové,30,M,Plný,+420 666 156 271
+276,Kateřina,Fialová,katerina.fialova@datacorp.cz,Marketing,SEO Specialist,2022-07-14,56000,3,VŠ PhD.,Praha,28,Ž,Plný,+420 701 784 614
+277,Alena,Novotná,alena.novotna@datacorp.cz,Marketing,Brand Manager,2022-05-31,66000,3,VŠ Bc.,Praha,31,Ž,Plný,+420 765 130 761
+278,Tomáš,Konečný,tomas.konecny@datacorp.cz,Marketing,Content Manager,2023-09-15,61500,3,VŠ Mgr.,Brno,28,M,Plný,+420 770 151 804
+279,Nikola,Blažková,nikola.blazkova@datacorp.cz,Marketing,Brand Manager,2023-10-11,52500,4,VŠ Mgr.,Praha,29,Ž,Plný,+420 637 822 643
+280,Marek,Navrátil,marek.navratil@datacorp.cz,Marketing,SEO Specialist,2019-05-27,67000,5,VŠ Mgr.,Praha,35,M,Plný,+420 724 943 783
+281,David,Kříž,david.kriz@datacorp.cz,Marketing,Marketingový specialista,2022-01-25,62000,4,VŠ Mgr.,Brno,35,M,Plný,+420 639 320 598
+282,Jakub,Kolář,jakub.kolar@datacorp.cz,Marketing,SEO Specialist,2022-02-21,52000,4,SŠ,České Budějovice,33,M,Částečný,+420 762 925 767
+283,Daniel,Kopecký,daniel.kopecky@datacorp.cz,Marketing,Content Manager,2022-05-05,40500,4,SŠ,Praha,27,M,Plný,+420 740 977 631
+284,Simona,Urbanová,simona.urbanova@datacorp.cz,Marketing,SEO Specialist,2023-08-10,44500,4,VŠ Bc.,Hradec Králové,27,Ž,Plný,+420 657 725 269
+285,Tomáš,Štěpánek,tomas.stepanek@datacorp.cz,Marketing,SEO Specialist,2021-10-16,78500,3,VŠ Mgr.,Brno,30,M,Plný,+420 619 113 219
+286,Jakub,Němec,jakub.nemec@datacorp.cz,Marketing,Marketingový specialista,2021-05-28,52500,3,VŠ Mgr.,Praha,28,M,Plný,+420 659 410 353
+287,Matěj,Pokorný,matej.pokorny@datacorp.cz,Marketing,Content Manager,2025-01-22,50500,3,VŠ Bc.,Praha,30,M,Plný,+420 760 828 377
+288,Martin,Svoboda,martin.svoboda@datacorp.cz,Marketing,Marketingový specialista,2024-06-20,43500,2,SŠ,Praha,24,M,Plný,+420 795 787 410
+289,Kristýna,Holubová,kristyna.holubova@datacorp.cz,Marketing,Brand Manager,2024-05-15,49000,4,VŠ Mgr.,Brno,27,Ž,Plný,+420 706 958 194
+290,Michal,Svoboda,michal.svoboda@datacorp.cz,Marketing,Marketingový specialista,2021-12-09,50500,3,VŠ Bc.,Brno,34,M,Plný,+420 626 490 516
+291,Filip,Vaněk,filip.vanek@datacorp.cz,Marketing,SEO Specialist,2019-01-26,53500,2,VŠ PhD.,Praha,37,M,Částečný,+420 605 527 387
+292,Simona,Štěpánková,simona.stepankova@datacorp.cz,Marketing,Content Manager,2024-05-13,43000,4,SŠ,Praha,30,Ž,Částečný,+420 761 943 577
+293,Adam,Král,adam.kral@datacorp.cz,Marketing,Content Manager,2021-01-21,44500,4,SŠ,Brno,26,M,Plný,+420 602 817 736
+294,Vojtěch,Zeman,vojtech.zeman@datacorp.cz,Marketing,Content Manager,2021-02-10,48000,4,VŠ Mgr.,Praha,32,M,Plný,+420 615 318 505
+295,Marie,Marková,marie.markova@datacorp.cz,Marketing,SEO Specialist,2022-04-05,57000,4,VŠ Mgr.,Praha,25,Ž,Plný,+420 620 506 704
+296,Tomáš,Doležal,tomas.dolezal@datacorp.cz,Marketing,Marketingový specialista,2022-11-28,33500,2,SŠ,Brno,28,M,Plný,+420 659 420 608
+297,Vojtěch,Sedláček,vojtech.sedlacek@datacorp.cz,Marketing,SEO Specialist,2023-04-04,56500,2,VŠ Bc.,Praha,34,M,Plný,+420 662 627 724
+298,Filip,Černý,filip.cerny@datacorp.cz,Marketing,Content Manager,2023-02-28,53500,4,SŠ,Plzeň,31,M,Plný,+420 722 109 692
+300,Simona,Černá,simona.cerna@datacorp.cz,Marketing,Brand Manager,2020-10-15,46500,5,SŠ,Praha,35,Ž,Plný,+420 615 722 530
+301,Barbora,Fialová,barbora.fialova@datacorp.cz,Marketing,Brand Manager,2021-12-29,54500,4,VŠ Mgr.,Pardubice,32,Ž,Plný,+420 701 810 692
+302,Monika,Benešová,monika.benesova@datacorp.cz,Marketing,SEO Specialist,2022-10-16,36000,3,VŠ Bc.,Praha,31,Ž,Částečný,+420 656 874 549
+303,Lukáš,Dvořák,lukas.dvorak@datacorp.cz,Marketing,Content Manager,2022-02-25,50500,4,SŠ,Brno,32,M,Plný,+420 764 261 601
+304,Ondřej,Horák,ondrej.horak@datacorp.cz,Marketing,SEO Specialist,2020-07-13,53500,4,VŠ Bc.,Liberec,29,M,Plný,+420 752 269 142
+305,Jana,Dvořáková,jana.dvorakova@datacorp.cz,Marketing,Brand Manager,2022-11-05,44000,2,VŠ Mgr.,Hradec Králové,30,Ž,Plný,+420 711 127 131
+306,Daniel,Blažek,daniel.blazek@datacorp.cz,Marketing,Content Manager,2023-11-13,50000,5,SŠ,Hradec Králové,27,M,Plný,+420 677 359 757
+307,Josef,Novotný,josef.novotny@datacorp.cz,Marketing,SEO Specialist,2023-03-09,49500,4,VŠ PhD.,Ostrava,24,M,Plný,+420 681 720 489
+308,Ondřej,Malý,ondrej.maly@datacorp.cz,Marketing,SEO Specialist,2021-10-27,48500,3,VŠ Mgr.,Olomouc,33,M,Plný,+420 643 708 375
+309,Markéta,Zemanová,marketa.zemanova@datacorp.cz,Marketing,Content Manager,2024-09-26,51000,3,VŠ Mgr.,Praha,27,Ž,Plný,+420 743 406 452
+310,Radek,Jelínek,radek.jelinek@datacorp.cz,Marketing,Content Manager,2020-07-30,54500,5,VŠ Mgr.,Hradec Králové,31,M,Plný,+420 692 350 567
+311,Karel,Černý,karel.cerny@datacorp.cz,Marketing,Brand Manager,2020-04-25,62500,3,VŠ Mgr.,Hradec Králové,30,M,Plný,+420 753 648 881
+312,Veronika,Hájková,veronika.hajkova@datacorp.cz,Marketing,Brand Manager,2022-04-28,47000,3,SŠ,Ostrava,28,Ž,Plný,+420 795 114 123
+313,Lenka,Zemanová,lenka.zemanova@datacorp.cz,Marketing,SEO Specialist,2021-05-04,52000,3,VŠ Mgr.,České Budějovice,36,Ž,Částečný,+420 708 502 302
+314,Hana,Růžičková,hana.ruzickova@datacorp.cz,Marketing,SEO Specialist,2021-09-06,35500,5,SŠ,Plzeň,38,Ž,Plný,+420 629 567 352
+315,David,Holub,david.holub@datacorp.cz,Marketing,Content Manager,2021-07-03,61500,3,VŠ Mgr.,Pardubice,22,M,DPP,+420 636 388 830
+316,Jan,Růžička,jan.ruzicka@datacorp.cz,Marketing,Content Manager,2021-04-27,49000,3,VŠ Mgr.,Brno,32,M,Plný,+420 628 838 480
+317,David,Procházka,david.prochazka@datacorp.cz,Marketing,Marketingový specialista,2022-10-07,64500,2,VŠ Mgr.,Zlín,32,M,Plný,+420 678 771 801
+318,Martina,Křížová,martina.krizova@datacorp.cz,Marketing,SEO Specialist,2023-12-22,42000,4,SŠ,Pardubice,30,Ž,Částečný,+420 662 956 314
+319,Martina,Němcová,martina.nemcova@datacorp.cz,Marketing,Marketingový specialista,2022-05-27,59000,2,VŠ PhD.,Liberec,32,Ž,Plný,+420 639 421 690
+320,Monika,Zemanová,monika.zemanova@datacorp.cz,Marketing,Content Manager,2022-08-03,62500,4,VŠ Mgr.,Zlín,36,Ž,Plný,+420 649 349 755
+322,Lukáš,Novotný,lukas.novotny@datacorp.cz,Marketing,Marketingový specialista,2020-11-13,57500,4,VŠ Mgr.,Hradec Králové,24,M,Plný,+420 687 146 704
+323,Klára,Horáková,klara.horakova@datacorp.cz,Marketing,Content Manager,2020-05-07,43000,4,VŠ Bc.,Plzeň,38,Ž,Plný,+420 640 885 174
+324,Simona,Jelínková,simona.jelinkova@datacorp.cz,Marketing,Marketingový specialista,2022-06-27,52000,4,VŠ Bc.,Olomouc,27,Ž,Plný,+420 650 477 405
+325,Tereza,Čechová,tereza.cechova@datacorp.cz,Marketing,Content Manager,2021-12-15,52000,3,VŠ Mgr.,České Budějovice,38,Ž,Plný,+420 775 932 614
+326,Simona,Svobodová,simona.svobodova@datacorp.cz,Marketing,SEO Specialist,2018-09-07,70500,5,VŠ Mgr.,Brno,32,Ž,DPP,+420 721 653 415
+327,Marie,Horáková,marie.horakova@datacorp.cz,Marketing,SEO Specialist,2020-03-21,56000,3,VŠ Mgr.,Ostrava,35,Ž,Plný,+420 604 770 895
+328,Martina,Doležalová,martina.dolezalova@datacorp.cz,Marketing,Brand Manager,2020-08-19,50000,4,VŠ Bc.,Ostrava,28,Ž,Plný,+420 743 880 265
+329,Josef,Doležal,josef.dolezal@datacorp.cz,Marketing,Brand Manager,2023-10-23,66500,3,VŠ Mgr.,Praha,33,M,Plný,+420 727 708 865
+330,Markéta,Křížová,marketa.krizova@datacorp.cz,Marketing,SEO Specialist,2022-01-24,63500,3,VŠ Bc.,Zlín,24,Ž,Částečný,+420 689 616 694
+331,Veronika,Vaňková,veronika.vankova@datacorp.cz,Marketing,Brand Manager,2022-05-05,65000,4,VŠ Mgr.,Praha,35,Ž,Plný,+420 771 113 181
+332,Jakub,Horák,jakub.horak@datacorp.cz,Marketing,Brand Manager,2022-05-25,52000,3,VŠ Bc.,Ostrava,31,M,Plný,+420 726 518 435
+333,Petra,Němcová,petra.nemcova@datacorp.cz,Marketing,Content Manager,2021-08-18,74500,3,VŠ PhD.,Hradec Králové,33,Ž,Plný,+420 611 850 561
+334,Tereza,Navrátilová,tereza.navratilova@datacorp.cz,Marketing,Content Manager,2022-03-20,53000,4,VŠ PhD.,Ostrava,28,Ž,Plný,+420 723 170 828
+335,Josef,Navrátil,josef.navratil@datacorp.cz,Marketing,Marketingový specialista,2020-06-30,51000,3,VŠ Bc.,Praha,28,M,Plný,+420 792 933 414
+336,Jan,Veselý,jan.vesely@datacorp.cz,Marketing,SEO Specialist,2021-08-21,55500,3,VŠ Bc.,Olomouc,29,M,Plný,+420 728 473 113
+337,Kateřina,Němcová,katerina.nemcova@datacorp.cz,Marketing,Marketingový specialista,2023-09-17,51000,3,SŠ,Hradec Králové,31,Ž,Částečný,+420 725 330 818
+338,Matěj,Černý,matej.cerny@datacorp.cz,Marketing,Marketingový specialista,2020-05-04,63000,3,VŠ Mgr.,Olomouc,32,M,Plný,+420 726 791 475
+339,Daniel,Sedláček,daniel.sedlacek@datacorp.cz,Marketing,Marketingový specialista,2020-02-08,40500,3,VŠ Bc.,Liberec,29,M,Plný,+420 724 480 658
+340,Veronika,Růžičková,veronika.ruzickova@datacorp.cz,Obchod,Account Manager,2020-04-20,63000,4,VŠ Mgr.,Olomouc,29,Ž,Plný,+420 702 687 163
+341,Daniel,Malý,daniel.maly@datacorp.cz,Obchod,Sales Manager,2024-03-17,48500,3,SŠ,Zlín,29,M,Plný,+420 673 499 643
+342,Marie,Křížová,marie.krizova@datacorp.cz,Obchod,Sales Manager,2020-04-02,92000,5,SŠ,Praha,35,Ž,Plný,+420 789 350 607
+343,Lucie,Zemanová,lucie.zemanova@datacorp.cz,Obchod,Business Development,2021-03-31,84500,3,SŠ,Praha,23,Ž,DPP,+420 600 229 117
+344,Marie,Vaňková,marie.vankova@datacorp.cz,Obchod,Obchodní zástupce,2022-08-05,55000,2,VŠ Bc.,Hradec Králové,32,Ž,Částečný,+420 684 329 560
+345,Tomáš,Růžička,tomas.ruzicka@datacorp.cz,Obchod,Sales Manager,2021-05-18,67000,4,VŠ Mgr.,Plzeň,34,M,Plný,+420 638 761 829
+346,Jakub,Fiala,jakub.fiala@datacorp.cz,Obchod,Obchodní zástupce,2019-11-08,87000,4,VŠ Mgr.,Ostrava,29,M,Částečný,+420 656 447 596
+347,Marie,Jelínková,marie.jelinkova@datacorp.cz,Obchod,Sales Manager,2020-05-20,50500,3,VŠ Bc.,Praha,32,Ž,Částečný,+420 669 158 286
+348,Jakub,Fiala,jakub.fiala@datacorp.cz,Obchod,Sales Manager,2020-11-17,58000,4,VŠ PhD.,Praha,30,M,Plný,+420 613 337 503
+349,Lukáš,Jelínek,lukas.jelinek@datacorp.cz,Obchod,Account Manager,2020-05-12,54000,3,SŠ,Praha,28,M,Plný,+420 776 769 182
+350,Dominik,Pokorný,dominik.pokorny@datacorp.cz,Obchod,Obchodní zástupce,2021-03-18,84500,2,VŠ PhD.,Zlín,26,M,Částečný,+420 733 195 152
+351,Marie,Fialová,marie.fialova@datacorp.cz,Obchod,Obchodní zástupce,2023-10-07,41000,4,VŠ Bc.,Praha,26,Ž,Plný,+420 686 666 958
+352,Kristýna,Fialová,kristyna.fialova@datacorp.cz,Obchod,Account Manager,2019-05-23,87000,4,SŠ,Brno,34,Ž,Plný,+420 617 147 623
+353,Jana,Hájková,jana.hajkova@datacorp.cz,Obchod,Business Development,2023-10-27,40000,5,VŠ Bc.,Zlín,31,Ž,Plný,+420 743 172 856
+354,Petra,Horáková,petra.horakova@datacorp.cz,Obchod,Obchodní zástupce,2024-10-30,41000,2,VŠ Bc.,Praha,37,Ž,Částečný,+420 671 471 316
+355,Vojtěch,Kučera,vojtech.kucera@datacorp.cz,Obchod,Obchodní zástupce,2025-04-26,43500,3,SŠ,Zlín,26,M,Plný,+420 684 608 327
+356,Monika,Křížová,monika.krizova@datacorp.cz,Obchod,Account Manager,2020-07-01,54000,4,SŠ,České Budějovice,26,Ž,Částečný,+420 759 491 686
+357,Daniel,Růžička,daniel.ruzicka@datacorp.cz,Obchod,Business Development,2021-01-27,61000,3,VŠ Bc.,Praha,31,M,Plný,+420 731 381 838
+358,Alena,Svobodová,alena.svobodova@datacorp.cz,Obchod,Business Development,2025-04-26,43000,3,SŠ,Olomouc,26,Ž,Plný,+420 648 401 430
+359,Ondřej,Čech,ondrej.cech@datacorp.cz,Obchod,Obchodní zástupce,2020-02-25,75000,5,VŠ Bc.,Brno,29,M,DPP,+420 623 455 481
+360,Matěj,Vaněk,matej.vanek@datacorp.cz,Obchod,Sales Manager,2023-01-12,57500,5,SŠ,Hradec Králové,25,M,Plný,+420 782 792 453
+361,Daniel,Jelínek,daniel.jelinek@datacorp.cz,Obchod,Obchodní zástupce,2020-07-11,57500,3,VŠ Bc.,Praha,33,M,Plný,+420 633 432 401
+362,David,Dvořák,david.dvorak@datacorp.cz,Obchod,Account Manager,2021-05-30,72000,3,VŠ Mgr.,Ostrava,26,M,Plný,+420 620 617 852
+363,Lucie,Veselá,lucie.vesela@datacorp.cz,Obchod,Sales Manager,2020-04-23,69500,4,VŠ Mgr.,Olomouc,33,Ž,Plný,+420 694 375 382
+364,Nikola,Čechová,nikola.cechova@datacorp.cz,Obchod,Sales Manager,2018-10-27,86000,4,VŠ Mgr.,Liberec,34,Ž,Plný,+420 700 386 341
+365,Filip,Konečný,filip.konecny@datacorp.cz,Obchod,Account Manager,2023-07-08,66500,3,VŠ PhD.,Zlín,25,M,Plný,+420 608 566 825
+366,Michal,Fiala,michal.fiala@datacorp.cz,Obchod,Business Development,2017-12-18,65500,4,VŠ Bc.,Brno,34,M,Plný,+420 604 170 870
+367,Martin,Blažek,martin.blazek@datacorp.cz,Obchod,Obchodní zástupce,2022-03-21,58000,3,SŠ,Praha,27,M,Plný,+420 757 491 169
+368,Martina,Benešová,martina.benesova@datacorp.cz,Obchod,Sales Manager,2020-05-12,72000,5,VŠ Mgr.,Olomouc,34,Ž,Plný,+420 690 698 571
+369,Monika,Konečná,monika.konecna@datacorp.cz,Obchod,Sales Manager,2022-01-20,55500,3,SŠ,Ostrava,29,Ž,DPP,+420 640 736 370
+370,Kristýna,Čermáková,kristyna.cermakova@datacorp.cz,Obchod,Business Development,2022-11-02,64500,4,VŠ PhD.,České Budějovice,34,Ž,Plný,+420 625 412 535
+371,Karel,Kříž,karel.kriz@datacorp.cz,Obchod,Sales Manager,2017-10-28,80500,5,SŠ,Liberec,34,M,Plný,+420 767 992 567
+372,Eva,Konečná,eva.konecna@datacorp.cz,Obchod,Sales Manager,2023-04-27,72500,4,SŠ,Pardubice,36,Ž,Plný,+420 750 712 155
+373,Markéta,Veselá,marketa.vesela@datacorp.cz,Obchod,Obchodní zástupce,2023-05-17,64500,3,VŠ Bc.,Praha,26,Ž,Plný,+420 667 164 272
+374,Karel,Růžička,karel.ruzicka@datacorp.cz,Obchod,Obchodní zástupce,2022-01-29,55500,4,SŠ,Pardubice,34,M,Plný,+420 635 468 330
+375,Marek,Svoboda,marek.svoboda@datacorp.cz,Obchod,Sales Manager,2019-06-07,67000,5,SŠ,Olomouc,33,M,Plný,+420 796 845 221
+377,Marek,Novotný,marek.novotny@datacorp.cz,Obchod,Account Manager,2021-02-05,60000,3,VŠ PhD.,Praha,25,M,Plný,+420 785 717 735
+378,Monika,Benešová,monika.benesova@datacorp.cz,Obchod,Business Development,2020-10-29,62500,3,VŠ PhD.,Praha,31,Ž,Plný,+420 642 557 464
+379,Dominik,Pokorný,dominik.pokorny@datacorp.cz,Obchod,Obchodní zástupce,2019-10-03,86500,4,VŠ Bc.,Pardubice,32,M,Plný,+420 780 918 997
+380,Jakub,Malý,jakub.maly@datacorp.cz,Obchod,Sales Manager,2020-06-10,74000,4,SŠ,Praha,34,M,Plný,+420 688 997 579
+381,Matěj,Růžička,matej.ruzicka@datacorp.cz,Obchod,Account Manager,2020-12-12,57500,4,VŠ Bc.,Plzeň,39,M,Plný,+420 754 945 112
+382,Daniel,Konečný,daniel.konecny@datacorp.cz,Obchod,Business Development,2022-02-27,72500,5,VŠ Mgr.,České Budějovice,29,M,Plný,+420 679 915 595
+383,Marek,Novotný,marek.novotny@datacorp.cz,Obchod,Business Development,2023-02-28,74500,4,SŠ,Praha,30,M,Částečný,+420 664 160 887
+384,Michal,Navrátil,michal.navratil@datacorp.cz,Obchod,Obchodní zástupce,2021-07-21,68500,3,VŠ Mgr.,Plzeň,31,M,Částečný,+420 746 993 789
+385,Pavel,Fiala,pavel.fiala@datacorp.cz,Obchod,Business Development,2021-01-07,82500,2,SŠ,Pardubice,28,M,Plný,+420 790 729 537
+386,Pavel,Horák,pavel.horak@datacorp.cz,Obchod,Account Manager,2022-08-02,76000,3,VŠ PhD.,Praha,31,M,Plný,+420 607 355 891
+387,Tomáš,Novotný,tomas.novotny@datacorp.cz,Obchod,Obchodní zástupce,2023-11-13,58500,4,VŠ Mgr.,Zlín,30,M,Plný,+420 704 369 302
+388,Tomáš,Kopecký,tomas.kopecky@datacorp.cz,Obchod,Obchodní zástupce,2020-06-26,78500,3,SŠ,České Budějovice,30,M,Plný,+420 649 688 144
+389,Marie,Zemanová,marie.zemanova@datacorp.cz,Obchod,Obchodní zástupce,2021-10-14,82000,3,VŠ Mgr.,Liberec,32,Ž,Plný,+420 654 914 635
+390,Michal,Hájek,michal.hajek@datacorp.cz,Obchod,Obchodní zástupce,2021-12-02,61500,2,VŠ Bc.,Praha,31,M,Plný,+420 788 797 959
+391,Monika,Pokorná,monika.pokorna@datacorp.cz,Obchod,Obchodní zástupce,2022-01-06,48500,3,SŠ,Praha,32,Ž,Plný,+420 675 612 224
+392,Kateřina,Svobodová,katerina.svobodova@datacorp.cz,Obchod,Business Development,2020-01-15,85000,3,VŠ Mgr.,Hradec Králové,34,Ž,Plný,+420 661 366 411
+393,Petra,Němcová,petra.nemcova@datacorp.cz,Obchod,Account Manager,2021-11-13,69500,3,SŠ,Praha,29,Ž,Plný,+420 710 217 858
+394,Daniel,Kolář,daniel.kolar@datacorp.cz,Obchod,Account Manager,2020-12-26,61000,2,VŠ Bc.,Praha,30,M,Plný,+420 746 478 688
+395,Martina,Veselá,martina.vesela@datacorp.cz,Obchod,Business Development,2021-04-14,53500,4,SŠ,Praha,32,Ž,Plný,+420 781 117 683
+396,Nikola,Benešová,nikola.benesova@datacorp.cz,Obchod,Business Development,2022-12-25,64500,2,SŠ,Liberec,24,Ž,Plný,+420 742 317 458
+397,Simona,Marková,simona.markova@datacorp.cz,Obchod,Business Development,2023-03-02,68500,2,VŠ Mgr.,České Budějovice,32,Ž,Plný,+420 621 114 421
+398,Jan,Beneš,jan.benes@datacorp.cz,Obchod,Obchodní zástupce,2024-01-04,48500,2,SŠ,Praha,29,M,Plný,+420 758 470 874
+399,Martin,Černý,martin.cerny@datacorp.cz,Obchod,Account Manager,2022-11-17,74500,3,VŠ Mgr.,Olomouc,30,M,Plný,+420 686 655 786
+400,Markéta,Novotná,marketa.novotna@datacorp.cz,Obchod,Business Development,2021-05-11,77500,2,VŠ Mgr.,Olomouc,32,Ž,Plný,+420 798 595 707
+401,Klára,Zemanová,klara.zemanova@datacorp.cz,Obchod,Sales Manager,2024-08-10,57000,3,SŠ,Praha,27,Ž,Plný,+420 673 268 126
+402,Marek,Beneš,marek.benes@datacorp.cz,Obchod,Obchodní zástupce,2023-08-26,56000,3,VŠ PhD.,Praha,30,M,Plný,+420 647 101 525
+403,Hana,Procházková,hana.prochazkova@datacorp.cz,Obchod,Sales Manager,2022-05-13,63000,3,SŠ,Praha,24,Ž,Plný,+420 654 188 244
+404,Karel,Urban,karel.urban@datacorp.cz,Obchod,Sales Manager,2019-12-19,71500,4,VŠ Mgr.,Brno,29,M,Plný,+420 768 271 376
+405,Alena,Kopecká,alena.kopecka@datacorp.cz,Obchod,Account Manager,2023-02-21,70000,4,VŠ Mgr.,Plzeň,31,Ž,Plný,+420 753 482 921
+406,Martin,Konečný,martin.konecny@datacorp.cz,Obchod,Business Development,2023-01-27,61000,5,VŠ Mgr.,Ostrava,36,M,Plný,+420 783 398 111
+408,Eva,Navrátilová,eva.navratilova@datacorp.cz,Obchod,Sales Manager,2023-07-28,52500,3,SŠ,Plzeň,31,Ž,Plný,+420 729 944 777
+409,Daniel,Beneš,daniel.benes@datacorp.cz,Obchod,Obchodní zástupce,2023-10-27,54500,2,SŠ,Plzeň,29,M,Plný,+420 654 964 147
+410,Eva,Čermáková,eva.cermakova@datacorp.cz,Obchod,Account Manager,2021-05-25,59000,3,SŠ,Praha,38,Ž,DPP,+420 738 926 273
+411,Tereza,Kopecká,tereza.kopecka@datacorp.cz,Obchod,Account Manager,2023-08-29,27000,3,SŠ,Praha,31,Ž,Plný,+420 621 505 240
+412,Matěj,Holub,matej.holub@datacorp.cz,Obchod,Account Manager,2018-09-19,82500,3,VŠ Mgr.,Pardubice,40,M,Plný,+420 737 241 504
+413,Petra,Kopecká,petra.kopecka@datacorp.cz,Obchod,Account Manager,2021-01-07,77000,4,SŠ,České Budějovice,31,Ž,Plný,+420 754 997 396
+414,Petra,Němcová,petra.nemcova@datacorp.cz,Obchod,Account Manager,2020-01-16,38000,3,VŠ Bc.,Hradec Králové,33,Ž,Plný,+420 770 444 701
+415,Lucie,Růžičková,lucie.ruzickova@datacorp.cz,Obchod,Business Development,2022-06-14,56500,3,VŠ PhD.,Brno,31,Ž,Plný,+420 700 485 494
+416,Lucie,Růžičková,lucie.ruzickova@datacorp.cz,Obchod,Business Development,2020-07-23,86000,5,VŠ PhD.,Brno,35,Ž,Plný,+420 718 411 233
+417,Lucie,Sedláčková,lucie.sedlackova@datacorp.cz,Obchod,Obchodní zástupce,2021-07-30,47500,4,SŠ,Liberec,26,Ž,Plný,+420 632 384 462
+418,Nikola,Kolářová,nikola.kolarova@datacorp.cz,Obchod,Obchodní zástupce,2023-09-22,59500,3,VŠ Mgr.,Liberec,39,Ž,Plný,+420 641 509 801
+420,Radek,Růžička,radek.ruzicka@datacorp.cz,Obchod,Account Manager,2019-03-10,76000,3,VŠ PhD.,Hradec Králové,30,M,Plný,+420 701 708 345
+421,Petr,Sedláček,petr.sedlacek@datacorp.cz,Obchod,Business Development,2020-02-19,69500,3,VŠ Mgr.,Praha,33,M,Plný,+420 697 487 521
+422,Eva,Urbanová,eva.urbanova@datacorp.cz,Obchod,Sales Manager,2023-03-03,79000,5,VŠ PhD.,Praha,39,Ž,Plný,+420 663 415 223
+423,Michal,Beneš,michal.benes@datacorp.cz,Obchod,Account Manager,2021-08-24,80000,3,VŠ PhD.,Ostrava,31,M,Plný,+420 711 782 610
+424,Martina,Králová,martina.kralova@datacorp.cz,Obchod,Obchodní zástupce,2023-03-13,57000,4,VŠ Mgr.,Brno,24,Ž,Plný,+420 715 285 712
+425,Filip,Holub,filip.holub@datacorp.cz,Obchod,Account Manager,2020-08-18,61000,3,SŠ,České Budějovice,31,M,Plný,+420 694 698 438
+426,Markéta,Pokorná,marketa.pokorna@datacorp.cz,Obchod,Account Manager,2023-05-16,72500,3,VŠ Mgr.,Praha,31,Ž,Plný,+420 736 258 398
+427,Dominik,Novotný,dominik.novotny@datacorp.cz,Obchod,Sales Manager,2021-08-22,58000,4,SŠ,Ostrava,22,M,Plný,+420 601 371 632
+428,Tomáš,Jelínek,tomas.jelinek@datacorp.cz,Obchod,Obchodní zástupce,2022-06-12,64000,3,VŠ Mgr.,Praha,38,M,Plný,+420 789 718 667
+429,Veronika,Němcová,veronika.nemcova@datacorp.cz,Obchod,Sales Manager,2022-02-09,60000,3,SŠ,Brno,29,Ž,Plný,+420 641 498 926
+430,Barbora,Fialová,barbora.fialova@datacorp.cz,Obchod,Obchodní zástupce,2018-09-16,65500,4,VŠ Mgr.,Brno,31,Ž,Plný,+420 677 638 234
+431,Josef,Zeman,josef.zeman@datacorp.cz,Obchod,Sales Manager,2021-04-04,80500,4,VŠ Mgr.,Zlín,27,M,Plný,+420 798 352 525
+432,Martina,Navrátilová,martina.navratilova@datacorp.cz,Obchod,Sales Manager,2023-06-13,59000,4,VŠ Mgr.,Liberec,23,Ž,Plný,+420 657 895 890
+433,Karel,Doležal,karel.dolezal@datacorp.cz,Obchod,Obchodní zástupce,2021-11-24,31500,4,VŠ Mgr.,Brno,38,M,Částečný,+420 774 391 158
+434,Matěj,Černý,matej.cerny@datacorp.cz,Obchod,Sales Manager,2022-09-22,60500,4,VŠ Bc.,Liberec,27,M,Plný,+420 775 271 407
+435,Hana,Růžičková,hana.ruzickova@datacorp.cz,Obchod,Account Manager,2023-01-03,60000,3,VŠ Mgr.,Liberec,27,Ž,Plný,+420 756 427 889
+436,Pavel,Fiala,pavel.fiala@datacorp.cz,Obchod,Obchodní zástupce,2024-05-25,57500,4,VŠ Mgr.,Praha,26,M,Plný,+420 719 820 690
+437,Vojtěch,Veselý,vojtech.vesely@datacorp.cz,Obchod,Sales Manager,2024-04-14,46000,3,VŠ PhD.,Praha,22,M,Plný,+420 734 743 300
+438,Lucie,Novotná,lucie.novotna@datacorp.cz,Obchod,Account Manager,2024-09-06,60500,4,SŠ,Liberec,23,Ž,Plný,+420 724 828 163
+439,Hana,Konečná,hana.konecna@datacorp.cz,Obchod,Account Manager,2025-02-02,36000,3,VŠ Bc.,Pardubice,26,Ž,Částečný,+420 753 301 685
+440,Petra,Horáková,petra.horakova@datacorp.cz,Obchod,Account Manager,2023-06-27,77500,3,SŠ,Hradec Králové,29,Ž,Plný,+420 697 419 695
+441,Veronika,Holubová,veronika.holubova@datacorp.cz,Obchod,Obchodní zástupce,2020-03-26,62500,4,VŠ Mgr.,Liberec,34,Ž,Plný,+420 633 688 495
+442,Marek,Kolář,marek.kolar@datacorp.cz,Obchod,Business Development,2019-01-21,70000,3,SŠ,Praha,32,M,Plný,+420 771 555 806
+443,Michal,Čech,michal.cech@datacorp.cz,Obchod,Account Manager,2022-09-21,66000,5,VŠ Mgr.,Hradec Králové,22,M,Plný,+420 686 757 632
+444,Anna,Nováková,anna.novakova@datacorp.cz,Obchod,Business Development,2023-04-25,72500,3,VŠ Mgr.,Praha,31,Ž,Částečný,+420 790 786 215
+445,Tereza,Kučerová,tereza.kucerova@datacorp.cz,Obchod,Account Manager,2021-08-01,86000,4,VŠ PhD.,Liberec,25,Ž,Plný,+420 796 903 479
+446,Josef,Černý,josef.cerny@datacorp.cz,Obchod,Sales Manager,2020-12-15,52000,4,VŠ Mgr.,Praha,29,M,Plný,+420 781 371 490
+447,Tomáš,Němec,tomas.nemec@datacorp.cz,Obchod,Sales Manager,2018-07-10,65500,5,SŠ,Praha,39,M,Plný,+420 690 637 985
+448,Marie,Benešová,marie.benesova@datacorp.cz,Obchod,Account Manager,2021-10-10,58000,4,VŠ Mgr.,Praha,22,Ž,Částečný,+420 616 472 566
+449,Klára,Urbanová,klara.urbanova@datacorp.cz,Obchod,Business Development,2022-07-08,71500,1,VŠ Mgr.,Praha,31,Ž,Plný,+420 711 910 679
+450,Karel,Konečný,karel.konecny@datacorp.cz,Obchod,Business Development,2023-03-15,38000,2,SŠ,Praha,31,M,Plný,+420 715 558 717
+451,Alena,Jelínková,alena.jelinkova@datacorp.cz,Obchod,Sales Manager,2022-01-14,62000,3,SŠ,Zlín,28,Ž,Plný,+420 610 726 660
+452,Anna,Králová,anna.kralova@datacorp.cz,Obchod,Sales Manager,2023-03-05,39500,4,SŠ,Zlín,30,Ž,Plný,+420 786 257 693
+453,Jakub,Pospíšil,jakub.pospisil@datacorp.cz,Obchod,Business Development,2021-12-02,48500,3,SŠ,Praha,31,M,Plný,+420 712 770 936
+454,Petra,Kopecká,petra.kopecka@datacorp.cz,Obchod,Business Development,2022-09-08,72000,2,VŠ Mgr.,Ostrava,22,Ž,Plný,+420 620 156 418
+455,Jana,Fialová,jana.fialova@datacorp.cz,Obchod,Sales Manager,2020-08-21,69500,3,VŠ PhD.,Liberec,28,Ž,Plný,+420 729 551 429
+456,Jakub,Černý,jakub.cerny@datacorp.cz,Obchod,Business Development,2023-09-26,68000,3,VŠ Mgr.,Praha,24,M,Plný,+420 720 103 115
+457,Adam,Král,adam.kral@datacorp.cz,Obchod,Sales Manager,2021-10-15,58000,3,VŠ Mgr.,České Budějovice,30,M,Částečný,+420 706 382 615
+458,Jakub,Navrátil,jakub.navratil@datacorp.cz,Obchod,Sales Manager,2019-09-22,72000,5,VŠ Mgr.,České Budějovice,30,M,Plný,+420 798 331 724
+459,Lucie,Pokorná,lucie.pokorna@datacorp.cz,Obchod,Business Development,2023-01-26,81500,3,SŠ,Ostrava,29,Ž,Plný,+420 628 966 785
+460,Nikola,Doležalová,nikola.dolezalova@datacorp.cz,Obchod,Business Development,2021-12-03,81000,3,SŠ,Praha,32,Ž,Plný,+420 685 532 819
+461,Martina,Svobodová,martina.svobodova@datacorp.cz,Obchod,Obchodní zástupce,2023-05-22,68000,3,VŠ Mgr.,České Budějovice,32,Ž,Plný,+420 742 754 265
+462,Markéta,Králová,marketa.kralova@datacorp.cz,Obchod,Business Development,2020-06-22,68000,3,SŠ,Olomouc,31,Ž,Plný,+420 683 281 594
+463,Tomáš,Dvořák,tomas.dvorak@datacorp.cz,Obchod,Account Manager,2021-06-12,67500,3,VŠ Mgr.,Brno,31,M,Plný,+420 684 567 274
+464,Lukáš,Doležal,lukas.dolezal@datacorp.cz,Obchod,Business Development,2021-01-28,55000,5,VŠ Bc.,Pardubice,30,M,Částečný,+420 628 541 526
+465,Karel,Doležal,karel.dolezal@datacorp.cz,Obchod,Business Development,2018-12-29,82000,3,VŠ Mgr.,Plzeň,33,M,DPP,+420 746 394 372
+466,Martin,Hájek,martin.hajek@datacorp.cz,Obchod,Sales Manager,2024-07-31,51000,2,VŠ Mgr.,Brno,34,M,Plný,+420 708 876 454
+467,Marek,Štěpánek,marek.stepanek@datacorp.cz,Obchod,Sales Manager,2023-08-22,75000,2,SŠ,České Budějovice,37,M,Plný,+420 745 247 111
+468,Jan,Štěpánek,jan.stepanek@datacorp.cz,Obchod,Account Manager,2021-03-24,66000,4,SŠ,Liberec,26,M,Plný,+420 626 456 586
+469,Jan,Svoboda,jan.svoboda@datacorp.cz,Obchod,Account Manager,2019-05-19,63500,4,VŠ Mgr.,Plzeň,36,M,Plný,+420 629 327 929
+470,Anna,Pospíšilová,anna.pospisilova@datacorp.cz,Obchod,Account Manager,2022-05-05,53000,4,SŠ,Olomouc,24,Ž,Plný,+420 653 846 312
+471,Kateřina,Čermáková,katerina.cermakova@datacorp.cz,Obchod,Obchodní zástupce,2019-10-08,72500,5,SŠ,Praha,36,Ž,Plný,+420 733 528 921
+472,Adam,Navrátil,adam.navratil@datacorp.cz,Obchod,Account Manager,2021-04-05,61500,5,VŠ PhD.,Hradec Králové,29,M,Plný,+420 606 169 863
+473,Tomáš,Růžička,tomas.ruzicka@datacorp.cz,Obchod,Business Development,2020-05-23,82000,4,VŠ Mgr.,Ostrava,29,M,Plný,+420 799 632 637
+474,Adam,Navrátil,adam.navratil@datacorp.cz,Obchod,Business Development,2022-02-04,72500,2,SŠ,České Budějovice,36,M,Plný,+420 654 314 149
+475,Klára,Kučerová,klara.kucerova@datacorp.cz,Obchod,Obchodní zástupce,2021-01-09,53000,2,VŠ Mgr.,Praha,33,Ž,Plný,+420 686 378 380
+476,Marie,Čermáková,marie.cermakova@datacorp.cz,Obchod,Sales Manager,2020-11-09,73000,5,SŠ,Plzeň,28,Ž,Plný,+420 670 780 303
+477,Dominik,Němec,dominik.nemec@datacorp.cz,Obchod,Obchodní zástupce,2021-03-28,69000,4,SŠ,Zlín,27,M,Plný,+420 608 418 984
+478,Filip,Urban,filip.urban@datacorp.cz,Obchod,Business Development,2021-12-30,56000,4,VŠ Mgr.,Praha,32,M,Plný,+420 720 110 498
+479,Lukáš,Jelínek,lukas.jelinek@datacorp.cz,Obchod,Obchodní zástupce,2019-06-28,74500,4,VŠ Mgr.,Praha,35,M,Plný,+420 631 836 101
+480,Pavel,Růžička,pavel.ruzicka@datacorp.cz,Obchod,Account Manager,2020-09-02,67500,5,VŠ Mgr.,Plzeň,25,M,Plný,+420 749 961 938
+481,Martin,Kučera,martin.kucera@datacorp.cz,Obchod,Obchodní zástupce,2021-03-15,71000,4,SŠ,Brno,32,M,Plný,+420 611 229 816
+482,Nikola,Fialová,nikola.fialova@datacorp.cz,Obchod,Obchodní zástupce,2025-04-26,38500,3,SŠ,Praha,26,Ž,Plný,+420 619 505 573
+483,Vojtěch,Urban,vojtech.urban@datacorp.cz,Obchod,Obchodní zástupce,2021-12-05,57500,3,VŠ Bc.,České Budějovice,33,M,Plný,+420 776 663 470
+484,Adam,Pokorný,adam.pokorny@datacorp.cz,Obchod,Business Development,2021-05-24,77500,4,VŠ Bc.,Zlín,39,M,Plný,+420 645 121 597
+485,Kateřina,Kolářová,katerina.kolarova@datacorp.cz,Obchod,Sales Manager,2020-04-21,69500,4,VŠ Mgr.,Pardubice,32,Ž,Plný,+420 757 508 191
+486,Petr,Růžička,petr.ruzicka@datacorp.cz,Obchod,Sales Manager,2019-03-04,66500,4,VŠ PhD.,Plzeň,37,M,Plný,+420 657 324 293
+487,Ondřej,Svoboda,ondrej.svoboda@datacorp.cz,Obchod,Account Manager,2020-10-20,66500,2,SŠ,Ostrava,33,M,Plný,+420 768 853 412
+488,Filip,Urban,filip.urban@datacorp.cz,Obchod,Sales Manager,2021-06-30,59500,3,VŠ Bc.,Plzeň,35,M,Plný,+420 686 639 136
+489,Veronika,Svobodová,veronika.svobodova@datacorp.cz,Obchod,Business Development,2024-11-16,48500,2,VŠ Bc.,Brno,29,Ž,Plný,+420 670 306 695
+490,Dominik,Pokorný,dominik.pokorny@datacorp.cz,Obchod,Account Manager,2023-01-18,65500,2,SŠ,Praha,26,M,Částečný,+420 751 322 654
+491,Hana,Vaňková,hana.vankova@datacorp.cz,Obchod,Obchodní zástupce,2022-01-21,57500,4,SŠ,Praha,31,Ž,DPP,+420 625 637 709
+492,Pavel,Urban,pavel.urban@datacorp.cz,Obchod,Account Manager,2019-08-04,54500,5,VŠ Bc.,Zlín,33,M,Plný,+420 613 365 617
+493,Michal,Jelínek,michal.jelinek@datacorp.cz,Obchod,Account Manager,2020-04-20,51000,3,SŠ,Praha,34,M,Plný,+420 682 551 527
+494,Ondřej,Novotný,ondrej.novotny@datacorp.cz,Obchod,Sales Manager,2022-06-15,66500,3,VŠ Mgr.,Ostrava,28,M,Plný,+420 720 142 507
+495,Markéta,Holubová,marketa.holubova@datacorp.cz,Obchod,Sales Manager,2021-11-21,66000,5,VŠ Bc.,Zlín,36,Ž,Plný,+420 613 349 380
+496,Martin,Zeman,martin.zeman@datacorp.cz,Obchod,Obchodní zástupce,2022-04-17,60000,4,VŠ Mgr.,Brno,27,M,Plný,+420 794 478 235
+497,Eva,Jelínková,eva.jelinkova@datacorp.cz,Obchod,Sales Manager,2021-10-14,46000,4,SŠ,Liberec,26,Ž,Plný,+420 756 340 660
+498,Klára,Doležalová,klara.dolezalova@datacorp.cz,Obchod,Obchodní zástupce,2023-01-13,56000,4,SŠ,Brno,27,Ž,Plný,+420 792 282 735
+499,Radek,Procházka,radek.prochazka@datacorp.cz,Obchod,Business Development,2024-06-15,73500,3,SŠ,Olomouc,29,M,Plný,+420 719 902 416
+500,Marek,Čech,marek.cech@datacorp.cz,Obchod,Sales Manager,2025-04-26,62000,3,VŠ Mgr.,Zlín,29,M,Plný,+420 715 446 433
+501,Adam,Hájek,adam.hajek@datacorp.cz,Obchod,Sales Manager,2021-04-24,58000,4,VŠ Bc.,Praha,27,M,Plný,+420 620 902 326
+502,Monika,Horáková,monika.horakova@datacorp.cz,Obchod,Sales Manager,2024-05-03,57000,3,SŠ,Brno,34,Ž,Plný,+420 764 850 156
+503,Marek,Fiala,marek.fiala@datacorp.cz,Obchod,Business Development,2020-05-13,82000,4,VŠ Mgr.,Plzeň,30,M,DPP,+420 792 717 676
+504,Anna,Fialová,anna.fialova@datacorp.cz,Obchod,Sales Manager,2019-03-21,90500,5,SŠ,Pardubice,28,Ž,Plný,+420 754 893 792
+505,Hana,Jelínková,hana.jelinkova@datacorp.cz,Obchod,Business Development,2021-02-02,69500,3,VŠ Mgr.,Ostrava,32,Ž,Plný,+420 790 966 701
+506,Martin,Hájek,martin.hajek@datacorp.cz,Obchod,Obchodní zástupce,2024-03-10,66000,4,VŠ Mgr.,Praha,27,M,DPP,+420 682 971 144
+507,Kristýna,Urbanová,kristyna.urbanova@datacorp.cz,Obchod,Account Manager,2022-02-07,79500,4,SŠ,Praha,30,Ž,Plný,+420 736 172 322
+508,Radek,Pospíšil,radek.pospisil@datacorp.cz,Obchod,Business Development,2025-02-11,30500,4,VŠ Bc.,Hradec Králové,29,M,Plný,+420 749 241 888
+509,Kristýna,Fialová,kristyna.fialova@datacorp.cz,Obchod,Account Manager,2019-11-07,51500,4,VŠ Mgr.,Zlín,34,Ž,DPP,+420 636 518 217
+510,Simona,Dvořáková,simona.dvorakova@datacorp.cz,Obchod,Sales Manager,2021-11-03,74000,3,VŠ Mgr.,Brno,32,Ž,Plný,+420 626 907 794
+511,Marek,Fiala,marek.fiala@datacorp.cz,Obchod,Sales Manager,2021-03-28,62500,4,VŠ Bc.,České Budějovice,32,M,Plný,+420 723 557 405
+512,Pavel,Blažek,pavel.blazek@datacorp.cz,Obchod,Business Development,2021-03-23,62000,2,VŠ Mgr.,Ostrava,31,M,Plný,+420 704 323 370
+513,Petra,Pospíšilová,petra.pospisilova@datacorp.cz,Obchod,Account Manager,2022-08-08,76500,5,VŠ Mgr.,Praha,26,Ž,Plný,+420 745 323 409
+514,Adam,Hájek,adam.hajek@datacorp.cz,Obchod,Sales Manager,2020-09-25,62000,2,VŠ Mgr.,Pardubice,40,M,Plný,+420 702 167 278
+515,Nikola,Marková,nikola.markova@datacorp.cz,Obchod,Business Development,2021-07-06,60500,3,VŠ Bc.,Praha,34,Ž,Plný,+420 792 806 712
+516,Karel,Dvořák,karel.dvorak@datacorp.cz,Obchod,Obchodní zástupce,2021-12-07,68500,4,VŠ Mgr.,Zlín,28,M,Plný,+420 650 613 127
+517,Marek,Vaněk,marek.vanek@datacorp.cz,Obchod,Sales Manager,2022-11-24,60000,4,VŠ Mgr.,Liberec,34,M,Plný,+420 715 207 525
+518,Lucie,Dvořáková,lucie.dvorakova@datacorp.cz,Obchod,Account Manager,2019-11-18,78500,4,VŠ Mgr.,Ostrava,35,Ž,DPP,+420 757 421 543
+519,Marie,Němcová,marie.nemcova@datacorp.cz,Obchod,Sales Manager,2021-03-22,71000,4,SŠ,Hradec Králové,32,Ž,Plný,+420 739 799 368
+521,Klára,Černá,klara.cerna@datacorp.cz,Obchod,Sales Manager,2019-12-03,72500,5,VŠ Mgr.,Hradec Králové,42,Ž,Plný,+420 759 881 318
+522,David,Čermák,david.cermak@datacorp.cz,Obchod,Obchodní zástupce,2018-09-27,85500,5,VŠ Mgr.,Olomouc,35,M,Plný,+420 775 202 993
+523,Simona,Pokorná,simona.pokorna@datacorp.cz,Obchod,Obchodní zástupce,2017-10-31,71500,3,SŠ,Olomouc,35,Ž,Plný,+420 759 232 437
+524,Alena,Růžičková,alena.ruzickova@datacorp.cz,Obchod,Account Manager,2022-12-06,60500,4,VŠ Bc.,Praha,25,Ž,Plný,+420 691 849 141
+525,Tereza,Kolářová,tereza.kolarova@datacorp.cz,HR,Payroll Specialist,2021-10-05,54000,3,VŠ Mgr.,Ostrava,32,Ž,Plný,+420 793 724 301
+526,Jakub,Černý,jakub.cerny@datacorp.cz,HR,Recruiter,2024-01-31,49000,2,VŠ Mgr.,Praha,29,M,Plný,+420 793 710 780
+527,Alena,Procházková,alena.prochazkova@datacorp.cz,HR,HR Manager,2022-11-03,62000,4,VŠ Mgr.,Brno,29,Ž,Plný,+420 680 440 581
+528,Karel,Kolář,karel.kolar@datacorp.cz,HR,HR Specialist,2024-08-07,57500,4,VŠ PhD.,Zlín,24,M,Částečný,+420 763 421 836
+529,Petr,Černý,petr.cerny@datacorp.cz,HR,Payroll Specialist,2023-02-13,34000,3,SŠ,Hradec Králové,31,M,Plný,+420 619 871 447
+530,Josef,Holub,josef.holub@datacorp.cz,HR,HR Specialist,2022-05-21,43000,3,SŠ,Plzeň,24,M,Částečný,+420 748 517 981
+531,Pavel,Černý,pavel.cerny@datacorp.cz,HR,HR Specialist,2022-07-05,69000,4,VŠ Mgr.,Praha,33,M,Plný,+420 609 510 333
+532,Anna,Holubová,anna.holubova@datacorp.cz,HR,Payroll Specialist,2022-05-19,58500,4,VŠ Bc.,Brno,29,Ž,Plný,+420 690 775 801
+533,Josef,Fiala,josef.fiala@datacorp.cz,HR,HR Manager,2022-08-30,44500,3,SŠ,Ostrava,30,M,Plný,+420 610 864 793
+534,Tereza,Pospíšilová,tereza.pospisilova@datacorp.cz,HR,HR Specialist,2022-08-26,55000,4,VŠ Mgr.,Praha,31,Ž,Plný,+420 630 846 399
+535,Lukáš,Beneš,lukas.benes@datacorp.cz,HR,Recruiter,2024-04-22,50000,4,SŠ,Praha,24,M,Plný,+420 620 829 210
+536,Adam,Kolář,adam.kolar@datacorp.cz,HR,Recruiter,2024-02-28,45500,4,VŠ Bc.,Olomouc,23,M,Plný,+420 616 718 820
+537,Tomáš,Horák,tomas.horak@datacorp.cz,HR,HR Specialist,2025-02-25,49500,5,SŠ,Liberec,30,M,DPP,+420 745 437 485
+538,Petr,Novák,petr.novak@datacorp.cz,HR,HR Manager,2022-03-23,36500,4,VŠ Bc.,České Budějovice,26,M,DPP,+420 685 313 981
+539,Jana,Pospíšilová,jana.pospisilova@datacorp.cz,HR,HR Specialist,2020-08-03,68000,4,VŠ Mgr.,České Budějovice,28,Ž,Plný,+420 733 218 579
+540,Simona,Horáková,simona.horakova@datacorp.cz,HR,HR Specialist,2023-04-08,40000,5,VŠ Bc.,Plzeň,26,Ž,Plný,+420 648 953 581
+541,Anna,Pokorná,anna.pokorna@datacorp.cz,HR,Recruiter,2022-08-30,42500,2,VŠ Bc.,Zlín,27,Ž,Plný,+420 773 264 245
+542,Martina,Urbanová,martina.urbanova@datacorp.cz,HR,HR Specialist,2020-01-01,58000,5,VŠ Mgr.,České Budějovice,33,Ž,Plný,+420 783 789 824
+543,Martin,Pospíšil,martin.pospisil@datacorp.cz,HR,Recruiter,2022-09-14,51000,4,SŠ,Praha,31,M,Částečný,+420 630 720 105
+544,Veronika,Kučerová,veronika.kucerova@datacorp.cz,HR,HR Manager,2022-09-01,58000,2,VŠ Mgr.,Brno,29,Ž,Plný,+420 684 806 485
+545,Tereza,Štěpánková,tereza.stepankova@datacorp.cz,HR,Recruiter,2021-11-25,54000,3,VŠ Mgr.,Hradec Králové,36,Ž,Plný,+420 737 278 179
+546,Pavel,Černý,pavel.cerny@datacorp.cz,HR,Recruiter,2024-06-08,57500,3,VŠ Mgr.,České Budějovice,22,M,Plný,+420 608 525 809
+547,Kristýna,Růžičková,kristyna.ruzickova@datacorp.cz,HR,Payroll Specialist,2019-06-09,64500,3,VŠ Mgr.,Olomouc,32,Ž,Plný,+420 615 360 931
+548,Jan,Fiala,jan.fiala@datacorp.cz,HR,HR Specialist,2021-09-02,52000,4,VŠ Bc.,Brno,37,M,Plný,+420 639 464 500
+549,Kateřina,Sedláčková,katerina.sedlackova@datacorp.cz,HR,HR Specialist,2021-12-26,61500,3,SŠ,Ostrava,30,Ž,Plný,+420 692 917 963
+550,Michal,Kříž,michal.kriz@datacorp.cz,HR,HR Specialist,2024-01-11,66000,3,VŠ Mgr.,Zlín,22,M,Plný,+420 728 483 133
+551,Tomáš,Procházka,tomas.prochazka@datacorp.cz,HR,HR Specialist,2020-11-23,63500,3,VŠ PhD.,Praha,35,M,Plný,+420 662 421 365
+552,Radek,Štěpánek,radek.stepanek@datacorp.cz,HR,HR Manager,2018-10-02,50000,4,VŠ Bc.,Olomouc,38,M,Plný,+420 610 748 507
+553,Martin,Novotný,martin.novotny@datacorp.cz,HR,HR Manager,2024-02-10,58000,4,SŠ,Liberec,26,M,Plný,+420 613 131 454
+554,Markéta,Navrátilová,marketa.navratilova@datacorp.cz,HR,HR Manager,2020-06-28,50500,4,VŠ Bc.,Zlín,31,Ž,Plný,+420 767 802 554
+555,David,Marek,david.marek@datacorp.cz,HR,HR Specialist,2022-08-16,73000,3,VŠ PhD.,Hradec Králové,35,M,Plný,+420 786 679 787
+556,David,Kříž,david.kriz@datacorp.cz,HR,HR Specialist,2023-05-20,43500,5,SŠ,Praha,25,M,Plný,+420 669 872 241
+557,Jan,Čech,jan.cech@datacorp.cz,HR,HR Manager,2021-12-28,65500,4,VŠ Mgr.,Liberec,27,M,Plný,+420 647 440 763
+558,Simona,Zemanová,simona.zemanova@datacorp.cz,HR,HR Manager,2022-11-21,49000,3,VŠ Mgr.,Ostrava,24,Ž,Plný,+420 693 880 441
+559,Veronika,Marková,veronika.markova@datacorp.cz,HR,Recruiter,2022-12-28,54500,5,VŠ Mgr.,Praha,33,Ž,Plný,+420 793 959 477
+560,Pavel,Vaněk,pavel.vanek@datacorp.cz,HR,HR Manager,2022-10-01,59500,3,VŠ Mgr.,Praha,27,M,Plný,+420 701 609 413
+561,Radek,Fiala,radek.fiala@datacorp.cz,HR,HR Specialist,2022-07-07,60000,3,VŠ Mgr.,Olomouc,23,M,Částečný,+420 655 146 380
+562,Karel,Kopecký,karel.kopecky@datacorp.cz,HR,Recruiter,2021-04-12,61000,3,VŠ Mgr.,Praha,29,M,Plný,+420 774 488 777
+563,Lucie,Konečná,lucie.konecna@datacorp.cz,HR,Payroll Specialist,2022-11-13,55000,3,VŠ PhD.,Brno,29,Ž,Plný,+420 675 641 159
+564,Josef,Růžička,josef.ruzicka@datacorp.cz,HR,HR Specialist,2024-05-23,51500,3,VŠ Bc.,Praha,23,M,Plný,+420 704 206 751
+565,Tomáš,Veselý,tomas.vesely@datacorp.cz,HR,Recruiter,2023-03-01,43500,4,SŠ,Zlín,36,M,Plný,+420 786 241 186
+566,Martina,Černá,martina.cerna@datacorp.cz,HR,Payroll Specialist,2024-02-03,50500,3,VŠ Mgr.,Pardubice,24,Ž,Plný,+420 604 308 455
+567,Radek,Černý,radek.cerny@datacorp.cz,HR,HR Manager,2022-09-21,50000,5,SŠ,Brno,31,M,Plný,+420 773 382 884
+568,Dominik,Urban,dominik.urban@datacorp.cz,HR,Recruiter,2021-07-29,55500,3,VŠ Mgr.,Plzeň,41,M,Plný,+420 693 427 784
+569,Eva,Němcová,eva.nemcova@datacorp.cz,HR,Payroll Specialist,2020-03-11,42500,3,VŠ Mgr.,Plzeň,32,Ž,Plný,+420 784 302 243
+570,Pavel,Čermák,pavel.cermak@datacorp.cz,HR,Recruiter,2024-01-15,32500,5,VŠ Bc.,České Budějovice,32,M,Plný,+420 773 156 646
+571,Marek,Sedláček,marek.sedlacek@datacorp.cz,HR,HR Specialist,2020-08-03,74500,4,VŠ Mgr.,Ostrava,32,M,Částečný,+420 758 761 103
+572,Karel,Malý,karel.maly@datacorp.cz,HR,Recruiter,2023-03-05,54000,4,VŠ PhD.,Liberec,30,M,Plný,+420 632 180 111
+573,Kateřina,Růžičková,katerina.ruzickova@datacorp.cz,HR,Payroll Specialist,2024-11-05,59500,3,VŠ PhD.,České Budějovice,22,Ž,Plný,+420 779 948 325
+575,Petra,Pokorná,petra.pokorna@datacorp.cz,HR,HR Specialist,2021-03-18,42500,4,SŠ,Zlín,34,Ž,Plný,+420 654 123 111
+576,Monika,Pokorná,monika.pokorna@datacorp.cz,HR,Recruiter,2019-11-08,61500,4,SŠ,Ostrava,28,Ž,Plný,+420 624 131 555
+577,David,Malý,david.maly@datacorp.cz,HR,HR Specialist,2025-01-29,47500,2,VŠ Mgr.,Plzeň,30,M,Plný,+420 789 351 364
+578,Simona,Novotná,simona.novotna@datacorp.cz,HR,Payroll Specialist,2023-03-23,53000,3,VŠ Mgr.,Olomouc,30,Ž,Plný,+420 645 524 417
+579,Monika,Čechová,monika.cechova@datacorp.cz,HR,Recruiter,2021-05-03,46500,3,VŠ Mgr.,Olomouc,35,Ž,Plný,+420 779 680 340
+580,Barbora,Veselá,barbora.vesela@datacorp.cz,HR,HR Manager,2021-01-24,48500,3,VŠ PhD.,Liberec,31,Ž,Plný,+420 749 409 531
+581,Veronika,Nováková,veronika.novakova@datacorp.cz,HR,Recruiter,2021-06-17,66000,4,VŠ Mgr.,Hradec Králové,22,Ž,DPP,+420 754 414 802
+582,Tereza,Jelínková,tereza.jelinkova@datacorp.cz,HR,HR Specialist,2022-02-15,49500,4,SŠ,Hradec Králové,29,Ž,Plný,+420 746 648 879
+583,Monika,Dvořáková,monika.dvorakova@datacorp.cz,HR,HR Specialist,2022-03-03,47000,5,VŠ Bc.,Zlín,35,Ž,Plný,+420 660 470 263
+584,Simona,Nováková,simona.novakova@datacorp.cz,HR,Recruiter,2022-11-26,41000,3,SŠ,Praha,30,Ž,Plný,+420 781 569 624
+585,Marie,Čermáková,marie.cermakova@datacorp.cz,HR,Recruiter,2022-11-01,56000,4,VŠ Mgr.,Praha,32,Ž,Plný,+420 665 814 148
+586,Marie,Čermáková,marie.cermakova@datacorp.cz,HR,Payroll Specialist,2025-01-10,42500,3,VŠ Mgr.,Zlín,23,Ž,Plný,+420 783 767 694
+587,Daniel,Navrátil,daniel.navratil@datacorp.cz,HR,Recruiter,2023-04-05,46500,4,VŠ Mgr.,Brno,28,M,Plný,+420 743 895 393
+588,Tomáš,Holub,tomas.holub@datacorp.cz,HR,Recruiter,2021-02-12,69000,5,VŠ Mgr.,Praha,33,M,Plný,+420 664 532 491
+589,Jan,Černý,jan.cerny@datacorp.cz,HR,HR Specialist,2023-05-23,40000,4,SŠ,Pardubice,30,M,Plný,+420 607 842 588
+590,Tereza,Nováková,tereza.novakova@datacorp.cz,HR,Payroll Specialist,2022-02-03,61500,4,VŠ Mgr.,Pardubice,34,Ž,Plný,+420 763 122 351
+591,Lenka,Černá,lenka.cerna@datacorp.cz,HR,HR Specialist,2022-11-09,57000,2,VŠ Bc.,Praha,28,Ž,Plný,+420 778 544 493
+592,Martin,Doležal,martin.dolezal@datacorp.cz,HR,HR Manager,2021-06-12,55000,4,VŠ Mgr.,Brno,33,M,Plný,+420 767 465 856
+593,Filip,Král,filip.kral@datacorp.cz,HR,Recruiter,2022-10-22,58500,3,VŠ Mgr.,Praha,29,M,Plný,+420 628 776 165
+594,Vojtěch,Sedláček,vojtech.sedlacek@datacorp.cz,HR,HR Manager,2020-07-12,42500,3,SŠ,Pardubice,34,M,Plný,+420 719 454 398
+595,Tomáš,Pospíšil,tomas.pospisil@datacorp.cz,HR,HR Specialist,2023-02-08,33000,2,SŠ,Plzeň,29,M,Plný,+420 622 722 267
+596,Jana,Nováková,jana.novakova@datacorp.cz,HR,Payroll Specialist,2022-12-20,41000,3,SŠ,Praha,32,Ž,Plný,+420 682 971 139
+597,Vojtěch,Malý,vojtech.maly@datacorp.cz,HR,Recruiter,2023-03-16,60000,4,VŠ Mgr.,Brno,28,M,Plný,+420 617 624 903
+598,Michal,Svoboda,michal.svoboda@datacorp.cz,HR,HR Manager,2022-07-04,42000,3,VŠ Mgr.,Praha,32,M,Plný,+420 676 363 154
+599,Petr,Beneš,petr.benes@datacorp.cz,HR,HR Manager,2020-10-06,64500,4,VŠ Mgr.,Liberec,29,M,Plný,+420 639 599 557
+600,Klára,Černá,klara.cerna@datacorp.cz,HR,HR Manager,2021-11-29,53000,3,VŠ Mgr.,Praha,29,Ž,Plný,+420 754 179 955
+601,Simona,Blažková,simona.blazkova@datacorp.cz,HR,Recruiter,2022-10-12,42000,3,VŠ Bc.,Praha,27,Ž,Plný,+420 717 271 211
+602,Tomáš,Pospíšil,tomas.pospisil@datacorp.cz,HR,HR Manager,2023-09-04,54000,3,SŠ,České Budějovice,24,M,Částečný,+420 602 753 657
+603,Josef,Beneš,josef.benes@datacorp.cz,HR,HR Specialist,2025-04-26,50500,4,VŠ PhD.,Liberec,26,M,DPP,+420 778 906 753
+604,Pavel,Dvořák,pavel.dvorak@datacorp.cz,HR,HR Manager,2019-06-07,68000,4,SŠ,Liberec,30,M,DPP,+420 640 412 996
+605,Veronika,Čermáková,veronika.cermakova@datacorp.cz,HR,HR Manager,2023-01-07,51500,2,VŠ Bc.,Praha,28,Ž,Plný,+420 666 295 848
+606,Nikola,Dvořáková,nikola.dvorakova@datacorp.cz,HR,Recruiter,2023-03-02,50000,4,VŠ Mgr.,Plzeň,24,Ž,Plný,+420 736 387 494
+607,Anna,Veselá,anna.vesela@datacorp.cz,HR,Payroll Specialist,2022-06-03,52000,5,VŠ Bc.,Praha,28,Ž,Plný,+420 696 457 184
+608,Matěj,Vaněk,matej.vanek@datacorp.cz,HR,Payroll Specialist,2023-01-28,64000,4,VŠ Mgr.,Zlín,30,M,Plný,+420 612 300 238
+609,Alena,Holubová,alena.holubova@datacorp.cz,HR,Payroll Specialist,2022-09-27,60000,3,VŠ PhD.,Brno,37,Ž,Plný,+420 729 835 340
+610,Pavel,Kříž,pavel.kriz@datacorp.cz,HR,Payroll Specialist,2023-12-04,61000,4,VŠ Mgr.,Praha,23,M,Plný,+420 730 732 635
+611,Martin,Blažek,martin.blazek@datacorp.cz,HR,HR Manager,2021-05-17,52500,4,VŠ Bc.,Pardubice,30,M,Plný,+420 609 977 730
+612,Jakub,Čech,jakub.cech@datacorp.cz,HR,HR Manager,2023-01-01,48500,5,VŠ Mgr.,Pardubice,28,M,Plný,+420 654 944 544
+613,David,Doležal,david.dolezal@datacorp.cz,HR,Payroll Specialist,2022-05-17,51500,3,VŠ Mgr.,Liberec,28,M,DPP,+420 676 207 895
+614,Daniel,Svoboda,daniel.svoboda@datacorp.cz,HR,Recruiter,2022-12-20,42000,3,VŠ Mgr.,České Budějovice,25,M,Plný,+420 715 700 186
+615,Jakub,Fiala,jakub.fiala@datacorp.cz,HR,Payroll Specialist,2023-03-04,43000,5,VŠ Mgr.,Zlín,36,M,Plný,+420 764 124 734
+616,Alena,Urbanová,alena.urbanova@datacorp.cz,HR,Payroll Specialist,2020-10-13,62000,3,VŠ PhD.,Zlín,28,Ž,Plný,+420 725 821 149
+617,Veronika,Novotná,veronika.novotna@datacorp.cz,HR,Payroll Specialist,2022-07-03,51000,5,VŠ PhD.,České Budějovice,30,Ž,Plný,+420 777 877 566
+619,Vojtěch,Novák,vojtech.novak@datacorp.cz,HR,HR Specialist,2019-10-05,60000,4,VŠ PhD.,Plzeň,29,M,DPP,+420 701 981 826
+620,Lukáš,Doležal,lukas.dolezal@datacorp.cz,HR,HR Specialist,2022-11-15,37000,3,VŠ Bc.,Hradec Králové,37,M,Plný,+420 600 340 288
+621,Monika,Procházková,monika.prochazkova@datacorp.cz,HR,HR Specialist,2022-06-08,52500,4,VŠ Mgr.,Praha,24,Ž,Plný,+420 691 308 189
+622,Karel,Procházka,karel.prochazka@datacorp.cz,HR,Recruiter,2020-09-06,40500,4,VŠ Bc.,Plzeň,30,M,Plný,+420 673 135 212
+623,Petra,Kopecká,petra.kopecka@datacorp.cz,HR,HR Specialist,2022-10-07,54500,3,VŠ Mgr.,Praha,32,Ž,Plný,+420 625 829 894
+624,Pavel,Pospíšil,pavel.pospisil@datacorp.cz,HR,Recruiter,2021-01-03,49500,3,VŠ Bc.,Brno,31,M,Plný,+420 692 507 994
+625,Kateřina,Čechová,katerina.cechova@datacorp.cz,Finance,Účetní,2019-12-28,69500,4,VŠ Mgr.,České Budějovice,29,Ž,Plný,+420 623 263 981
+626,Lukáš,Čermák,lukas.cermak@datacorp.cz,Finance,Controller,2022-08-09,53500,5,VŠ Mgr.,Praha,28,M,Plný,+420 646 853 405
+627,Alena,Doležalová,alena.dolezalova@datacorp.cz,Finance,Účetní,2023-08-14,60000,2,SŠ,Brno,27,Ž,Plný,+420 786 962 607
+628,Vojtěch,Novotný,vojtech.novotny@datacorp.cz,Finance,Controller,2022-01-06,46000,3,VŠ Mgr.,České Budějovice,29,M,Plný,+420 679 362 959
+629,Jakub,Pokorný,jakub.pokorny@datacorp.cz,Finance,Finanční analytik,2018-02-27,87000,5,VŠ Mgr.,Olomouc,37,M,Plný,+420 796 480 123
+630,Lukáš,Sedláček,lukas.sedlacek@datacorp.cz,Finance,Účetní,2025-04-26,59500,4,VŠ Bc.,Praha,33,M,Plný,+420 753 813 866
+631,Tomáš,Marek,tomas.marek@datacorp.cz,Finance,Auditor,2020-07-02,84000,2,VŠ Mgr.,Liberec,37,M,Plný,+420 628 769 439
+632,Dominik,Král,dominik.kral@datacorp.cz,Finance,Účetní,2021-10-24,58000,4,VŠ Mgr.,Praha,25,M,Plný,+420 683 692 277
+633,Michal,Novák,michal.novak@datacorp.cz,Finance,Finanční analytik,2020-11-07,59000,4,VŠ Mgr.,Praha,34,M,DPP,+420 796 930 628
+634,Petra,Kopecká,petra.kopecka@datacorp.cz,Finance,Finanční analytik,2019-07-05,60500,4,SŠ,Liberec,26,Ž,Plný,+420 664 607 692
+635,Michal,Němec,michal.nemec@datacorp.cz,Finance,Finanční analytik,2022-03-30,67000,4,VŠ Mgr.,Olomouc,36,M,Plný,+420 618 436 413
+636,Petra,Fialová,petra.fialova@datacorp.cz,Finance,Auditor,2018-05-05,73000,5,VŠ Mgr.,Liberec,34,Ž,Plný,+420 702 947 692
+637,Adam,Kříž,adam.kriz@datacorp.cz,Finance,Finanční analytik,2022-07-24,79000,2,VŠ Mgr.,Praha,34,M,Plný,+420 758 222 560
+638,Hana,Vaňková,hana.vankova@datacorp.cz,Finance,Účetní,2018-12-05,98000,5,VŠ PhD.,Olomouc,35,Ž,Plný,+420 674 626 803
+639,Monika,Zemanová,monika.zemanova@datacorp.cz,Finance,Účetní,2018-10-19,88000,4,VŠ Mgr.,Ostrava,30,Ž,DPP,+420 628 891 106
+640,Martin,Štěpánek,martin.stepanek@datacorp.cz,Finance,Controller,2021-08-26,71500,3,VŠ PhD.,Brno,30,M,Částečný,+420 689 907 740
+641,Klára,Konečná,klara.konecna@datacorp.cz,Finance,Auditor,2019-03-04,57500,3,SŠ,Brno,36,Ž,Plný,+420 672 921 712
+642,Filip,Doležal,filip.dolezal@datacorp.cz,Finance,Auditor,2020-04-05,69000,4,VŠ Mgr.,Plzeň,37,M,Plný,+420 722 244 746
+643,Markéta,Procházková,marketa.prochazkova@datacorp.cz,Finance,Auditor,2021-03-12,80500,3,VŠ PhD.,Praha,32,Ž,Plný,+420 640 340 216
+644,Alena,Fialová,alena.fialova@datacorp.cz,Finance,Controller,2023-03-18,64500,3,SŠ,Praha,27,Ž,Plný,+420 691 202 891
+645,Lukáš,Fiala,lukas.fiala@datacorp.cz,Finance,Controller,2022-07-10,69000,3,VŠ Mgr.,Praha,26,M,Plný,+420 744 656 389
+646,Petra,Kopecká,petra.kopecka@datacorp.cz,Finance,Auditor,2020-01-30,78500,4,VŠ Mgr.,Zlín,26,Ž,Plný,+420 786 588 414
+647,Filip,Král,filip.kral@datacorp.cz,Finance,Finanční analytik,2021-10-22,62000,5,VŠ Bc.,Olomouc,33,M,Plný,+420 786 911 278
+648,Daniel,Svoboda,daniel.svoboda@datacorp.cz,Finance,Účetní,2020-06-24,78000,4,VŠ Mgr.,České Budějovice,30,M,Plný,+420 707 761 529
+649,Petra,Černá,petra.cerna@datacorp.cz,Finance,Auditor,2021-08-09,81500,3,VŠ PhD.,Olomouc,28,Ž,Plný,+420 603 348 399
+650,Marek,Vaněk,marek.vanek@datacorp.cz,Finance,Auditor,2020-07-06,69500,3,VŠ Bc.,Hradec Králové,34,M,Částečný,+420 756 917 932
+651,Jana,Kopecká,jana.kopecka@datacorp.cz,Finance,Finanční analytik,2022-04-26,57000,4,VŠ Mgr.,Brno,35,Ž,Plný,+420 708 420 654
+652,Filip,Veselý,filip.vesely@datacorp.cz,Finance,Účetní,2018-05-05,70500,3,VŠ Mgr.,Pardubice,37,M,Plný,+420 652 219 294
+653,Dominik,Kopecký,dominik.kopecky@datacorp.cz,Finance,Controller,2021-08-30,69500,4,VŠ Mgr.,Plzeň,30,M,Plný,+420 761 112 118
+654,Karel,Malý,karel.maly@datacorp.cz,Finance,Controller,2019-02-01,63500,4,VŠ Mgr.,Brno,31,M,Plný,+420 767 203 889
+655,Jakub,Dvořák,jakub.dvorak@datacorp.cz,Finance,Controller,2018-09-22,57000,4,VŠ Mgr.,Zlín,29,M,Plný,+420 661 639 999
+656,Radek,Doležal,radek.dolezal@datacorp.cz,Finance,Controller,2022-11-07,56000,5,SŠ,Ostrava,29,M,Plný,+420 671 479 924
+657,Pavel,Kříž,pavel.kriz@datacorp.cz,Finance,Finanční analytik,2018-08-29,69500,4,SŠ,Brno,32,M,Plný,+420 668 540 582
+658,Tereza,Němcová,tereza.nemcova@datacorp.cz,Finance,Finanční analytik,2019-07-30,64000,5,VŠ Mgr.,Brno,27,Ž,Plný,+420 730 255 615
+659,Veronika,Malá,veronika.mala@datacorp.cz,Finance,Finanční analytik,2018-06-04,71000,4,VŠ Bc.,Liberec,34,Ž,Plný,+420 797 832 427
+660,Filip,Hájek,filip.hajek@datacorp.cz,Finance,Finanční analytik,2020-02-22,68000,4,VŠ Mgr.,Praha,28,M,Plný,+420 783 251 791
+661,Eva,Blažková,eva.blazkova@datacorp.cz,Finance,Finanční analytik,2021-02-27,64500,2,VŠ Bc.,Zlín,31,Ž,Plný,+420 617 197 114
+662,Dominik,Holub,dominik.holub@datacorp.cz,Finance,Finanční analytik,2020-11-18,61500,3,SŠ,Liberec,32,M,Plný,+420 637 985 579
+663,Filip,Čech,filip.cech@datacorp.cz,Finance,Controller,2017-12-29,83500,4,VŠ Mgr.,Olomouc,37,M,Plný,+420 755 561 142
+664,Dominik,Malý,dominik.maly@datacorp.cz,Finance,Finanční analytik,2021-03-26,62500,3,VŠ Mgr.,Praha,36,M,Plný,+420 646 721 794
+665,Nikola,Kučerová,nikola.kucerova@datacorp.cz,Finance,Controller,2024-08-19,71500,4,VŠ Mgr.,Plzeň,32,Ž,Plný,+420 621 216 281
+666,David,Kolář,david.kolar@datacorp.cz,Finance,Finanční analytik,2021-08-23,63500,3,VŠ Mgr.,Praha,25,M,Plný,+420 622 384 895
+667,Marek,Pokorný,marek.pokorny@datacorp.cz,Finance,Finanční analytik,2018-03-23,66000,3,VŠ PhD.,Pardubice,36,M,Částečný,+420 614 363 211
+668,Anna,Dvořáková,anna.dvorakova@datacorp.cz,Finance,Finanční analytik,2021-01-22,79500,4,VŠ Mgr.,Praha,28,Ž,Plný,+420 789 293 423
+669,Nikola,Štěpánková,nikola.stepankova@datacorp.cz,Finance,Controller,2021-02-19,48000,4,SŠ,Praha,28,Ž,Plný,+420 681 599 967
+670,Marie,Zemanová,marie.zemanova@datacorp.cz,Finance,Auditor,2023-11-18,46000,3,VŠ Mgr.,Praha,24,Ž,Částečný,+420 723 697 369
+671,Adam,Jelínek,adam.jelinek@datacorp.cz,Finance,Účetní,2019-01-28,68500,4,VŠ PhD.,Zlín,26,M,Plný,+420 627 158 457
+672,Lukáš,Jelínek,lukas.jelinek@datacorp.cz,Finance,Auditor,2023-10-24,75500,3,VŠ Mgr.,Plzeň,30,M,Plný,+420 736 953 860
+673,Petra,Vaňková,petra.vankova@datacorp.cz,Finance,Auditor,2018-10-06,66500,4,VŠ Mgr.,Praha,34,Ž,Plný,+420 699 557 613
+674,Pavel,Zeman,pavel.zeman@datacorp.cz,Finance,Controller,2018-08-27,78500,3,VŠ Mgr.,Praha,33,M,Částečný,+420 606 148 394
+675,Pavel,Čermák,pavel.cermak@datacorp.cz,Finance,Finanční analytik,2021-01-09,63500,4,VŠ Mgr.,Plzeň,32,M,Plný,+420 695 292 286
+676,Josef,Štěpánek,josef.stepanek@datacorp.cz,Finance,Auditor,2020-03-02,79500,3,VŠ Mgr.,Ostrava,29,M,Plný,+420 629 819 794
+677,Martina,Kolářová,martina.kolarova@datacorp.cz,Finance,Finanční analytik,2020-09-07,65500,4,VŠ Bc.,Ostrava,22,Ž,Plný,+420 653 338 604
+678,Karel,Fiala,karel.fiala@datacorp.cz,Finance,Auditor,2024-08-12,66000,3,VŠ Mgr.,České Budějovice,23,M,Plný,+420 699 697 436
+679,Jana,Svobodová,jana.svobodova@datacorp.cz,Finance,Finanční analytik,2022-02-20,41500,3,VŠ Bc.,Brno,31,Ž,Plný,+420 642 200 315
+680,Veronika,Svobodová,veronika.svobodova@datacorp.cz,Finance,Controller,2019-01-01,76500,3,VŠ Mgr.,Liberec,32,Ž,Plný,+420 674 106 491
+681,Pavel,Jelínek,pavel.jelinek@datacorp.cz,Finance,Auditor,2017-12-11,72000,5,SŠ,České Budějovice,32,M,Plný,+420 685 276 610
+683,Petra,Novotná,petra.novotna@datacorp.cz,Finance,Auditor,2021-05-16,76500,4,VŠ Mgr.,České Budějovice,34,Ž,Plný,+420 691 691 919
+684,Marek,Doležal,marek.dolezal@datacorp.cz,Finance,Účetní,2021-11-16,59000,3,VŠ Mgr.,Pardubice,32,M,Plný,+420 784 482 141
+685,Nikola,Fialová,nikola.fialova@datacorp.cz,Finance,Účetní,2025-04-26,64000,3,VŠ Mgr.,Ostrava,29,Ž,Plný,+420 726 853 754
+686,Kateřina,Štěpánková,katerina.stepankova@datacorp.cz,Finance,Finanční analytik,2019-01-16,75500,4,SŠ,Olomouc,36,Ž,Plný,+420 689 280 484
+687,Simona,Fialová,simona.fialova@datacorp.cz,Finance,Controller,2020-09-07,67500,3,VŠ Mgr.,Ostrava,30,Ž,Plný,+420 738 713 586
+688,Marie,Čermáková,marie.cermakova@datacorp.cz,Finance,Auditor,2020-12-07,57500,5,VŠ Mgr.,Pardubice,29,Ž,Plný,+420 618 344 970
+689,Martin,Konečný,martin.konecny@datacorp.cz,Finance,Finanční analytik,2022-04-11,81000,4,VŠ Mgr.,Zlín,35,M,Plný,+420 606 875 629
+690,Daniel,Horák,daniel.horak@datacorp.cz,Finance,Controller,2020-04-21,80500,2,VŠ Mgr.,Olomouc,25,M,Plný,+420 786 385 489
+691,David,Zeman,david.zeman@datacorp.cz,Finance,Účetní,2021-09-27,62000,3,VŠ PhD.,Brno,31,M,Plný,+420 618 400 643
+692,Kateřina,Němcová,katerina.nemcova@datacorp.cz,Finance,Finanční analytik,2024-09-07,63500,4,VŠ Mgr.,Liberec,22,Ž,Plný,+420 600 348 207
+693,Monika,Králová,monika.kralova@datacorp.cz,Finance,Účetní,2019-02-13,85500,4,VŠ PhD.,Hradec Králové,30,Ž,Plný,+420 758 362 318
+694,Jan,Vaněk,jan.vanek@datacorp.cz,Finance,Auditor,2018-11-07,52000,4,VŠ Bc.,Praha,31,M,Plný,+420 737 724 872
+695,Jana,Štěpánková,jana.stepankova@datacorp.cz,Finance,Finanční analytik,2024-08-24,58500,4,VŠ Bc.,Praha,24,Ž,Částečný,+420 794 213 346
+696,Anna,Marková,anna.markova@datacorp.cz,Finance,Finanční analytik,2019-06-09,82500,4,VŠ Mgr.,Olomouc,36,Ž,Plný,+420 691 919 481
+697,Anna,Malá,anna.mala@datacorp.cz,Finance,Finanční analytik,2021-09-27,55000,3,SŠ,Brno,37,Ž,Plný,+420 671 816 950
+698,Adam,Čech,adam.cech@datacorp.cz,Finance,Účetní,2023-03-27,56000,2,VŠ PhD.,Praha,34,M,Plný,+420 686 886 928
+699,Radek,Vaněk,radek.vanek@datacorp.cz,Finance,Auditor,2017-12-11,72500,3,VŠ Mgr.,Zlín,37,M,Plný,+420 715 171 274
+700,Markéta,Králová,marketa.kralova@datacorp.cz,Finance,Finanční analytik,2020-12-21,50500,4,VŠ Mgr.,Liberec,33,Ž,Plný,+420 627 293 796
+701,Tereza,Dvořáková,tereza.dvorakova@datacorp.cz,Finance,Controller,2022-04-19,71000,3,VŠ Mgr.,Pardubice,30,Ž,Částečný,+420 657 972 689
+702,David,Malý,david.maly@datacorp.cz,Finance,Finanční analytik,2022-10-29,69500,4,VŠ Mgr.,Zlín,27,M,Plný,+420 657 333 353
+703,Marek,Beneš,marek.benes@datacorp.cz,Finance,Účetní,2018-10-21,74000,4,VŠ PhD.,Praha,33,M,Plný,+420 630 742 112
+704,Marek,Malý,marek.maly@datacorp.cz,Finance,Finanční analytik,2023-02-25,69000,3,VŠ PhD.,Pardubice,37,M,DPP,+420 720 791 779
+705,Jakub,Navrátil,jakub.navratil@datacorp.cz,Finance,Auditor,2022-01-27,51500,4,SŠ,Praha,26,M,Plný,+420 667 544 531
+706,Hana,Čechová,hana.cechova@datacorp.cz,Finance,Finanční analytik,2023-06-10,71500,3,VŠ Mgr.,Plzeň,30,Ž,Plný,+420 680 856 233
+707,Vojtěch,Sedláček,vojtech.sedlacek@datacorp.cz,Finance,Controller,2019-12-27,73000,4,SŠ,Praha,38,M,Plný,+420 741 619 663
+708,Veronika,Němcová,veronika.nemcova@datacorp.cz,Finance,Auditor,2018-08-14,86500,4,VŠ Bc.,České Budějovice,32,Ž,DPP,+420 773 632 114
+709,Veronika,Procházková,veronika.prochazkova@datacorp.cz,Finance,Controller,2021-05-16,65000,4,VŠ PhD.,Praha,31,Ž,Plný,+420 767 121 469
+710,Dominik,Růžička,dominik.ruzicka@datacorp.cz,Finance,Auditor,2019-08-31,64500,3,VŠ Mgr.,Brno,37,M,Plný,+420 790 917 777
+711,Pavel,Novák,pavel.novak@datacorp.cz,Finance,Controller,2022-12-20,65000,3,VŠ Mgr.,Praha,28,M,Plný,+420 708 496 945
+712,Jana,Černá,jana.cerna@datacorp.cz,Finance,Finanční analytik,2022-01-17,76000,3,VŠ PhD.,Ostrava,30,Ž,DPP,+420 619 539 777
+713,Jana,Fialová,jana.fialova@datacorp.cz,Finance,Auditor,2023-11-15,69000,3,VŠ Mgr.,Plzeň,26,Ž,Částečný,+420 763 290 255
+714,Jakub,Dvořák,jakub.dvorak@datacorp.cz,Finance,Finanční analytik,2023-07-25,64500,4,VŠ Mgr.,Praha,32,M,Plný,+420 669 506 302
+715,Nikola,Vaňková,nikola.vankova@datacorp.cz,Finance,Účetní,2023-03-06,64000,2,VŠ Mgr.,Praha,22,Ž,Plný,+420 720 601 366
+716,Nikola,Čechová,nikola.cechova@datacorp.cz,Finance,Finanční analytik,2016-05-20,61500,4,VŠ PhD.,České Budějovice,35,Ž,Plný,+420 788 620 936
+717,Markéta,Holubová,marketa.holubova@datacorp.cz,Finance,Auditor,2024-03-11,59500,3,VŠ Mgr.,Pardubice,31,Ž,Plný,+420 780 270 841
+718,Eva,Jelínková,eva.jelinkova@datacorp.cz,Finance,Finanční analytik,2019-06-07,75000,4,VŠ Mgr.,Praha,33,Ž,Plný,+420 750 644 676
+719,Veronika,Štěpánková,veronika.stepankova@datacorp.cz,Finance,Účetní,2021-09-16,76000,3,VŠ Mgr.,Praha,24,Ž,DPP,+420 724 326 884
+720,Klára,Horáková,klara.horakova@datacorp.cz,Finance,Finanční analytik,2022-10-15,81000,3,VŠ Mgr.,Olomouc,28,Ž,Plný,+420 710 978 909
+721,Tereza,Kopecká,tereza.kopecka@datacorp.cz,Finance,Auditor,2022-02-21,68000,3,VŠ Mgr.,Praha,33,Ž,Plný,+420 714 353 452
+722,Kristýna,Urbanová,kristyna.urbanova@datacorp.cz,Finance,Finanční analytik,2021-02-06,95000,3,VŠ Mgr.,Hradec Králové,29,Ž,Plný,+420 796 865 141
+723,Tomáš,Kopecký,tomas.kopecky@datacorp.cz,Finance,Auditor,2020-04-02,72000,2,VŠ Mgr.,Hradec Králové,37,M,Plný,+420 651 915 370
+724,Markéta,Hájková,marketa.hajkova@datacorp.cz,Finance,Auditor,2024-04-23,77500,4,VŠ PhD.,Liberec,28,Ž,Plný,+420 615 156 755
+725,Dominik,Černý,dominik.cerny@datacorp.cz,Finance,Finanční analytik,2021-11-27,79500,4,VŠ Mgr.,Brno,26,M,Plný,+420 627 240 246
+726,Ondřej,Kolář,ondrej.kolar@datacorp.cz,Finance,Auditor,2019-03-28,75000,5,VŠ PhD.,Pardubice,26,M,Plný,+420 714 701 775
+727,Marie,Svobodová,marie.svobodova@datacorp.cz,Finance,Auditor,2025-04-26,74000,4,VŠ PhD.,Ostrava,23,Ž,Plný,+420 678 566 455
+728,Alena,Vaňková,alena.vankova@datacorp.cz,Finance,Controller,2018-05-25,61500,3,VŠ Bc.,Brno,40,Ž,Plný,+420 750 844 477
+729,Radek,Doležal,radek.dolezal@datacorp.cz,Finance,Auditor,2019-08-27,59000,4,VŠ Mgr.,Brno,38,M,Plný,+420 794 906 340
+730,Alena,Jelínková,alena.jelinkova@datacorp.cz,Finance,Účetní,2015-12-18,67500,4,VŠ Mgr.,Plzeň,33,Ž,Plný,+420 726 250 230
+731,Ondřej,Novotný,ondrej.novotny@datacorp.cz,Finance,Auditor,2015-03-04,61000,4,SŠ,Olomouc,42,M,Plný,+420 787 102 197
+732,Lukáš,Procházka,lukas.prochazka@datacorp.cz,Finance,Finanční analytik,2023-05-03,70000,4,VŠ Mgr.,Liberec,34,M,DPP,+420 674 843 905
+733,Petra,Svobodová,petra.svobodova@datacorp.cz,Finance,Auditor,2022-08-01,57000,2,VŠ Mgr.,Ostrava,32,Ž,Plný,+420 605 589 938
+734,Petr,Beneš,petr.benes@datacorp.cz,Finance,Auditor,2023-12-19,60000,3,VŠ Mgr.,Praha,33,M,Plný,+420 727 732 626
+735,Kateřina,Navrátilová,katerina.navratilova@datacorp.cz,Finance,Finanční analytik,2023-01-07,75500,4,VŠ Mgr.,Olomouc,32,Ž,Plný,+420 710 848 289
+736,Adam,Urban,adam.urban@datacorp.cz,Finance,Účetní,2020-01-13,67000,5,VŠ PhD.,Plzeň,34,M,Plný,+420 705 201 707
+737,Martina,Malá,martina.mala@datacorp.cz,Finance,Auditor,2019-11-28,68500,4,VŠ PhD.,Zlín,31,Ž,Plný,+420 661 781 590
+738,Petra,Marková,petra.markova@datacorp.cz,Finance,Finanční analytik,2022-04-18,72500,2,VŠ Mgr.,Praha,27,Ž,Plný,+420 767 449 480
+739,Tomáš,Sedláček,tomas.sedlacek@datacorp.cz,Finance,Finanční analytik,2024-02-23,55500,2,VŠ Bc.,Liberec,29,M,Plný,+420 717 609 172
+740,Hana,Pospíšilová,hana.pospisilova@datacorp.cz,Finance,Finanční analytik,2019-10-19,72000,3,VŠ Mgr.,Pardubice,30,Ž,Plný,+420 759 654 252
+741,Adam,Kopecký,adam.kopecky@datacorp.cz,Finance,Controller,2022-07-23,48000,3,VŠ Bc.,Olomouc,34,M,Plný,+420 628 550 422
+742,Barbora,Pokorná,barbora.pokorna@datacorp.cz,Finance,Účetní,2023-07-01,75000,4,VŠ PhD.,Praha,30,Ž,Plný,+420 768 688 970
+743,Petra,Sedláčková,petra.sedlackova@datacorp.cz,Finance,Finanční analytik,2021-10-05,71500,4,VŠ PhD.,Pardubice,32,Ž,Plný,+420 771 786 685
+744,Klára,Hájková,klara.hajkova@datacorp.cz,Finance,Auditor,2020-06-16,58000,4,VŠ Mgr.,Pardubice,33,Ž,Plný,+420 772 214 490
+745,David,Dvořák,david.dvorak@datacorp.cz,Finance,Controller,2022-10-22,61000,3,SŠ,Praha,25,M,Plný,+420 663 956 368
+746,Dominik,Čermák,dominik.cermak@datacorp.cz,Finance,Controller,2022-05-27,67000,3,VŠ Mgr.,Praha,30,M,Plný,+420 677 718 570
+747,Petra,Králová,petra.kralova@datacorp.cz,Finance,Controller,2021-08-09,65500,5,SŠ,Hradec Králové,33,Ž,Plný,+420 611 352 826
+748,Alena,Kopecká,alena.kopecka@datacorp.cz,Finance,Účetní,2020-02-09,68500,4,VŠ Mgr.,Brno,33,Ž,Plný,+420 759 406 286
+749,Dominik,Jelínek,dominik.jelinek@datacorp.cz,Finance,Finanční analytik,2021-04-21,75500,3,VŠ Mgr.,Praha,37,M,Plný,+420 771 799 814
+750,Martin,Jelínek,martin.jelinek@datacorp.cz,Finance,Controller,2019-10-16,68500,3,VŠ Bc.,Brno,33,M,Plný,+420 657 801 550
+751,Vojtěch,Hájek,vojtech.hajek@datacorp.cz,Finance,Finanční analytik,2019-01-25,69000,4,VŠ Bc.,Liberec,30,M,Plný,+420 747 970 541
+752,Martina,Svobodová,martina.svobodova@datacorp.cz,Finance,Auditor,2019-07-28,69000,4,VŠ Mgr.,Pardubice,30,Ž,Částečný,+420 639 116 765
+753,Alena,Dvořáková,alena.dvorakova@datacorp.cz,Finance,Auditor,2017-08-28,76000,3,VŠ Mgr.,Zlín,39,Ž,Plný,+420 705 553 874
+754,Pavel,Holub,pavel.holub@datacorp.cz,Finance,Controller,2019-01-12,56500,4,VŠ Mgr.,Hradec Králové,26,M,Plný,+420 629 886 763
+755,Nikola,Konečná,nikola.konecna@datacorp.cz,Finance,Controller,2017-07-01,86000,4,VŠ PhD.,Pardubice,26,Ž,Plný,+420 765 724 277
+756,Josef,Vaněk,josef.vanek@datacorp.cz,Finance,Auditor,2021-12-21,69000,4,VŠ PhD.,Praha,31,M,Plný,+420 724 509 625
+757,Petra,Fialová,petra.fialova@datacorp.cz,Finance,Auditor,2020-11-12,84000,3,VŠ Mgr.,Liberec,39,Ž,Plný,+420 716 139 446
+759,Daniel,Jelínek,daniel.jelinek@datacorp.cz,Finance,Controller,2018-08-09,67000,5,VŠ Bc.,Liberec,32,M,Plný,+420 724 203 960
+760,Daniel,Hájek,daniel.hajek@datacorp.cz,Finance,Controller,2022-06-20,80000,3,VŠ PhD.,Olomouc,26,M,Plný,+420 668 868 372
+761,David,Jelínek,david.jelinek@datacorp.cz,Finance,Účetní,2018-07-15,74500,5,VŠ Mgr.,Ostrava,33,M,Plný,+420 748 453 109
+762,Monika,Černá,monika.cerna@datacorp.cz,Finance,Finanční analytik,2019-03-22,73500,3,VŠ Mgr.,Praha,36,Ž,Plný,+420 649 111 680
+763,Barbora,Čechová,barbora.cechova@datacorp.cz,Finance,Účetní,2018-02-17,88500,4,VŠ Mgr.,Plzeň,37,Ž,Plný,+420 663 345 441
+764,David,Pospíšil,david.pospisil@datacorp.cz,Finance,Auditor,2023-02-25,53500,3,VŠ Mgr.,Praha,30,M,Plný,+420 613 645 986
+765,Marie,Černá,marie.cerna@datacorp.cz,Podpora,Help Desk Specialist,2022-11-10,55000,4,VŠ Mgr.,Liberec,31,Ž,Plný,+420 661 878 504
+766,Tereza,Jelínková,tereza.jelinkova@datacorp.cz,Podpora,Technická podpora,2023-04-29,52500,3,VŠ Mgr.,Olomouc,29,Ž,Plný,+420 607 624 540
+767,Lenka,Pospíšilová,lenka.pospisilova@datacorp.cz,Podpora,Support Team Lead,2022-12-17,37500,4,SŠ,Brno,32,Ž,Plný,+420 627 478 624
+768,Anna,Zemanová,anna.zemanova@datacorp.cz,Podpora,Zákaznická podpora,2024-11-12,34500,2,SŠ,Brno,23,Ž,Plný,+420 600 432 275
+769,Eva,Fialová,eva.fialova@datacorp.cz,Podpora,Support Team Lead,2024-01-14,27000,3,VŠ Bc.,Plzeň,32,Ž,Částečný,+420 774 991 707
+770,Marie,Čechová,marie.cechova@datacorp.cz,Podpora,Help Desk Specialist,2021-11-13,52500,3,SŠ,Praha,29,Ž,Plný,+420 654 777 401
+771,Josef,Kolář,josef.kolar@datacorp.cz,Podpora,Support Team Lead,2023-04-27,48500,4,SŠ,Brno,26,M,Plný,+420 755 870 102
+772,Josef,Fiala,josef.fiala@datacorp.cz,Podpora,Support Team Lead,2024-03-10,54000,3,VŠ Mgr.,Ostrava,26,M,Plný,+420 633 296 273
+773,Jan,Dvořák,jan.dvorak@datacorp.cz,Podpora,Technická podpora,2023-10-09,35000,4,SŠ,Zlín,32,M,Plný,+420 724 171 956
+774,Tomáš,Sedláček,tomas.sedlacek@datacorp.cz,Podpora,Support Team Lead,2023-05-22,32500,4,SŠ,Brno,25,M,Plný,+420 773 367 636
+775,Veronika,Čechová,veronika.cechova@datacorp.cz,Podpora,Help Desk Specialist,2023-05-22,29000,4,SŠ,Brno,35,Ž,Plný,+420 760 896 310
+776,Simona,Sedláčková,simona.sedlackova@datacorp.cz,Podpora,Support Team Lead,2022-09-18,35000,3,VŠ Bc.,Brno,22,Ž,Plný,+420 681 955 352
+777,Kristýna,Veselá,kristyna.vesela@datacorp.cz,Podpora,Technická podpora,2023-04-09,42500,3,SŠ,Pardubice,28,Ž,Plný,+420 676 992 411
+778,Vojtěch,Doležal,vojtech.dolezal@datacorp.cz,Podpora,Technická podpora,2024-05-14,41500,3,VŠ Mgr.,Praha,36,M,Plný,+420 680 777 764
+779,Vojtěch,Konečný,vojtech.konecny@datacorp.cz,Podpora,Support Team Lead,2022-05-19,43500,3,SŠ,Plzeň,35,M,Plný,+420 714 611 864
+780,Marie,Sedláčková,marie.sedlackova@datacorp.cz,Podpora,Support Team Lead,2021-12-03,48000,4,VŠ Mgr.,Pardubice,27,Ž,Plný,+420 719 116 637
+781,Jakub,Doležal,jakub.dolezal@datacorp.cz,Podpora,Support Team Lead,2024-01-02,35500,3,SŠ,Liberec,22,M,Plný,+420 720 265 367
+782,Dominik,Čech,dominik.cech@datacorp.cz,Podpora,Help Desk Specialist,2024-08-27,30500,2,SŠ,Praha,22,M,Plný,+420 613 458 181
+783,Lenka,Jelínková,lenka.jelinkova@datacorp.cz,Podpora,Technická podpora,2022-10-26,45500,4,VŠ Mgr.,Brno,32,Ž,Částečný,+420 609 721 642
+784,Martin,Procházka,martin.prochazka@datacorp.cz,Podpora,Support Team Lead,2022-04-17,25500,3,SŠ,Praha,29,M,Plný,+420 719 579 132
+785,Petr,Čermák,petr.cermak@datacorp.cz,Podpora,Support Team Lead,2023-06-12,31500,3,SŠ,Brno,38,M,Plný,+420 774 257 176
+786,Martin,Kučera,martin.kucera@datacorp.cz,Podpora,Technická podpora,2022-08-10,37500,4,SŠ,Pardubice,32,M,Plný,+420 688 865 431
+787,David,Zeman,david.zeman@datacorp.cz,Podpora,Zákaznická podpora,2024-01-08,40000,3,SŠ,Pardubice,26,M,Plný,+420 694 469 699
+788,Markéta,Novotná,marketa.novotna@datacorp.cz,Podpora,Help Desk Specialist,2022-03-08,51000,2,VŠ Mgr.,Pardubice,27,Ž,Plný,+420 722 113 227
+789,Daniel,Kříž,daniel.kriz@datacorp.cz,Podpora,Support Team Lead,2022-02-09,34000,4,SŠ,Praha,27,M,Plný,+420 660 162 337
+790,Josef,Beneš,josef.benes@datacorp.cz,Podpora,Support Team Lead,2022-08-18,42000,4,SŠ,Praha,35,M,Plný,+420 700 258 972
+791,Pavel,Hájek,pavel.hajek@datacorp.cz,Podpora,Technická podpora,2022-01-05,29000,2,SŠ,Brno,31,M,Plný,+420 696 601 683
+792,Marie,Holubová,marie.holubova@datacorp.cz,Podpora,Support Team Lead,2022-03-16,47000,4,VŠ Bc.,Zlín,28,Ž,Plný,+420 765 217 368
+793,Eva,Svobodová,eva.svobodova@datacorp.cz,Podpora,Help Desk Specialist,2023-04-15,36000,4,VŠ Bc.,Liberec,27,Ž,Plný,+420 699 637 978
+794,Markéta,Malá,marketa.mala@datacorp.cz,Podpora,Technická podpora,2023-02-13,48000,1,VŠ Mgr.,Praha,29,Ž,Částečný,+420 685 209 852
+795,Tomáš,Štěpánek,tomas.stepanek@datacorp.cz,Podpora,Support Team Lead,2023-10-08,42500,4,SŠ,Praha,22,M,Plný,+420 763 206 883
+796,Adam,Kolář,adam.kolar@datacorp.cz,Podpora,Zákaznická podpora,2022-08-26,52000,5,VŠ Mgr.,Praha,33,M,Plný,+420 730 660 739
+797,Adam,Pokorný,adam.pokorny@datacorp.cz,Podpora,Zákaznická podpora,2021-07-15,49500,3,VŠ Bc.,České Budějovice,32,M,Plný,+420 785 120 667
+798,Eva,Fialová,eva.fialova@datacorp.cz,Podpora,Technická podpora,2023-09-12,32000,3,VŠ Bc.,Brno,28,Ž,Plný,+420 712 365 139
+799,Tereza,Černá,tereza.cerna@datacorp.cz,Podpora,Zákaznická podpora,2024-07-31,28000,3,SŠ,Brno,33,Ž,DPP,+420 732 453 525
+800,Petr,Novák,petr.novak@datacorp.cz,Podpora,Technická podpora,2022-08-14,35000,4,VŠ Mgr.,Ostrava,34,M,Částečný,+420 766 597 925
+801,Martin,Blažek,martin.blazek@datacorp.cz,Podpora,Zákaznická podpora,2021-06-27,45500,3,SŠ,Brno,25,M,Plný,+420 613 389 710
+802,Marek,Kučera,marek.kucera@datacorp.cz,Podpora,Support Team Lead,2023-06-11,42500,4,VŠ Mgr.,Liberec,34,M,Plný,+420 672 906 286
+803,Jana,Dvořáková,jana.dvorakova@datacorp.cz,Podpora,Zákaznická podpora,2023-02-27,34500,3,VŠ Bc.,Plzeň,23,Ž,Plný,+420 790 300 175
+804,Jakub,Kříž,jakub.kriz@datacorp.cz,Podpora,Help Desk Specialist,2023-07-31,47000,4,VŠ PhD.,Praha,26,M,Plný,+420 743 946 756
+805,Monika,Králová,monika.kralova@datacorp.cz,Podpora,Zákaznická podpora,2022-02-13,50500,2,VŠ PhD.,Ostrava,29,Ž,Plný,+420 629 239 227
+806,Vojtěch,Kříž,vojtech.kriz@datacorp.cz,Podpora,Technická podpora,2025-04-16,43000,4,VŠ Mgr.,Olomouc,30,M,Plný,+420 651 454 353
+807,Jan,Dvořák,jan.dvorak@datacorp.cz,Podpora,Zákaznická podpora,2022-11-08,40500,2,VŠ Bc.,Ostrava,32,M,Plný,+420 750 384 947
+808,Anna,Svobodová,anna.svobodova@datacorp.cz,Podpora,Technická podpora,2024-11-01,44000,4,SŠ,Praha,23,Ž,Plný,+420 690 295 201
+809,Marie,Pospíšilová,marie.pospisilova@datacorp.cz,Podpora,Zákaznická podpora,2023-06-29,33500,5,VŠ Bc.,Praha,33,Ž,Plný,+420 641 466 141
+810,Lukáš,Novák,lukas.novak@datacorp.cz,Podpora,Support Team Lead,2024-10-07,27500,1,SŠ,České Budějovice,31,M,Plný,+420 660 437 709
+811,Kateřina,Procházková,katerina.prochazkova@datacorp.cz,Podpora,Help Desk Specialist,2023-07-03,43000,3,VŠ Bc.,Praha,22,Ž,Plný,+420 724 189 651
+812,Ondřej,Veselý,ondrej.vesely@datacorp.cz,Podpora,Technická podpora,2024-08-02,36500,3,VŠ Bc.,Liberec,23,M,Plný,+420 692 944 568
+813,Markéta,Benešová,marketa.benesova@datacorp.cz,Podpora,Help Desk Specialist,2023-03-19,35000,2,SŠ,Praha,30,Ž,DPP,+420 749 502 376
+814,Marie,Blažková,marie.blazkova@datacorp.cz,Podpora,Technická podpora,2023-05-31,30000,4,SŠ,České Budějovice,32,Ž,Plný,+420 676 488 198
+815,Klára,Urbanová,klara.urbanova@datacorp.cz,Podpora,Zákaznická podpora,2022-03-26,34000,2,VŠ Mgr.,Brno,41,Ž,Plný,+420 676 144 981
+816,Matěj,Novák,matej.novak@datacorp.cz,Podpora,Technická podpora,2023-10-28,34500,4,SŠ,České Budějovice,28,M,Plný,+420 781 320 374
+817,Tereza,Navrátilová,tereza.navratilova@datacorp.cz,Podpora,Technická podpora,2022-11-23,42000,3,SŠ,Brno,26,Ž,Plný,+420 695 523 954
+818,Filip,Procházka,filip.prochazka@datacorp.cz,Podpora,Technická podpora,2022-01-18,55500,3,VŠ Mgr.,Brno,26,M,Částečný,+420 707 343 452
+819,Martina,Štěpánková,martina.stepankova@datacorp.cz,Podpora,Support Team Lead,2022-12-31,41500,4,VŠ Mgr.,Hradec Králové,26,Ž,Částečný,+420 660 885 325
+820,Petr,Holub,petr.holub@datacorp.cz,Podpora,Technická podpora,2022-07-12,44500,3,SŠ,Brno,35,M,Částečný,+420 662 602 954
+821,Ondřej,Růžička,ondrej.ruzicka@datacorp.cz,Podpora,Technická podpora,2022-08-06,44500,3,SŠ,Brno,22,M,Plný,+420 787 464 194
+822,Dominik,Novotný,dominik.novotny@datacorp.cz,Podpora,Zákaznická podpora,2023-09-09,35500,4,SŠ,Plzeň,27,M,Plný,+420 618 882 431
+823,Alena,Sedláčková,alena.sedlackova@datacorp.cz,Podpora,Technická podpora,2023-03-27,38500,3,VŠ Mgr.,Praha,33,Ž,Plný,+420 621 328 920
+824,Veronika,Veselá,veronika.vesela@datacorp.cz,Podpora,Technická podpora,2023-04-05,40500,3,VŠ Mgr.,Ostrava,25,Ž,Plný,+420 627 974 522
+825,Michal,Fiala,michal.fiala@datacorp.cz,Podpora,Zákaznická podpora,2022-06-27,25000,3,VŠ Bc.,Liberec,26,M,Plný,+420 632 845 478
+826,Ondřej,Novák,ondrej.novak@datacorp.cz,Podpora,Support Team Lead,2023-01-04,41500,4,SŠ,České Budějovice,27,M,Plný,+420 726 100 459
+827,Karel,Čermák,karel.cermak@datacorp.cz,Podpora,Zákaznická podpora,2023-08-06,32500,2,VŠ Bc.,Olomouc,27,M,Plný,+420 756 984 158
+828,Daniel,Blažek,daniel.blazek@datacorp.cz,Podpora,Zákaznická podpora,2023-11-02,38500,3,VŠ Bc.,Praha,24,M,Plný,+420 652 466 834
+829,Jan,Urban,jan.urban@datacorp.cz,Podpora,Support Team Lead,2023-04-23,45000,4,VŠ Mgr.,Zlín,35,M,Plný,+420 629 402 216
+830,Martin,Pospíšil,martin.pospisil@datacorp.cz,Podpora,Help Desk Specialist,2022-04-15,39000,4,VŠ Bc.,Brno,33,M,Plný,+420 763 979 111
+831,Ondřej,Kopecký,ondrej.kopecky@datacorp.cz,Podpora,Zákaznická podpora,2023-10-14,50000,5,VŠ Mgr.,České Budějovice,32,M,Plný,+420 637 698 672
+832,Marek,Kolář,marek.kolar@datacorp.cz,Podpora,Help Desk Specialist,2023-12-18,37000,2,VŠ Bc.,Pardubice,22,M,Plný,+420 729 730 420
+833,Barbora,Čechová,barbora.cechova@datacorp.cz,Podpora,Help Desk Specialist,2024-07-01,31500,3,SŠ,Zlín,23,Ž,Plný,+420 695 130 406
+834,Veronika,Němcová,veronika.nemcova@datacorp.cz,Podpora,Support Team Lead,2023-11-11,41500,4,SŠ,Praha,28,Ž,Plný,+420 699 785 627
+835,Radek,Blažek,radek.blazek@datacorp.cz,Podpora,Zákaznická podpora,2023-12-03,41000,3,VŠ Mgr.,Zlín,26,M,Plný,+420 679 368 537
+836,Markéta,Procházková,marketa.prochazkova@datacorp.cz,Podpora,Support Team Lead,2023-04-19,40500,3,SŠ,Liberec,37,Ž,Plný,+420 760 185 579
+837,Veronika,Veselá,veronika.vesela@datacorp.cz,Podpora,Zákaznická podpora,2022-10-22,48500,3,VŠ PhD.,Praha,22,Ž,DPP,+420 640 312 995
+838,Jakub,Holub,jakub.holub@datacorp.cz,Podpora,Support Team Lead,2022-09-30,38500,4,SŠ,Pardubice,25,M,DPP,+420 672 748 592
+839,Daniel,Marek,daniel.marek@datacorp.cz,Podpora,Support Team Lead,2024-10-30,25500,3,SŠ,České Budějovice,36,M,Plný,+420 795 678 174
+840,Adam,Urban,adam.urban@datacorp.cz,Podpora,Technická podpora,2023-09-26,35000,3,VŠ Mgr.,České Budějovice,33,M,Plný,+420 615 791 979
+841,Martina,Čermáková,martina.cermakova@datacorp.cz,Podpora,Help Desk Specialist,2023-04-05,42000,3,SŠ,Plzeň,28,Ž,Plný,+420 692 750 178
+842,Petr,Horák,petr.horak@datacorp.cz,Podpora,Help Desk Specialist,2023-06-04,41000,3,SŠ,Brno,33,M,Plný,+420 672 927 223
+843,Matěj,Zeman,matej.zeman@datacorp.cz,Podpora,Zákaznická podpora,2023-07-20,31500,3,SŠ,Praha,28,M,Plný,+420 621 336 452
+844,Adam,Beneš,adam.benes@datacorp.cz,Podpora,Technická podpora,2023-12-28,41000,2,SŠ,Praha,30,M,Plný,+420 741 248 987
+845,David,Král,david.kral@datacorp.cz,Podpora,Help Desk Specialist,2023-01-23,36000,3,SŠ,Plzeň,22,M,Plný,+420 791 927 316
+846,Tomáš,Svoboda,tomas.svoboda@datacorp.cz,Podpora,Zákaznická podpora,2023-10-30,38000,3,SŠ,Ostrava,29,M,Plný,+420 734 291 226
+847,Lenka,Zemanová,lenka.zemanova@datacorp.cz,Podpora,Zákaznická podpora,2023-09-12,39500,3,SŠ,Liberec,26,Ž,Plný,+420 604 689 457
+848,Ondřej,Urban,ondrej.urban@datacorp.cz,Podpora,Zákaznická podpora,2023-12-04,48000,2,VŠ Mgr.,Praha,27,M,Plný,+420 612 563 842
+849,Lukáš,Kopecký,lukas.kopecky@datacorp.cz,Podpora,Zákaznická podpora,2022-09-05,52000,4,VŠ Mgr.,Pardubice,28,M,Plný,+420 789 543 288
+850,Lenka,Křížová,lenka.krizova@datacorp.cz,Podpora,Help Desk Specialist,2022-11-17,43500,4,VŠ Bc.,Zlín,30,Ž,Plný,+420 678 612 949
+851,Martin,Fiala,martin.fiala@datacorp.cz,Podpora,Help Desk Specialist,2020-09-28,49000,5,VŠ Mgr.,Praha,25,M,Plný,+420 628 109 723
+852,Petr,Holub,petr.holub@datacorp.cz,Podpora,Support Team Lead,2023-12-15,40500,2,VŠ Mgr.,Zlín,31,M,Plný,+420 644 342 954
+853,Karel,Blažek,karel.blazek@datacorp.cz,Podpora,Technická podpora,2024-12-08,34500,3,SŠ,Plzeň,35,M,Plný,+420 726 649 812
+854,David,Kučera,david.kucera@datacorp.cz,Podpora,Zákaznická podpora,2023-08-24,46000,3,VŠ Mgr.,Praha,31,M,Plný,+420 640 143 864
+855,Lukáš,Procházka,lukas.prochazka@datacorp.cz,Podpora,Support Team Lead,2024-05-25,32000,3,SŠ,Brno,30,M,Plný,+420 718 337 466
+856,Alena,Kopecká,alena.kopecka@datacorp.cz,Podpora,Support Team Lead,2022-02-10,42500,3,VŠ Mgr.,Plzeň,32,Ž,Plný,+420 706 600 198
+857,Jakub,Čermák,jakub.cermak@datacorp.cz,Podpora,Technická podpora,2022-09-30,37500,5,VŠ Bc.,Brno,27,M,Plný,+420 781 104 523
+858,Dominik,Beneš,dominik.benes@datacorp.cz,Podpora,Zákaznická podpora,2023-08-09,29500,4,SŠ,Pardubice,23,M,Plný,+420 709 863 518
+859,Eva,Procházková,eva.prochazkova@datacorp.cz,Podpora,Support Team Lead,2024-09-20,40000,3,SŠ,Brno,26,Ž,Plný,+420 684 779 629
+860,Radek,Král,radek.kral@datacorp.cz,Podpora,Support Team Lead,2024-05-17,46000,2,VŠ Mgr.,Praha,29,M,Plný,+420 652 645 861
+861,Eva,Vaňková,eva.vankova@datacorp.cz,Podpora,Zákaznická podpora,2022-05-07,36000,2,SŠ,Praha,25,Ž,Plný,+420 670 646 765
+862,Nikola,Kučerová,nikola.kucerova@datacorp.cz,Podpora,Help Desk Specialist,2022-04-25,48000,3,SŠ,Ostrava,31,Ž,Plný,+420 636 348 693
+863,Michal,Hájek,michal.hajek@datacorp.cz,Podpora,Help Desk Specialist,2023-10-28,49500,3,VŠ Mgr.,Hradec Králové,26,M,Plný,+420 647 961 923
+864,Simona,Křížová,simona.krizova@datacorp.cz,Podpora,Zákaznická podpora,2024-12-16,42500,4,VŠ Mgr.,Plzeň,23,Ž,Plný,+420 776 118 763
+865,Nikola,Králová,nikola.kralova@datacorp.cz,Podpora,Support Team Lead,2024-01-18,49000,4,VŠ Mgr.,České Budějovice,28,Ž,Plný,+420 673 590 511
+866,Klára,Jelínková,klara.jelinkova@datacorp.cz,Podpora,Zákaznická podpora,2023-11-19,43000,3,VŠ Mgr.,České Budějovice,26,Ž,Plný,+420 644 146 674
+867,Veronika,Hájková,veronika.hajkova@datacorp.cz,Podpora,Technická podpora,2024-09-02,30000,4,SŠ,Praha,26,Ž,Plný,+420 642 647 823
+868,Jana,Čechová,jana.cechova@datacorp.cz,Podpora,Zákaznická podpora,2022-09-30,37000,4,VŠ Bc.,Praha,32,Ž,Částečný,+420 644 551 721
+869,Jana,Králová,jana.kralova@datacorp.cz,Podpora,Help Desk Specialist,2023-04-27,38500,4,SŠ,Zlín,33,Ž,Plný,+420 639 124 802
+870,Jana,Dvořáková,jana.dvorakova@datacorp.cz,Podpora,Technická podpora,2021-10-28,32000,4,VŠ Bc.,Ostrava,28,Ž,Částečný,+420 609 477 546
+871,Marek,Fiala,marek.fiala@datacorp.cz,Podpora,Support Team Lead,2022-06-19,57500,3,VŠ Mgr.,Praha,32,M,Plný,+420 614 865 559
+872,Karel,Kříž,karel.kriz@datacorp.cz,Podpora,Zákaznická podpora,2022-10-19,40500,3,SŠ,Ostrava,30,M,Plný,+420 677 112 132
+873,Martina,Čermáková,martina.cermakova@datacorp.cz,Podpora,Zákaznická podpora,2025-04-26,44500,4,SŠ,Liberec,27,Ž,Plný,+420 633 550 196
+874,Martin,Pokorný,martin.pokorny@datacorp.cz,Podpora,Zákaznická podpora,2023-12-08,37500,3,SŠ,Brno,24,M,Částečný,+420 633 831 139
+875,Filip,Kolář,filip.kolar@datacorp.cz,Podpora,Technická podpora,2024-07-19,44500,4,VŠ Mgr.,Praha,22,M,Plný,+420 791 681 487
+876,Petra,Doležalová,petra.dolezalova@datacorp.cz,Podpora,Technická podpora,2025-04-26,33500,4,SŠ,České Budějovice,25,Ž,Plný,+420 700 702 907
+877,Radek,Kříž,radek.kriz@datacorp.cz,Podpora,Support Team Lead,2023-02-24,53000,2,VŠ Mgr.,Olomouc,26,M,Plný,+420 724 639 103
+878,Pavel,Štěpánek,pavel.stepanek@datacorp.cz,Podpora,Technická podpora,2022-09-10,38500,3,SŠ,Praha,24,M,Plný,+420 650 512 374
+879,David,Jelínek,david.jelinek@datacorp.cz,Podpora,Support Team Lead,2025-04-26,38000,4,SŠ,Praha,25,M,Plný,+420 630 974 757
+880,Hana,Veselá,hana.vesela@datacorp.cz,Podpora,Technická podpora,2023-06-25,51500,3,VŠ Mgr.,Praha,35,Ž,Plný,+420 658 109 345
+881,Filip,Čermák,filip.cermak@datacorp.cz,Podpora,Support Team Lead,2023-10-03,42000,4,VŠ Mgr.,Hradec Králové,22,M,Plný,+420 603 668 279
+882,Monika,Doležalová,monika.dolezalova@datacorp.cz,Podpora,Technická podpora,2024-03-28,35000,3,VŠ Mgr.,Praha,22,Ž,Plný,+420 689 317 513
+883,Vojtěch,Procházka,vojtech.prochazka@datacorp.cz,Podpora,Technická podpora,2024-08-20,28500,5,SŠ,Praha,27,M,Plný,+420 773 750 702
+884,Petr,Doležal,petr.dolezal@datacorp.cz,Podpora,Help Desk Specialist,2023-03-16,39000,3,VŠ Mgr.,Brno,22,M,Plný,+420 656 421 987
+885,Karel,Zeman,karel.zeman@datacorp.cz,Podpora,Help Desk Specialist,2024-08-24,57500,4,VŠ Mgr.,Brno,34,M,Plný,+420 698 226 447
+886,Marie,Nováková,marie.novakova@datacorp.cz,Podpora,Help Desk Specialist,2023-09-18,28000,4,VŠ Bc.,Plzeň,22,Ž,Plný,+420 640 731 373
+887,Marie,Hájková,marie.hajkova@datacorp.cz,Podpora,Zákaznická podpora,2024-07-25,27000,3,SŠ,Praha,30,Ž,Plný,+420 669 941 915
+888,Tomáš,Sedláček,tomas.sedlacek@datacorp.cz,Podpora,Technická podpora,2023-03-23,40500,4,SŠ,Praha,33,M,Plný,+420 799 100 216
+889,Martin,Procházka,martin.prochazka@datacorp.cz,Podpora,Technická podpora,2023-05-26,38000,2,VŠ Bc.,Praha,31,M,DPP,+420 707 947 413
+890,Dominik,Čermák,dominik.cermak@datacorp.cz,Podpora,Support Team Lead,2022-07-11,32000,2,VŠ Bc.,Olomouc,30,M,Plný,+420 727 968 965
+891,Michal,Novák,michal.novak@datacorp.cz,Podpora,Support Team Lead,2023-09-10,31000,3,SŠ,Praha,24,M,Plný,+420 752 762 525
+892,Karel,Dvořák,karel.dvorak@datacorp.cz,Podpora,Help Desk Specialist,2023-10-22,35000,3,VŠ Bc.,Praha,27,M,Plný,+420 792 368 195
+893,Vojtěch,Malý,vojtech.maly@datacorp.cz,Podpora,Support Team Lead,2022-11-10,30000,4,SŠ,Praha,28,M,Plný,+420 723 742 439
+894,Monika,Kolářová,monika.kolarova@datacorp.cz,Podpora,Zákaznická podpora,2023-01-26,50000,3,VŠ Mgr.,Praha,28,Ž,Plný,+420 699 808 193
+895,Monika,Kolářová,monika.kolarova@datacorp.cz,Podpora,Help Desk Specialist,2025-04-22,38500,3,SŠ,Praha,27,Ž,DPP,+420 752 793 479
+896,Radek,Kříž,radek.kriz@datacorp.cz,Podpora,Support Team Lead,2022-09-27,38000,2,VŠ Mgr.,Ostrava,27,M,Plný,+420 659 497 874
+897,Jana,Králová,jana.kralova@datacorp.cz,Podpora,Support Team Lead,2023-08-22,35000,4,VŠ Bc.,Praha,30,Ž,Plný,+420 609 214 439
+898,Lucie,Pokorná,lucie.pokorna@datacorp.cz,Podpora,Zákaznická podpora,2022-10-24,38500,5,SŠ,Ostrava,37,Ž,Plný,+420 696 388 601
+899,Petra,Vaňková,petra.vankova@datacorp.cz,Podpora,Technická podpora,2023-07-08,44000,2,SŠ,Praha,23,Ž,Plný,+420 641 928 788
+900,Jana,Jelínková,jana.jelinkova@datacorp.cz,Podpora,Help Desk Specialist,2024-05-24,52500,5,VŠ Mgr.,Praha,22,Ž,Plný,+420 668 171 811
+901,Nikola,Urbanová,nikola.urbanova@datacorp.cz,Podpora,Technická podpora,2023-10-10,38000,2,SŠ,Zlín,33,Ž,Částečný,+420 692 843 894
+902,Simona,Jelínková,simona.jelinkova@datacorp.cz,Podpora,Support Team Lead,2022-08-19,42000,3,SŠ,Brno,28,Ž,Plný,+420 617 526 341
+903,Vojtěch,Konečný,vojtech.konecny@datacorp.cz,Podpora,Support Team Lead,2023-10-21,36500,4,SŠ,Liberec,33,M,Plný,+420 668 318 583
+904,Jakub,Navrátil,jakub.navratil@datacorp.cz,Podpora,Zákaznická podpora,2024-03-14,35500,4,SŠ,Ostrava,22,M,Plný,+420 736 145 828
+905,Dominik,Urban,dominik.urban@datacorp.cz,Podpora,Technická podpora,2023-10-05,47000,2,VŠ Mgr.,Praha,32,M,Plný,+420 751 108 543
+906,Martina,Nováková,martina.novakova@datacorp.cz,Podpora,Support Team Lead,2024-09-12,49000,4,VŠ Mgr.,Brno,32,Ž,Plný,+420 760 653 696
+907,Pavel,Vaněk,pavel.vanek@datacorp.cz,Podpora,Help Desk Specialist,2025-04-03,32000,4,SŠ,Plzeň,25,M,Plný,+420 684 401 741
+908,David,Navrátil,david.navratil@datacorp.cz,Podpora,Zákaznická podpora,2024-06-07,35000,4,SŠ,Brno,31,M,Plný,+420 600 786 403
+909,Veronika,Blažková,veronika.blazkova@datacorp.cz,Podpora,Zákaznická podpora,2022-07-21,43000,3,SŠ,Zlín,29,Ž,Částečný,+420 779 384 474
+910,Hana,Dvořáková,hana.dvorakova@datacorp.cz,Podpora,Technická podpora,2023-01-01,46500,3,VŠ Mgr.,Praha,29,Ž,Plný,+420 648 811 481
+911,Jakub,Pokorný,jakub.pokorny@datacorp.cz,Podpora,Help Desk Specialist,2022-11-13,38500,3,VŠ Mgr.,Praha,37,M,Plný,+420 630 769 215
+912,Lenka,Kopecká,lenka.kopecka@datacorp.cz,Podpora,Technická podpora,2023-10-11,28500,3,SŠ,Brno,22,Ž,Částečný,+420 637 270 902
+913,Adam,Černý,adam.cerny@datacorp.cz,Podpora,Help Desk Specialist,2022-06-01,41000,4,VŠ Mgr.,České Budějovice,30,M,Plný,+420 654 624 881
+914,Kristýna,Veselá,kristyna.vesela@datacorp.cz,Podpora,Support Team Lead,2024-04-25,43500,5,VŠ Mgr.,Praha,30,Ž,Plný,+420 740 151 123
+915,Daniel,Doležal,daniel.dolezal@datacorp.cz,Podpora,Zákaznická podpora,2025-04-26,44500,2,VŠ Mgr.,Brno,34,M,Plný,+420 752 573 885
+916,Jakub,Pospíšil,jakub.pospisil@datacorp.cz,Podpora,Zákaznická podpora,2023-06-28,31500,3,SŠ,České Budějovice,22,M,Plný,+420 677 727 600
+917,Lenka,Kučerová,lenka.kucerova@datacorp.cz,Podpora,Help Desk Specialist,2023-10-11,38500,3,VŠ Mgr.,Zlín,40,Ž,Plný,+420 797 957 139
+918,Filip,Růžička,filip.ruzicka@datacorp.cz,Podpora,Support Team Lead,2022-10-25,43000,3,VŠ Mgr.,Pardubice,38,M,Plný,+420 748 589 712
+919,Lukáš,Navrátil,lukas.navratil@datacorp.cz,Podpora,Technická podpora,2024-06-05,40500,2,SŠ,Praha,26,M,Plný,+420 672 491 122
+920,Michal,Kolář,michal.kolar@datacorp.cz,Podpora,Zákaznická podpora,2023-07-03,28500,4,SŠ,České Budějovice,32,M,Plný,+420 713 951 569
+921,Lenka,Navrátilová,lenka.navratilova@datacorp.cz,Podpora,Technická podpora,2022-08-03,44500,3,VŠ Mgr.,Liberec,30,Ž,Plný,+420 786 273 573
+922,Marek,Doležal,marek.dolezal@datacorp.cz,Podpora,Support Team Lead,2022-08-26,45500,4,SŠ,Liberec,30,M,Plný,+420 780 620 934
+923,Barbora,Benešová,barbora.benesova@datacorp.cz,Podpora,Technická podpora,2025-02-27,33000,2,SŠ,Olomouc,30,Ž,Plný,+420 750 556 781
+924,Jana,Navrátilová,jana.navratilova@datacorp.cz,Podpora,Support Team Lead,2023-11-13,27000,3,VŠ Bc.,Brno,25,Ž,Plný,+420 745 694 269
+925,Veronika,Němcová,veronika.nemcova@datacorp.cz,Podpora,Technická podpora,2022-05-08,37000,4,SŠ,Liberec,31,Ž,Plný,+420 764 663 663
+926,David,Urban,david.urban@datacorp.cz,Podpora,Help Desk Specialist,2022-12-20,45500,3,VŠ Mgr.,Praha,26,M,Plný,+420 797 952 590
+927,Hana,Kopecká,hana.kopecka@datacorp.cz,Podpora,Help Desk Specialist,2021-08-27,49000,3,SŠ,Hradec Králové,27,Ž,Plný,+420 621 434 604
+928,Josef,Jelínek,josef.jelinek@datacorp.cz,Podpora,Zákaznická podpora,2023-11-25,51500,5,VŠ PhD.,České Budějovice,28,M,Částečný,+420 650 186 445
+929,Petra,Růžičková,petra.ruzickova@datacorp.cz,Podpora,Help Desk Specialist,2023-05-24,39500,4,VŠ Bc.,Brno,23,Ž,Plný,+420 698 535 502
+930,Martina,Malá,martina.mala@datacorp.cz,Podpora,Technická podpora,2022-03-19,46000,3,VŠ Mgr.,Praha,32,Ž,Plný,+420 625 354 994
+931,Karel,Horák,karel.horak@datacorp.cz,Podpora,Help Desk Specialist,2024-10-15,34000,5,SŠ,Brno,30,M,Plný,+420 760 694 639
+932,Klára,Čermáková,klara.cermakova@datacorp.cz,Podpora,Zákaznická podpora,2024-03-02,37500,4,VŠ Mgr.,Brno,22,Ž,Plný,+420 603 134 594
+933,Jakub,Procházka,jakub.prochazka@datacorp.cz,Podpora,Help Desk Specialist,2023-12-01,43000,3,SŠ,Liberec,26,M,DPP,+420 657 915 663
+934,Markéta,Vaňková,marketa.vankova@datacorp.cz,Podpora,Help Desk Specialist,2023-10-05,54500,3,VŠ PhD.,Praha,25,Ž,Plný,+420 739 843 410
+935,Jakub,Procházka,jakub.prochazka@datacorp.cz,Podpora,Zákaznická podpora,2022-08-07,50500,3,VŠ Mgr.,Ostrava,33,M,Plný,+420 785 795 709
+936,Jakub,Pokorný,jakub.pokorny@datacorp.cz,Podpora,Support Team Lead,2024-01-07,34500,3,VŠ Bc.,Praha,26,M,Plný,+420 785 244 792
+937,Jakub,Hájek,jakub.hajek@datacorp.cz,Podpora,Support Team Lead,2022-04-17,50500,4,VŠ Mgr.,Praha,26,M,Plný,+420 655 487 855
+938,Martin,Holub,martin.holub@datacorp.cz,Podpora,Help Desk Specialist,2024-08-08,32500,3,VŠ Bc.,Olomouc,33,M,Plný,+420 763 471 796
+940,Kristýna,Čechová,kristyna.cechova@datacorp.cz,Podpora,Support Team Lead,2024-05-24,37500,3,VŠ Bc.,Praha,26,Ž,Plný,+420 691 373 525
+941,Kateřina,Malá,katerina.mala@datacorp.cz,Podpora,Help Desk Specialist,2025-04-26,47500,4,VŠ Mgr.,Brno,26,Ž,Částečný,+420 756 954 978
+943,Marek,Král,marek.kral@datacorp.cz,Podpora,Support Team Lead,2023-02-22,31500,2,VŠ Bc.,Praha,25,M,Částečný,+420 723 646 658
+944,Lucie,Blažková,lucie.blazkova@datacorp.cz,Podpora,Technická podpora,2023-05-05,42500,3,SŠ,Hradec Králové,29,Ž,Plný,+420 709 748 728
+945,Dominik,Blažek,dominik.blazek@datacorp.cz,Podpora,Help Desk Specialist,2023-01-15,30500,3,SŠ,Praha,29,M,Plný,+420 702 752 396
+946,Ondřej,Fiala,ondrej.fiala@datacorp.cz,Podpora,Zákaznická podpora,2022-05-23,51500,4,VŠ Mgr.,Liberec,31,M,Plný,+420 626 597 993
+947,Ondřej,Veselý,ondrej.vesely@datacorp.cz,Podpora,Technická podpora,2021-08-16,35000,4,SŠ,Praha,33,M,Plný,+420 775 363 167
+948,Josef,Kučera,josef.kucera@datacorp.cz,Podpora,Support Team Lead,2022-05-17,36000,2,SŠ,Ostrava,30,M,Plný,+420 766 896 863
+949,Vojtěch,Fiala,vojtech.fiala@datacorp.cz,Podpora,Support Team Lead,2022-10-19,32500,3,VŠ Bc.,Praha,36,M,Plný,+420 724 200 549
+950,Michal,Hájek,michal.hajek@datacorp.cz,Podpora,Technická podpora,2024-03-26,35500,3,SŠ,České Budějovice,29,M,Plný,+420 636 622 982
+951,Vojtěch,Kolář,vojtech.kolar@datacorp.cz,Podpora,Help Desk Specialist,2023-12-04,50500,3,SŠ,Liberec,32,M,Plný,+420 623 556 674
+952,Klára,Hájková,klara.hajkova@datacorp.cz,Podpora,Support Team Lead,2022-04-07,38000,2,SŠ,Olomouc,31,Ž,Plný,+420 799 168 650
+953,Tomáš,Malý,tomas.maly@datacorp.cz,Podpora,Help Desk Specialist,2023-07-15,50000,4,VŠ Mgr.,Brno,25,M,Plný,+420 605 749 698
+954,Filip,Holub,filip.holub@datacorp.cz,Podpora,Technická podpora,2022-10-31,57000,2,VŠ Mgr.,České Budějovice,27,M,Plný,+420 684 138 381
+955,Kristýna,Navrátilová,kristyna.navratilova@datacorp.cz,Podpora,Support Team Lead,2022-09-11,45500,4,VŠ Bc.,Zlín,30,Ž,Částečný,+420 721 266 970
+956,Hana,Holubová,hana.holubova@datacorp.cz,Podpora,Technická podpora,2023-05-08,43500,3,SŠ,Praha,30,Ž,Plný,+420 759 501 372
+957,Simona,Doležalová,simona.dolezalova@datacorp.cz,Podpora,Technická podpora,2023-12-19,49000,3,VŠ Mgr.,Ostrava,22,Ž,Plný,+420 719 333 993
+958,Jakub,Beneš,jakub.benes@datacorp.cz,Podpora,Technická podpora,2024-04-22,33000,3,SŠ,Praha,27,M,Plný,+420 763 934 971
+959,Marie,Sedláčková,marie.sedlackova@datacorp.cz,Podpora,Help Desk Specialist,2022-05-22,40000,4,VŠ Mgr.,Plzeň,32,Ž,Plný,+420 604 361 409
+960,Kateřina,Kolářová,katerina.kolarova@datacorp.cz,Podpora,Technická podpora,2023-03-26,43500,3,SŠ,Liberec,22,Ž,Plný,+420 614 113 754
+961,Markéta,Pospíšilová,marketa.pospisilova@datacorp.cz,Podpora,Zákaznická podpora,2024-08-02,32500,3,SŠ,Olomouc,30,Ž,Plný,+420 662 573 935
+962,Barbora,Svobodová,barbora.svobodova@datacorp.cz,Podpora,Technická podpora,2023-04-22,52500,4,VŠ Mgr.,Praha,31,Ž,Plný,+420 742 950 752
+963,Ondřej,Kolář,ondrej.kolar@datacorp.cz,Podpora,Help Desk Specialist,2025-03-09,38000,2,SŠ,Praha,29,M,Plný,+420 688 555 311
+964,Lenka,Černá,lenka.cerna@datacorp.cz,Podpora,Support Team Lead,2024-07-20,36000,4,SŠ,Hradec Králové,28,Ž,Plný,+420 734 580 451
+965,Matěj,Pokorný,matej.pokorny@datacorp.cz,Podpora,Zákaznická podpora,2025-02-25,38000,4,SŠ,Olomouc,32,M,DPP,+420 709 509 909
+966,Tomáš,Beneš,tomas.benes@datacorp.cz,Podpora,Help Desk Specialist,2022-05-02,48000,4,SŠ,Praha,33,M,Plný,+420 755 314 871
+967,Pavel,Konečný,pavel.konecny@datacorp.cz,Podpora,Technická podpora,2022-12-11,54500,3,VŠ Bc.,Praha,23,M,Plný,+420 604 317 767
+968,Dominik,Veselý,dominik.vesely@datacorp.cz,Podpora,Support Team Lead,2022-03-02,55500,4,VŠ Mgr.,Plzeň,26,M,Plný,+420 662 430 529
+969,Tereza,Novotná,tereza.novotna@datacorp.cz,Podpora,Help Desk Specialist,2023-10-17,51000,5,VŠ Mgr.,Olomouc,27,Ž,Plný,+420 784 938 206
+970,Kristýna,Zemanová,kristyna.zemanova@datacorp.cz,Podpora,Support Team Lead,2024-01-02,35000,5,VŠ Bc.,Ostrava,28,Ž,Plný,+420 673 656 263
+971,Daniel,Holub,daniel.holub@datacorp.cz,Podpora,Zákaznická podpora,2023-09-02,40000,4,SŠ,Plzeň,22,M,Plný,+420 779 211 980
+972,Josef,Holub,josef.holub@datacorp.cz,Podpora,Help Desk Specialist,2022-09-13,42000,2,VŠ Mgr.,Brno,27,M,DPP,+420 791 650 837
+973,David,Veselý,david.vesely@datacorp.cz,Podpora,Technická podpora,2023-06-13,38500,4,SŠ,Zlín,32,M,Částečný,+420 722 599 261
+974,Michal,Marek,michal.marek@datacorp.cz,Podpora,Zákaznická podpora,2023-12-16,46000,3,VŠ Mgr.,Plzeň,22,M,Plný,+420 788 463 464
+975,David,Malý,david.maly@datacorp.cz,Podpora,Technická podpora,2022-11-23,40500,4,VŠ Bc.,Praha,31,M,Plný,+420 781 620 162
+976,Petra,Marková,petra.markova@datacorp.cz,Podpora,Zákaznická podpora,2023-07-17,27500,1,SŠ,Brno,24,Ž,Plný,+420 779 802 743
+977,Adam,Kučera,adam.kucera@datacorp.cz,Podpora,Zákaznická podpora,2024-11-18,34500,3,SŠ,Pardubice,22,M,Plný,+420 714 136 748
+978,Dominik,Blažek,dominik.blazek@datacorp.cz,Podpora,Support Team Lead,2024-12-01,26500,3,VŠ Bc.,Liberec,30,M,Částečný,+420 713 792 703
+979,Markéta,Štěpánková,marketa.stepankova@datacorp.cz,Podpora,Support Team Lead,2024-05-16,37000,3,SŠ,Ostrava,28,Ž,Částečný,+420 736 968 821
+980,Klára,Kolářová,klara.kolarova@datacorp.cz,Podpora,Support Team Lead,2023-01-26,46000,3,VŠ Bc.,Brno,31,Ž,DPP,+420 652 869 577
+981,David,Malý,david.maly@datacorp.cz,Podpora,Help Desk Specialist,2023-08-17,45000,2,VŠ Bc.,Brno,23,M,Plný,+420 614 356 919
+982,Daniel,Blažek,daniel.blazek@datacorp.cz,Podpora,Technická podpora,2022-08-28,39500,5,SŠ,Praha,22,M,Plný,+420 774 463 385
+983,Martin,Veselý,martin.vesely@datacorp.cz,Podpora,Zákaznická podpora,2023-05-24,35000,3,SŠ,Praha,26,M,Plný,+420 672 299 146
+984,Lukáš,Malý,lukas.maly@datacorp.cz,Podpora,Help Desk Specialist,2023-12-23,50500,2,VŠ PhD.,Liberec,27,M,Plný,+420 791 876 174
+985,Jan,Veselý,jan.vesely@datacorp.cz,Podpora,Technická podpora,2023-06-06,50000,3,VŠ Mgr.,Zlín,31,M,Plný,+420 700 631 559
+986,Dominik,Navrátil,dominik.navratil@datacorp.cz,Podpora,Support Team Lead,2025-04-26,38500,4,SŠ,Brno,26,M,Plný,+420 610 574 241
+987,Markéta,Konečná,marketa.konecna@datacorp.cz,Podpora,Zákaznická podpora,2024-03-29,29500,3,VŠ Bc.,Hradec Králové,25,Ž,Plný,+420 757 485 155
+988,Marie,Vaňková,marie.vankova@datacorp.cz,Podpora,Support Team Lead,2024-09-19,39500,3,VŠ Mgr.,Zlín,30,Ž,Částečný,+420 733 175 595
+989,Dominik,Novotný,dominik.novotny@datacorp.cz,Podpora,Technická podpora,2024-07-12,39500,2,SŠ,Hradec Králové,30,M,Plný,+420 657 354 602
+990,Martin,Pospíšil,martin.pospisil@datacorp.cz,Podpora,Technická podpora,2023-12-07,40500,4,VŠ Mgr.,Praha,34,M,Plný,+420 658 181 123
+991,Martina,Navrátilová,martina.navratilova@datacorp.cz,Podpora,Help Desk Specialist,2025-02-16,33500,3,SŠ,Praha,24,Ž,Plný,+420 748 775 836
+992,Tereza,Kopecká,tereza.kopecka@datacorp.cz,Podpora,Technická podpora,2023-05-29,42500,3,SŠ,Brno,25,Ž,Částečný,+420 650 599 844
+993,Matěj,Novák,matej.novak@datacorp.cz,Podpora,Technická podpora,2023-08-02,55000,4,VŠ Mgr.,Zlín,22,M,Plný,+420 667 557 816
+994,Ondřej,Veselý,ondrej.vesely@datacorp.cz,Podpora,Technická podpora,2022-09-08,34000,5,SŠ,Plzeň,30,M,Plný,+420 613 300 946
+995,Adam,Veselý,adam.vesely@datacorp.cz,Podpora,Help Desk Specialist,2022-01-14,36000,2,SŠ,Olomouc,31,M,Plný,+420 611 115 328
+996,Lucie,Horáková,lucie.horakova@datacorp.cz,Podpora,Zákaznická podpora,2025-04-26,37000,4,VŠ Mgr.,Praha,36,Ž,Plný,+420 701 781 830
+997,Kateřina,Zemanová,katerina.zemanova@datacorp.cz,Podpora,Help Desk Specialist,2023-08-28,34500,5,SŠ,Pardubice,33,Ž,Plný,+420 693 571 839
+998,Klára,Hájková,klara.hajkova@datacorp.cz,Podpora,Support Team Lead,2024-10-12,40000,3,SŠ,Hradec Králové,34,Ž,Plný,+420 743 506 772
+999,Petra,Štěpánková,petra.stepankova@datacorp.cz,Podpora,Support Team Lead,2022-05-22,55500,3,VŠ Mgr.,České Budějovice,36,Ž,Plný,+420 622 813 869
+1000,Petr,Pospíšil,petr.pospisil@datacorp.cz,Podpora,Support Team Lead,2024-05-19,46000,3,SŠ,Pardubice,24,M,Plný,+420 705 180 802
+1001,Klára,Kučerová,klara.kucerova@datacorp.cz,Podpora,Zákaznická podpora,2022-12-15,47000,5,SŠ,Praha,31,Ž,Plný,+420 741 890 521
+1002,Monika,Vaňková,monika.vankova@datacorp.cz,Podpora,Zákaznická podpora,2023-03-15,41000,4,VŠ Mgr.,České Budějovice,25,Ž,DPP,+420 663 144 283
+1003,Simona,Pospíšilová,simona.pospisilova@datacorp.cz,Podpora,Help Desk Specialist,2023-08-02,43500,4,SŠ,Liberec,28,Ž,Plný,+420 735 169 725
+1004,Simona,Pospíšilová,simona.pospisilova@datacorp.cz,Podpora,Technická podpora,2021-12-30,47500,3,SŠ,Hradec Králové,28,Ž,Plný,+420 632 986 540
+1005,Karel,Vaněk,karel.vanek@datacorp.cz,Podpora,Support Team Lead,2023-05-27,38000,2,VŠ Bc.,Zlín,24,M,Plný,+420 633 797 326
+1006,Veronika,Štěpánková,veronika.stepankova@datacorp.cz,Podpora,Technická podpora,2023-03-15,31500,3,SŠ,Ostrava,33,Ž,Plný,+420 635 940 300
+1007,Jana,Nováková,jana.novakova@datacorp.cz,Podpora,Support Team Lead,2022-08-28,34000,3,SŠ,Pardubice,23,Ž,Plný,+420 637 406 188
+1008,Hana,Jelínková,hana.jelinkova@datacorp.cz,Podpora,Technická podpora,2021-04-26,50500,5,VŠ PhD.,Plzeň,35,Ž,Plný,+420 607 576 530
+1009,Karel,Veselý,karel.vesely@datacorp.cz,Podpora,Technická podpora,2022-05-02,37500,2,SŠ,Plzeň,31,M,Plný,+420 630 151 611
+1010,Ondřej,Dvořák,ondrej.dvorak@datacorp.cz,Podpora,Zákaznická podpora,2023-10-30,29500,3,SŠ,Hradec Králové,27,M,Částečný,+420 703 396 280
+1011,Simona,Křížová,simona.krizova@datacorp.cz,Podpora,Help Desk Specialist,2022-07-04,39500,4,SŠ,Praha,29,Ž,Plný,+420 692 668 606
+1012,Alena,Vaňková,alena.vankova@datacorp.cz,Podpora,Help Desk Specialist,2023-06-14,34500,4,SŠ,Praha,25,Ž,Plný,+420 660 151 358
+1013,Michal,Kučera,michal.kucera@datacorp.cz,Podpora,Support Team Lead,2022-12-26,39000,4,SŠ,Olomouc,28,M,Plný,+420 690 362 787
+1014,Lukáš,Urban,lukas.urban@datacorp.cz,Podpora,Support Team Lead,2023-11-02,42000,3,VŠ Mgr.,Brno,23,M,Plný,+420 795 991 615

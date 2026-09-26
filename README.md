@@ -19,6 +19,7 @@ Syntetický dataset fiktivní české firmy "DataCorp s.r.o." — zaměstnaneck�
 | `notebooks/datacorp_org_chart.csv` | Organizační struktura (~1000+ řádků) — některé manažerské vazby tvoří cykly nebo míří na neexistující zaměstnance |
 | `notebooks/datacorp_tickets.csv` | Interní IT/HR tickety (~5000 záznamů) — volný text, nekonzistentní kategorie, někdy špatná priorita |
 | `notebooks/datacorp_payroll_q3.xlsx` | Mzdový list Q3 z Finance — Excel s nesourodým schématem, několika řádky v EUR a součtovým řádkem |
+| `notebooks/datacorp_clean.csv` | Kanonická vyčištěná verze hlavní tabulky (generuje se před zanesením chyb) — referenční řešení SP3 a zdroj tabulky `zamestnanci_clean` v DuckDB, se kterou pracuje notebook 03c |
 | `notebooks/datacorp_ground_truth_exits.csv` | Správné odpovědi pro eval v samostatné práci 4 (Fáze 2) — skutečné důvody odchodu, jazyk a rozpory v exit interviews |
 | `notebooks/datacorp_ground_truth_reviews.csv` | Správné odpovědi pro eval v samostatné práci 4 (Fáze 2) — skutečný sentiment hodnocení, sarkasmus a záměny osob |
 | `notebooks/datacorp_ground_truth_payroll.csv` | Správné odpovědi pro eval v samostatné práci 4 (Fáze 2) — typy chyb v jednotlivých řádcích mzdového listu |

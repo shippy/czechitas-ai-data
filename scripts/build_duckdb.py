@@ -36,6 +36,15 @@ def main() -> None:
     out.unlink(missing_ok=True)
 
     con = duckdb.connect(str(out))
+    # Clean canonical table gets real types (auto-detected); the dirty tables
+    # below stay all_varchar so their deliberate dirt survives untouched.
+    clean_path = DATA_DIR / "datacorp_clean.csv"
+    con.execute(
+        "CREATE TABLE zamestnanci_clean AS SELECT * FROM read_csv(?)",
+        [str(clean_path)],
+    )
+    n = con.execute("SELECT count(*) FROM zamestnanci_clean").fetchone()[0]
+    print(f"  zamestnanci_clean: {n} rows (datacorp_clean.csv, typed)")
     for table, filename in TABLES.items():
         path = DATA_DIR / filename
         con.execute(

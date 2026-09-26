@@ -1175,6 +1175,14 @@ def main() -> None:
     print(f"  Universe: {len(universe)} ({universe['_departed'].sum()} departed)")
 
     main_df = universe[~universe["_departed"]].drop(columns=["_departed"]).copy()
+
+    # Canonical clean version — the "answer" to SP3's cleaning exercise and
+    # the join-safe HR reference for assignment 03c. Exported pre-dirt.
+    clean = main_df.copy()
+    clean["plat"] = clean["plat"].round().astype(int)
+    clean["datum_nastupu"] = clean["datum_nastupu"].apply(lambda d: d.strftime("%Y-%m-%d"))
+    clean.to_csv(OUTPUT_DIR / "datacorp_clean.csv", index=False)
+
     main_df_dirty = apply_dirt_main(main_df)
     universe_for_sides = universe.drop(columns=["_departed"]).copy()
 
