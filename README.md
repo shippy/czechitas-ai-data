@@ -77,4 +77,6 @@ uv run --with jupyter jupyter lab notebooks/assignment-03c.ipynb
 
 ### Údržba mezi kohortami
 
+Před novým během kurzu aktualizujte **číslo kurzu ve zpětnovazebních QR kódech** — URL `moje.czechitas.cz/cs/zpetna-vazba/<číslo>-ai-v-datove-analyze` na dvou místech v `slides/slides.md` (slide „Zpětná vazba" a „Děkujeme za pozornost!"). Aktuálně: 8360.
+
 GPT pomocníček byl vyřazen (Custom GPTs končí; nahradily ho skilly ve složce `skills/`). Datový ZIP pro studentky se generuje automaticky GitHub Actions (`data-release.yml`) — rolling release `datacorp-data` při každé změně dat na `main`, verzované releasy při tagu `v*`.

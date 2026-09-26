@@ -94,7 +94,7 @@ layout: center
 
 Budeme rádi za vaši zpětnou vazbu!
 
-<QRCode url="https://moje.czechitas.cz/cs/zpetna-vazba/8176-ai-v-datove-analyze" :size="250">Zpětná vazba</QRCode>
+<QRCode url="https://moje.czechitas.cz/cs/zpetna-vazba/8360-ai-v-datove-analyze" :size="250">Zpětná vazba</QRCode>
 
 ---
 layout: center
@@ -106,7 +106,7 @@ Markéta Hanna · Šimon Podhajský · Dan Rabiencný
 
 **Czechitas · AI v datové analýze · září 2026**
 
-<QRCode url="https://moje.czechitas.cz/cs/zpetna-vazba/8176-ai-v-datove-analyze" :size="150">Zpětná vazba</QRCode>
+<QRCode url="https://moje.czechitas.cz/cs/zpetna-vazba/8360-ai-v-datove-analyze" :size="150">Zpětná vazba</QRCode>
 
 ---
 layout: center
