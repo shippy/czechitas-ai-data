@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "slidev",
     "build": "slidev build --base /czechitas-ai-data/ --out ../dist",
-    "preview": "npm run build && npx serve ../dist -l 4000"
+    "preview": "npm run build && npx serve ../dist -l 4000",
+    "export": "slidev export --output export/ai-v-datove-analyze.pdf && slidev export --format pptx --output export/ai-v-datove-analyze.pptx"
   },
   "dependencies": {
     "@slidev/cli": "^52.12.0",
