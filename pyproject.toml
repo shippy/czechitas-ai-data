@@ -27,3 +27,5 @@ test = [
 
 [tool.uv]
 exclude-newer = "7 days"
+# certifi carries CA trust-store security fixes (e.g. eMudhra, 2026-10); follow the global 2-day cooldown
+exclude-newer-package = { certifi = "2 days" }
