@@ -52,8 +52,13 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release delete datacorp-data --yes || true
-          git push origin :refs/tags/datacorp-data || true
+          # Replace assets on the existing rolling release instead of deleting/recreating its tag
+          # (tags are admin-only via the protect-tags ruleset; github-actions can't bypass on a personal account).
+          if gh release view datacorp-data >/dev/null 2>&1; then
+            gh release upload datacorp-data build/datacorp-data.zip build/datacorp.duckdb --clobber
+            exit 0
+          fi
+          # First-time only (needs the datacorp-data tag to exist; create it yourself if missing).
           gh release create datacorp-data build/datacorp-data.zip build/datacorp.duckdb \
             --title "DataCorp data (rolling)" \
             --notes "Aktuální data kurzu: 6 CSV tabulek, mzdový list (xlsx), datacorp.duckdb a složka skills/. Bez ground-truth souborů. Automaticky přegenerováno při každé změně dat na main." \
